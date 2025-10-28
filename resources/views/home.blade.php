@@ -8,4 +8,6 @@
     <x-fale-conosco/>
     <x-enviar-curriculo/>
     <x-section-enviar-curriculo/>
+
+    <x-back-to-top/>
 @endsection

@@ -13,7 +13,6 @@
     
     <x-header/>
 
-
     <!-- Conteudo dinamico -->
     <main>
         @yield('content')
@@ -169,6 +168,6 @@
 
 
 
-
+ @stack('scripts')
 </body>
 </html>

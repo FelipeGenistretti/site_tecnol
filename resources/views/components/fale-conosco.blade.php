@@ -7,7 +7,7 @@
   </div>
 
   <div class="pt-5">
-    <div class="grid grid-cols-1 md:grid-cols-[70%_30%] gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-[70%_30%] gap-6" id="faleConosco">
       
       <!-- FORMULÁRIO (70%) -->
       <div class="bg-gray-100/30 rounded-md shadow-md p-6">
@@ -17,7 +17,7 @@
           </div>
         @endif
 
-        <form action="{{ route('fale-conosco.store') }}" method="POST">
+        <form action="{{ route('fale-conosco.store') }}" method="POST" >
           @csrf
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -109,7 +109,7 @@
       </div>
 
       <!-- BLOCO DE INFORMAÇÕES (30%) -->
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 max-md:w-full">
         <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
           <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
             <img src="/email.png" alt="" class="w-[25px] h-[25px]" />
