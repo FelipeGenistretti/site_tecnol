@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .container-x {
+    @apply px-4 sm:px-8 md:px-[120px];   /* pequeno em mobile, maior em desktop */
+  }
+
+  .container-2x {
+    @apply px-4 sm:px-8 md:px-[240px];   /* mesmo conceito */
+  }
+
+  .container-mbl {
+    @apply px-2;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,142 +10,8 @@
     <title>@yield('title','TecShare')</title>
 </head>
 <body>
-    <nav class="h-[78px] lg:h-[128px] bg-white text-black flex items-center px-10 lg:px-20   shadow-md  justify-between">
-      <button
-  aria-label="Voltar"
-  id="back-button"
-  class="fixed top-4 left-2 z-50 p-2 rounded-full bg-white shadow-sm hover:bg-gray-100 active:scale-95 transition lg:hidden"
->
-  <svg xmlns="http://www.w3.org/2000/svg"
-       class="h-6 w-6 text-gray-800"
-       fill="none"
-       viewBox="0 0 24 24"
-       stroke="currentColor"
-       stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-  </svg>
-</button>
-   
-   
-   
-      <!-- Logo à esquerda -->
-    <div  class="flex items-center">
-        <img src="{{ asset('/logo.png') }}" alt="logo" class=" h-12 md:15 lg:h-20" id="logo-navbar">
-    </div>
     
-
-    <!-- Conteúdo (links + botão final) -->
-    <div class="hidden lg:flex items-center flex-1 ml-12 justify-end">
-        <!-- Links -->
-        <ul class="flex gap-8 text-sm font-semibold">
-            <li class="hover:text-orange-600 cursor-pointer">INÍCIO</li>
-            <li class="hover:text-orange-600 cursor-pointer"><a href="#">QUEM SOMOS</a></li>
-            <li class="hover:text-orange-600 cursor-pointer whitespace-nowrap">SYSTEM DATA ANALITICS</li>
-            <li class="hover:text-orange-600 cursor-pointer">SEGURANÇA</li>
-            <li class="hover:text-orange-600 cursor-pointer">ONDE OPERAMOS</li>
-            <li class="hover:text-orange-600 cursor-pointer">CONTATO</li>
-        </ul>
-
-        <!-- Ícone lupa e botão laranja -->
-        <div class="flex items-center gap-2 pr-1">
-            <!-- Ícone lupa -->
-            <button class="p-2 rounded hover:bg-gray-100 m-3px">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none"
-                     viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15z"/>
-                </svg>
-            </button>
-
-            <!-- Botão laranja com cadeado -->
-            <button class="bg-orange-600 text-white px-5 py-3 rounded hover:bg-orange-800 flex items-center gap-2 whitespace-nowrap text-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M12 11c1.656 0 3 1.343 3 3v3H9v-3c0-1.657 1.343-3 3-3zm0-7a5 5 0 00-5 5v3h10V9a5 5 0 00-5-5z"/>
-                </svg>
-
-                ACESSO SAFE DATA ANALITICS
-            </button>
-        </div>
-    </div>
-
-    
-   
-
-  <!-- Botão hamburguer/ lupa hamburguer (visível só em telas pequenas) -->
-<div class="flex items-center justify-between gap-3 lg:hidden px-3 py-2">
- 
-
- 
-    <!-- Botão lupa -->
-  <button class="p-2 rounded hover:bg-gray-100 focus:outline-none" id="lupa-mobile">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 ml-4 " fill="none"
-         viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15z"/>
-    </svg>
-  </button>
-
-  <!-- Botão menu -->
-  <button onclick="OpenMobileMenu()" id="menu-btn" class="focus:outline-none">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-700" fill="none" 
-         viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"/>
-    </svg>
-  </button>
-<!--Menu Mobile -->
-
-  <div id="mobile-menu"
-       class=" absolute top-12 right-0 bg-white text-gray-700 shadow-lg flex flex-col gap-5 p-4 mt-7 inset-0 bg-[#f5f5f5]
-       transition-all
-       "
-       >
-    <div class="relative w-full max-w-md"> <!-- container relativo -->
-  <input
-    type="text"
-    placeholder="pesquisar"
-    class="w-full rounded-md border border-gray-300 py-2 pl-4 pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
-  />
-  <button
-    type="button"
-    class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-orange-600"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-         stroke-width="2" stroke="currentColor" class="w-5 h-5">
-      <path stroke-linecap="round" stroke-linejoin="round"
-            d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18a7.5 7.5 0 006.15-3.35z" />
-    </svg>
-  </button>
-</div>
-
-     
-    <a href="#" class="py-2 px-3 hover:bg-gray-100 rounded">INÍCIO</a>
-    <a href="#" class="py-2 px-3 hover:bg-gray-100 rounded">QUEM SOMOS</a>
-    <a href="#" class="py-2 px-3 hover:bg-gray-100 rounded">SYSTEM DATA ANALYTICS</a>
-    <a href="#" class="py-2 px-3 hover:bg-gray-100 rounded">COMPLIANCE</a>
-    <a href="#" class="py-2 px-3 hover:bg-gray-100 rounded">SEGURANÇA</a>
-    <a href="#" class="py-2 px-3 hover:bg-gray-100 rounded">ONDE OPERAMOS</a>
-    <a href="#" class="py-2 px-3 hover:bg-gray-100 rounded">CONTATOS</a>
-      <button class="bg-orange-600 text-white px-5 py-3 rounded hover:bg-orange-800 flex items-center gap-2 whitespace-nowrap text-sm w-[300px]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M12 11c1.656 0 3 1.343 3 3v3H9v-3c0-1.657 1.343-3 3-3zm0-7a5 5 0 00-5 5v3h10V9a5 5 0 00-5-5z"/>
-                </svg>
-
-                ACESSO SAFE DATA ANALITICS
-            </button>
-  </div>
-</div>
-
-
-</div>
-
-
-
-</nav>
-
-
+    <x-header/>
 
 
     <!-- Conteudo dinamico -->
