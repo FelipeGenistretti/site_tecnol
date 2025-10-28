@@ -36,8 +36,8 @@
     <div class="hidden lg:flex items-center flex-1 ml-12 justify-end">
         <!-- Links -->
         <ul class="flex gap-8 text-sm font-semibold">
-            <li class="hover:text-orange-600 cursor-pointer">INÍCIO</li>
-            <li class="hover:text-orange-600 cursor-pointer"><a href="#">QUEM SOMOS</a></li>
+            <li class="hover:text-orange-600 cursor-pointer"><a href="{{ route('home') }}"> INÍCIO</a></li>
+            <li class="hover:text-orange-600 cursor-pointer"><a href="{{ route('quemsomos') }}">QUEM SOMOS</a></li>
             <li class="hover:text-orange-600 cursor-pointer whitespace-nowrap">SYSTEM DATA ANALITICS</li>
             <li class="hover:text-orange-600 cursor-pointer">SEGURANÇA</li>
             <li class="hover:text-orange-600 cursor-pointer">ONDE OPERAMOS</li>
@@ -152,7 +152,7 @@
     </main>
 
     <!-- Footer --->
-    <footer class=" bg-[#125e7a]">
+    <footer class=" bg-[#004A65]">
         
         <div  class="h-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-white p-12 place-items-center lg:place-items-start ">
                 <!--Coluna 1-->
