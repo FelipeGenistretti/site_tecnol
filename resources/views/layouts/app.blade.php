@@ -20,7 +20,7 @@
     </main>
 
     <!-- Footer --->
-    <footer class=" bg-[#125e7a]">
+    <footer class=" bg-[#004A65]">
         
         <div  class="h-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-white p-12 place-items-center lg:place-items-start ">
                 <!--Coluna 1-->
