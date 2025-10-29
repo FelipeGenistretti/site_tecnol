@@ -22,10 +22,10 @@
             </div>
           </li>
 
-          <li class="hover:text-orange-600"><a href="{{ route('compliance') }}">Compliance</a></li>
+          <li class="hover:text-orange-600"><a href="{{ route('compliance') }}" id="">Compliance</a></li>
           <li class="hover:text-orange-600"><a href="">Segurança</a></li>
           <li class="hover:text-orange-600"><a href="">Onde operamos</a></li>
-          <li class="hover:text-orange-600"><a href="">Contato</a></li>
+          <li class="hover:text-orange-600"><a href="" id="scrollToFaleConosco">Contato</a></li>
         </ul>
 
         <div class="flex items-center">
@@ -175,6 +175,17 @@
   back.addEventListener("click", () => {
     menu.classList.toggle("hidden");
   });
+
+const linkContato = document.getElementById('scrollToFaleConosco');
+const targetContato = document.getElementById('faleConosco');
+
+linkContato.addEventListener('click', (e) => {
+    e.preventDefault();
+    targetContato.scrollIntoView({ behavior: 'smooth' });
+});
+;
+
+
 </script>
 
 <style>
