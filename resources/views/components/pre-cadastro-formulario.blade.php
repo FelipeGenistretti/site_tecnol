@@ -12,7 +12,6 @@
     <form action="{{ route('pre-registro.store') }}" method="post">
       @csrf
 
-      <!-- Primeira linha -->
       <div class="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-3">
         <div>
           <div class="flex flex-col">
@@ -60,7 +59,6 @@
         </div>
       </div>
 
-      <!-- Segunda linha -->
       <div class="grid grid-cols-1 lg:grid-cols-[20%_60%_20%] mt-3 gap-3">
         <div>
           <div class="flex flex-col">
@@ -85,7 +83,7 @@
         <div>
           <div class="flex flex-col">
             <label for="numero" class="text-sm">Número</label>
-            <input type="text" name="numero" id="numero" value="{{ old('numero') }}" placeholder="00" class="p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="numero" id="numero" value="{{ old('numero') }}" placeholder="00" class="p-2 rounded-sm mt-2 border border-gray mr-3">
             @error('numero')
               <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -93,7 +91,6 @@
         </div>
       </div>
 
-      <!-- Terceira linha -->
       <div class="grid grid-cols-1 lg:grid-cols-[25%_25%_25%_25%] gap-3 mt-3 mr-6">
         <div>
           <div class="flex flex-col">
@@ -143,7 +140,6 @@
         </div>
       </div>
 
-      <!-- Quarta linha -->
       <div class="grid grid-cols-1 lg:grid-cols-[40%_20%_20%_20%] gap-3 mt-3 mr-6">
         <div>
           <div class="flex flex-col">
@@ -186,7 +182,6 @@
         </div>
       </div>
 
-      <!-- Política de privacidade + botão -->
       <div class="mt-6">
         <div class="flex gap-2 items-center mb-4">
           <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125" {{ old('privacy') ? 'checked' : '' }}/>
@@ -207,4 +202,85 @@
 
     </form>
   </div>
+
+
+<div class="h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center fixed inset-0 z-50" id="modalSuccess">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/iconCheckModal.png" alt="">
+        <p class="text-white">Cadastro realizado com sucesso!</p>
+        <button type="button" class="flex items-center">
+            <img src="/iconCloseModal.png" alt="" id="close">
+        </button>
+    </div>
 </div>
+
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center" id="modalCamposObrigatorios">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/alertModalCamposObrigatorios.png" alt="">
+        <p class="text-black">Cadastro realizado com sucesso!</p>
+        <button type="button" class="flex items-center">
+            <img src="/closeModalBlack.png" alt="" id="btnClose">
+        </button>
+    </div>
+</div>
+
+@if(session('success'))
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("modalSuccess");
+      const btnClose = document.getElementById("close");
+
+      modal.classList.remove("hidden");
+      modal.classList.add("opacity-0", "transition", "duration-500");
+      setTimeout(() => modal.classList.remove("opacity-0"), 10);
+
+      btnClose.addEventListener("click", () => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+      });
+
+      setTimeout(() => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+      }, 3000);
+    });
+  </script>
+@endif
+
+@if($errors->any())
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const modalCamposObrigatorios = document.getElementById("modalCamposObrigatorios");
+        const btnClose = document.getElementById("btnClose");
+
+        modalCamposObrigatorios.classList.remove("hidden");
+        modalCamposObrigatorios.classList.add("opacity-0", "transition", "duration-500");
+        setTimeout(() => modalCamposObrigatorios.classList.remove("opacity-0"), 10);
+
+        btnClose.addEventListener("click", () => {
+            modalCamposObrigatorios.classList.add("opacity-0");
+            setTimeout(() => modalCamposObrigatorios.classList.add("hidden"), 500);
+        });
+
+        setTimeout(() => {
+            modalCamposObrigatorios.classList.add("opacity-0");
+            setTimeout(() => modalCamposObrigatorios.classList.add("hidden"), 500);
+        }, 3000);
+    });
+</script>
+@endif
+
+
+
+
+
+</div>
+
+<script>
+
+
+
+
+    
+
+</script>

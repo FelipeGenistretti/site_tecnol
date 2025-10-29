@@ -14,19 +14,19 @@
     <x-header/>
 
     <!-- Conteudo dinamico -->
-    <main>
+    <main class="pt-[120px]">
         @yield('content')
     </main>
 
     <!-- Footer --->
-    <footer class=" bg-[#125e7a]">
+    <footer class=" bg-[#004A65]">
         
         <div  class="h-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-white p-12 place-items-center lg:place-items-start ">
                 <!--Coluna 1-->
 
         <div class="mt-3 mb-3 lg:ml-12 text-center">
             <img src="{{ asset('/logo.png') }}" alt="logo" class="h-10">
-            <ul>
+            <ul class="">
                 <li class="text-lg">Registro</li>
                 <li class="text-lg">Rápido</li>
                 <li class="text-lg">Fácil &</li>
@@ -55,7 +55,7 @@
         <div class="text-center lg:text-left">
             <h1 class="text-2xl mt-3 mb-3 ">Endereços</h1>
             <h2 class="text-sm mt-1 mb-1">
-               <h3>Matriz</h3>
+               <h3 class="font-semibold">Matriz</h3>
                 Rua Senador Milton Campos,35, 7º andar
                 <br>
                 Vila da Serra, Nova Lima - MG
