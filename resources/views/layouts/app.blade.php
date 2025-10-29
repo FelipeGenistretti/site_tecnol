@@ -13,7 +13,7 @@
     
     <x-header/>
 
-    <!-- Conteudo dinamico -->
+    <!-- Conteudo dinamico pt-[120px]-->
     <main class="pt-[120px]">
         @yield('content')
     </main>

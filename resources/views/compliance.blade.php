@@ -3,8 +3,8 @@
 @section('title','TecShare compliance')
 
 @section('content')
-<div class="mt-[130px]">
-              <div class="flex items-center h-[128px] bg-gray-200 mt-[130px]">
+<div class="">
+              <div class="flex items-center h-[128px] bg-gray-200">
   <h1 class="text-[40px] text-black container-x">Compliance</h1>
     </div>
 

@@ -43,3 +43,8 @@ Route::get('/compliance', function() {
 Route::get('/seguranca', function() {
     return view('seguranca');
 })->name('seguranca');
+
+
+Route::get("/privacidade", function(){
+    return view("privacidade");
+})->name("privacidade");
