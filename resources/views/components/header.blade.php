@@ -23,7 +23,7 @@
           </li>
 
           <li class="hover:text-orange-600"><a href="{{ route('compliance') }}">Compliance</a></li>
-          <li class="hover:text-orange-600"><a href="">Segurança</a></li>
+          <li class="hover:text-orange-600"><a href="{{ route('seguranca') }}">Segurança</a></li>
           <li class="hover:text-orange-600"><a href="">Onde operamos</a></li>
           <li class="hover:text-orange-600"><a href="">Contato</a></li>
         </ul>
