@@ -4,7 +4,7 @@
 @section('title','TecShare')
 
 @section('content')
-      <div class="flex items-center h-[128px] bg-gray-200">
+      <div class="flex items-center h-[128px] bg-gray-200 mt-[130px]">
   <h1 class="text-[40px] text-black container-x">Quem somos</h1>
     </div>
 
