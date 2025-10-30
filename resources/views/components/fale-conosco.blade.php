@@ -1,210 +1,160 @@
-<div class="container-x py-10 bg-[#F2F2F2]">
-  <h1 class="text-black text-3xl">Safe Register Car</h1>
-</div>
-
-<div class="container-x py-12">
-  <div class="text-center space-y-4">
-    <h1 class="text-5xl text-[#333333]">Pré-cadastro</h1>
-    <p class="text-[#666666] font-semibold">Preencha todos os campos abaixo para iniciar seu pré-cadastro.</p>
+<div class="container-2x py-12">
+  <div class="flex flex-col justify-center items-center gap-2">
+    <h1 class="text-4xl">Fale conosco</h1>
+    <p class="text-md text-gray-500 font-semibold max-sm:text-center max-sm:text-lg">
+      Envie-nos um e-mail com uma sugestão, crítica ou elogio
+    </p>
   </div>
 
-  <div class="p-5 bg-[#F2F2F2] rounded-md mt-6">
-    <form action="{{ route('pre-registro.store') }}" method="post">
-      @csrf
+  <div class="pt-5">
+    <div class="grid grid-cols-1 md:grid-cols-[70%_30%] gap-6">
+      
+      <!-- FORMULÁRIO (70%) -->
+      <div class="bg-gray-100/30 rounded-md shadow-md p-6">
+        @if(session('success'))
+          <div class="bg-green-100 text-green-700 p-2 rounded mb-4">
+              {{ session('success') }}
+          </div>
+        @endif
 
-      <!-- Primeira linha -->
-      <div class="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-3">
-        <div>
-          <div class="flex flex-col">
-            <label for="cnpj" class="text-sm">CNPJ</label>
-            <input type="text" name="cnpj" id="cnpj" value="{{ old('cnpj') }}" placeholder="00.000.000/0001-00" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('cnpj')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
+        <form action="{{ route('fale-conosco.store') }}" method="POST">
+          @csrf
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="flex flex-col">
+              <label for="name" class="font-medium mb-1">Nome</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value="{{ old('name') }}"
+                placeholder="Digite seu nome"
+                class="p-2 border rounded-md w-full @error('name') border-red-500 @enderror"
+              />
+              @error('name')
+                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+              @enderror
+            </div>
+
+            <div class="flex flex-col">
+              <label for="email" class="font-medium mb-1">E-mail</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value="{{ old('email') }}"
+                placeholder="email@email.com.br"
+                class="p-2 border rounded-md w-full @error('email') border-red-500 @enderror"
+              />
+              @error('email')
+                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+              @enderror
+            </div>
+
+            <div class="flex flex-col">
+              <label for="phone" class="font-medium mb-1">Telefone</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                value="{{ old('phone') }}"
+                placeholder="(xx) xxxxx-xxxx"
+                class="p-2 border rounded-md w-full @error('phone') border-red-500 @enderror"
+              />
+              @error('phone')
+                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+              @enderror
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 py-5">
+            <div class="flex flex-col rounded-md">
+              <label class="font-medium mb-1" for="message">Mensagem</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                placeholder="Escreva aqui sua mensagem"
+                class="p-3 border rounded-md resize-none @error('message') border-red-500 @enderror"
+              >{{ old('message') }}</textarea>
+              @error('message')
+                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+              @enderror
+            </div>
+          </div>
+
+          <div class="flex gap-2 items-center mb-4">
+            <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125" {{ old('privacy') ? 'checked' : '' }}/>
+            <p>
+              Li e concordo com a
+              <span>
+                <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
+              </span>
+              e autorizo o tratamento dos meus dados.
+            </p>
+          </div>
+          @error('privacy')
+            <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
+          @enderror
+
+          <div class="flex justify-center pt-5">
+            <button
+              type="submit"
+              class="uppercase text-md text-white bg-orange-600 hover:bg-orange-400 transition duration-300 w-full p-3 rounded-md"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- BLOCO DE INFORMAÇÕES (30%) -->
+      <div class="flex flex-col gap-4">
+        <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
+          <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
+            <img src="/email.png" alt="" class="w-[25px] h-[25px]" />
+          </div>
+          <div>
+            <p class="opacity-65 mb-2">Email</p>
+            <p>atendimento@sistemastecnol.com.br</p>
           </div>
         </div>
 
-        <div>
-          <div class="flex flex-col">
-            <label for="nome" class="text-sm">Razão social</label>
-            <input type="text" name="nome" id="nome" value="{{ old('nome') }}" placeholder="Nome" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('nome')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
+        <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
+          <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
+            <img src="/email.png" alt="" class="w-[25px] h-[25px]" />
+          </div>
+          <div>
+            <p class="opacity-65 mb-2">Ouvidoria</p>
+            <p>ouvidoria@sistemastecnol.com.br</p>
           </div>
         </div>
 
-        <div>
-          <div class="flex flex-col">
-            <label for="categoria" class="text-sm">Categoria</label>
-            <select name="categoria" id="categoria" class="p-2 rounded-sm mt-2 border border-gray">
-              <option value="">Selecione...</option>
-              <option value="oficina" {{ old('categoria') == 'oficina' ? 'selected' : '' }}>Oficina</option>
-              <option value="lojista" {{ old('categoria') == 'lojista' ? 'selected' : '' }}>Lojista</option>
-              <option value="empresa" {{ old('categoria') == 'empresa' ? 'selected' : '' }}>Empresa</option>
-            </select>
-            @error('categoria')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
+        <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
+          <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
+            <img src="/email.png" alt="" class="w-[25px] h-[25px]" />
+          </div>
+          <div>
+            <p class="opacity-65 mb-2">Encarregado de proteção de dados</p>
+            <p>Saron Correa</p>
+            <p>dpo@sistemastecnol.com.br</p>
           </div>
         </div>
 
-        <div>
-          <div class="flex flex-col">
-            <label for="nome-fantasia" class="text-sm">Nome fantasia</label>
-            <input type="text" name="nome-fantasia" id="nome-fantasia" value="{{ old('nome-fantasia') }}" placeholder="Nome" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('nome-fantasia')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
+        <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
+          <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
+            <img src="/email.png" alt="" class="w-[25px] h-[25px]" />
+          </div>
+          <div>
+            <p class="opacity-65 mb-2">Telefones</p>
+            <p>(31) 3324-6460</p>
+            <p>0800 590 4004</p>
           </div>
         </div>
       </div>
-
-      <!-- Segunda linha -->
-      <div class="grid grid-cols-1 lg:grid-cols-[20%_60%_20%] mt-3 gap-3">
-        <div>
-          <div class="flex flex-col">
-            <label for="cep" class="text-sm">CEP*</label>
-            <input type="text" name="cep" id="cep" value="{{ old('cep') }}" placeholder="00000-000" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('cep')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-
-        <div>
-          <div class="flex flex-col">
-            <label for="endereco" class="text-sm">Endereço</label>
-            <input type="text" name="endereco" id="endereco" value="{{ old('endereco') }}" placeholder="Endereço" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('endereco')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-
-        <div>
-          <div class="flex flex-col">
-            <label for="numero" class="text-sm">Número</label>
-            <input type="text" name="numero" id="numero" value="{{ old('numero') }}" placeholder="00" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('numero')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-      </div>
-
-      <!-- Terceira linha -->
-      <div class="grid grid-cols-1 lg:grid-cols-[25%_25%_25%_25%] gap-3 mt-3 mr-6">
-        <div>
-          <div class="flex flex-col">
-            <label for="complemento" class="text-sm">Complemento</label>
-            <input type="text" name="complemento" id="complemento" value="{{ old('complemento') }}" placeholder="sala, apartamento, etc..." class="p-2 rounded-sm mt-2 border border-gray">
-            @error('complemento')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-
-        <div>
-          <div class="flex flex-col">
-            <label for="bairro" class="text-sm">Bairro</label>
-            <input type="text" name="bairro" id="bairro" value="{{ old('bairro') }}" placeholder="Nome do bairro" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('bairro')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-
-        <div>
-          <div class="flex flex-col">
-            <label for="uf" class="text-sm">UF</label>
-            <select name="uf" id="uf" class="p-2 rounded-sm mt-2 border border-gray">
-              <option value="">Selecione...</option>
-              @foreach(['SP','RJ','MG','PR','RS','SC','BA','PE'] as $estado)
-                <option value="{{ $estado }}" {{ old('uf') == $estado ? 'selected' : '' }}>{{ $estado }}</option>
-              @endforeach
-            </select>
-            @error('uf')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-
-        <div>
-          <div class="flex flex-col">
-            <label for="cidade" class="text-sm">Cidade</label>
-            <select name="cidade" id="cidade" class="p-2 rounded-sm mt-2 border border-gray w-full">
-              <option value="">Selecione...</option>
-            </select>
-            @error('cidade')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-      </div>
-
-      <!-- Quarta linha -->
-      <div class="grid grid-cols-1 lg:grid-cols-[40%_20%_20%_20%] gap-3 mt-3 mr-6">
-        <div>
-          <div class="flex flex-col">
-            <label for="Nome" class="text-sm">Nome</label>
-            <input type="text" name="Nome" id="Nome" value="{{ old('Nome') }}" placeholder="Nome" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('Nome')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-
-        <div>
-          <div class="flex flex-col">
-            <label for="cpf" class="text-sm">CPF</label>
-            <input type="text" name="cpf" id="cpf" value="{{ old('cpf') }}" placeholder="000.000.000-00" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('cpf')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>  
-        </div>
-
-        <div>
-          <div class="flex flex-col">
-            <label for="telefone" class="text-sm">Telefone</label>
-            <input type="text" name="telefone" id="telefone" value="{{ old('telefone') }}" placeholder="(00) 00000-0000" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('telefone')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-
-        <div>
-          <div class="flex flex-col">
-            <label for="email" class="text-sm">E-mail</label>
-            <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="email@dominio.com.br" class="p-2 rounded-sm mt-2 border border-gray">
-            @error('email')
-              <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
-          </div>
-        </div>
-      </div>
-
-      <!-- Política de privacidade + botão -->
-      <div class="mt-6">
-        <div class="flex gap-2 items-center mb-4">
-          <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125" {{ old('privacy') ? 'checked' : '' }}/>
-          <p>
-            Li e concordo com a
-            <span>
-              <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
-            </span>
-            e autorizo o tratamento dos meus dados.
-          </p>
-        </div>
-        @error('privacy')
-          <span class="text-red-600 text-sm mt-1 block">{{ $message }}</span>
-        @enderror
-
-        <button type="submit" class="p-4 uppercase text-white rounded-md bg-orange-600 transform hover:bg-orange-400 transition duration-300">enviar</button>
-      </div>
-
-    </form>
+    </div>
   </div>
 </div>
+
+
+
