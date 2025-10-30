@@ -184,7 +184,7 @@
     <div class="flex flex-col">
       <label class="text-sm font-medium mb-1">Upload de Arquivo</label>
       <label class="border rounded px-3 py-2 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3">
-        <img src="{{ asset('/upload.png') }}" alt="">
+        <img src="{{ asset('/upload-nuuvem.png') }}" alt="">
         <p class="text-sm text-center">
           Arraste e solte seu(s) arquivo(s) aqui <br> ou
         </p>

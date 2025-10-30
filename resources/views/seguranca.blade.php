@@ -6,7 +6,7 @@
 <div>
         <d class="mt-[130px]">
               <div class="flex items-center h-[128px] bg-gray-200 mt-[130px]">
-  <h1 class="text-[40px] text-black container-x">Segurança</h1>
+  <h1 class="text-[40px] text-black container-x">Segurançaa</h1>
     </div>
 
     <div class="grid grid-cols-2 gap-4 container-x py-10 h-[820px]">
