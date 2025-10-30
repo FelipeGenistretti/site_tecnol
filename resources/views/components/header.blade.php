@@ -7,38 +7,65 @@
       </div>
 
       <!-- MENU DESKTOP -->
-      <nav class="hidden lg:flex items-center gap-2 uppercase font-semibold">
-        <ul class="flex gap-6">
-          <li class="hover:text-orange-600"><a href="{{ route('home') }}">Início</a></li>
-          <li class="hover:text-orange-600"><a href="{{ route('quem-somos') }}">Quem somos</a></li>
+      <nav class="hidden lg:flex items-center justify-end gap-8 uppercase text-md">
+  <!-- Links -->
+  <ul class="flex items-center gap-6">
+    <li class="hover:text-orange-600"><a href="{{ route('home') }}">Início</a></li>
+    <li class="hover:text-orange-600"><a href="{{ route('quem-somos') }}">Quem somos</a></li>
+
+    <li class="relative group">
+      <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('safe-register-car') }}">
+        Safe Register Car
+      </a>
+      <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">O que é?</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">onde operamos</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Pré-cadastro</a>
+      </div>
+    </li>
+
+      <li class="relative group">
+      <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('safe-register-car') }}">
+        compliance
+      </a>
+      <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">compliance</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">canal de denúncia</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">solicitação do titular</a>
+      </div>
+    </li>
 
           <li class="relative group">
-            <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('safe-register-car') }}">
-              Safe Register Car
-            </a>
-            <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">O que é?</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Pré-cadastro</a>
-            </div>
-          </li>
+      <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('safe-register-car') }}">
+        segurança
+      </a>
+      <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">gestão de segurança</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">privacidade</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">qualidade</a>
+      </div>
+    </li>
 
-          <li class="hover:text-orange-600"><a href="{{ route('compliance') }}">Compliance</a></li>
-          <li class="hover:text-orange-600"><a href="{{ route('seguranca') }}">Segurança</a></li>
-          <li class="hover:text-orange-600"><a href="">Onde operamos</a></li>
-          <li class="hover:text-orange-600"><a href="" id="scrollToFaleConosco">Contato</a></li>
-        </ul>
+    <li class="hover:text-orange-600"><a href="" id="scrollToFaleConosco">Contato</a></li>
+  </ul>
 
-        <div class="flex items-center">
-          <button type="button">
-            <img src="/pesquisar.png" alt="">
-          </button>
-        </div>
+  <div class="flex items-center gap-5">
+    <button type="button" class="flex items-center justify-center">
+      <img src="/pesquisar.png" alt="Pesquisar" class="h-5 w-5">
+    </button>
 
-        <button type="button" class="py-3 flex items-center px-3 gap-2 rounded-md bg-orange-600 text-white uppercase hover:bg-orange-500 transition-colors duration-300">
-          <img src="/locked.png" class="h-[20px] w-[20px]" alt="imagem de um cadeado">
-          Acesso Safe Register Car
-        </button>
-      </nav>
+    <div class="flex items-center gap-2">
+      <button type="button"><img src="/aPlus.png" alt="Aumentar fonte" class="h-[40px] w-[40px]"></button>
+      <button type="button"><img src="/A-.png" alt="Diminuir fonte" class="h-[33.33px] w-[33.33px]"></button>
+    </div>
+
+    <button type="button" class="py-3 px-4 flex items-center gap-2 rounded-md bg-orange-600 text-white uppercase hover:bg-orange-500 transition-colors duration-300">
+      <img src="/locked.png" class="h-[20px] w-[20px]" alt="Cadeado">
+      Acesso Safe Register Car
+    </button>
+  </div>
+</nav>
+
 
       <!-- BOTÃO HAMBURGUER MOBILE -->
       <div class="lg:hidden">

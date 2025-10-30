@@ -4,19 +4,19 @@
 @section('title','TecShare')
 
 @section('content')
-      <div class="flex items-center h-[128px] bg-gray-200">
-  <h1 class="text-[40px] text-black container-x">Quem somos</h1>
+      <div class="flex items-center py-12  bg-gray-200">
+  <h1 class="text-2xl text-black container-x">Quem somos</h1>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 h-[460.px] container-x m-5">
-        <div class= "p-4 mt-12 h-[278px] ">
+        <div class= "p-4 mt-12">
             <h1 class= "text-[40px] m-3">Um pouco da nossa história</h1>
             <p class="text-sm">Hoje a TECNOL possui sede em Nova Lima e conta com uma infraestrutura moderna, com Datacenter certificados, links redundantes e toda estrutura de atendimento (BackOffice, Comercial,<br> Relacionamento Institucional, Jurídico especializado e uma Central de Atendimento). Somos formados por uma equipe com mais de 20 anos de experiência no setor de veículos. Estamos sempre investindo em pessoas e em novas tecnologias, buscando o nosso aperfeiçoamento contínuo para sempre ser a melhor opção em nossa área de atuação.</p>
         </div>
         
         
         <div class = "p-4 mt-12">
-            <img class="h-[300px] w-[820px] rounded" src="{{ asset('/quemsomos-1.jpg') }}" alt="">
+            <img class="rounded" src="{{ asset('/quemsomos-1.jpg') }}" alt="">
 
         </div>
     </div>
@@ -37,30 +37,9 @@
         </div>
         
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
             <div class="flex items-center justify-center m-8">
             <h1 class="text-[40px]"> Nossos valores</h1>
              </div>
-
-
-
-
-
-
-    
- 
-
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
   <!-- Card 1 -->
   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
@@ -146,10 +125,8 @@
 
 <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 m-10 container-x">
   
-  <!-- Coluna 1: Form ocupando máximo espaço -->
   <form class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-6">
 
-    <!-- Linha 1: 4 inputs pequenos -->
     <div class="grid grid-cols-4 gap-4">
       <div class="flex flex-col">
         <label class="text-sm font-medium mb-1">Nome</label>
