@@ -25,7 +25,7 @@
     </li>
 
       <li class="relative group">
-      <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('safe-register-car') }}">
+      <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('compliance') }}">
         compliance
       </a>
       <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -36,7 +36,7 @@
     </li>
 
           <li class="relative group">
-      <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('safe-register-car') }}">
+      <a  class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('seguranca') }}">
         segurança
       </a>
       <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">

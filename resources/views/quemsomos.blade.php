@@ -5,7 +5,7 @@
 
 @section('content')
       <div class="flex items-center py-12  bg-gray-200">
-  <h1 class="text-2xl text-black container-x">Quem somos</h1>
+  <h1 class="text-[40px] text-black container-x">Quem somos</h1>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 h-[460.px] container-x m-5">
