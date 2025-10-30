@@ -9,5 +9,7 @@
     <x-enviar-curriculo/>
     <x-section-enviar-curriculo/>
 
+    <x-upload-arquivo/>
+
     <x-back-to-top/>
 @endsection

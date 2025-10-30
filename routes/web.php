@@ -48,3 +48,7 @@ Route::get('/seguranca', function() {
 Route::get("/privacidade", function(){
     return view("privacidade");
 })->name("privacidade");
+
+Route::get("/canal-denuncia", function(){
+    return view("canal-denuncia");
+})->name("canal-denuncia");
