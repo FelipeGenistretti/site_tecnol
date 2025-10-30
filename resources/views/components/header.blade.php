@@ -45,7 +45,7 @@
 
         <x-font-control/>
 
-        <button type="button" class="textContainer py-3 px-4 flex items-center gap-2 rounded-md bg-orange-600 text-white uppercase hover:bg-orange-500 transition-colors duration-300">
+        <button type="button" class="textContainer py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-orange-500 transition-colors duration-300">
           <img src="/locked.png" class="h-[20px] w-[20px]" alt="Cadeado">
           Acesso Safe Register Car
         </button>
