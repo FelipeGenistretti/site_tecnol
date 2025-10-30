@@ -1,6 +1,6 @@
-<div class="container-x py-10">
+<div class=" py-10">
   <div class="flex flex-col">
-    <label class="border-2 border-dashed border-gray-400/30 rounded px-3 py-2 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors">
+    <label class=" border-2 border-dashed border-gray-400/30 rounded px-3 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors">
       <img src="/iconDownloadUploadFile.png" alt="">
       <p class="text-sm text-center">
         Arraste e solte seu(s) arquivo(s) aqui <br> ou
