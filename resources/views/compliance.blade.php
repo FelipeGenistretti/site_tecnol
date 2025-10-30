@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="">
-              <div class="flex items-center h-[128px] bg-gray-200">
+              <div class="flex items-center h-[128px] bg-[#F2F2F2]">
   <h1 class="text-[40px] text-black container-x">Compliance</h1>
     </div>
 

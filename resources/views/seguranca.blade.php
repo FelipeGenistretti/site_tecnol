@@ -5,7 +5,7 @@
 @section('content')
 <div>
         <div>
-              <div class="flex items-center h-[128px] bg-gray-200 mt-[130px]">
+              <div class="flex items-center h-[128px] bg-[#F2F2F2] mt-[px]">
   <h1 class="text-[40px] text-black container-x">Segurança</h1>
     </div>
 
