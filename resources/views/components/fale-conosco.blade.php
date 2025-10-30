@@ -1,6 +1,6 @@
-<div class="container-2x py-12">
+<div class="container-2x py-12" id="faleConosco">
   <div class="flex flex-col justify-center items-center gap-2">
-    <h1 class="text-4xl">Fale conosco</h1>
+    <h1 class="text-4xl" >Fale conosco</h1>
     <p class="text-md text-gray-500 font-semibold max-sm:text-center max-sm:text-lg">
       Envie-nos um e-mail com uma sugestão, crítica ou elogio
     </p>

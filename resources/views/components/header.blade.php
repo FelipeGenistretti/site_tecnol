@@ -40,7 +40,7 @@
             </div>
           </li>
 
-          <li class="hover:text-orange-600"><a href="" id="scrollToFaleConosco">Contato</a></li>
+          <li class="hover:text-orange-600"><a href="/#faleConosco"  id="scrollToFaleConosco">Contato</a></li>
         </ul>
 
         <x-font-control/>
