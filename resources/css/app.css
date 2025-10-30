@@ -1,21 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Importação deve vir ANTES dos @tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Camada base: define configurações globais */
+@layer base {
+  html {
+    @apply font-ibm; /* Define a fonte padrão global */
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Camada utilities: define classes customizadas */
 @layer utilities {
   .container-x {
-    @apply px-4 sm:px-8 md:px-[120px];   /* pequeno em mobile, maior em desktop */
+    @apply px-4 sm:px-8 md:px-[120px];
   }
 
   .container-2x {
-    @apply px-4 sm:px-8 md:px-[240px];   /* mesmo conceito */
+    @apply px-4 sm:px-8 md:px-[240px];
   }
 
   .container-mbl {
     @apply px-2;
   }
-}
-
-html, body {
-  overflow-x: hidden;
 }
