@@ -11,7 +11,7 @@
       Registro de contrato de veículos
     </p>
 
-    <p class="hidden md:flex mb-2 text-md text-white mt-2">
+    <p class="textContainer hidden md:flex mb-2 text-md text-white mt-2">
       A solução mais moderna, segura e eficiente para registro <br/>
       eletrônico de contratos de garantia de financiamento de <br/>
       veículos.
@@ -20,15 +20,15 @@
     <div class="hidden md:flex flex-col md:flex-row gap-6 mt-10">
       <div class="flex flex-col  text-white gap-2 md:gap-4">
         <p class="text-5xl font-semibold">16+</p>
-        <p class="text-sm">Estados Brasileiros</p>
+        <p class="textContainer text-sm">Estados Brasileiros</p>
       </div>
       <div class="flex flex-col text-white gap-2 md:gap-4">
         <p class="text-5xl font-semibold">100%</p>
-        <p class="text-sm">Conformidade Legal</p>
+        <p class="textContainer text-sm">Conformidade Legal</p>
       </div>
       <div class="flex flex-col text-white gap-2 md:gap-4">
         <p class="text-5xl font-semibold">24/7</p>
-        <p class="text-sm">Disponibilidade</p>
+        <p class="textContainer text-sm">Disponibilidade</p>
       </div>
     </div>
 
@@ -38,7 +38,7 @@
         <div class="max-sm:hidden">
           <img src="/locked.png" alt="">
         </div>
-        <p class="max-sm:hidden">acesso ao sistema</p>
+        <p class="max-sm:hidden textContainer">acesso ao sistema</p>
         
         <div class="flex items-center gap-2">
           <p class="md:hidden">saiba mais</p>
@@ -50,7 +50,7 @@
 
       <button type="button"
               class="hidden md:flex items-center gap-2 border text-white uppercase rounded-md px-4 py-3 transform hover:bg-white/10 hover:scale-105 transition duration-300 relative z-10">
-        <p>sobre o safe register car</p>
+        <p class="textContainer">sobre o safe register car</p>
         <img src="/avancar.png" alt="" class="w-[20px] h-[20px]">
       </button>
     </div>
@@ -59,10 +59,10 @@
   <!-- Seção de cadastro -->
   <div class="hero-signup bg-[#004A65] py-12 md:py-16 flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg mt-12 relative z-10">
     <div class="container-x flex flex-col gap-2 md:gap-3 text-center md:text-left">
-      <p class="text-white text-3xl font-semibold max-sm:text-2xl">
+      <p class="text-white text-3xl font-semibold max-sm:text-2xl textContainer">
         Faça seu cadastro sem custo de adesão e mensalidade
       </p>
-      <p class="text-white text-lg sm:text">
+      <p class="text-white text-lg sm:text textContainer">
         Pague somente pelas transações executadas
       </p>
     </div>
@@ -70,7 +70,7 @@
     <div class="container-x">
       <button type="button" class="sm:w-full flex items-center p-3 gap-2 transform hover:scale-105 duration-300 hover:shadow-md border rounded-md relative z-10">
         <img src="/check.png" class="w-[20px]" alt="">
-        <p class="uppercase text-white">iniciar pré-cadastro</p>
+        <p class="uppercase text-white textContainer">iniciar pré-cadastro</p>
       </button>
     </div>
   </div>
