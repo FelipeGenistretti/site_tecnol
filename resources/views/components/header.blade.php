@@ -1,4 +1,4 @@
-<div>
+<div class="">
   <header class="w-full container-x fixed top-0 left-0 bg-white shadow z-50 h-[128px]">
     <div class="flex justify-between items-center mx-auto h-full">
 
@@ -9,38 +9,38 @@
 
       <!-- MENU DESKTOP -->
       <nav class="hidden lg:flex items-center gap-8 uppercase text-md">
-        <ul class="textContainer flex items-center gap-6 text-[16px] transition-all">
-          <li class="hover:text-orange-600"><a href="{{ route('home') }}">Início</a></li>
-          <li class="hover:text-orange-600"><a href="{{ route('quem-somos') }}">Quem somos</a></li>
+        <ul class="textContainer flex items-center gap-6 text-[16px] text-textSecondary font-medium transition-all">
+          <li class="hover:text-textPrimary hover:font-bold"><a href="{{ route('home') }}">Início</a></li>
+          <li class="hover:text-textPrimary hover:font-bold"><a href="{{ route('quem-somos') }}">Quem somos</a></li>
 
           <li class="relative group">
-            <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('safe-register-car') }}">Safe Register Car</a>
+            <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold transition-colors" href="{{ route('safe-register-car') }}">Safe Register Car</a>
             <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">O que é?</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Onde operamos</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Pré-cadastro</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">O que é?</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Onde operamos</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Pré-cadastro</a>
             </div>
           </li>
 
           <li class="relative group">
-            <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('compliance') }}">Compliance</a>
+            <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold transition-colors" href="{{ route('compliance') }}">Compliance</a>
             <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="{{ route('compliance') }}" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Compliance</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Canal de denúncia</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Solicitação do titular</a>
+              <a href="{{ route('compliance') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Compliance</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Canal de denúncia</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Solicitação do titular</a>
             </div>
           </li>
 
           <li class="relative group">
-            <a class="flex items-center gap-1 hover:text-orange-600 transition-colors" href="{{ route('seguranca') }}">Segurança</a>
+            <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold transition-colors" href="{{ route('seguranca') }}">Segurança</a>
             <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Gestão de segurança</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Privacidade</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">Qualidade</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Gestão de segurança</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Privacidade</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Qualidade</a>
             </div>
           </li>
 
-          <li class="hover:text-orange-600"><a href="/#faleConosco"  id="scrollToFaleConosco">Contato</a></li>
+          <li class="hover:text-textPrimary hover:font-bold"><a href="" id="scrollToFaleConosco">Contato</a></li>
         </ul>
 
         <x-font-control/>

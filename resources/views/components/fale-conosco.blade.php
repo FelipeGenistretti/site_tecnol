@@ -1,7 +1,7 @@
 <div class="container-2x py-12" id="faleConosco">
   <div class="flex flex-col justify-center items-center gap-2">
-    <h1 class="text-4xl" >Fale conosco</h1>
-    <p class="text-md text-gray-500 font-semibold max-sm:text-center max-sm:text-lg">
+    <h1 class="text-4xl">Fale conosco</h1>
+    <p class="text-md text-gray-500 font-semibold max-sm:text-center max-sm:text-lg textContainer">
       Envie-nos um e-mail com uma sugestão, crítica ou elogio
     </p>
   </div>
@@ -10,7 +10,7 @@
     <div class="grid grid-cols-1 md:grid-cols-[70%_30%] gap-6">
       
       <!-- FORMULÁRIO (70%) -->
-      <div class="bg-gray-100/30 rounded-md shadow-md p-6">
+      <div class="bg-gray-100/30 rounded-md shadow-md p-6 textContainer">
         @if(session('success'))
           <div class="bg-green-100 text-green-700 p-2 rounded mb-4">
               {{ session('success') }}
@@ -109,7 +109,7 @@
       </div>
 
       <!-- BLOCO DE INFORMAÇÕES (30%) -->
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 textContainer">
         <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
           <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
             <img src="/email.png" alt="" class="w-[25px] h-[25px]" />

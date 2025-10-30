@@ -1,15 +1,15 @@
 <div class="container-x bg-[#004A65] py-5 pb-10">
     <div class="text-white flex justify-center items-center flex-col gap-3 pt-12 sm:items-center sm:justify-center">
         <h1 class="text-4xl sm:text-5xl max-sm:text-center max-sm:text-6xl">Por que escolher a Tecnol?</h1>
-        <p class="text-lg font-semibold max-sm:text-lg max-sm:flex max-sm:text-center">Oferecemos soluções inteligentes, seguras e automatizadas para nossos clientes</p>
+        <p class="text-lg font-semibold max-sm:text-lg max-sm:flex max-sm:text-center textContainer">Oferecemos soluções inteligentes, seguras e automatizadas para nossos clientes</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pb-10 mt-5">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pb-10 mt-5 textContainer">
 
 <!--Grid 1 --> 
         <div class="flex flex-col gap-4">
 <!-- Card 1-->
-            <div class="text-white p-6 border bg-[#F2F2F2]/10 border-blue-500/40 rounded-md transform hover:scale-105 hover:shadow-lg duration-300 h-full">
+            <div class=" text-white p-6 border bg-[#F2F2F2]/10 border-blue-500/40 rounded-md transform hover:scale-105 hover:shadow-lg duration-300 h-full">
                 <img src="/database.png" alt="">
                 <p class="text-xl mt-2 font-semibold">Base de dados criptografadas</p>
                 <p class="mt-2">Dados criptografados de ponta a ponta, sem risco de vazamento de dado.</p>

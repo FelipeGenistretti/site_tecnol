@@ -14,7 +14,7 @@
     <x-header/>
 
     <!-- Conteudo dinamico pt-[120px]-->
-    <main class="pt-[120px]">
+    <main class="pt-[120px] font-ibm">
         @yield('content')
     </main>
 

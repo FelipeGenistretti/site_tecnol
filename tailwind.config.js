@@ -6,7 +6,19 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
-  },
+    extend: {
+      colors:{
+        textPrimary:"#333333",
+        textSecondary:"#666666",
+        bgPrimary:"#004A65",
+        bgSecondary:"#F2F2F2",
+        bgButtonPrimary:"#F15A29"
+      }   
+    },
+
+    fontFamily:{
+      ibm:['"IBM Plex Sans"', 'sans-serif'],
+    },
+  }, 
   plugins: [],
 }
