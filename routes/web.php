@@ -56,3 +56,6 @@ Route::get("/canal-denuncia", function(){
 Route::get("/qualidade", function(){
     return view("qualidade");
 })->name("qualidade");
+Route::get("/solicitacao-titular", function(){
+    return view("solicitacaotitular");
+})->name("solicitacaotitular");
