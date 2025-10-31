@@ -111,9 +111,9 @@
       <!-- BLOCO DE INFORMAÇÕES (30%) -->
       <div class="flex flex-col gap-4 textContainer">
         <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
-          <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
-            <img src="/email.png" alt="" class="w-[25px] h-[25px]" />
-          </div>
+
+            <img src="/email.png" alt="" class="" />
+
           <div>
             <p class="opacity-65 mb-2">Email</p>
             <p>atendimento@sistemastecnol.com.br</p>
@@ -121,9 +121,7 @@
         </div>
 
         <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
-          <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
-            <img src="/email.png" alt="" class="w-[25px] h-[25px]" />
-          </div>
+            <img src="/email.png" alt="" class="" />
           <div>
             <p class="opacity-65 mb-2">Ouvidoria</p>
             <p>ouvidoria@sistemastecnol.com.br</p>
@@ -131,9 +129,7 @@
         </div>
 
         <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
-          <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
-            <img src="/email.png" alt="" class="w-[25px] h-[25px]" />
-          </div>
+            <img src="/email.png" alt="" class="" />
           <div>
             <p class="opacity-65 mb-2">Encarregado de proteção de dados</p>
             <p>Saron Correa</p>
@@ -142,9 +138,7 @@
         </div>
 
         <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
-          <div class="w-[40px] h-[40px] bg-orange-300/15 flex items-center justify-center rounded-md p-1">
-            <img src="/email.png" alt="" class="w-[25px] h-[25px]" />
-          </div>
+            <img src="/email.png" alt="" class="" />
           <div>
             <p class="opacity-65 mb-2">Telefones</p>
             <p>(31) 3324-6460</p>

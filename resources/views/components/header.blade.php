@@ -79,8 +79,8 @@
 
       <div class="bg-[#F8F8FF]">
         <ul class="flex flex-col gap-5 p-4 uppercase">
-          <li><a href="" class="block hover:text-orange-600">Início</a></li>
-          <li><a href="" class="block hover:text-orange-600">Quem somos</a></li>
+          <li><a href="" class="block hover:text-bgButtonPrimary">Início</a></li>
+          <li><a href="" class="block hover:text-bgButtonPrimary">Quem somos</a></li>
           <li class="relative">
             <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
               Safe Register Car
@@ -150,7 +150,7 @@
   });
   back.addEventListener("click", () => menu.classList.toggle("hidden"));
 
-  // Scroll suave para contato
+
   const linkContato = document.getElementById('scrollToFaleConosco');
   const targetContato = document.getElementById('faleConosco');
   if (linkContato && targetContato) {

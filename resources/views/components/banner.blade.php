@@ -34,7 +34,7 @@
 
     <div class="flex flex-col sm:flex-row gap-4 mt-10">
       <button type="button"
-              class="w-full flex items-center gap-2 bg-orange-600 text-white font-semibold uppercase rounded-md px-4 py-3 hover:bg-orange-400 transition duration-300 sm:w-auto relative z-10">
+              class="w-full flex items-center gap-2 bg-bgButtonPrimary text-white font-semibold uppercase rounded-md px-4 py-3 hover:bg-orange-400 transition duration-300 sm:w-auto relative z-10">
         <div class="max-sm:hidden">
           <img src="/locked.png" alt="">
         </div>
@@ -57,7 +57,7 @@
   </div>
 
   <!-- Seção de cadastro -->
-  <div class="hero-signup bg-[#004A65] py-12 md:py-16 flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg mt-12 relative z-10">
+  <div class="hero-signup bg-bgPrimary py-12 md:py-16 flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg mt-12 relative z-10">
     <div class="container-x flex flex-col gap-2 md:gap-3 text-center md:text-left">
       <p class="text-white text-3xl font-semibold max-sm:text-2xl textContainer">
         Faça seu cadastro sem custo de adesão e mensalidade

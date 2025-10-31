@@ -1,4 +1,4 @@
-<div class="container-x bg-[#004A65] py-5 pb-10">
+<div class="container-x bg-bgPrimary py-5 pb-10">
     <div class="text-white flex justify-center items-center flex-col gap-3 pt-12 sm:items-center sm:justify-center">
         <h1 class="text-4xl sm:text-5xl max-sm:text-center max-sm:text-6xl">Por que escolher a Tecnol?</h1>
         <p class="text-lg font-semibold max-sm:text-lg max-sm:flex max-sm:text-center textContainer">Oferecemos soluções inteligentes, seguras e automatizadas para nossos clientes</p>

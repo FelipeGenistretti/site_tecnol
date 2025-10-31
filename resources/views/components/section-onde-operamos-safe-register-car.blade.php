@@ -4,11 +4,11 @@
             <!-- Coluna 1: Texto -->
             <div>
                 <div class="space-y-4">
-                    <h1 class="text-[#666666] text-4xl">Onde operamos</h1>
-                    <p><span class="text-[#666666] font-bold">Safe Register Car</span> é amplamente utilizado em território nacional por nossos clientes parceiros.</p>
-                    <p>Hoje estamos em <span class="text-[#666666] font-bold">16 estados</span> brasileiros:</p>
+                    <h1 class="text-textSecondary text-4xl">Onde operamos</h1>
+                    <p><span class="text-textSecondary font-bold textContainer">Safe Register Car</span> é amplamente utilizado em território nacional por nossos clientes parceiros.</p>
+                    <p>Hoje estamos em <span class="text-[#666666] font-bold textContainer">16 estados</span> brasileiros:</p>
                     <div class="ml-4">
-                        <ul class="list-disc">
+                        <ul class="list-disc textContainer text-textSecondary">
                             <li>Acre</li>
                             <li>Amapá</li>
                             <li>Bahia</li>
@@ -27,7 +27,7 @@
                             <li>Tocantins</li>
                         </ul>
                     </div>
-                    <p>Em processo de credenciamento do estado de <span class="text-[#F15A29] font-bold">Sergipe</span></p>
+                    <p class="text-textSecondary text-lg">Em processo de credenciamento do estado de <span class="text-[#F15A29] text-lg font-bold textContainer">Distrito Federal, Espirito Santo e Sergipe</span></p>
                 </div>
             </div>
 
