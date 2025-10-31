@@ -83,7 +83,7 @@
         <div>
           <div class="flex flex-col">
             <label for="numero" class="text-sm">Número</label>
-            <input type="text" name="numero" id="numero" value="{{ old('numero') }}" placeholder="00" class="p-2 rounded-sm mt-2 border border-gray mr-3">
+            <input type="text" name="numero" id="numero" value="{{ old('numero') }}" placeholder="00" class="p-2 rounded-sm mt-2 border border-gray lg:mr-3">
             @error('numero')
               <span class="text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -91,7 +91,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-[25%_25%_25%_25%] gap-3 mt-3 mr-6">
+      <div class="grid grid-cols-1 lg:grid-cols-[25%_25%_25%_25%] gap-3 mt-3 lg:mr-6">
         <div>
           <div class="flex flex-col">
             <label for="complemento" class="text-sm">Complemento</label>
@@ -140,7 +140,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-[40%_20%_20%_20%] gap-3 mt-3 mr-6">
+      <div class="grid grid-cols-1 lg:grid-cols-[40%_20%_20%_20%] gap-3 mt-3 lg:mr-6">
         <div>
           <div class="flex flex-col">
             <label for="Nome" class="text-sm">Nome</label>
