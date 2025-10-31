@@ -3,13 +3,11 @@
 @section('title','TecShare-Segurança')
 
 @section('content')
-<div>
-        <div>
-              <div class="flex items-center h-[128px] bg-[#F2F2F2] mt-[px]">
+          <div class="flex items-center h-[128px] bg-[#F2F2F2] mt-[px]">
   <h1 class="text-[40px] text-black container-x">Segurança</h1>
     </div>
 
-    <div class="grid grid-cols-2 gap-4 container-x py-10 h-[820px]">
+      <div class="grid  grid-cols-1 lg:grid-cols-2 gap-4 container-x py-10">
         <div class="p-4">
             <h1 class="text-[50px]">Gestão de segurança da <br> informação e serviços</h1>
             <p class="py-3">A TECNOL, reforçando o nosso compromisso com a Segurança da Informação, assegura através da norma ISO 27001 que seus processos de governança de segurança da informação estão com conformidade com os requisitos da norma e cerifica esse escopo conforme atestado pela<strong>  QMS CERTIFICATION.</strong></p>
@@ -26,12 +24,12 @@
         </div>
 
         <div>
-            <img src="{{ asset('./quem-somos.png')  }}" alt="" class="w-[820px] h-[541px]">
+            <img src="{{ asset('./quem-somos.png')  }}" alt="" class="lg:w-[820px] lg:h-[541px]">
 
         </div>
     </div>
 
-    <div class="grid grid-cols-4 container-x py-12 gap-3">
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 container-x py-12 gap-3">
         
         <div>
              <button class="flex items-center gap-3 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer ">
@@ -40,7 +38,7 @@
      </button>
         </div>
 
-
+        
         <div>
              <button class="flex items-center gap-3 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer" >
       <img src="{{ asset('/download-black.png') }}" alt="Ícone de download" class="w-5 h-5">
@@ -64,13 +62,7 @@
 
 
 
-</div>
 
-
-
-
-
-    </div>
 
 
 @endsection

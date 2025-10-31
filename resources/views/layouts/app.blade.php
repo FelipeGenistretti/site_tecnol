@@ -75,7 +75,7 @@
           <!--Coluna 4-->
         <div class="text-center lg:text-left">
             <h1 class="text-2xl  mt-3 mb-3 " >Certificações</h1>
-            <div class="grid lg:grid-cols-2 lg:gap-4 grid-cols-4 gap-2 justify-items-between" >
+            <div class="grid lg:grid-cols-2 lg:gap-4 grid-cols-2 gap-2 justify-items-between" >
                 <img src="{{ asset('/ISO.png') }}" alt="" class="mb-3 p-0">
                 <img src="{{ asset('/37301.png') }}" alt="" class="mb-3 p-0">
             

@@ -9,9 +9,9 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 container-x py-12 gap-4">
-        <div class="space-y-4 mt-6">
-            <h1 class= "text-4xl text-textPrimary">Um pouco da nossa história</h1>
-            <p class="textContainer text-lg text-textPrimary">Hoje a TECNOL possui sede em Nova Lima e conta com uma infraestrutura moderna, com Datacenter certificados, links redundantes e toda estrutura de atendimento (BackOffice, Comercial,<br> Relacionamento Institucional, Jurídico especializado e uma Central de Atendimento). Somos formados por uma equipe com mais de 20 anos de experiência no setor de veículos. Estamos sempre investindo em pessoas e em novas tecnologias, buscando o nosso aperfeiçoamento contínuo para sempre ser a melhor opção em nossa área de atuação.</p>
+        <div class="space-y-4  mt-3 lg:mt-6">
+            <h1 class= "text-4xl text-center lg:text-left text-Primary text-[45px] m-2">Um pouco da nossa história</h1>
+            <p class="textContainer text-lg text-textPrimary   lg:text-left m-2">Hoje a TECNOL possui sede em Nova Lima e conta com uma infraestrutura moderna, com Datacenter certificados, links redundantes e toda estrutura de atendimento (BackOffice, Comercial,<br> Relacionamento Institucional, Jurídico especializado e uma Central de Atendimento). Somos formados por uma equipe com mais de 20 anos de experiência no setor de veículos. Estamos sempre investindo em pessoas e em novas tecnologias, buscando o nosso aperfeiçoamento contínuo para sempre ser a melhor opção em nossa área de atuação.</p>
         </div>
         
         
@@ -31,7 +31,7 @@
         </div>
 
           <div class= "mt-12 space-y-3">
-            <h1 class= "text-4xl">Nossa missão e visão</h1>
+            <h1 class= "text-4xl text-center lg:text-left">Nossa missão e visão</h1>
             <p class="textContainer text-md">Temos como missão automatizar sistematicamente a transmissão de informações de forma rápida, fácil e segura. Além da busca contínua em ser referência em soluções automatizadas para o mercado financeiro. </p>
                 
         </div>
@@ -125,83 +125,88 @@
 
 <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 container-x mb-12">
   
-  <form class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4">
+<form class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4">
 
-    <div class="textContainer grid grid-cols-4 gap-4">
-      <div class="flex flex-col">
-        <label class="textContainer text-sm font-medium mb-1">Nome</label>
-        <input type="text" class="border rounded px-3 py-2 w-full" placeholder="Digite seu nome">
-      </div>
-      <div class="flex flex-col">
-        <label class="textContainer text-sm font-medium mb-1">E-mail</label>
-        <input type="text" class="border rounded px-3 py-2 w-full" placeholder="email@email.com.br">
-      </div>
-      <div class="flex flex-col">
-        <label class="textContainer text-sm font-medium mb-1">Telefone</label>
-        <input type="text" class="border rounded px-3 py-2 w-full" placeholder="(xx) xxxxx-xxxx">
-      </div>
-      <div class="flex flex-col">
-        <label class="textContainer text-sm font-medium mb-1">Área de atuação</label>
-        <select class="border rounded px-3 py-2 w-full bg-white">
-          <option value="">Selecionar</option>
-          <option value="opcao1">Opção 1</option>
-          <option value="opcao2">Opção 2</option>
-          <option value="opcao3">Opção 3</option>
-        </select>
-      </div>
-    </div>
-
-  
-    <div class="flex flex-col w-full">
-      <label class="textContainer text-sm font-medium mb-1">Mensagem</label>
-      <input type="text" class="border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" />
-    </div>
-
-  
+  <!-- Grid responsiva -->
+  <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
     <div class="flex flex-col">
-      <label class="textContainer text-sm font-medium mb-1">Upload de Arquivo</label>
-      <label class="border rounded px-3 py-2 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3">
-        <img src="{{ asset('/upload-nuuvem.png') }}" alt="">
-        <p class="textContainer text-sm text-center">
-          Arraste e solte seu(s) arquivo(s) aqui <br> ou
-        </p>
-        <span class="textContainer p-2 px-6 rounded border border-[#B3B3B3] cursor-pointer">
-          Adicionar arquivos
-        </span>
-        <input type="file" class="hidden">
-      </label>
-      <p class="textContainer text-sm text-gray-500 mt-1">Tamanho máximo permitido do anexo 5MB</p>
+      <label class="textContainer text-sm font-medium mb-1">Nome</label>
+      <input type="text" class="border rounded px-3 py-2 w-full" placeholder="Digite seu nome">
     </div>
 
-  
-    <div class="flex flex-col gap-2">
-      <!-- Checkbox circular customizado -->
-      <label class="flex items-start md:items-center gap-2 text-sm cursor-pointer relative">
-        <input type="checkbox" class="peer absolute w-5 h-5 opacity-0" />
-        <div class="w-5 h-5 rounded-full border border-gray-400 flex items-center justify-center bg-white peer-checked:bg-orange-500 transition-colors">
-          <div class="w-2.5 h-2.5 rounded-full bg-white scale-0 peer-checked:scale-100 transition-transform"></div>
-        </div>
-        <span class="textContainer ml-1">
-          Li e concordo com a <span><a href="#" class="text-bgButtonPrimary border-b-2 border-bgButtonPrimary font-bold">Política de Privacidade</a></span> e autorizo o tratamento dos meus dados.
-        </span>
-      </label>
+    <div class="flex flex-col">
+      <label class="textContainer text-sm font-medium mb-1">E-mail</label>
+      <input type="text" class="border rounded px-3 py-2 w-full" placeholder="email@email.com.br">
+    </div>
 
-    
-      <div class="mt-2">
-        <div class="bg-gray-200 border border-gray-300 rounded p-4 text-center">
-          <span class="text-sm text-gray-500">reCAPTCHA aqui</span>
-        </div>
+    <div class="flex flex-col">
+      <label class="textContainer text-sm font-medium mb-1">Telefone</label>
+      <input type="text" class="border rounded px-3 py-2 w-full" placeholder="(xx) xxxxx-xxxx">
+    </div>
+
+    <div class="flex flex-col">
+      <label class="textContainer text-sm font-medium mb-1">Área de atuação</label>
+      <select class="border rounded px-3 py-2 w-full bg-white">
+        <option value="">Selecionar</option>
+        <option value="opcao1">Opção 1</option>
+        <option value="opcao2">Opção 2</option>
+        <option value="opcao3">Opção 3</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Mensagem -->
+  <div class="flex flex-col w-full">
+    <label class="textContainer text-sm font-medium mb-1">Mensagem</label>
+    <input type="text" class="border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" />
+  </div>
+
+  <!-- Upload -->
+  <div class="flex flex-col">
+    <label class="textContainer text-sm font-medium mb-1">Upload de Arquivo</label>
+    <label class="border rounded px-3 py-2 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3">
+      <img src="{{ asset('/upload-nuuvem.png') }}" alt="">
+      <p class="textContainer text-sm text-center">
+        Arraste e solte seu(s) arquivo(s) aqui <br> ou
+      </p>
+      <span class="textContainer p-2 px-6 rounded border border-[#B3B3B3] cursor-pointer">
+        Adicionar arquivos
+      </span>
+      <input type="file" class="hidden">
+    </label>
+    <p class="textContainer text-sm text-gray-500 mt-1">Tamanho máximo permitido do anexo 5MB</p>
+  </div>
+
+  <!-- Checkbox + reCAPTCHA -->
+  <div class="flex flex-col gap-2">
+    <label class="flex items-start md:items-center gap-2 text-sm cursor-pointer relative">
+      <input type="checkbox" class="peer absolute w-5 h-5 opacity-0" />
+      <div class="w-5 h-5 rounded-full border border-gray-400 flex items-center justify-center bg-white peer-checked:bg-orange-500 transition-colors">
+        <div class="w-2.5 h-2.5 rounded-full bg-white scale-0 peer-checked:scale-100 transition-transform"></div>
+      </div>
+      <span class="textContainer ml-1">
+        Li e concordo com a 
+        <a href="#" class="text-bgButtonPrimary border-b-2 border-bgButtonPrimary font-bold">Política de Privacidade</a> 
+        e autorizo o tratamento dos meus dados.
+      </span>
+    </label>
+
+    <div class="mt-2">
+      <div class="bg-gray-200 border border-gray-300 rounded p-4 text-center">
+        <span class="text-sm text-gray-500">reCAPTCHA aqui</span>
       </div>
     </div>
+  </div>
 
-   
-    <div>
-      <button type="submit" class=" bg-[#F15A29] textContainer hover:bg-orange-500 text-white font-medium py-2 px-4 rounded transition-colors flex justify-center items-center gap-2">
-        <img src="{{'./curriculo-submit.png'}}" alt="" class="h-4">
-        Enviar Currículo
-      </button>
-    </div>
-  </form>
+  <!-- Botão -->
+  <div>
+    <button type="submit" class="bg-[#F15A29] textContainer hover:bg-orange-500 text-white font-medium py-2 px-4 rounded transition-colors flex justify-center items-center gap-2">
+      <img src="{{'./curriculo-submit.png'}}" alt="" class="h-4">
+      Enviar Currículo
+    </button>
+  </div>
+
+</form>
 
   <!-- Coluna 2: Contatos -->
   <div class="flex flex-col space-y-4 mt-5">

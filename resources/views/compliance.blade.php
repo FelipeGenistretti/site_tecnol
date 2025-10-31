@@ -3,14 +3,12 @@
 @section('title','TecShare compliance')
 
 @section('content')
-<div class="">
-              <div class="flex items-center h-[128px] bg-[#F2F2F2]">
+  <div class="flex items-center h-[128px] w-full bg-[#F2F2F2]">
   <h1 class="text-[40px] text-black container-x">Compliance</h1>
     </div>
 
-
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 h-[592px] container-x m-5">
+    
+  <div class="grid grid-cols-1 lg:grid-cols-2  container-x m-8">
         <div class= "p-4 mt-[80px] h-[278px] ">
             <h1 class= "text-[40px] m-3">Transparência e conformidade</h1>
             <p class="text-lg">Na Tecnol, a transparência, a conformidade com a legislação e o compromisso com princípios éticos e melhores experiências de mercado são práticas diárias e fundamentais para o futuro sustentável dos negócios.<br> <br>
@@ -22,16 +20,17 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
             <span>Baixe nossa política de compliance</span>
             </button>
 </div>
-        
-        
-        <div class = "p-4 mt-12">
+
+         <div class = "p-4 mt-12">
             <img class="h-[432px] w-[820px] rounded" src="{{ asset('/quemsomos-1.jpg') }}" alt="">
 
         </div>
     </div>
+      
 
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 h-[700px] container-x bg-[#004A65] text-white p-10">
+
+ <div class="grid grid-cols-1 lg:grid-cols-2 container-x bg-[#004A65] text-white p-10">
 
         
         <div class = "p-4 mt-12">
@@ -64,12 +63,13 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     </div>
 
 
+
             <div class="flex items-center justify-center m-8">
             <h1 class="text-[40px]"> Nossos pilares</h1>
              </div>
 
 
-<div class="grid grid-cols-3 gap-10 container-x mb-12">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container-x mb-12">
 
 
       <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
@@ -88,8 +88,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     </p>
   </div>
 
-
-    <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
+ <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
     <img src="{{ asset('./medalha.png') }}" alt="" class="h-[30px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Análise de perfil e risco.</h2>
     <p class="text-gray-700 text-base flex-1">
@@ -99,15 +98,15 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
   </div>
 </div>
 
-<div class="grid grid-cols-2 gap-10 container-x mb-12">
-    <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col w-[525px] justify-self-end" >
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 container-x mb-12">
+    <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col lg:w-[525px] lg:justify-self-end" >
     <img src="{{ asset('./medalha-star.png') }}" alt="" class="h-[30px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Regras e instrumentos</h2>
     <p class="text-gray-700 text-base flex-1">
         Políticas e procedimentos para <br> mitigar os riscos.
   </div>
 
-   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col w-[525px]">
+   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col lg:w-[525px] ">
     <img src="{{ asset('./wi-fi.png') }}" alt="" class="h-[20px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Monitoramento contínuo</h2>
     <p class="text-gray-700 text-base flex-1">
@@ -118,9 +117,8 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 </div>
 
-
-<div class="grid grid-cols-2 h-[430px]">
-      <div class="bg-[#F2F2F2] text-center flex flex-col items-center justify-center px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="bg-[#F2F2F2] text-center flex flex-col items-center justify-center px-6 p-10">
     <h1 class="text-[52px] font-semibold mb-4">Código de conduta e ética</h1>
     <p class="text-gray-700">
       Para fortalecer a transparência e a equidade entre os nossos colaboradores, fornecedores, clientes e parceiros de negócios, tornamos público o nosso Código de Conduta.
@@ -132,7 +130,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     </button>
   </div>
     
-       <div class="bg-gradient-to-b from-[#004A65] to-[#006C94] text-center flex flex-col items-center justify-center px-6 text-white">
+       <div class="bg-gradient-to-b from-[#004A65] to-[#006C94] text-center flex flex-col items-center justify-center px-6 text-white p-10">
     <h1 class="text-[52px] font-semibold mb-4">Canal de denúncia</h1>
     <p class="">
         Contamos com um Canal de Denúncia sigiloso e imparcial, hospedado fora dos sistemas da TECNOL, administrado com total garantia de confidencialidade.
@@ -146,9 +144,11 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     
 
 
+  
 
 
 
 
-</div>
+
+
 @endsection
