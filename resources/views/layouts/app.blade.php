@@ -25,12 +25,12 @@
                 <!--Coluna 1-->
 
         <div class="mt-3 mb-3 lg:ml-12 text-center">
-            <img src="{{ asset('/logo.png') }}" alt="logo" class="h-10">
+            <img src="{{ asset('/logo.png') }}" alt="logo" class="h-10 mb-4">
             <ul class="">
                 <li class="text-lg">Registro</li>
-                <li class="text-lg">Rápido</li>
-                <li class="text-lg">Fácil &</li>
-                <li class="text-lg">Seguro</li>
+                <li class="text-lg" style="color:#FAC8B8" >Rápido</li>
+                <li class="text-lg" style="color:#FAC8B8">Fácil &</li>
+                <li class="text-lg" style="color:#FAC8B8">Seguro</li>
             </ul>
         </div>
 
@@ -77,9 +77,9 @@
             <h1 class="text-2xl  mt-3 mb-3 " >Certificações</h1>
             <div class="grid lg:grid-cols-2 lg:gap-4 grid-cols-4 gap-2 justify-items-between" >
                 <img src="{{ asset('/ISO.png') }}" alt="" class="mb-3 p-0">
-                <img src="{{ asset('/ISO.png') }}" alt="" class="mb-3 p-0">
+                <img src="{{ asset('/37301.png') }}" alt="" class="mb-3 p-0">
             
-                <img src="{{ asset('/ISO.png') }}" alt="" class="m-0 p-0">
+                <img src="{{ asset('/9001.png') }}" alt="" class="m-0 p-0">
                 <img src="{{ asset('/ISO.png') }}" alt="" class="m-0 p-0">
             </div>
 
@@ -90,7 +90,7 @@
    
 
 
-    <div class="grid lg:grid-cols-2 sm:grid-cols-1 text-white pl-12 pr-12">
+    <div class="grid lg:grid-cols-2 sm:grid-cols-1 text-white pl-12 pr-12 container-x">
        
        
         <div class="flex items-center gap-2 justify-center lg:justify-start mt-5 lg:mt-0">
