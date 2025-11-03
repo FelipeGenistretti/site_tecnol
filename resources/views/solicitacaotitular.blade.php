@@ -4,27 +4,28 @@
 @section('title','TecShare')
 
 @section('content')
-   <!-- Header -->
-<div class="w-full flex items-center h-[128px] bg-gray-200 px-6 lg:px-12">
-  <h1 class="text-2xl sm:text-3xl lg:text-[40px] text-black font-semibold">
-    Solicitação do titular
-  </h1>
-</div>
+
+    <div class="flex items-center py-12  bg-bgSecondary justify-center lg:justify-start h-[]">
+  <h1 class="text-[38px] text-textPrimary container-x">Solicitação do titular</h1>
+    </div>
+
+
 
 <!-- Conteúdo principal -->
 <div class="mt-[60px] flex flex-col items-center px-4 sm:px-8">
   <!-- Título e subtítulo -->
   <div class="text-center max-w-3xl">
-    <h1 class="text-2xl sm:text-3xl lg:text-[52px] font-semibold mb-3">
+    <h1 class="text-2xl sm:text-3xl lg:text-[52px] font-semibold mb-3 text-textPrimary">
       Canal de solicitação do titular
     </h1>
-    <p class="text-gray-700 text-base sm:text-lg">
+    <br>
+    <p class="text-textPrimary text-base sm:text-lg ">
       Preencha todos os campos abaixo para concluir a solicitação
     </p>
   </div>
 
   <!-- Formulário -->
-  <div class="w-full max-w-[1200px] bg-gray-100 rounded-lg p-6 sm:p-8 shadow-md mt-8">
+  <div class="w-full max-w-[1200px] bg-gray-100 rounded-lg p-6 sm:p-8 shadow-md mt-8 mb-10">
     <form class="flex flex-col space-y-6">
       <!-- Seletor duplo -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -85,10 +86,10 @@
       </div>
 
       <!-- Botão -->
-      <div class="flex justify-center">
+      <div class="flex justify-center lg:justify-start">
         <button
           type="submit"
-          class="bg-[#F15A29] hover:bg-orange-500 text-white font-medium py-2 px-6 rounded transition-colors flex items-center gap-2"
+          class="bg-[#F15A29] hover:bg-orange-500 text-white font-medium py-2 px-6 rounded transition-colors flex items-center gap-2 justify-center w-full lg:w-[80px]"
         >
           Enviar
         </button>

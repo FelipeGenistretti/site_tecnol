@@ -4,19 +4,19 @@
 @section('title','TecShare')
 
 @section('content')
-      <div class="flex items-center py-12  bg-bgSecondary">
-  <h1 class="text-4xl text-textPrimary container-x">Quem somos</h1>
+      <div class="flex items-center py-12  bg-bgSecondary justify-center lg:justify-start h-[]">
+  <h1 class="text-[38px] text-textPrimary container-x">Quem somos</h1>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 container-x py-12 gap-4">
         <div class="space-y-4  mt-3 lg:mt-6">
-            <h1 class= "text-4xl text-center lg:text-left text-Primary text-[45px] m-2">Um pouco da nossa história</h1>
-            <p class="textContainer text-lg text-textPrimary   lg:text-left m-2">Hoje a TECNOL possui sede em Nova Lima e conta com uma infraestrutura moderna, com Datacenter certificados, links redundantes e toda estrutura de atendimento (BackOffice, Comercial,<br> Relacionamento Institucional, Jurídico especializado e uma Central de Atendimento). Somos formados por uma equipe com mais de 20 anos de experiência no setor de veículos. Estamos sempre investindo em pessoas e em novas tecnologias, buscando o nosso aperfeiçoamento contínuo para sempre ser a melhor opção em nossa área de atuação.</p>
+            <h1 class= " text-textPrimary text-[38px] text-center lg:text-left text-Primary text-[45px] m-2">Um pouco da nossa história</h1>
+            <p class="textContainer text-[16px]  text-textPrimary   lg:text-left m-2">Hoje a TECNOL possui sede em Nova Lima e conta com uma infraestrutura moderna, com Datacenter certificados, links redundantes e toda estrutura de atendimento (BackOffice, Comercial, Relacionamento Institucional, Jurídico especializado e uma Central de Atendimento). Somos formados por uma equipe com mais de 20 anos de experiência no setor de veículos. Estamos sempre investindo em pessoas e em novas tecnologias, buscando o nosso aperfeiçoamento contínuo para sempre ser a melhor opção em nossa área de atuação.</p>
         </div>
         
         
         <div class = "">
-            <img class="rounded" src="{{ asset('/quemsomos-1.jpg') }}" alt="">
+            <img class="rounded" src="{{ asset('/quem-somos-1.png') }}" alt="">
 
         </div>
     </div>
@@ -26,21 +26,21 @@
 
         
         <div class = "">
-            <img class="rounded" src="{{ asset('/quemsomos-1.jpg') }}" alt="">
+            <img class="rounded mt-[40px]" src="{{ asset('/quem-somos-2.png') }}" alt="" >
 
         </div>
 
-          <div class= "mt-12 space-y-3">
+          <div class= "mt-[40px] space-y-3">
             <h1 class= "text-4xl text-center lg:text-left">Nossa missão e visão</h1>
-            <p class="textContainer text-md">Temos como missão automatizar sistematicamente a transmissão de informações de forma rápida, fácil e segura. Além da busca contínua em ser referência em soluções automatizadas para o mercado financeiro. </p>
+            <p class="textContainer text-md mt-[24px]">Temos como missão automatizar sistematicamente a transmissão de informações de forma rápida, fácil e segura. Além da busca contínua em ser referência em soluções automatizadas para o mercado financeiro. </p>
                 
         </div>
         
     </div>
             <div class="flex items-center justify-center py-10">
-            <h1 class="text-5xl"> Nossos valores</h1>
+            <h1 class="text-5xl mb-[24px]"> Nossos valores</h1>
              </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 container-x">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-[16px] container-x">
   <!-- Card 1 -->
   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
     <img src="{{ asset('./star.png') }}" alt="" class="h-[40px]  w-[40px]">
@@ -98,17 +98,17 @@
 
 <div class="container-x bg-bgPrimary text-white flex flex-col items-center justify-center py-10 mt-20 space-y-5">
   <img src="{{ asset('/seg.png') }}" alt="Ícone" class="">
-  <h1 class="text-4xl font-normal">Política de Sistema de Gestão Integrado - SGI</h1>
+  <h1 class="text-4xl font-normal text-center ">Política de Sistema de Gestão Integrado - SGI</h1>
   <p class="textContainer text-center font-medium text-md">A TECNOL, uma empresa de tecnologia focada no fornecimento de Serviços de Desenvolvimento de Soluções de Software, com sua matriz localizada em Nova Lima/MG e uma filial em São Paulo/SP, operando em âmbito nacional, define sua Política de Gestão Integrada com o compromisso de alcançar</p>
 
     <div  class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="bg-[#F2F2F21A]  rounded border  border-[#F2F2F21A] p-4">
-            <p class="textContainer text-sm">• A Política de Segurança da Informação e Serviços da TECNOL tem como principais metas oferecer um serviço confiável, com<strong> garantia de qualidade e segurança da informação </strong> para a entrega e operação dos serviços contratados, com objetivo de manter, por meios dos requisitos técnicos e legais, de clientes, parceiros a <strong> confidencialidade, integridade e disponibilidade </strong> durante toda a prestação do serviço, monitorando constantemente.</p>
+            <p class="textContainer text-[16px] ">• A Política de Segurança da Informação e Serviços da TECNOL tem como principais metas oferecer um serviço confiável, com<strong> garantia de qualidade e segurança da informação </strong> para a entrega e operação dos serviços contratados, com objetivo de manter, por meios dos requisitos técnicos e legais, de clientes, parceiros a <strong> confidencialidade, integridade e disponibilidade </strong> durante toda a prestação do serviço, monitorando constantemente.</p>
         </div>
 
         <div class="bg-[#F2F2F21A] rounded border  border-[#F2F2F21A] p-4">
             
-            <p class="textContainer text-sm">• A Política de Segurança da Informação e Serviços da TECNOL, assegura a proteção dos seus ativos, pessoas, informação, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio de acordo com as estratégias da empresa, legislação vigente e requisitos contratuais, com acompanhamento constante.</p>
+            <p class="textContainer  text-[16px]">• A Política de Segurança da Informação e Serviços da TECNOL, assegura a proteção dos seus ativos, pessoas, informação, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio de acordo com as estratégias da empresa, legislação vigente e requisitos contratuais, com acompanhamento constante.</p>
         </div>
     </div>
 </div>
@@ -127,7 +127,7 @@
   
 <form class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4">
 
-  <!-- Grid responsiva -->
+  
   <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
     <div class="flex flex-col">
       <label class="textContainer text-sm font-medium mb-1">Nome</label>
