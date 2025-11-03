@@ -5,4 +5,5 @@
     <x-intro-section-privacidade/>
     <x-section-solicitacao-privacidade/>
     <x-section-sites-terceiros/>
+    <x-back-to-top/>
 @endsection

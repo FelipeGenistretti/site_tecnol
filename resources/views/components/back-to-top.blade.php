@@ -1,4 +1,4 @@
-<button id="backToTop" class="fixed bottom-10 right-10 hidden py-5 px-5 bg-[#004A65] text-white rounded-full shadow-lg duration-300 z-50">
+<button id="backToTop" class="fixed bottom-10 right-10 hidden py-6 px-5 bg-[#004A65] text-white rounded-full shadow-lg duration-300 z-50">
     <img src="/backTop.png" alt="">
 </button>
 

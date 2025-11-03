@@ -72,5 +72,5 @@
 
     </div>
 
-
+    <x-back-to-top/>
 @endsection

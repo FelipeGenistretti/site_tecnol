@@ -150,5 +150,70 @@
   </div>
 </div>
 
+<div class="h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center fixed inset-20 z-50" id="modalSuccess">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/iconCheckModal.png" alt="">
+        <p class="text-white">Cadastro realizado com sucesso!</p>
+        <button type="button" class="flex items-center">
+            <img src="/iconCloseModal.png" alt="" id="close">
+        </button>
+    </div>
+</div>
+
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center" id="modalCamposObrigatorios">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/alertModalCamposObrigatorios.png" alt="">
+        <p class="text-black">Preencha os campos obrigatórios</p>
+        <button type="button" class="flex items-center">
+            <img src="/closeModalBlack.png" alt="" id="btnClose">
+        </button>
+    </div>
+</div>
 
 
+
+@if(session('success'))
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("modalSuccess");
+      const btnClose = document.getElementById("close");
+
+      modal.classList.remove("hidden");
+      modal.classList.add("opacity-0", "transition", "duration-500");
+      setTimeout(() => modal.classList.remove("opacity-0"), 10);
+
+      btnClose.addEventListener("click", () => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+      });
+
+      setTimeout(() => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+      }, 3000);
+    });
+  </script>
+@endif
+
+@if($errors->any())
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const modalCamposObrigatorios = document.getElementById("modalCamposObrigatorios");
+        const btnClose = document.getElementById("btnClose");
+
+        modalCamposObrigatorios.classList.remove("hidden");
+        modalCamposObrigatorios.classList.add("opacity-0", "transition", "duration-500");
+        setTimeout(() => modalCamposObrigatorios.classList.remove("opacity-0"), 10);
+
+        btnClose.addEventListener("click", () => {
+            modalCamposObrigatorios.classList.add("opacity-0");
+            setTimeout(() => modalCamposObrigatorios.classList.add("hidden"), 500);
+        });
+
+        setTimeout(() => {
+            modalCamposObrigatorios.classList.add("opacity-0");
+            setTimeout(() => modalCamposObrigatorios.classList.add("hidden"), 500);
+        }, 3000);
+    });
+</script>
+@endif

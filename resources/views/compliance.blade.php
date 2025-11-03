@@ -151,4 +151,5 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 
 </div>
+    <x-back-to-top/>
 @endsection
