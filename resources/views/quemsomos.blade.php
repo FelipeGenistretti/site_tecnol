@@ -247,22 +247,12 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
 
 </div>
 
 
-
+    <x-back-to-top/>
 @endsection
+

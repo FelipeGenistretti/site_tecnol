@@ -1,12 +1,12 @@
-<div class="container-x py-20">
+<div class="container-x py-20" id="">
     <div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
             <!-- Coluna 1: Texto -->
             <div>
                 <div class="space-y-4">
                     <h1 class="text-textSecondary text-4xl">Onde operamos</h1>
-                    <p><span class="text-textSecondary font-bold textContainer">Safe Register Car</span> é amplamente utilizado em território nacional por nossos clientes parceiros.</p>
-                    <p>Hoje estamos em <span class="text-[#666666] font-bold textContainer">16 estados</span> brasileiros:</p>
+                    <p class="textContainer"><span class="text-textSecondary font-bold textContainer">Safe Register Car</span> é amplamente utilizado em território nacional por nossos clientes parceiros.</p>
+                    <p class="textContainer">Hoje estamos em <span class="text-[#666666] font-bold textContainer">16 estados</span> brasileiros:</p>
                     <div class="ml-4">
                         <ul class="list-disc textContainer text-textSecondary">
                             <li>Acre</li>
@@ -27,7 +27,7 @@
                             <li>Tocantins</li>
                         </ul>
                     </div>
-                    <p class="text-textSecondary text-lg">Em processo de credenciamento do estado de <span class="text-[#F15A29] text-lg font-bold textContainer">Distrito Federal, Espirito Santo e Sergipe</span></p>
+                    <p class="text-textSecondary text-lg textContainer">Em processo de credenciamento do estado de <span class="text-[#F15A29] text-lg font-bold textContainer">Distrito Federal, Espirito Santo e Sergipe</span></p>
                 </div>
             </div>
 

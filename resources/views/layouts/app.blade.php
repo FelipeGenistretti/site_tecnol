@@ -167,7 +167,7 @@
 
 
 
-
+    <x-vlibras/>
  @stack('scripts')
 </body>
 </html>

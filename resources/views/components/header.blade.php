@@ -17,7 +17,7 @@
             <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold transition-colors" href="{{ route('safe-register-car') }}">Safe Register Car</a>
             <div class="absolute left-0 top-full mt-2 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">O que é?</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Onde operamos</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors" href="/#ondeOperamos" id="scrollToOndeOperamos">Onde operamos</a>
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold transition-colors">Pré-cadastro</a>
             </div>
           </li>
