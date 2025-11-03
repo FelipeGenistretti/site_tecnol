@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,161 +11,145 @@
     
     <x-header/>
 
-    <!-- Conteudo dinamico pt-[120px]-->
     <main class="pt-[120px] font-ibm">
         @yield('content')
     </main>
 
-    <!-- Footer --->
-    <footer class=" bg-[#004A65]">
+ <footer class="bg-bgPrimary">
+    <div class="container-x">
         
-        <div  class="h-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-white p-12 place-items-center lg:place-items-start ">
-                <!--Coluna 1-->
-
-        <div class="mt-3 mb-3 lg:ml-12 text-center">
-            <img src="{{ asset('/logo.png') }}" alt="logo" class="h-10 mb-4">
-            <ul class="">
-                <li class="text-lg">Registro</li>
-                <li class="text-lg" style="color:#FAC8B8" >Rápido</li>
-                <li class="text-lg" style="color:#FAC8B8">Fácil &</li>
-                <li class="text-lg" style="color:#FAC8B8">Seguro</li>
-            </ul>
-        </div>
-
-          <!--Coluna 2-->
-        <div class="text-center lg:text-left">
-           <h1 class="text-2xl mt-3 mb-3">Mapa do site</h1>
-            <ul>
-                <li class="text-sm mt-1 mb-1" >Pagina inicial</li>
-                <li class="text-sm mt-1 mb-1">Quem somos</li>
-                <li class="text-sm mt-1 mb-1">System Data Analytics</li>
-                <li class="text-sm mt-1 mb-1">Compliance</li>
-                <li class="text-sm mt-1 mb-1">Segurança</li>
-                <li class="text-sm mt-1 mb-1">Onde operamos</li>
-                <li class="text-sm mt-1 mb-1">Privacidade</li>
-                <li class="text-sm mt-1 mb-1">Qualidade</li>
-                <li class="text-sm mt-1 mb-1">Canal de denúncia</li>
-                <li class="text-sm mt-1 mb-1">Contato</li>
-            </ul>
-        </div>
-
-          <!--Coluna 3-->
-        <div class="text-center lg:text-left">
-            <h1 class="text-2xl mt-3 mb-3 ">Endereços</h1>
-            <h2 class="text-sm mt-1 mb-1">
-               <h3 class="font-semibold">Matriz</h3>
-                Rua Senador Milton Campos,35, 7º andar
-                <br>
-                Vila da Serra, Nova Lima - MG
-                <br>
-                CEP 34006-050                
-            </h2>
-            <h2 class="text-sm mt-1 mb-1">
-            <h3 class="mt-1 mb-1">Filial</h3>
-            Av. Dr Chucri Zaidan, 1240, 16º andar
-            <br>
-            Chácara Santo Antônio, São Paulo - SP
-            <br>
-            CEP 04711-130
-            </h2>
-        </div>
-
-          <!--Coluna 4-->
-        <div class="text-center lg:text-left">
-            <h1 class="text-2xl  mt-3 mb-3 " >Certificações</h1>
-            <div class="grid lg:grid-cols-2 lg:gap-4 grid-cols-2 gap-2 justify-items-between" >
-                <img src="{{ asset('/ISO.png') }}" alt="" class="mb-3 p-0">
-                <img src="{{ asset('/37301.png') }}" alt="" class="mb-3 p-0">
-            
-                <img src="{{ asset('/9001.png') }}" alt="" class="m-0 p-0">
-                <img src="{{ asset('/ISO.png') }}" alt="" class="m-0 p-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-white py-12 place-items-center lg:place-items-start">
+            <!-- Coluna 1 -->
+            <div class="mt-3 mb-3 text-center">
+                <img src="{{ asset('/logo.png') }}" alt="logo" class="h-10 mb-4">
+                <ul>
+                    <li class="text-lg">Registro</li>
+                    <li class="text-lg" style="color:#FAC8B8">Rápido</li>
+                    <li class="text-lg" style="color:#FAC8B8">Fácil &</li>
+                    <li class="text-lg" style="color:#FAC8B8">Seguro</li>
+                </ul>
             </div>
 
+            <!-- Coluna 2 -->
+            <div class="text-center lg:text-left">
+                <h1 class="text-2xl mt-3 mb-3">Mapa do site</h1>
+                <ul>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Página inicial</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Quem somos</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Trabalhe conosco</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Safe Register Car</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Onde operamos</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Pré-cadastro</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Compliance</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Canal de denúncia</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Solicitação de titular</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Segurança</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Privacidade</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Qualidade</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Contato</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3 -->
+            <div class="text-center lg:text-left">
+                <h1 class="text-2xl mt-3 mb-3">Endereços</h1>
+
+                <h3 class="font-semibold">Matriz</h3>
+                <p>
+                    Rua Senador Milton Campos, 35, 7º andar<br>
+                    Vila da Serra, Nova Lima - MG<br>
+                    CEP 34006-050
+                </p>
+
+                <h3 class="text-lg mt-4 mb-1 font-bold">Filial</h3>
+                <p>
+                    Av. Dr Chucri Zaidan, 1240, 16º andar<br>
+                    Chácara Santo Antônio, São Paulo - SP<br>
+                    CEP 04711-130
+                </p>
+
+                <h3 class="text-lg mt-4 mb-1 font-bold">Contatos</h3>
+                <p>(31) 3324-6460</p>
+                <p>0800 590 4004</p>
+            </div>
+
+            <!-- Coluna 4 -->
+            <div class="text-center lg:text-left">
+                <h1 class="text-2xl mt-3 mb-3">Certificações</h1>
+                <div class="grid lg:grid-cols-2 lg:gap-4 grid-cols-2 gap-2">
+                    <img src="{{ asset('/ISO.png') }}" alt="" class="mb-3 p-0">
+                    <img src="{{ asset('/37301.png') }}" alt="" class="mb-3 p-0">
+                    <img src="{{ asset('/9001.png') }}" alt="" class="m-0 p-0">
+                    <img src="{{ asset('/ISO.png') }}" alt="" class="m-0 p-0">
+                </div>
+            </div>
         </div>
-</div>
 
-<hr class="border-t border-blue-400 ">  
-   
+        <hr class="border-t border-blue-400">  
 
-
-    <div class="grid lg:grid-cols-2 sm:grid-cols-1 text-white pl-12 pr-12 container-x">
-       
-       
-        <div class="flex items-center gap-2 justify-center lg:justify-start mt-5 lg:mt-0">
-            <p class="text-sm">@ 2025 Tecnol. Todos os direitos reservados</p>
-        </div>
-        
-         <div class="flex items-center justify-center lg:justify-end gap-2 m-10 ">
-        <h1>Siga-nos : </h1>
-        <a href="#" class="hover:text-blue-400">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
-        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-        </svg>
-        </a>    
+        <!-- Linha final -->
+        <div class="grid lg:grid-cols-2 sm:grid-cols-1 text-white py-6">
+            <div class="flex items-center gap-2 justify-center lg:justify-start mt-5 lg:mt-0">
+                <p class="text-sm">@ 2025 Tecnol. Todos os direitos reservados</p>
+            </div>
             
-        <a href="#" class="hover:text-pink-500">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
-        <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3zm8 1a1 1 0 110 2 1 1 0 010-2zm-5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
-        </svg>
-        </a>
+            <div class="flex items-center justify-center lg:justify-end gap-2 m-10">
+                <h1>Siga-nos :</h1>
 
-        <a href="#" class="hover:text-blue-600">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
-        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.38v4.59h-3v-9h2.88v1.23h.04c.4-.76 1.37-1.56 2.82-1.56 3.02 0 3.58 1.99 3.58 4.58v5.75z"/>
-        </svg>
-        </a>
+                <a href="#" class="hover:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                    </svg>
+                </a>    
+                    
+                <a href="#" class="hover:text-pink-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
+                        <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3zm8 1a1 1 0 110 2 1 1 0 010-2zm-5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+                    </svg>
+                </a>
 
+                <a href="#" class="hover:text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
+                        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.38v4.59h-3v-9h2.88v1.23h.04c.4-.76 1.37-1.56 2.82-1.56 3.02 0 3.58 1.99 3.58 4.58v5.75z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
-
-
     </div>
-
-    
-        </div>    
+</footer>
 
 
+    <script>
+        // elementos
+        const LogoNavBar = document.getElementById('logo-navbar')
+        const MenuElement = document.getElementById('mobile-menu')
+        const backbutton = document.getElementById('back-button')
+        const hamburguer = document.getElementById('menu-btn')
+        const lupamobile = document.getElementById('lupa-mobile')
 
-    </footer>
+        // estado inicial
+        MenuElement.classList.add('hidden')
+        backbutton.classList.add('hidden')
 
+        function OpenMobileMenu() {
+            MenuElement.classList.remove('hidden')
+            hamburguer.classList.add('hidden')
+            backbutton.classList.remove('hidden')
+            LogoNavBar.classList.add('hidden')
+            lupamobile.classList.add('hidden')
+        }
 
-<script>
-    // elementos
-  const LogoNavBar = document.getElementById('logo-navbar')
-  const MenuElement = document.getElementById('mobile-menu')
-  const backbutton = document.getElementById('back-button')
-  const hamburguer = document.getElementById('menu-btn')
-  const lupamobile = document.getElementById('lupa-mobile')
-
-  // estado inicial
-  MenuElement.classList.add('hidden')
-  backbutton.classList.add('hidden')
-
-  function OpenMobileMenu() {
-    // abrir o menu mobile
-    MenuElement.classList.remove('hidden')      // mostra o menu
-    hamburguer.classList.add('hidden')          // esconde o hamburguer
-    backbutton.classList.remove('hidden')       // mostra a seta
-    LogoNavBar.classList.add('hidden')          // esconde a logo
-    lupamobile.classList.add('hidden')          //esconde a lupa mobile
-  }
-
-  // função pra voltar
-  backbutton.addEventListener('click', () => {
-    MenuElement.classList.add('hidden')         // esconde o menu
-    hamburguer.classList.remove('hidden')       // mostra o hamburguer
-    backbutton.classList.add('hidden')          // esconde a seta 
-    LogoNavBar.classList.remove('hidden')       // mostra a logo
-    lupamobile.classList.remove('hidden')       //Mostra a lupa mobile
-
-  })
-
-</script>
-
-
-
-
+        // função pra voltar
+        backbutton.addEventListener('click', () => {
+            MenuElement.classList.add('hidden')
+            hamburguer.classList.remove('hidden')
+            backbutton.classList.add('hidden')
+            LogoNavBar.classList.remove('hidden')
+            lupamobile.classList.remove('hidden')
+        })
+    </script>
 
     <x-vlibras/>
- @stack('scripts')
+    @stack('scripts')
 </body>
 </html>

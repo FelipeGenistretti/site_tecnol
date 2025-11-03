@@ -57,7 +57,7 @@
 
   <div class="hero-signup bg-bgPrimary py-12 md:py-16 flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg mt-12 relative z-10">
     <div class="container-x flex flex-col gap-2 md:gap-3 text-center md:text-left">
-      <p class="text-white text-3xl font-medium max-sm:text-2xl textContainer">
+      <p class="text-white text-3xl font-medium max-sm:text-2xl ">
         Faça seu cadastro sem custo de adesão e mensalidade
       </p>
       <p class="text-white text-lg sm:text textContainer max-sm:text-sm">

@@ -1,4 +1,4 @@
-<div class="container-2x py-12" id="faleConosco">
+<div class="container-x py-12" id="faleConosco">
   <div class="flex flex-col justify-center items-center gap-2">
     <h1 class="text-4xl">Fale conosco</h1>
     <p class="text-md text-gray-500 font-semibold max-sm:text-center max-sm:text-lg textContainer">
@@ -7,7 +7,7 @@
   </div>
 
   <div class="pt-5">
-    <div class="grid grid-cols-1 md:grid-cols-[70%_30%] gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-[60%_40%] gap-6">
       
       <!-- FORMULÁRIO (70%) -->
       <div class="bg-gray-100/30 rounded-md shadow-md p-6 textContainer">
@@ -110,7 +110,7 @@
 
       <!-- BLOCO DE INFORMAÇÕES (30%) -->
       <div class="flex flex-col gap-4 textContainer">
-        <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
+        <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300 lg:w-full">
 
             <img src="/email.png" alt="" class="" />
 
@@ -128,7 +128,7 @@
           </div>
         </div>
 
-        <div class="bg-gray-100/30 rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
+        <div class="bg-gray-100/30 rounded-md shadow-md p-5 lg:w-full flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
             <img src="/email.png" alt="" class="" />
           <div>
             <p class="opacity-65 mb-2">Encarregado de proteção de dados</p>

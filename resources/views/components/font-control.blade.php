@@ -1,10 +1,10 @@
 <div class="flex items-center gap-2">
   <button type="button" id="aPlus" class="flex items-center justify-center">
-    <img src="/aPlus.png" alt="Aumentar fonte" class="h-[40px] w-[40px]">
+    <img src="/aPlus.png" alt="Aumentar fonte" class="h-[24px] w-[24px]">
   </button>
 
   <button type="button" id="aMinus" class="flex items-center justify-center">
-    <img src="/A-.png" alt="Diminuir fonte" class="h-[33px] w-[33px]">
+    <img src="/A-.png" alt="Diminuir fonte" class="h-[24px] w-[24px]">
   </button>
 </div>
 
