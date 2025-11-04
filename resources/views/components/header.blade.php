@@ -73,100 +73,64 @@
   </header>
 
   <!-- MENU MOBILE -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-[#F8F8FF] shadow-md fixed top-0 left-0 w-full z-50 overflow-y-auto">
-    <div class="flex items-center justify-between px-4 py-4 border-b">
-      <button id="close-menu" class="text-gray-800">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white w-full fixed top-0 left-0 shadow-lg z-50">
+      <div class="pt-4 flex justify-start">
+        <button id="back" type="button" class="flex items-center gap-2 px-4 py-3 rounded-md">
+          <img src="/voltar.png" alt="Voltar" class="w-5 h-5"/>
+        </button>
+      </div>
+      <div class="relative p-2">
+        <input type="text" name="search" id="searchInput" placeholder="Pesquisar" class="w-full border border-black/15 p-3 pr-12 rounded-md"/>
+        <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center">
+          <img src="/search.png" alt="Pesquisar" class="w-5 h-5"/>
+        </button>
+        <div id="searchResults" class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md"></div>
+      </div>
 
-      <div class="flex items-center bg-white w-full ml-2">
-        <div class="relative w-full">
-          <input type="text" placeholder="Pesquisar" class="w-full border rounded-md py-2 pl-3 pr-10 text-sm focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute right-3 top-2.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </div>
+      <div class="bg-[#F8F8FF]">
+        <ul class="flex flex-col gap-5 p-4 uppercase">
+          <li><a href="" class="block hover:text-orange-600">Início</a></li>
+          <li><a href="" class="block hover:text-orange-600">Quem somos</a></li>
+          <li class="relative">
+            <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
+              Safe Register Car
+              <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
+              <li><a href="#" class="block hover:text-orange-600">O que é?</a></li>
+              <li><a href="#" class="block hover:text-orange-600">Pré-cadastro</a></li>
+            </ul>
+          </li>
+          <li><a href="" class="block hover:text-orange-600">Compliance</a></li>
+          <li><a href="" class="block hover:text-orange-600">Segurança</a></li>
+          <li><a href="" class="block hover:text-orange-600">Onde operamos</a></li>
+          <li><a href="" class="block hover:text-orange-600">Contato</a></li>
+          <li>
+            <button type="button" class="py-3 w-[70%] flex items-center justify-center gap-2 rounded-md bg-orange-600 text-white uppercase hover:bg-orange-500 transition-colors duration-300">
+              <img src="/locked.png" class="h-[20px] w-[20px]" alt="imagem de um cadeado">
+              Acesso Safe Register Car
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
-
-    <ul class="flex flex-col gap-1 p-6 text-textSecondary font-medium uppercase text-[13px]">
-      <li><a href="{{ route('home') }}" class="block py-2 hover:text-textPrimary">Início</a></li>
-      <li><a href="{{ route('quem-somos') }}" class="block py-2 hover:text-textPrimary">Quem somos</a></li>
-
-      <li>
-        <button class="w-full uppercase flex justify-between items-center py-2 hover:text-textPrimary submenu-toggle">
-          Safe Register Car
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">O que é?</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Onde operamos</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Pré-cadastro</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <button class="uppercase w-full flex justify-between items-center py-2 hover:text-textPrimary submenu-toggle">
-          Compliance
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
-          <li><a href="{{ route('compliance') }}" class="py-1 hover:text-textPrimary uppercase">Compliance</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Canal de denúncia</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Solicitação do titular</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <button class="w-full flex justify-between items-center py-2 hover:text-textPrimary submenu-toggle uppercase">
-          Segurança
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
-          <li><a href="#" class="py-1 hover:text-textPrimary">Gestão de segurança</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary">Privacidade</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary">Qualidade</a></li>
-        </ul>
-      </li>
-
-      <li><a href="/#faleConosco" class="block py-2 hover:text-textPrimary" id="scrollToFaleConoscoMobile">Contato</a></li>
-    </ul>
-
-    <div class="px-6 mb-8">
-      <button class="flex items-center justify-center gap-2 p-3 rounded-md bg-bgButtonPrimary text-white uppercase text-[12px] hover:bg-orange-500 transition-colors duration-300">
-        <img src="/locked.png" class="h-[18px] w-[18px]" alt="Cadeado">
-        Acesso Safe Register Car
-      </button>
-    </div>
+  </header>
+  <div class="relative p-4 w-[40%]">
+    <input type="text" placeholder="Pesquisar" class="">
   </div>
 </div>
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('menu-btn');
-    const closeBtn = document.getElementById('close-menu');
+    const menuBtn = document.getElementById('menu-btn');
+    const backBtn = document.getElementById('back');
     const menu = document.getElementById('mobile-menu');
     const header = document.getElementById('main-header');
 
+    // Atualiza aparência do header conforme rolagem
     function updateHeaderState() {
       if (!header) return;
-      const isMenuOpen = !menu.classList.contains('hidden');
-      if (isMenuOpen) {
-        header.classList.add('hidden');
-        header.classList.remove('header-fixed');
-        return;
-      } else {
-        header.classList.remove('hidden', 'header-hidden-temp');
-      }
-
       if (window.scrollY > 300) {
         header.classList.add('header-fixed');
       } else {
@@ -174,26 +138,31 @@
       }
     }
 
-    btn.addEventListener('click', () => {
+    // Abre o menu mobile
+    menuBtn.addEventListener('click', () => {
       menu.classList.remove('hidden');
-      header.classList.add('hidden');
+      header.classList.add('invisible'); // esconde visualmente mas mantém o espaço
     });
 
-    closeBtn.addEventListener('click', () => {
+    // Fecha o menu mobile (botão "voltar")
+    backBtn.addEventListener('click', () => {
       menu.classList.add('hidden');
+      header.classList.remove('invisible');
       updateHeaderState();
     });
 
-    const toggles = document.querySelectorAll('.submenu-toggle');
-    toggles.forEach(btnToggle => {
-      btnToggle.addEventListener('click', () => {
-        const submenu = btnToggle.nextElementSibling;
+    // Submenus (mobile)
+    const toggles = document.querySelectorAll('.toggle-submenu');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const submenu = toggle.nextElementSibling;
         submenu.classList.toggle('hidden');
-        const icon = btnToggle.querySelector('svg');
+        const icon = toggle.querySelector('svg');
         if (icon) icon.classList.toggle('rotate-180');
       });
     });
 
+    // Fechar menu ao clicar em "Contato" (mobile)
     const linkContatoMobile = document.getElementById('scrollToFaleConoscoMobile');
     const targetContato = document.getElementById('faleConosco');
     if (linkContatoMobile && targetContato) {
@@ -201,10 +170,11 @@
         e.preventDefault();
         targetContato.scrollIntoView({ behavior: 'smooth' });
         menu.classList.add('hidden');
-        updateHeaderState();
+        header.classList.remove('invisible');
       });
     }
 
+    // Listener de rolagem
     window.addEventListener('scroll', updateHeaderState, { passive: true });
     updateHeaderState();
   });
