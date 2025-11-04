@@ -93,47 +93,65 @@
     </div>
   </header>
 
-  <!-- BARRA DE PESQUISA (MODAL) -->
-  <div id="searchModal" class="hidden fixed inset-0 bg-black/40 z-[999] flex justify-center items-start pt-[120px] transition-all duration-300">
-    <div class="relative w-[40%] bg-white shadow-lg rounded-md p-4 flex items-center gap-3">
-      <input 
-        type="text" 
-        placeholder="Pesquisar..." 
-        class="w-full border border-gray-300 rounded-md py-2 px-4 text-sm focus:outline-none focus:border-[#F15A29] transition-colors"
-      >
-      <button id="closeSearch" class="text-gray-600 hover:text-[#F15A29] transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
   <!-- MENU MOBILE -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-[#F8F8FF] shadow-md fixed top-0 left-0 w-full z-50 overflow-y-auto">
-    <!-- conteúdo do menu mobile -->
-    <!-- (não alterado, permanece igual ao seu original) -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white w-full fixed top-0 left-0 shadow-lg z-50">
+      <div class="pt-4 flex justify-start">
+        <button id="back" type="button" class="flex items-center gap-2 px-4 py-3 rounded-md">
+          <img src="/voltar.png" alt="Voltar" class="w-5 h-5"/>
+        </button>
+      </div>
+      <div class="relative p-2">
+        <input type="text" name="search" id="searchInput" placeholder="Pesquisar" class="w-full border border-black/15 p-3 pr-12 rounded-md"/>
+        <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center">
+          <img src="/search.png" alt="Pesquisar" class="w-5 h-5"/>
+        </button>
+        <div id="searchResults" class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md"></div>
+      </div>
+
+      <div class="bg-[#F8F8FF]">
+        <ul class="flex flex-col gap-5 p-4 uppercase">
+          <li><a href="" class="block hover:text-orange-600">Início</a></li>
+          <li><a href="" class="block hover:text-orange-600">Quem somos</a></li>
+          <li class="relative">
+            <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
+              Safe Register Car
+              <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
+              <li><a href="#" class="block hover:text-orange-600">O que é?</a></li>
+              <li><a href="#" class="block hover:text-orange-600">Pré-cadastro</a></li>
+            </ul>
+          </li>
+          <li><a href="" class="block hover:text-orange-600">Compliance</a></li>
+          <li><a href="" class="block hover:text-orange-600">Segurança</a></li>
+          <li><a href="" class="block hover:text-orange-600">Onde operamos</a></li>
+          <li><a href="" class="block hover:text-orange-600">Contato</a></li>
+          <li>
+            <button type="button" class="py-3 w-[70%] flex items-center justify-center gap-2 rounded-md bg-orange-600 text-white uppercase hover:bg-orange-500 transition-colors duration-300">
+              <img src="/locked.png" class="h-[20px] w-[20px]" alt="imagem de um cadeado">
+              Acesso Safe Register Car
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="relative p-4 w-[40%]">
+    <input type="text" placeholder="Pesquisar" class="">
   </div>
 </div>
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('menu-btn');
-    const closeBtn = document.getElementById('close-menu');
+    const menuBtn = document.getElementById('menu-btn');
+    const backBtn = document.getElementById('back');
     const menu = document.getElementById('mobile-menu');
     const header = document.getElementById('main-header');
 
+    // Atualiza aparência do header conforme rolagem
     function updateHeaderState() {
       if (!header) return;
-      const isMenuOpen = !menu.classList.contains('hidden');
-      if (isMenuOpen) {
-        header.classList.add('hidden');
-        header.classList.remove('header-fixed');
-        return;
-      } else {
-        header.classList.remove('hidden', 'header-hidden-temp');
-      }
-
       if (window.scrollY > 300) {
         header.classList.add('header-fixed');
       } else {
@@ -141,26 +159,31 @@
       }
     }
 
-    btn?.addEventListener('click', () => {
+    // Abre o menu mobile
+    menuBtn.addEventListener('click', () => {
       menu.classList.remove('hidden');
-      header.classList.add('hidden');
+      header.classList.add('invisible'); // esconde visualmente mas mantém o espaço
     });
 
-    closeBtn?.addEventListener('click', () => {
+    // Fecha o menu mobile (botão "voltar")
+    backBtn.addEventListener('click', () => {
       menu.classList.add('hidden');
+      header.classList.remove('invisible');
       updateHeaderState();
     });
 
-    const toggles = document.querySelectorAll('.submenu-toggle');
-    toggles.forEach(btnToggle => {
-      btnToggle.addEventListener('click', () => {
-        const submenu = btnToggle.nextElementSibling;
+    // Submenus (mobile)
+    const toggles = document.querySelectorAll('.toggle-submenu');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const submenu = toggle.nextElementSibling;
         submenu.classList.toggle('hidden');
-        const icon = btnToggle.querySelector('svg');
+        const icon = toggle.querySelector('svg');
         if (icon) icon.classList.toggle('rotate-180');
       });
     });
 
+    // Fechar menu ao clicar em "Contato" (mobile)
     const linkContatoMobile = document.getElementById('scrollToFaleConoscoMobile');
     const targetContato = document.getElementById('faleConosco');
     if (linkContatoMobile && targetContato) {
@@ -168,10 +191,11 @@
         e.preventDefault();
         targetContato.scrollIntoView({ behavior: 'smooth' });
         menu.classList.add('hidden');
-        updateHeaderState();
+        header.classList.remove('invisible');
       });
     }
 
+    // Listener de rolagem
     window.addEventListener('scroll', updateHeaderState, { passive: true });
     updateHeaderState();
   });
