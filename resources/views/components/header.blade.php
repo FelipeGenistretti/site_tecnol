@@ -7,44 +7,84 @@
       </div>
 
       <!-- MENU DESKTOP -->
-      <nav class="hidden lg:flex items-center gap-4 uppercase text-md h-full">
-        <ul class="flex items-center gap-6 text-textSecondary font-medium text-[12px] h-full">
-          <li class="hover:text-textPrimary hover:font-bold flex items-center h-full"><a href="{{ route('home') }}">Início</a></li>
-          <li class="hover:text-textPrimary hover:font-bold flex items-center h-full"><a href="{{ route('quem-somos') }}">Quem somos</a></li>
+      <nav class="hidden lg:flex items-center gap-4 uppercase text-md h-full relative">
+        <ul class="flex items-center gap-6 font-medium text-[12px] h-full">
+
+          <li class="flex items-center h-full">
+            <a href="{{ route('home') }}" 
+               class="nav-link {{ Route::is('home') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+              Início
+            </a>
+          </li>
+
+          <li class="flex items-center h-full">
+            <a href="{{ route('quem-somos') }}" 
+               class="nav-link {{ Route::is('quem-somos') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+              Quem somos
+            </a>
+          </li>
 
           <li class="relative group flex items-center h-full">
-            <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold transition-colors" href="{{ route('safe-register-car') }}">Safe Register Car</a>
-            <div class="absolute left-0 top-full mt-1 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="{{ route('safe-register-car') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">O que é?</a>
-              <a href="{{ route('safe-register-car') }}#ondeoperamos" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold" id="scrollToOndeOperamos">Onde operamos</a>
-              <a href="{{ route('pre-registro') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Pré-cadastro</a>
+            <a href="{{ route('safe-register-car') }}" 
+               class="nav-link flex items-center gap-1 transition-colors {{ Route::is('safe-register-car') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+              Safe Register Car
+            </a>
+            <div class="absolute left-0 top-[60%] w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
+              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">O que é?</a>
+              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold" id="scrollToOndeOperamos">Onde operamos</a>
+              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Pré-cadastro</a>
             </div>
           </li>
 
           <li class="relative group flex items-center h-full">
-            <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold" href="{{ route('compliance') }}">Compliance</a>
-            <div class="absolute left-0 top-full mt-1 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="{{ route('compliance') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Compliance</a>
-              <a href="{{ route('canal-denuncia') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Canal de denúncia</a>
-              <a href="{{ route('solicitacao-titular') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Solicitação do titular</a>
+            <a href="{{ route('compliance') }}" 
+               class="nav-link flex items-center gap-1 {{ Route::is('compliance') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+              Compliance
+            </a>
+            <div class="absolute left-0 top-[60%] w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
+              <a href="{{ route('compliance') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Compliance</a>
+              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Canal de denúncia</a>
+              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Solicitação do titular</a>
             </div>
           </li>
 
           <li class="relative group flex items-center h-full">
-            <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold" href="{{ route('seguranca') }}">Segurança</a>
-            <div class="absolute left-0 top-full mt-1 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="{{ route('seguranca') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Gestão de segurança</a>
-              <a href="{{ route('privacidade') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Privacidade</a>
-              <a href="{{ route('qualidade') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Qualidade</a>
+            <a href="{{ route('seguranca') }}" 
+               class="nav-link flex items-center gap-1 {{ Route::is('seguranca') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+              Segurança
+            </a>
+            <div class="absolute left-0 top-[60%] w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
+              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Gestão de segurança</a>
+              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Privacidade</a>
+              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Qualidade</a>
             </div>
           </li>
 
-          <li class="hover:text-textPrimary hover:font-bold flex items-center h-full"><a href="/#faleConosco" id="scrollToFaleConosco">Contato</a></li>
+          <li class="flex items-center h-full">
+            <a href="/#faleConosco" id="scrollToFaleConosco"
+               class="nav-link text-textSecondary hover:text-textPrimary hover:font-bold">
+              Contato
+            </a>
+          </li>
         </ul>
 
-        <button type="button">
-          <img src="/search.png" class="h-[20px] w-[20px]" alt="Buscar">
-        </button>
+        <div class="relative">
+          <button type="button" class="nav-link focus:outline-none" id="searchButtonDesktop">
+            <img src="/search.png" class="h-[20px] w-[20px]" alt="Buscar">
+          </button>
+
+          <div 
+            id="searchBarDesktop"
+            class="hidden absolute top-full right-0 mt-2 w-[320px] bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-[9999]">
+            <div class="flex items-center gap-2 border border-gray-300 rounded-md px-3 py-2">
+              <input 
+                type="text" 
+                placeholder="Pesquisar..." 
+                class="w-full focus:outline-none text-sm text-gray-700" />
+              <img src="/search.png" alt="Buscar" class="w-4 h-4 opacity-70">
+            </div>
+          </div>
+        </div>
 
         <x-font-control/>
 
@@ -56,7 +96,7 @@
 
       <!-- BOTÃO HAMBURGUER MOBILE -->
       <div class="lg:hidden flex items-center">
-        <button id="menu-btn" class="text-black focus:outline-none">
+        <button id="menu-btn" class="nav-link text-black focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -66,133 +106,152 @@
   </header>
 
   <!-- MENU MOBILE -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-[#F8F8FF] shadow-md fixed top-0 left-0 w-full z-50 overflow-y-auto">
-    <div class="flex items-center justify-between px-4 py-4 border-b">
-      <button id="close-menu" class="text-gray-800">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
+  <div id="mobile-menu" class="hidden lg:hidden bg-white w-full fixed top-0 left-0 shadow-lg z-50">
+    <div class="pt-4 flex justify-start">
+      <button id="back" type="button" class="flex items-center gap-2 px-4 py-3 rounded-md">
+        <img src="/voltar.png" alt="Voltar" class="w-5 h-5"/>
       </button>
-
-      <div class="flex items-center bg-white w-full ml-2">
-        <div class="relative w-full">
-          <input type="text" placeholder="Pesquisar" class="w-full border rounded-md py-2 pl-3 pr-10 text-sm focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute right-3 top-2.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </div>
-      </div>
+    </div>
+    <div class="relative p-2">
+      <input type="text" name="search" id="searchInput" placeholder="Pesquisar" class="w-full border border-black/15 p-3 pr-12 rounded-md"/>
+      <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center">
+        <img src="/search.png" alt="Pesquisar" class="w-5 h-5"/>
+      </button>
+      <div id="searchResults" class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md"></div>
     </div>
 
-    <ul class="flex flex-col gap-1 p-6 text-textSecondary font-medium uppercase text-[13px]">
-      <li><a href="{{ route('home') }}" class="block py-2 hover:text-textPrimary">Início</a></li>
-      <li><a href="{{ route('quem-somos') }}" class="block py-2 hover:text-textPrimary">Quem somos</a></li>
+    <div class="bg-[#F8F8FF]">
+      <ul class="flex flex-col gap-5 p-4 uppercase">
+        <li><a href="" class="block hover:text-orange-600">Início</a></li>
+        <li><a href="" class="block hover:text-orange-600">Quem somos</a></li>
+        <li class="relative">
+          <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
+            Safe Register Car
+            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
+            <li><a href="#" class="block hover:text-orange-600">O que é?</a></li>
+            <li><a href="#" class="block hover:text-orange-600">Pré-cadastro</a></li>
+          </ul>
+        </li>
+        <li><a href="" class="block hover:text-orange-600">Compliance</a></li>
+        <li><a href="" class="block hover:text-orange-600">Segurança</a></li>
+        <li><a href="" class="block hover:text-orange-600">Onde operamos</a></li>
+        <li><a href="" class="block hover:text-orange-600">Contato</a></li>
 
-      <li>
-        <button class="w-full uppercase flex justify-between items-center py-2 hover:text-textPrimary submenu-toggle">
-          Safe Register Car
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">O que é?</a></li>
-          <li><a href="{{route('safe-register-car')}}/#ondeoperamos" class="py-1 hover:text-textPrimary uppercase" id="scrollToondeoperamos">Onde operamos</a></li>
-          <li><a href="{{ route('pre-registro') }}" class="py-1 hover:text-textPrimary uppercase">Pré-cadastro</a></li>
-        </ul>
-      </li>
+        <li>
+          <div class="relative max-md:hidden">
+            <button id="searchButtonMobile" type="button" class="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 transition">
+              <img src="/search.png" class="h-[20px] w-[20px]" alt="Buscar">
+            </button>
 
-      <li>
-        <button class="uppercase w-full flex justify-between items-center py-2 hover:text-textPrimary submenu-toggle">
-          Compliance
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
-          <li><a href="{{ route('compliance') }}" class="py-1 hover:text-textPrimary uppercase">Compliance</a></li>
-          <li><a href="{{ route('canal-denuncia') }}" class="py-1 hover:text-textPrimary uppercase">Canal de denúncia</a></li>
-          <li><a href="{{ route('solicitacao-titular') }}" class="py-1 hover:text-textPrimary uppercase">Solicitação do titular</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <button class="w-full flex justify-between items-center py-2 hover:text-textPrimary submenu-toggle uppercase">
-          Segurança
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
-          <li><a href="{{ route('seguranca') }}" class="py-1 hover:text-textPrimary">Gestão de segurança</a></li>
-          <li><a href="{{ route('privacidade') }}" class="py-1 hover:text-textPrimary">Privacidade</a></li>
-          <li><a href="{{ route('qualidade') }}" class="py-1 hover:text-textPrimary">Qualidade</a></li>
-        </ul>
-      </li>
-
-      <li><a href="/#faleConosco" class="block py-2 hover:text-textPrimary" id="scrollToFaleConoscoMobile">Contato</a></li>
-    </ul>
-
-    <div class="px-6 mb-8">
-      <button class=" flex items-center justify-center gap-2 p-3 rounded-md bg-bgButtonPrimary text-white uppercase text-[12px] hover:bg-orange-500 transition-colors duration-300">
-        <img src="/locked.png" class="h-[18px] w-[18px]" alt="Cadeado">
-        Acesso Safe Register Car
-      </button>
+            <div id="searchBarMobile" class="hidden absolute top-full right-0 mt-2 w-[300px] bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-[9999]">
+              <div class="flex items-center gap-2 border border-gray-300 rounded-md px-3 py-2">
+                <input type="text" placeholder="Pesquisar..." class="w-full focus:outline-none text-sm text-gray-700" />
+                <img src="/search.png" alt="Buscar" class="w-4 h-4 opacity-70">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 
 <script>
-  const btn = document.getElementById('menu-btn');
-  const closeBtn = document.getElementById('close-menu');
-  const menu = document.getElementById('mobile-menu');
-  const header = document.getElementById('main-header');
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const backBtn = document.getElementById('back');
+    const menu = document.getElementById('mobile-menu');
+    const header = document.getElementById('main-header');
 
-  btn.addEventListener('click', () => {
-    menu.classList.remove('hidden');
-    header.classList.add('hidden');
-  });
+    function updateHeaderState() {
+      if (!header) return;
+      if (window.scrollY > 300) {
+        header.classList.add('header-fixed');
+      } else {
+        header.classList.remove('header-fixed');
+      }
+    }
 
-  closeBtn.addEventListener('click', () => {
-    menu.classList.add('hidden');
-    header.classList.remove('hidden');
-  });
-
-  // Submenus expansíveis mobile
-  const toggles = document.querySelectorAll('.submenu-toggle');
-  toggles.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const submenu = btn.nextElementSibling;
-      submenu.classList.toggle('hidden');
-      const icon = btn.querySelector('svg');
-      icon.classList.toggle('rotate-180');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.remove('hidden');
+      header.classList.add('invisible');
     });
+
+    backBtn.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      header.classList.remove('invisible');
+      updateHeaderState();
+    });
+
+    const toggles = document.querySelectorAll('.toggle-submenu');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const submenu = toggle.nextElementSibling;
+        submenu.classList.toggle('hidden');
+        const icon = toggle.querySelector('svg');
+        if (icon) icon.classList.toggle('rotate-180');
+      });
+    });
+
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    updateHeaderState();
   });
 
+  function setupSearch(buttonId, barId) {
+    const button = document.getElementById(buttonId);
+    const bar = document.getElementById(barId);
 
-  const linkContatoMobile = document.getElementById('scrollToFaleConoscoMobile');
-  const targetContato = document.getElementById('faleConosco');
+    if (!button || !bar) return;
 
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      bar.classList.toggle('hidden');
+    });
 
-  if (linkContatoMobile && targetContato) {
-    linkContatoMobile.addEventListener('click', e => {
-      e.preventDefault();
-      targetContato.scrollIntoView({ behavior: 'smooth' });
-      menu.classList.add('hidden');
-      header.classList.remove('hidden');
+    document.addEventListener('click', (e) => {
+      if (!bar.contains(e.target) && !button.contains(e.target)) {
+        bar.classList.add('hidden');
+      }
     });
   }
 
-
-
-
-
-
-
-
-
+  setupSearch('searchButtonDesktop', 'searchBarDesktop');
+  setupSearch('searchButtonMobile', 'searchBarMobile');
 </script>
 
 <style>
   .rotate-180 { transform: rotate(180deg); transition: transform 0.2s ease; }
+
+  .header-fixed {
+    height: 80px !important;           
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  #main-header.header-fixed > div {
+    align-items: center; 
+    height: 80px;
+  }
+
+  #main-header.header-fixed img[alt="Logo TecShare"] {
+    max-height: 24px;
+    width: auto;
+  }
+
+  .nav-link:focus {
+    outline: none !important;
+    border: 1px solid #999 !important;
+    border-radius: 4px;
+    color: #999 !important;
+    background: transparent !important;
+    padding: 0.75rem !important;
+    transition: all 0.2s ease;
+  }
 </style>
