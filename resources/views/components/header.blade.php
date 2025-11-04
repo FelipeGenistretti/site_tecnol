@@ -30,9 +30,9 @@
               Safe Register Car
             </a>
             <div class="absolute left-0 top-[60%] w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
-              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">O que é?</a>
-              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold" id="scrollToOndeOperamos">Onde operamos</a>
-              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Pré-cadastro</a>
+              <a href="{{ route('safe-register-car') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">O que é?</a>
+              <a href="{{ route('safe-register-car') }}#ondeoperamos" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold" id="scrollToOndeOperamos">Onde operamos</a>
+              <a href="{{route('pre-registro') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Pré-cadastro</a>
             </div>
           </li>
 
@@ -43,8 +43,8 @@
             </a>
             <div class="absolute left-0 top-[60%] w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
               <a href="{{ route('compliance') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Compliance</a>
-              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Canal de denúncia</a>
-              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Solicitação do titular</a>
+              <a href="{{ route('canal-denuncia') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Canal de denúncia</a>
+              <a href="{{ route('solicitacao-titular') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Solicitação do titular</a>
             </div>
           </li>
 
@@ -54,9 +54,9 @@
               Segurança
             </a>
             <div class="absolute left-0 top-[60%] w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
-              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Gestão de segurança</a>
-              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Privacidade</a>
-              <a href="#" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Qualidade</a>
+              <a href="{{ route('seguranca') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Gestão de segurança</a>
+              <a href="{{ route('privacidade') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Privacidade</a>
+              <a href="{{ route('qualidade') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Qualidade</a>
             </div>
           </li>
 
@@ -123,7 +123,7 @@
     <div class="bg-[#F8F8FF]">
       <ul class="flex flex-col gap-5 p-4 uppercase">
         <li><a href="" class="block hover:text-orange-600">Início</a></li>
-        <li><a href="" class="block hover:text-orange-600">Quem somos</a></li>
+        <li><a href="{{ route('quem-somos') }}" class="block hover:text-orange-600">Quem somos</a></li>
         <li class="relative">
           <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
             Safe Register Car
@@ -132,14 +132,14 @@
             </svg>
           </button>
           <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
-            <li><a href="#" class="block hover:text-orange-600">O que é?</a></li>
-            <li><a href="#" class="block hover:text-orange-600">Pré-cadastro</a></li>
+            <li><a href="{{ route('safe-register-car') }}" class="block hover:text-orange-600">O que é?</a></li>
+            <li><a href="{{ route('pre-registro') }}" class="block hover:text-orange-600">Pré-cadastro</a></li>
           </ul>
         </li>
-        <li><a href="" class="block hover:text-orange-600">Compliance</a></li>
-        <li><a href="" class="block hover:text-orange-600">Segurança</a></li>
-        <li><a href="" class="block hover:text-orange-600">Onde operamos</a></li>
-        <li><a href="" class="block hover:text-orange-600">Contato</a></li>
+        <li><a href="{{ route('compliance') }}" class="block hover:text-orange-600">Compliance</a></li>
+        <li><a href="{{ route('seguranca') }}" class="block hover:text-orange-600">Segurança</a></li>
+        <li><a href="{{ route('safe-register-car') }}#ondeoperamos" class="block hover:text-orange-600">Onde operamos</a></li>
+        <li><a href="/#faleconsco" class="block hover:text-orange-600">Contato</a></li>
 
         <li>
           <div class="relative max-md:hidden">
