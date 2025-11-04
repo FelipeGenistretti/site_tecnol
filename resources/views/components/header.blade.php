@@ -2,6 +2,7 @@
   <header id="main-header" class="w-full container-x fixed top-0 left-0 bg-white shadow z-50 h-[128px] flex items-center transition-all duration-300">
     <div class="flex justify-between items-center w-full h-full mx-auto">
 
+      <!-- LOGO -->
       <div class="flex items-center w-[167px] h-[29px]">
         <img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain">
       </div>
@@ -9,12 +10,16 @@
       <!-- MENU DESKTOP -->
       <nav class="hidden lg:flex items-center gap-4 uppercase text-md h-full">
         <ul class="flex items-center gap-6 text-textSecondary font-medium text-[12px] h-full">
-          <li class="hover:text-textPrimary hover:font-bold flex items-center h-full"><a href="{{ route('home') }}">Início</a></li>
-          <li class="hover:text-textPrimary hover:font-bold flex items-center h-full"><a href="{{ route('quem-somos') }}">Quem somos</a></li>
+          <li class="hover:text-textPrimary hover:font-bold flex items-center h-full">
+            <a href="{{ route('home') }}">Início</a>
+          </li>
+          <li class="hover:text-textPrimary hover:font-bold flex items-center h-full">
+            <a href="{{ route('quem-somos') }}">Quem somos</a>
+          </li>
 
           <li class="relative group flex items-center h-full">
             <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold transition-colors" href="{{ route('safe-register-car') }}">Safe Register Car</a>
-            <div class="absolute left-0 top-full mt-1 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="absolute left-0 top-[60%]  w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">O que é?</a>
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold" id="scrollToOndeOperamos">Onde operamos</a>
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Pré-cadastro</a>
@@ -23,7 +28,7 @@
 
           <li class="relative group flex items-center h-full">
             <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold" href="{{ route('compliance') }}">Compliance</a>
-            <div class="absolute left-0 top-full mt-1 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="absolute left-0 top-[60%] w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
               <a href="{{ route('compliance') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Compliance</a>
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Canal de denúncia</a>
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Solicitação do titular</a>
@@ -32,14 +37,16 @@
 
           <li class="relative group flex items-center h-full">
             <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold" href="{{ route('seguranca') }}">Segurança</a>
-            <div class="absolute left-0 top-full mt-1 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="absolute left-0 top-[60%] w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Gestão de segurança</a>
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Privacidade</a>
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Qualidade</a>
             </div>
           </li>
 
-          <li class="hover:text-textPrimary hover:font-bold flex items-center h-full"><a href="/#faleConosco" id="scrollToFaleConosco">Contato</a></li>
+          <li class="hover:text-textPrimary hover:font-bold flex items-center h-full">
+            <a href="/#faleConosco" id="scrollToFaleConosco">Contato</a>
+          </li>
         </ul>
 
         <button type="button">
@@ -134,7 +141,7 @@
     </ul>
 
     <div class="px-6 mb-8">
-      <button class=" flex items-center justify-center gap-2 p-3 rounded-md bg-bgButtonPrimary text-white uppercase text-[12px] hover:bg-orange-500 transition-colors duration-300">
+      <button class="flex items-center justify-center gap-2 p-3 rounded-md bg-bgButtonPrimary text-white uppercase text-[12px] hover:bg-orange-500 transition-colors duration-300">
         <img src="/locked.png" class="h-[18px] w-[18px]" alt="Cadeado">
         Acesso Safe Register Car
       </button>
@@ -143,44 +150,85 @@
 </div>
 
 <script>
-  const btn = document.getElementById('menu-btn');
-  const closeBtn = document.getElementById('close-menu');
-  const menu = document.getElementById('mobile-menu');
-  const header = document.getElementById('main-header');
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const menu = document.getElementById('mobile-menu');
+    const header = document.getElementById('main-header');
 
-  btn.addEventListener('click', () => {
-    menu.classList.remove('hidden');
-    header.classList.add('hidden');
-  });
+    function updateHeaderState() {
+      if (!header) return;
+      const isMenuOpen = !menu.classList.contains('hidden');
+      if (isMenuOpen) {
+        header.classList.add('hidden');
+        header.classList.remove('header-fixed');
+        return;
+      } else {
+        header.classList.remove('hidden', 'header-hidden-temp');
+      }
 
-  closeBtn.addEventListener('click', () => {
-    menu.classList.add('hidden');
-    header.classList.remove('hidden');
-  });
+      if (window.scrollY > 300) {
+        header.classList.add('header-fixed');
+      } else {
+        header.classList.remove('header-fixed');
+      }
+    }
 
-  // Submenus expansíveis mobile
-  const toggles = document.querySelectorAll('.submenu-toggle');
-  toggles.forEach(btn => {
     btn.addEventListener('click', () => {
-      const submenu = btn.nextElementSibling;
-      submenu.classList.toggle('hidden');
-      const icon = btn.querySelector('svg');
-      icon.classList.toggle('rotate-180');
+      menu.classList.remove('hidden');
+      header.classList.add('hidden');
     });
-  });
 
-  const linkContatoMobile = document.getElementById('scrollToFaleConoscoMobile');
-  const targetContato = document.getElementById('faleConosco');
-  if (linkContatoMobile && targetContato) {
-    linkContatoMobile.addEventListener('click', e => {
-      e.preventDefault();
-      targetContato.scrollIntoView({ behavior: 'smooth' });
+    closeBtn.addEventListener('click', () => {
       menu.classList.add('hidden');
-      header.classList.remove('hidden');
+      updateHeaderState();
     });
-  }
+
+    const toggles = document.querySelectorAll('.submenu-toggle');
+    toggles.forEach(btnToggle => {
+      btnToggle.addEventListener('click', () => {
+        const submenu = btnToggle.nextElementSibling;
+        submenu.classList.toggle('hidden');
+        const icon = btnToggle.querySelector('svg');
+        if (icon) icon.classList.toggle('rotate-180');
+      });
+    });
+
+    const linkContatoMobile = document.getElementById('scrollToFaleConoscoMobile');
+    const targetContato = document.getElementById('faleConosco');
+    if (linkContatoMobile && targetContato) {
+      linkContatoMobile.addEventListener('click', e => {
+        e.preventDefault();
+        targetContato.scrollIntoView({ behavior: 'smooth' });
+        menu.classList.add('hidden');
+        updateHeaderState();
+      });
+    }
+
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    updateHeaderState();
+  });
 </script>
 
 <style>
   .rotate-180 { transform: rotate(180deg); transition: transform 0.2s ease; }
+
+  .header-fixed {
+    height: 80px !important;           
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  #main-header.header-fixed > div {
+    align-items: center; 
+    height: 80px;
+  }
+
+  #main-header.header-fixed img[alt="Logo TecShare"] {
+    max-height: 24px;
+    width: auto;
+  }
 </style>
