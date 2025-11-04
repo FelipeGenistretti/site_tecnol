@@ -11,7 +11,7 @@
   <div class="grid grid-cols-1 lg:grid-cols-2  container-x my-8 lg:my-12">
         <div class= "p-4  lg:mt-12">
             <h1 class= "text-[40px]  text-textPrimary py-2  text-center lg:text-start m-2">Transparência e conformidade</h1>
-            <p class="text-lg  text-textPrimary">Na Tecnol, a transparência, a conformidade com a legislação e o compromisso com princípios éticos e melhores experiências de mercado são práticas diárias e fundamentais para o futuro sustentável dos negócios.<br> <br>
+            <p class="text-lg  text-textPrimary textContainer">Na Tecnol, a transparência, a conformidade com a legislação e o compromisso com princípios éticos e melhores experiências de mercado são práticas diárias e fundamentais para o futuro sustentável dos negócios.<br> <br>
 
 O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer desvios que possam comprometer nosso código de conduta e/ou as normas em vigor.</p>
        
@@ -41,12 +41,12 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
           <div class= "py-2 lg:py-[55px]">
             <h1 class= "text-[35px] text-center lg:text-start m-3" ><strong> Programa de compliance  </strong></h1>
             <br>
-            <p>Estamos empenhados em manter a integridade e a confiança em todos os nossos relacionamentos, seja com clientes, parceiros, colaboradores ou órgãos reguladores. <br><br>
+            <p class="textContainer">Estamos empenhados em manter a integridade e a confiança em todos os nossos relacionamentos, seja com clientes, parceiros, colaboradores ou órgãos reguladores. <br><br>
             </p>
         
             
 
-            <p>Para reforçar esse compromisso, o nosso programa de Compliance inclui uma Política do Sistema de Antissuborno e ações contínuas para promover um ambiente ético e transparente, consolidando a confiança com nossos stakeholders e fortalecendo a governança corporativa.</p>
+            <p class="textContainer">Para reforçar esse compromisso, o nosso programa de Compliance inclui uma Política do Sistema de Antissuborno e ações contínuas para promover um ambiente ético e transparente, consolidando a confiança com nossos stakeholders e fortalecendo a governança corporativa.</p>
         
            <button class="flex items-center gap-3 justify-center lg:justify-start p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8 w-full lg:w-[450px]">
       <img src="{{ asset('/download-white.png') }}" alt="Ícone de download" class="w-5 h-5">
@@ -70,7 +70,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
       <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
     <img src="{{ asset('./star.png') }}" alt="" class="h-[40px]  w-[40px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Compromisso de alta direção.</h2>
-    <p class="text-gray-700 text-base flex-1">
+    <p class="text-gray-700 text-base flex-1 textContainer">
         O compromisso de agregar valor.
     </p>
   </div>
@@ -78,7 +78,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
     <img src="{{ asset('./pessoas.png') }}" alt="" class="h-[30px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Instância responsável.</h2>
-    <p class="text-gray-700 text-base flex-1">
+    <p class="text-gray-700 text-base flex-1 textContainer">
         Equipe bem estruturada
     </p>
   </div>
@@ -86,7 +86,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
  <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
     <img src="{{ asset('./medalha.png') }}" alt="" class="h-[30px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Análise de perfil e risco.</h2>
-    <p class="text-gray-700 text-base flex-1">
+    <p class="text-gray-700 text-base flex-1 textContainer">
         Soluções pensadas no cliente.
     </p>
   </div>
@@ -97,14 +97,14 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col lg:w-[525px] lg:justify-self-end" >
     <img src="{{ asset('./medalha-star.png') }}" alt="" class="h-[30px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Regras e instrumentos</h2>
-    <p class="text-gray-700 text-base flex-1">
+    <p class="text-gray-700 text-base flex-1 textContainer">
         Políticas e procedimentos para <br> mitigar os riscos.
   </div>
 
    <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col lg:w-[525px] ">
     <img src="{{ asset('./wi-fi.png') }}" alt="" class="h-[20px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Monitoramento contínuo</h2>
-    <p class="text-gray-700 text-base flex-1">
+    <p class="text-gray-700 text-base flex-1 textContainer">
         Análise e avaliação <br> para assegurar resultados valídos
     </p>
   </div>
@@ -115,7 +115,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="bg-[#F2F2F2] text-center flex flex-col items-center justify-center px-6 p-10">
     <h1 class="text-[45px] font-semibold mb-4">Código de conduta e ética</h1>
-    <p class="text-gray-700">
+    <p class="text-gray-700 textContainer">
       Para fortalecer a transparência e a equidade entre os nossos colaboradores, fornecedores, clientes e parceiros de negócios, tornamos público o nosso Código de Conduta.
     </p>
 
@@ -127,7 +127,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     
        <div class="bg-gradient-to-b from-[#004A65] to-[#006C94] text-center flex flex-col items-center justify-center px-6 text-white p-10">
     <h1 class="text-[45px] font-semibold mb-4">Canal de denúncia</h1>
-    <p class="">
+    <p class="textContainer">
         Contamos com um Canal de Denúncia sigiloso e imparcial, hospedado fora dos sistemas da TECNOL, administrado com total garantia de confidencialidade.
     </p>
 

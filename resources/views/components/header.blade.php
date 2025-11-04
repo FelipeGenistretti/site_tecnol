@@ -1,8 +1,7 @@
 <div class="">
-  <header class="w-full container-x fixed top-0 left-0 bg-white shadow z-50 h-[128px] flex items-center">
+  <header id="main-header" class="w-full container-x fixed top-0 left-0 bg-white shadow z-50 h-[128px] flex items-center transition-all duration-300">
     <div class="flex justify-between items-center w-full h-full mx-auto">
 
-      <!-- LOGO -->
       <div class="flex items-center w-[167px] h-[29px]">
         <img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain">
       </div>
@@ -44,7 +43,7 @@
         </ul>
 
         <button type="button">
-          <img src="/search.png" class="h-[20px] w-[20px]" alt="Cadeado">
+          <img src="/search.png" class="h-[20px] w-[20px]" alt="Buscar">
         </button>
 
         <x-font-control/>
@@ -63,100 +62,125 @@
           </svg>
         </button>
       </div>
-
     </div>
   </header>
 
   <!-- MENU MOBILE -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-md fixed top-[128px] left-0 w-full z-40">
-    <ul class="flex flex-col gap-1 p-4 text-textSecondary font-medium">
+  <div id="mobile-menu" class="hidden lg:hidden bg-[#F8F8FF] shadow-md fixed top-0 left-0 w-full z-50 overflow-y-auto">
+    <div class="flex items-center justify-between px-4 py-4 border-b">
+      <button id="close-menu" class="text-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <div class="flex items-center bg-white w-full ml-2">
+        <div class="relative w-full">
+          <input type="text" placeholder="Pesquisar" class="w-full border rounded-md py-2 pl-3 pr-10 text-sm focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute right-3 top-2.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <ul class="flex flex-col gap-1 p-6 text-textSecondary font-medium uppercase text-[13px]">
       <li><a href="{{ route('home') }}" class="block py-2 hover:text-textPrimary">Início</a></li>
       <li><a href="{{ route('quem-somos') }}" class="block py-2 hover:text-textPrimary">Quem somos</a></li>
 
       <li>
-        <button class="w-full text-left py-2 toggle-submenu flex justify-between items-center hover:text-textPrimary">
+        <button class="w-full uppercase flex justify-between items-center py-2 hover:text-textPrimary submenu-toggle">
           Safe Register Car
-          <svg class="h-4 w-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <ul class="hidden pl-4 flex flex-col gap-1">
-          <li><a href="#" class="block py-2 hover:text-textPrimary">O que é?</a></li>
-          <li><a href="#" class="block py-2 hover:text-textPrimary">Onde operamos</a></li>
-          <li><a href="#" class="block py-2 hover:text-textPrimary">Pré-cadastro</a></li>
+        <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
+          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">O que é?</a></li>
+          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Onde operamos</a></li>
+          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Pré-cadastro</a></li>
         </ul>
       </li>
 
       <li>
-        <button class="w-full text-left py-2 toggle-submenu flex justify-between items-center hover:text-textPrimary">
+        <button class="uppercase w-full flex justify-between items-center py-2 hover:text-textPrimary submenu-toggle">
           Compliance
-          <svg class="h-4 w-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <ul class="hidden pl-4 flex flex-col gap-1">
-          <li><a href="{{ route('compliance') }}" class="block py-2 hover:text-textPrimary">Compliance</a></li>
-          <li><a href="#" class="block py-2 hover:text-textPrimary">Canal de denúncia</a></li>
-          <li><a href="#" class="block py-2 hover:text-textPrimary">Solicitação do titular</a></li>
+        <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
+          <li><a href="{{ route('compliance') }}" class="py-1 hover:text-textPrimary uppercase">Compliance</a></li>
+          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Canal de denúncia</a></li>
+          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Solicitação do titular</a></li>
         </ul>
       </li>
 
       <li>
-        <button class="w-full text-left py-2 toggle-submenu flex justify-between items-center hover:text-textPrimary">
+        <button class="w-full flex justify-between items-center py-2 hover:text-textPrimary submenu-toggle uppercase">
           Segurança
-          <svg class="h-4 w-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <ul class="hidden pl-4 flex flex-col gap-1">
-          <li><a href="#" class="block py-2 hover:text-textPrimary">Gestão de segurança</a></li>
-          <li><a href="#" class="block py-2 hover:text-textPrimary">Privacidade</a></li>
-          <li><a href="#" class="block py-2 hover:text-textPrimary">Qualidade</a></li>
+        <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
+          <li><a href="#" class="py-1 hover:text-textPrimary">Gestão de segurança</a></li>
+          <li><a href="#" class="py-1 hover:text-textPrimary">Privacidade</a></li>
+          <li><a href="#" class="py-1 hover:text-textPrimary">Qualidade</a></li>
         </ul>
       </li>
 
       <li><a href="/#faleConosco" class="block py-2 hover:text-textPrimary" id="scrollToFaleConoscoMobile">Contato</a></li>
     </ul>
+
+    <div class="px-6 mb-8">
+      <button class=" flex items-center justify-center gap-2 p-3 rounded-md bg-bgButtonPrimary text-white uppercase text-[12px] hover:bg-orange-500 transition-colors duration-300">
+        <img src="/locked.png" class="h-[18px] w-[18px]" alt="Cadeado">
+        Acesso Safe Register Car
+      </button>
+    </div>
   </div>
 </div>
 
 <script>
-  // Mobile menu toggle
   const btn = document.getElementById('menu-btn');
+  const closeBtn = document.getElementById('close-menu');
   const menu = document.getElementById('mobile-menu');
-  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  const header = document.getElementById('main-header');
 
-  // Mobile submenu toggle
-  document.querySelectorAll('.toggle-submenu').forEach(btn => {
+  btn.addEventListener('click', () => {
+    menu.classList.remove('hidden');
+    header.classList.add('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    menu.classList.add('hidden');
+    header.classList.remove('hidden');
+  });
+
+  // Submenus expansíveis mobile
+  const toggles = document.querySelectorAll('.submenu-toggle');
+  toggles.forEach(btn => {
     btn.addEventListener('click', () => {
       const submenu = btn.nextElementSibling;
       submenu.classList.toggle('hidden');
-      btn.querySelector('svg').classList.toggle('rotate-180');
+      const icon = btn.querySelector('svg');
+      icon.classList.toggle('rotate-180');
     });
   });
 
-  // Smooth scroll contato
-  const linkContato = document.getElementById('scrollToFaleConosco');
-  const targetContato = document.getElementById('faleConosco');
-  if(linkContato && targetContato){
-    linkContato.addEventListener('click', e=>{
-      e.preventDefault();
-      targetContato.scrollIntoView({behavior:'smooth'});
-    });
-  }
   const linkContatoMobile = document.getElementById('scrollToFaleConoscoMobile');
-  if(linkContatoMobile && targetContato){
-    linkContatoMobile.addEventListener('click', e=>{
+  const targetContato = document.getElementById('faleConosco');
+  if (linkContatoMobile && targetContato) {
+    linkContatoMobile.addEventListener('click', e => {
       e.preventDefault();
-      targetContato.scrollIntoView({behavior:'smooth'});
+      targetContato.scrollIntoView({ behavior: 'smooth' });
       menu.classList.add('hidden');
+      header.classList.remove('hidden');
     });
   }
 </script>
 
 <style>
-  /* Submenu mais próximo do item */
-  nav ul li .group div {
-    margin-top: 0.25rem; /* mt-1 */
-  }
+  .rotate-180 { transform: rotate(180deg); transition: transform 0.2s ease; }
 </style>
