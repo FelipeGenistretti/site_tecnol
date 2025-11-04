@@ -25,7 +25,7 @@
         </div>
 
         <div>
-            <img src="{{ asset('./quem-somos.png')  }}" alt="" class="lg:w-[820px] lg:h-[541px]">
+            <img src="{{ asset('/seguranca-1.png')  }}" alt="" class="mt-12">
 
         </div>
     </div>

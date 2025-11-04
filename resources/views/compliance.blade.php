@@ -22,7 +22,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 </div>
 
          <div class = "p-4 mt-4 lg:mt-12">
-            <img class="h- rounded" src="{{ asset('/quemsomos-1.jpg') }}" alt="">
+            <img class="h- rounded" src="{{ asset('/compliance-1.png') }}" alt="">
 
         </div>
     </div>
@@ -34,7 +34,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
         
         <div class = "p-4 mt-4 lg:mt-12">
-            <img class=" rounded" src="{{ asset('/quemsomos-1.jpg') }}" alt="">
+            <img class=" rounded" src="{{ asset('/compliance-2.png') }}" alt="">
 
         </div>
 

@@ -123,9 +123,9 @@
   </p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 container-x mb-12">
+<div class="grid grid-cols-1 md:grid-cols-[2fr_auto] gap-6 container-x mb-12">
   
-<form class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4">
+<form class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
 
   
   <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

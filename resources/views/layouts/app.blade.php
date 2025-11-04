@@ -20,7 +20,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-white py-12 place-items-center lg:place-items-start">
             <!-- Coluna 1 -->
-            <div class="mt-3 mb-3 text-center">
+            <div class="mt-3 mb-3 text-center  md:place-self-start md:justify-self-center">
                 <img src="{{ asset('/logo.png') }}" alt="logo" class="h-10 mb-4">
                 <ul>
                     <li class="text-lg">Registro</li>
@@ -74,21 +74,31 @@
             </div>
 
             <!-- Coluna 4 -->
-            <div class="text-center lg:text-left">
-                <h1 class="text-2xl mt-3 mb-3">Certificações</h1>
-                <div class="grid lg:grid-cols-2 lg:gap-4 grid-cols-2 gap-2">
-                    <img src="{{ asset('/ISO.png') }}" alt="" class="mb-3 p-0">
-                    <img src="{{ asset('/37301.png') }}" alt="" class="mb-3 p-0">
-                    <img src="{{ asset('/9001.png') }}" alt="" class="m-0 p-0">
-                    <img src="{{ asset('/ISO.png') }}" alt="" class="m-0 p-0">
-                </div>
-            </div>
+    <div class="lg:text-left text-left lg:place-self-start lg:justify-self-end ">
+    <h1 class="text-2xl mt-3 mb-3">Certificações</h1>
+
+    <div class="grid grid-cols-2 lg:grid-cols-2 gap-2 lg:gap-4 justify-items-start">
+        <img src="{{ asset('/ISO.png') }}" alt="" class="mb-3 p-0">
+        <img src="{{ asset('/37301.png') }}" alt="" class="mb-3 p-0">
+        <img src="{{ asset('/9001.png') }}" alt="" class="m-0 p-0">
+        <img src="{{ asset('/ISO.png') }}" alt="" class="m-0 p-0">
+    </div>
+</div>
+        
+
         </div>
 
-        <hr class="border-t border-blue-400">  
+
+        <hr class="border-t border-blue-400 w-screen relative left-1/2 right-1/2 -ml-[50vw]">
+
+
+       
+
 
         <!-- Linha final -->
-        <div class="grid lg:grid-cols-2 sm:grid-cols-1 text-white py-6">
+        <div class="grid lg:grid-cols-2 sm:grid-cols-1 text-white  ">
+            
+
             <div class="flex items-center gap-2 justify-center lg:justify-start mt-5 lg:mt-0">
                 <p class="text-sm">@ 2025 Tecnol. Todos os direitos reservados</p>
             </div>
