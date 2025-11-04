@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 container-x py-12 gap-4">
+    <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 container-x py-12 gap-4">
   <div>
     <button class="flex items-center justify-center lg:justify-start gap-3 w-full p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
       <img src="{{ asset('/download-black.png') }}" alt="Ícone de download" class="w-5 h-5">

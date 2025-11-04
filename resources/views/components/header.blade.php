@@ -15,9 +15,9 @@
           <li class="relative group flex items-center h-full">
             <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold transition-colors" href="{{ route('safe-register-car') }}">Safe Register Car</a>
             <div class="absolute left-0 top-full mt-1 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">O que é?</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold" id="scrollToOndeOperamos">Onde operamos</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Pré-cadastro</a>
+              <a href="{{ route('safe-register-car') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">O que é?</a>
+              <a href="{{ route('safe-register-car') }}#ondeoperamos" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold" id="scrollToOndeOperamos">Onde operamos</a>
+              <a href="{{ route('pre-registro') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Pré-cadastro</a>
             </div>
           </li>
 
@@ -25,17 +25,17 @@
             <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold" href="{{ route('compliance') }}">Compliance</a>
             <div class="absolute left-0 top-full mt-1 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <a href="{{ route('compliance') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Compliance</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Canal de denúncia</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Solicitação do titular</a>
+              <a href="{{ route('canal-denuncia') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Canal de denúncia</a>
+              <a href="{{ route('solicitacao-titular') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Solicitação do titular</a>
             </div>
           </li>
 
           <li class="relative group flex items-center h-full">
             <a class="flex items-center gap-1 hover:text-textPrimary hover:font-bold" href="{{ route('seguranca') }}">Segurança</a>
             <div class="absolute left-0 top-full mt-1 w-48 bg-white border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Gestão de segurança</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Privacidade</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Qualidade</a>
+              <a href="{{ route('seguranca') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Gestão de segurança</a>
+              <a href="{{ route('privacidade') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Privacidade</a>
+              <a href="{{ route('qualidade') }}" class="block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold">Qualidade</a>
             </div>
           </li>
 
@@ -96,9 +96,9 @@
           </svg>
         </button>
         <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">O que é?</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Onde operamos</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Pré-cadastro</a></li>
+          <li><a href="{{route('safe-register-car')  }}" class="py-1 hover:text-textPrimary uppercase">O que é?</a></li>
+          <li><a href="{{route('safe-register-car')}}/#ondeoperamos" class="py-1 hover:text-textPrimary uppercase" id="scrollToondeoperamos">Onde operamos</a></li>
+          <li><a href="{{ route('pre-registro') }}" class="py-1 hover:text-textPrimary uppercase">Pré-cadastro</a></li>
         </ul>
       </li>
 
@@ -111,8 +111,8 @@
         </button>
         <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
           <li><a href="{{ route('compliance') }}" class="py-1 hover:text-textPrimary uppercase">Compliance</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Canal de denúncia</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary uppercase">Solicitação do titular</a></li>
+          <li><a href="{{ route('canal-denuncia') }}" class="py-1 hover:text-textPrimary uppercase">Canal de denúncia</a></li>
+          <li><a href="{{ route('solicitacao-titular') }}" class="py-1 hover:text-textPrimary uppercase">Solicitação do titular</a></li>
         </ul>
       </li>
 
@@ -124,9 +124,9 @@
           </svg>
         </button>
         <ul class="hidden flex flex-col pl-4 text-gray-600 text-[12px]">
-          <li><a href="#" class="py-1 hover:text-textPrimary">Gestão de segurança</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary">Privacidade</a></li>
-          <li><a href="#" class="py-1 hover:text-textPrimary">Qualidade</a></li>
+          <li><a href="{{ route('seguranca') }}" class="py-1 hover:text-textPrimary">Gestão de segurança</a></li>
+          <li><a href="{{ route('privacidade') }}" class="py-1 hover:text-textPrimary">Privacidade</a></li>
+          <li><a href="{{ route('qualidade') }}" class="py-1 hover:text-textPrimary">Qualidade</a></li>
         </ul>
       </li>
 
@@ -169,8 +169,11 @@
     });
   });
 
+
   const linkContatoMobile = document.getElementById('scrollToFaleConoscoMobile');
   const targetContato = document.getElementById('faleConosco');
+
+
   if (linkContatoMobile && targetContato) {
     linkContatoMobile.addEventListener('click', e => {
       e.preventDefault();
@@ -179,6 +182,15 @@
       header.classList.remove('hidden');
     });
   }
+
+
+
+
+
+
+
+
+
 </script>
 
 <style>
