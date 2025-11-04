@@ -5,10 +5,9 @@
 
 @section('content')
 
-    <div class="flex items-center py-12  bg-bgSecondary justify-center lg:justify-start h-[]">
+     <div class="flex items-center py-12  bg-bgSecondary justify-center lg:justify-start text-center lg:text-start">
   <h1 class="text-[38px] text-textPrimary container-x">Solicitação do titular</h1>
     </div>
-
 
 
 <!-- Conteúdo principal -->
@@ -33,9 +32,12 @@
           <label class="text-sm font-medium mb-1">Tipo da solicitação</label>
           <select class="border rounded px-3 py-2 w-full bg-white">
             <option value="">Selecionar</option>
-            <option>Opção 1</option>
-            <option>Opção 2</option>
-            <option>Opção 3</option>
+            <option>A empresa possui meus dados pessoais</option>
+            <option>Dados pessoais que a empresa tem sobre mim</option>
+            <option>Atualizar meus dados pessoais</option>
+              <option>Excluir os dados pessoais que a empresa tem sobre mim</option>
+            <option>Revogar o consentimento para tratar meus dados pessoais</option>
+
           </select>
         </div>
 
@@ -43,15 +45,16 @@
           <label class="text-sm font-medium mb-1">Classificação do titular</label>
           <select class="border rounded px-3 py-2 w-full bg-white">
             <option value="">Selecionar</option>
-            <option>Opção 1</option>
-            <option>Opção 2</option>
-            <option>Opção 3</option>
+            <option>Clientes</option>
+            <option>Colaboradores</option>
+            <option>Ex-colaborador</option>
+            <option>Outro</option>
           </select>
         </div>
       </div>
 
       <!-- Inputs principais -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="flex flex-col">
           <label class="text-sm font-medium mb-1">Nome</label>
           <input type="text" class="border rounded px-3 py-2 w-full" placeholder="Digite seu nome" />

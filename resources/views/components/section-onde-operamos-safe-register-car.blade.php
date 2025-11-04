@@ -1,6 +1,6 @@
-<div class="container-x py-20" id="">
+<div class="container-x py-20" id="ondeoperamos">
     <div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3" >
             <!-- Coluna 1: Texto -->
             <div>
                 <div class="space-y-4">

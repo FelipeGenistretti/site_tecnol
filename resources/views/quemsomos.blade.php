@@ -40,7 +40,7 @@
             <div class="flex items-center justify-center py-10">
             <h1 class="text-5xl mb-[24px]"> Nossos valores</h1>
              </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-[16px] container-x">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-[16px] container-x">
   <!-- Card 1 -->
   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
     <img src="{{ asset('./star.png') }}" alt="" class="h-[40px]  w-[40px]">
@@ -52,7 +52,7 @@
 
   <!-- Card 2 -->
   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
-    <img src="{{ asset('./pessoas.png') }}" alt="" class="h-[40px]  w-[40px]">
+    <img src="{{ asset('./Icon-pessoas.png') }}" alt="" class="h-[40px] w-[40px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Ética</h2>
     <p class="textContainer text-gray-700 text-base flex-1">
     Agimos alinhados à nossa missão e visão, atuando contra atitudes antiéticas ou desvios de conduta. Tomamos decisões com foco no longo prazo e consideramos os impactos em nossos stakeholders.
@@ -61,7 +61,7 @@
 
   <!-- Card 3 -->
   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
-    <img src="{{ asset('./medalha.png') }}" alt="" class="h-[40px]  w-[40px]">
+    <img src="{{ asset('./medalha.png') }}" alt="" class="h-[30px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Qualidade e eficiência </h2>
     <p class="textContainer text-gray-700 text-base flex-1">
        Garantimos as melhores entregas ao tomar decisões baseadas em dados, informações relevantes e na troca de conhecimento. Criamos soluções com etapas lógicas e somos disciplinados na execução, realizando uma gestão de risco contínua. 
@@ -70,7 +70,7 @@
 
   <!-- Card 4 -->
   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
-    <img src="{{ asset('./medalha-star.png') }}" alt="" class="h-[40px]  w-[40px]">
+    <img src="{{ asset('./medalha-star.png') }}" alt="" class="h-[30px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Compromisso com a verdade e transparência</h2>
     <p class="textContainer text-gray-700 text-base flex-1">
         Adotamos a perspectiva de nossos clientes para entender suas necessidades e antecipar soluções que gerem valor. Estabelecemos relações de confiança e consultivas, esclarecendo dúvidas de forma transparente e mantendo-os informados. Formamos parcerias com outras áreas para otimizar e agilizar os resultados, considerando os impactos para o cliente.
@@ -88,7 +88,7 @@
 
   <!-- Card 6 -->
   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col">
-    <img src="{{ asset('./plantas.png') }}" alt="" class="h-[20px]  w-[30px]">
+    <img src="{{ asset('./plantas.png') }}" alt="" class="h-[30px]  w-[30px]">
     <h2 class="text-xl font-semibold mb-3 text-gray-800">Responsabilidade socioambiental</h2>
     <p class="textContainer text-gray-700 text-base flex-1">
         Estamos comprometidos com nosso meio ambiente, desenvolvendo nossas atividades de forma a não causar danos à natureza e auxiliando outras instituições por meio das nossas soluções automatizadas. Internamente, mantemos um compromisso com a utilização de recursos de maneira sustentável e consciente.
@@ -123,7 +123,7 @@
   </p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-[2fr_auto] gap-6 container-x mb-12">
+<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x mb-12">
   
 <form class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
 

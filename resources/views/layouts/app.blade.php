@@ -18,7 +18,7 @@
  <footer class="bg-bgPrimary">
     <div class="container-x">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-white py-12 place-items-center lg:place-items-start">
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5 text-white py-12 place-items-center lg:place-items-start">
             <!-- Coluna 1 -->
             <div class="mt-3 mb-3 text-center  md:place-self-start md:justify-self-center">
                 <img src="{{ asset('/logo.png') }}" alt="logo" class="h-10 mb-4">

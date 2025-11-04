@@ -21,7 +21,7 @@ Route::post('/fale-conosco', [FormController::class, 'store'])
 // Formulário de pré-cadastro (exibe o formulário)
 Route::get('/pre-registro', function() {
     return view('pre-cadastro');
-})->name('pre-registro.create');
+})->name('pre-registro');
 
 // Formulário de pré-cadastro (envio)
 Route::post('/pre-registro', [PreRegistroController::class, 'store'])
@@ -56,6 +56,11 @@ Route::get("/canal-denuncia", function(){
 Route::get("/qualidade", function(){
     return view("qualidade");
 })->name("qualidade");
+
 Route::get("/solicitacao-titular", function(){
     return view("solicitacaotitular");
-})->name("solicitacaotitular");
+})->name("solicitacao-titular");
+
+Route::get("/404", function(){
+    return view("errors/404");
+})->name("404");
