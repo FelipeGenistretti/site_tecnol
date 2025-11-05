@@ -7,7 +7,7 @@
   </div>
 
   <div class="pt-5">
-    <div class="grid grid-cols-1 md:grid-cols-[60%_40%] gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[60%_40%] gap-6">
       
       <!-- FORMULÁRIO (70%) -->
       <div class="bg-gray-100/30 rounded-md shadow-md p-6 textContainer">

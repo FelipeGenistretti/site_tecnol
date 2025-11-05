@@ -3,7 +3,7 @@
     <div class="flex justify-between items-center w-full h-full mx-auto">
 
       <div class="flex items-center w-[167px] h-[29px]">
-        <img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain">
+        <a href="{{ route('home') }}"><img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain"></a>
       </div>
 
       <!-- MENU DESKTOP -->

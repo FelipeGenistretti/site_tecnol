@@ -2,8 +2,8 @@
 
   <div class="absolute inset-0 bg-black/30 z-0"></div>
 
-  <div class="hero-content relative z-10 container-x flex flex-col justify-center pt-[80px] pb-10 max-sm:items-center">
-    <h1 class="uppercase text-5xl font-medium mb-2 text-white max-sm:text-center max-sm:font-semibold max-sm:text-4xl">
+  <div class="hero-content relative z-10 container-x flex flex-col justify-center pt-[80px] pb-10 max-md:items-center">
+    <h1 class="uppercase text-5xl font-medium mb-2 text-white max-md:text-center max-sm:font-semibold max-sm:text-4xl">
       Safe Register Car
     </h1>
 

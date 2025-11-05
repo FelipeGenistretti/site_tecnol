@@ -1,4 +1,4 @@
-<div class="container-x lg:py-20 max-sm:pt-10">
+<div class="container-x lg:py-20 max-sm:pt-10 md:pt-10">
     <div class="flex justify-center items-center flex-col">
         <h1 class="text-5xl max-sm:text-[38px] font-medium text-textPrimary">Quem somos</h1>
         <p class="text-textSecondary textContainer font-normal max-sm:text-[21px] text-lg mt-3">Conheça melhor nossa instituição</p>

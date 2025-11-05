@@ -1,4 +1,4 @@
-<div class="container-x bg-bgPrimary max-sm:py-10 lg:py-20">
+<div class="container-x bg-bgPrimary max-sm:py-10 lg:py-20 md:py-10">
   <div class="text-white flex justify-center items-center flex-col gap-3 sm:items-center sm:justify-center">
     <h1 class="text-4xl sm:text-5xl max-sm:text-center max-sm:text-[38px]">Por que escolher a Tecnol?</h1>
     <p class="text-lg font-normal max-sm:text-lg max-sm:flex max-sm:text-center textContainer">
