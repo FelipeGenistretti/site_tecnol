@@ -3,6 +3,38 @@
 @section('title','TecShare compliance')
 
 @section('content')
+    <div id="skeleton" class="container-x py-10 animate-pulse">
+    <div class="h-10 w-56 bg-gray-300 rounded mb-8"></div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="space-y-3">
+            <div class="h-8 w-3/4 bg-gray-300 rounded"></div>
+            <div class="h-4 w-full bg-gray-300 rounded"></div>
+            <div class="h-4 w-5/6 bg-gray-300 rounded"></div>
+            <div class="h-4 w-4/5 bg-gray-300 rounded"></div>
+        </div>
+
+        <div class="h-64 w-full bg-gray-300 rounded"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-12">
+        <div class="h-64 w-full bg-gray-300 rounded"></div>
+        <div class="space-y-3">
+            <div class="h-8 w-1/2 bg-gray-300 rounded"></div>
+            <div class="h-4 w-full bg-gray-300 rounded"></div>
+            <div class="h-4 w-5/6 bg-gray-300 rounded"></div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12">
+        <div class="h-48 bg-gray-300 rounded"></div>
+        <div class="h-48 bg-gray-300 rounded"></div>
+        <div class="h-48 bg-gray-300 rounded"></div>
+    </div>
+</div>
+
+<div id="content-real" class="hidden">
+
    <div class="flex items-center py-12  bg-bgSecondary justify-center lg:justify-start h-[]">
   <h1 class="text-[38px] text-textPrimary container-x">Compliance</h1>
     </div>
@@ -149,4 +181,18 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 </div>
     <x-back-to-top/>
+
+</div>
+
+<script>
+    window.addEventListener("load", () => {
+        const skeleton = document.getElementById('skeleton');
+        const content = document.getElementById('content-real');
+
+        skeleton.classList.add('hidden');
+        content.classList.remove('hidden');
+    });
+
+</script>
+
 @endsection

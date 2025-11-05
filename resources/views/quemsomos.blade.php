@@ -4,6 +4,50 @@
 @section('title','TecShare')
 
 @section('content')
+{{-- Skeleton Loading --}}
+<div id="skeleton" class="container-x py-10 animate-pulse">
+    {{-- Título --}}
+    <div class="h-10 w-56 bg-gray-300 rounded mb-8"></div>
+
+    {{-- Grid principal --}}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {{-- Texto --}}
+        <div class="space-y-3">
+            <div class="h-8 w-3/4 bg-gray-300 rounded"></div>
+            <div class="h-4 w-full bg-gray-300 rounded"></div>
+            <div class="h-4 w-5/6 bg-gray-300 rounded"></div>
+            <div class="h-4 w-4/5 bg-gray-300 rounded"></div>
+            <div class="h-4 w-3/4 bg-gray-300 rounded"></div>
+            <div class="h-4 w-2/3 bg-gray-300 rounded"></div>
+        </div>
+
+        {{-- Imagem --}}
+        <div class="h-64 w-full bg-gray-300 rounded"></div>
+    </div>
+
+    {{-- Missão/Visão --}}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-12">
+        <div class="h-64 w-full bg-gray-300 rounded"></div>
+        <div class="space-y-3">
+            <div class="h-8 w-1/2 bg-gray-300 rounded"></div>
+            <div class="h-4 w-full bg-gray-300 rounded"></div>
+            <div class="h-4 w-5/6 bg-gray-300 rounded"></div>
+        </div>
+    </div>
+
+    {{-- Valores --}}
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 mt-12">
+        <div class="h-48 bg-gray-300 rounded"></div>
+        <div class="h-48 bg-gray-300 rounded"></div>
+        <div class="h-48 bg-gray-300 rounded"></div>
+        <div class="h-48 bg-gray-300 rounded"></div>
+        <div class="h-48 bg-gray-300 rounded"></div>
+        <div class="h-48 bg-gray-300 rounded"></div>
+    </div>
+</div>
+
+<div id="content-real" class="hidden">
+
       <div class="flex items-center py-12  bg-bgSecondary justify-center lg:justify-start h-[]">
   <h1 class="text-[38px] text-textPrimary container-x">Quem somos</h1>
     </div>
@@ -277,60 +321,68 @@
 
 
     <x-back-to-top/>
+
+</div>    
 @endsection
 
-
-@if(session('success'))
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("modalSuccess");
-  const close = document.getElementById("close");
+    window.addEventListener("load", () => {
+        const skeleton = document.getElementById('skeleton');
+        const content = document.getElementById('content-real');
 
-  if (!modal) return;
-
-  modal.classList.remove("hidden");
-  modal.classList.add("opacity-0", "transition", "duration-500");
-  setTimeout(() => modal.classList.remove("opacity-0"), 10);
-
-  if (close) {
-    close.addEventListener("click", () => {
-      modal.classList.add("opacity-0");
-      setTimeout(() => modal.classList.add("hidden"), 500);
+        skeleton.classList.add('hidden');
+        content.classList.remove('hidden');
     });
-  }
-
-  setTimeout(() => {
-    modal.classList.add("opacity-0");
-    setTimeout(() => modal.classList.add("hidden"), 500);
-  }, 3000);
-});
 </script>
-@endif
 
-
-@if($errors->any())
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const modalCampos = document.getElementById("modalCamposObrigatorios");
-  const btnCloseCampos = document.getElementById("btnClose");
+ 
 
-  if (modalCampos) {
-    modalCampos.classList.remove("hidden");
-    modalCampos.classList.add("opacity-0");
-    setTimeout(() => modalCampos.classList.remove("opacity-0"), 10);
+    // Modal sucesso
+    const modalSuccess = document.getElementById("modalSuccess");
+    const closeSuccess = document.getElementById("close");
+    @if(session('success'))
+        if(modalSuccess){
+            modalSuccess.classList.remove("hidden");
+            modalSuccess.classList.add("opacity-0", "transition", "duration-500");
+            setTimeout(() => modalSuccess.classList.remove("opacity-0"), 10);
 
-    if (btnCloseCampos) {
-      btnCloseCampos.addEventListener("click", () => {
-        modalCampos.classList.add("opacity-0");
-        setTimeout(() => modalCampos.classList.add("hidden"), 300);
-      });
-    }
+            if(closeSuccess){
+                closeSuccess.addEventListener("click", () => {
+                    modalSuccess.classList.add("opacity-0");
+                    setTimeout(() => modalSuccess.classList.add("hidden"), 500);
+                });
+            }
 
-    setTimeout(() => {
-      modalCampos.classList.add("opacity-0");
-      setTimeout(() => modalCampos.classList.add("hidden"), 300);
-    }, 3000);
-  }
+            setTimeout(() => {
+                modalSuccess.classList.add("opacity-0");
+                setTimeout(() => modalSuccess.classList.add("hidden"), 500);
+            }, 3000);
+        }
+    @endif
+
+    // Modal campos obrigatórios
+    const modalCampos = document.getElementById("modalCamposObrigatorios");
+    const btnCloseCampos = document.getElementById("btnClose");
+    @if($errors->any())
+        if(modalCampos){
+            modalCampos.classList.remove("hidden");
+            modalCampos.classList.add("opacity-0");
+            setTimeout(() => modalCampos.classList.remove("opacity-0"), 10);
+
+            if(btnCloseCampos){
+                btnCloseCampos.addEventListener("click", () => {
+                    modalCampos.classList.add("opacity-0");
+                    setTimeout(() => modalCampos.classList.add("hidden"), 500);
+                });
+            }
+
+            setTimeout(() => {
+                modalCampos.classList.add("opacity-0");
+                setTimeout(() => modalCampos.classList.add("hidden"), 500);
+            }, 3000);
+        }
+    @endif
 });
 </script>
-@endif

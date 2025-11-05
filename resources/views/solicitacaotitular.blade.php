@@ -3,7 +3,42 @@
 @section('title','TecShare')
 
 @section('content')
+{{-- Skeleton Loading --}}
+<div id="skeleton" class="container-x py-10 animate-pulse">
+    <!-- Título -->
+    <div class="h-10 w-3/4 bg-gray-300 rounded mx-auto mb-8"></div>
 
+    <!-- Form container -->
+    <div class="w-full max-w-[1200px] bg-gray-200 rounded-lg p-6 sm:p-8 shadow-md mx-auto">
+        <!-- Seletor duplo -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div class="h-10 bg-gray-300 rounded"></div>
+            <div class="h-10 bg-gray-300 rounded"></div>
+        </div>
+
+        <!-- Inputs principais -->
+        <div class="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div class="h-10 bg-gray-300 rounded"></div>
+            <div class="h-10 bg-gray-300 rounded"></div>
+            <div class="h-10 bg-gray-300 rounded"></div>
+            <div class="h-10 bg-gray-300 rounded"></div>
+        </div>
+
+        <!-- Textarea Observações -->
+        <div class="h-24 bg-gray-300 rounded mb-6"></div>
+
+        <!-- Upload -->
+        <div class="h-48 bg-gray-300 rounded mb-6"></div>
+
+        <!-- Checkbox -->
+        <div class="h-6 w-3/4 bg-gray-300 rounded mb-6"></div>
+
+        <!-- Botão Enviar -->
+        <div class="h-12 w-1/4 bg-gray-300 rounded"></div>
+    </div>
+</div>
+
+<div id="content-real" class="hidden">
 <div class="flex items-center py-12 bg-bgSecondary justify-center lg:justify-start text-center lg:text-start">
   <h1 class="text-[38px] text-textPrimary container-x">Solicitação do titular</h1>
 </div>
@@ -134,8 +169,18 @@
   </div>
 </div>
 
+</div>
 @endsection
 
+<script>
+  window.addEventListener("load", () => {
+        const skeleton = document.getElementById('skeleton');
+        const content = document.getElementById('content-real');
+
+        skeleton.classList.add('hidden');
+        content.classList.remove('hidden');
+    });
+</script>
 
 
 @if(session('success'))
