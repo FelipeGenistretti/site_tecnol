@@ -8,6 +8,26 @@
   <h1 class="text-[38px] text-textPrimary container-x">Quem somos</h1>
     </div>
 
+    <div class="h-[72px] w-[371px] hidden  bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50" id="modalSuccess">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/iconCheckModal.png" alt="">
+        <p class="text-white">Cadastro realizado com sucesso!</p>
+        <button type="button" class="flex items-center">
+            <img src="/iconCloseModal.png" alt="" id="close">
+        </button>
+    </div> 
+</div>
+
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center right-10 mt-4 justify-center fixed z-50" id="modalCamposObrigatorios">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/alertModalCamposObrigatorios.png" alt="">
+        <p class="text-black">Preencha os campos obrigatórios</p>
+        <button type="button" class="flex items-center">
+            <img src="/closeModalBlack.png" alt="" id="btnClose">
+        </button>
+    </div>
+</div>
+
     <div class="grid grid-cols-1 lg:grid-cols-2 container-x py-12 gap-4">
         <div class="space-y-4  mt-3 lg:mt-6">
             <h1 class= " text-textPrimary text-[38px] text-center lg:text-left text-Primary text-[45px] m-2">Um pouco da nossa história</h1>
@@ -125,28 +145,37 @@
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x mb-12">
   
-<form class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
+<form action="{{ route('enviar-curriculo') }}" enctype="multipart/form-data" accept="image/*" method="post" class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
+  @csrf
 
-  
   <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
     <div class="flex flex-col">
       <label class="textContainer text-sm font-medium mb-1">Nome</label>
-      <input type="text" class="border rounded px-3 py-2 w-full" placeholder="Digite seu nome">
+      <input type="text" name="nome" class="border rounded px-3 py-2 w-full" placeholder="Digite seu nome">
     </div>
+            @error('nome')
+          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
+        @enderror
 
     <div class="flex flex-col">
       <label class="textContainer text-sm font-medium mb-1">E-mail</label>
-      <input type="text" class="border rounded px-3 py-2 w-full" placeholder="email@email.com.br">
+      <input type="text" name="email"  class="border rounded px-3 py-2 w-full" placeholder="email@email.com.br">
     </div>
+            @error('email')
+          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
+        @enderror
 
     <div class="flex flex-col">
       <label class="textContainer text-sm font-medium mb-1">Telefone</label>
-      <input type="text" class="border rounded px-3 py-2 w-full" placeholder="(xx) xxxxx-xxxx">
+      <input type="text" name="telefone" class="border rounded px-3 py-2 w-full" placeholder="(xx) xxxxx-xxxx">
     </div>
+            @error('telefone')
+          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
+        @enderror
 
     <div class="flex flex-col">
       <label class="textContainer text-sm font-medium mb-1">Área de atuação</label>
-      <select class="border rounded px-3 py-2 w-full bg-white">
+      <select class="border rounded px-3 py-2 w-full bg-white" name="atuacao">
         <option value="">Selecionar</option>
         <option value="opcao1">Opção 1</option>
         <option value="opcao2">Opção 2</option>
@@ -154,12 +183,20 @@
       </select>
     </div>
   </div>
+          @error('atuacao')
+          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
+        @enderror
 
   <!-- Mensagem -->
   <div class="flex flex-col w-full">
     <label class="textContainer text-sm font-medium mb-1">Mensagem</label>
-    <input type="text" class="border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" />
+    <input type="text" class="border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" name="menssagem" />
   </div>
+          @error('menssagem')
+          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
+        @enderror
+
+  
 
   <!-- Upload -->
   <div class="flex flex-col">
@@ -172,24 +209,29 @@
       <span class="textContainer p-2 px-6 rounded border border-[#B3B3B3] cursor-pointer">
         Adicionar arquivos
       </span>
-      <input type="file" class="hidden">
+      <input type="file" name="files"  class="hidden">
     </label>
     <p class="textContainer text-sm text-gray-500 mt-1">Tamanho máximo permitido do anexo 5MB</p>
   </div>
+          @error('files')
+          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
+        @enderror
 
   <!-- Checkbox + reCAPTCHA -->
   <div class="flex flex-col gap-2">
-    <label class="flex items-start md:items-center gap-2 text-sm cursor-pointer relative">
-      <input type="checkbox" class="peer absolute w-5 h-5 opacity-0" />
-      <div class="w-5 h-5 rounded-full border border-gray-400 flex items-center justify-center bg-white peer-checked:bg-orange-500 transition-colors">
-        <div class="w-2.5 h-2.5 rounded-full bg-white scale-0 peer-checked:scale-100 transition-transform"></div>
-      </div>
-      <span class="textContainer ml-1">
-        Li e concordo com a 
-        <a href="#" class="text-bgButtonPrimary border-b-2 border-bgButtonPrimary font-bold">Política de Privacidade</a> 
-        e autorizo o tratamento dos meus dados.
-      </span>
-    </label>
+    <div class="flex gap-2 items-center mb-4">
+          <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125" {{ old('privacy') ? 'checked' : '' }}/>
+          <p class="textContainer">
+            Li e concordo com a
+            <span class="textContainer">
+              <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
+            </span>
+            e autorizo o tratamento dos meus dados.
+          </p>
+        </div>
+        @error('privacy')
+          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
+        @enderror
 
     <div class="mt-2">
       <div class="bg-gray-200 border border-gray-300 rounded p-4 text-center">
@@ -256,3 +298,58 @@
     <x-back-to-top/>
 @endsection
 
+
+@if(session('success'))
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modalSuccess");
+  const close = document.getElementById("close");
+
+  if (!modal) return;
+
+  modal.classList.remove("hidden");
+  modal.classList.add("opacity-0", "transition", "duration-500");
+  setTimeout(() => modal.classList.remove("opacity-0"), 10);
+
+  if (close) {
+    close.addEventListener("click", () => {
+      modal.classList.add("opacity-0");
+      setTimeout(() => modal.classList.add("hidden"), 500);
+    });
+  }
+
+  setTimeout(() => {
+    modal.classList.add("opacity-0");
+    setTimeout(() => modal.classList.add("hidden"), 500);
+  }, 3000);
+});
+</script>
+@endif
+
+
+@if($errors->any())
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const modalCampos = document.getElementById("modalCamposObrigatorios");
+  const btnCloseCampos = document.getElementById("btnClose");
+
+  if (modalCampos) {
+    modalCampos.classList.remove("hidden");
+    modalCampos.classList.add("opacity-0");
+    setTimeout(() => modalCampos.classList.remove("opacity-0"), 10);
+
+    if (btnCloseCampos) {
+      btnCloseCampos.addEventListener("click", () => {
+        modalCampos.classList.add("opacity-0");
+        setTimeout(() => modalCampos.classList.add("hidden"), 300);
+      });
+    }
+
+    setTimeout(() => {
+      modalCampos.classList.add("opacity-0");
+      setTimeout(() => modalCampos.classList.add("hidden"), 300);
+    }, 3000);
+  }
+});
+</script>
+@endif
