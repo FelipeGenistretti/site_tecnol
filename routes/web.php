@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\DownloadPdf;
+use App\Http\Controllers\EnviarCurriculoController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\PreRegistroController;
+use App\Http\Controllers\UploadFileController;
 use Illuminate\Support\Facades\Route;
 
 // Página inicial
@@ -67,3 +69,7 @@ Route::get("/404", function(){
 })->name("404");
 
 Route::get('/baixar-pdf/{nome}', [DownloadPdf::class, 'downloadPdf'])->name('download.pdf');
+
+Route::post("/upload-file", [UploadFileController::class, "uploadFile"])->name('upload-file');
+
+Route::post("/enviar-curriculo", [EnviarCurriculoController::class, "enviarCurriculo"])->name('enviar-curriculo');
