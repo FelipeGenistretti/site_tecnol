@@ -20,7 +20,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5 text-white py-12 place-items-center lg:place-items-start">
             <!-- Coluna 1 -->
-            <div class="mt-3 mb-3 text-center  md:place-self-start md:justify-self-center">
+            <div class="mt-3 mb-3 text-center  md:place-self-start md:justify-self-center lg:justify-self-start">
                 <img src="{{ asset('/logo.png') }}" alt="logo" class="h-10 mb-4">
                 <ul>
                     <li class="text-lg">Registro</li>
@@ -34,19 +34,19 @@
             <div class="text-center lg:text-left">
                 <h1 class="text-2xl mt-3 mb-3">Mapa do site</h1>
                 <ul>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Página inicial</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Quem somos</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Trabalhe conosco</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Safe Register Car</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Onde operamos</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Pré-cadastro</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Compliance</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Canal de denúncia</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Solicitação de titular</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Segurança</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Privacidade</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Qualidade</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md"><img src="/arrowToRightFooter.png" alt=""><a href="">Contato</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Página inicial</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Quem somos</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Trabalhe conosco</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Safe Register Car</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Onde operamos</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Pré-cadastro</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Compliance</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Canal de denúncia</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Solicitação de titular</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Segurança</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Privacidade</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Qualidade</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="">Contato</a></li>
                 </ul>
             </div>
 

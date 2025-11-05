@@ -18,7 +18,7 @@
       </div>
 
       <div>
-        <img src="" alt="">
+        <img src="{{ asset('Privacidade-1.png') }}" alt="">
       </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
 
         <div>
-            <img src="" alt="">
+            <img src="{{ asset('Privacidade-2.png') }}" alt="">
         </div>
 
         <div>
