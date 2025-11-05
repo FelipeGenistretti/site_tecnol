@@ -4,6 +4,7 @@ use App\Http\Controllers\DownloadPdf;
 use App\Http\Controllers\EnviarCurriculoController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\PreRegistroController;
+use App\Http\Controllers\SolicitacaoTitularController;
 use App\Http\Controllers\UploadFileController;
 use Illuminate\Support\Facades\Route;
 
@@ -73,3 +74,5 @@ Route::get('/baixar-pdf/{nome}', [DownloadPdf::class, 'downloadPdf'])->name('dow
 Route::post("/upload-file", [UploadFileController::class, "uploadFile"])->name('upload-file');
 
 Route::post("/enviar-curriculo", [EnviarCurriculoController::class, "enviarCurriculo"])->name('enviar-curriculo');
+
+Route::post("/solicitacao-titular", [SolicitacaoTitularController::class, "solicitacaoTitular"])->name('enviar-solicitacao');

@@ -145,7 +145,7 @@
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x mb-12">
   
-<form action="{{ route('enviar-curriculo') }}" enctype="multipart/form-data" accept="image/*" method="post" class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
+<form action="{{ route('enviar-curriculo') }}" type="file" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
   @csrf
 
   <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -153,25 +153,17 @@
       <label class="textContainer text-sm font-medium mb-1">Nome</label>
       <input type="text" name="nome" class="border rounded px-3 py-2 w-full" placeholder="Digite seu nome">
     </div>
-            @error('nome')
-          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
-        @enderror
-
+           
     <div class="flex flex-col">
       <label class="textContainer text-sm font-medium mb-1">E-mail</label>
       <input type="text" name="email"  class="border rounded px-3 py-2 w-full" placeholder="email@email.com.br">
     </div>
-            @error('email')
-          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
-        @enderror
+  
 
     <div class="flex flex-col">
       <label class="textContainer text-sm font-medium mb-1">Telefone</label>
       <input type="text" name="telefone" class="border rounded px-3 py-2 w-full" placeholder="(xx) xxxxx-xxxx">
     </div>
-            @error('telefone')
-          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
-        @enderror
 
     <div class="flex flex-col">
       <label class="textContainer text-sm font-medium mb-1">Área de atuação</label>
@@ -183,18 +175,13 @@
       </select>
     </div>
   </div>
-          @error('atuacao')
-          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
-        @enderror
+
 
   <!-- Mensagem -->
   <div class="flex flex-col w-full">
     <label class="textContainer text-sm font-medium mb-1">Mensagem</label>
     <input type="text" class="border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" name="menssagem" />
   </div>
-          @error('menssagem')
-          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
-        @enderror
 
   
 
@@ -213,9 +200,6 @@
     </label>
     <p class="textContainer text-sm text-gray-500 mt-1">Tamanho máximo permitido do anexo 5MB</p>
   </div>
-          @error('files')
-          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
-        @enderror
 
   <!-- Checkbox + reCAPTCHA -->
   <div class="flex flex-col gap-2">
@@ -229,9 +213,6 @@
             e autorizo o tratamento dos meus dados.
           </p>
         </div>
-        @error('privacy')
-          <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
-        @enderror
 
     <div class="mt-2">
       <div class="bg-gray-200 border border-gray-300 rounded p-4 text-center">
