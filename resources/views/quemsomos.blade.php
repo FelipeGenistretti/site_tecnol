@@ -133,7 +133,7 @@
     </div>
 </div>
 
-         <div class="textContainer flex flex-col items-center justify-center text-center mt-5 py-10">
+         <div class="textContainer flex flex-col items-center justify-center text-center mt-5 py-10" id="trabalheConosco">
   <h1 class="text-4xl mb-3 text-textPrimary">Trabalhe conosco</h1>
   <p class="textContainer text-sm text-textSecondary">
     Já pensou em trabalhar em um lugar onde o principal objetivo é crescer junto?
