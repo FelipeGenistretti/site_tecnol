@@ -4,7 +4,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-7 h-full">
             <div>
                 <div class="w-full">
-                    <img src="/src-main-img.png" alt="">
+                    <img src="/src-img.png" alt="">
                 </div>
             </div>
             <div>
