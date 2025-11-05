@@ -1,4 +1,4 @@
-<form action="{{ route('upload-file') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('upload-file') }}" type="file" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post">
     @csrf
 
     <div class="flex flex-col">
@@ -16,7 +16,7 @@
             </p>
             <span class="textContainer py-3 px-6 rounded border border-[#B3B3B3] cursor-pointer uppercase">
                 Adicionar arquivos
-            </span>
+            </span> 
 
             <input type="file" name="files" class="hidden">
         </label>
@@ -43,4 +43,5 @@
     <button type="submit" class="textContainer max-sm:w-full uppercase p-3 text-white bg-bgButtonPrimary hover:bg-orange-400 transition duration-300 rounded-md">
         Enviar arquivo
     </button>
+
 </form>

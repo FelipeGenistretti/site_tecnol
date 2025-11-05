@@ -253,7 +253,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modalSuccess");
-  const btnClose = document.getElementById("close"); // seu elemento <img id="close"> existente
+  const btnClose = document.getElementById("close"); 
 
   if (!modal) return;
   modal.classList.remove("hidden");

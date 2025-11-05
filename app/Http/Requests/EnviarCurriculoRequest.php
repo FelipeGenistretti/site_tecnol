@@ -27,7 +27,7 @@ class EnviarCurriculoRequest extends FormRequest
             "telefone"=>["required", "string"],
             "atuacao" =>["required"],
             "menssagem"=>["required", "string"],
-            "files"=>["required", "file","mimes:jpg,jpeg,png,webp,gif" ,"max:5120"],
+            "files"=>["required", "file",'mimes:png,jpg,jpeg,webp,pdf,doc,docx,xls,xlsx' ,"max:5120"],
             "privacy"=> ['accepted']
 
         ];
@@ -41,7 +41,7 @@ class EnviarCurriculoRequest extends FormRequest
                 "telefone.required"=> "O telefone é obrigatório.",
                 "files.required"=> "O arquivo é obrigatório",
                 "files.max"=>"O arquivo deve ter no máximo 5MB",
-                "files.mimes"=>"O arquivo deve ser uma imagem",
+                "files.mimes"=>"Deve ser um arquivo válido",
                 "privacy.accepted" => "Você deve aceitar a política de privacidade."
     ];
         
