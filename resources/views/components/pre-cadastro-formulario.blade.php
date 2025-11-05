@@ -22,6 +22,27 @@
     </div>
 </div>
 
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center right-10 mt-4 fixed z-50" id="modalCpfInvalido">
+  <div class="flex items-center gap-3">
+    <img src="/alertModalCamposObrigatorios.png" alt="">
+    <p class="text-black">O CPF informado é inválido.</p>
+    <button type="button" class="flex items-center">
+      <img src="/closeModalBlack.png" alt="" id="closeCpfModal">
+    </button>
+  </div>
+</div>
+
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center right-10 mt-4 fixed z-50" id="modalCnpjInvalido">
+  <div class="flex items-center gap-3">
+    <img src="/alertModalCamposObrigatorios.png" alt="">
+    <p class="text-black">O CNPJ informado é inválido.</p>
+    <button type="button" class="flex items-center">
+      <img src="/closeModalBlack.png" alt="" id="closeCnpjModal">
+    </button>
+  </div>
+</div>
+
+
 <div class="container-x py-12">
   <div class="text-center space-y-5 relative">
     <h1 class="text-5xl text-textPrimary max-sm:text-[38px]">Pré-cadastro</h1>
@@ -197,7 +218,7 @@
             <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="email@dominio.com.br" class="textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('email')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
+            @enderror   
           </div>
         </div>
       </div>
@@ -271,7 +292,51 @@
 </script>
 @endif
 
+@if($errors->has('cpf'))
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modalCpfInvalido");
+    const close = document.getElementById("closeCpfModal");
 
+    modal.classList.remove("hidden");
+    modal.classList.add("opacity-0", "transition", "duration-500");
+    setTimeout(() => modal.classList.remove("opacity-0"), 10);
+
+    close.addEventListener("click", () => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    });
+
+    setTimeout(() => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    }, 3000);
+});
+</script>
+@endif
+
+@if($errors->has('cnpj'))
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modalCnpjInvalido");
+    const close = document.getElementById("closeCnpjModal");
+
+    modal.classList.remove("hidden");
+    modal.classList.add("opacity-0", "transition", "duration-500");
+    setTimeout(() => modal.classList.remove("opacity-0"), 10);
+
+    close.addEventListener("click", () => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    });
+
+    setTimeout(() => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    }, 3000);
+});
+</script>
+@endif
 
 
 
