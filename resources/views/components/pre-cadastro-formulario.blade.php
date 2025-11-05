@@ -2,8 +2,49 @@
   <h1 class="text-textPrimary flex max-sm:text-center max-sm:text-[38px] text-3xl max-sm:justify-center">Pré-cadastro</h1>
 </div>
 
+<div class="h-[72px] w-[371px] hidden  bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50" id="modalSuccess">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/iconCheckModal.png" alt="">
+        <p class="text-white">Cadastro realizado com sucesso!</p>
+        <button type="button" class="flex items-center">
+            <img src="/iconCloseModal.png" alt="" id="close">
+        </button>
+    </div> 
+</div>
+
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center right-10 mt-4 justify-center fixed z-50" id="modalCamposObrigatorios">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/alertModalCamposObrigatorios.png" alt="">
+        <p class="text-black">Preencha os campos obrigatórios</p>
+        <button type="button" class="flex items-center">
+            <img src="/closeModalBlack.png" alt="" id="btnClose">
+        </button>
+    </div>
+</div>
+
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center right-10 mt-4 fixed z-50" id="modalCpfInvalido">
+  <div class="flex items-center gap-3">
+    <img src="/alertModalCamposObrigatorios.png" alt="">
+    <p class="text-black">O CPF informado é inválido.</p>
+    <button type="button" class="flex items-center">
+      <img src="/closeModalBlack.png" alt="" id="closeCpfModal">
+    </button>
+  </div>
+</div>
+
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center right-10 mt-4 fixed z-50" id="modalCnpjInvalido">
+  <div class="flex items-center gap-3">
+    <img src="/alertModalCamposObrigatorios.png" alt="">
+    <p class="text-black">O CNPJ informado é inválido.</p>
+    <button type="button" class="flex items-center">
+      <img src="/closeModalBlack.png" alt="" id="closeCnpjModal">
+    </button>
+  </div>
+</div>
+
+
 <div class="container-x py-12">
-  <div class="text-center space-y-5">
+  <div class="text-center space-y-5 relative">
     <h1 class="text-5xl text-textPrimary max-sm:text-[38px]">Pré-cadastro</h1>
     <p class="textContainer text-textSecondary font-semibold">Preencha todos os campos abaixo para iniciar seu pré-cadastro.</p>
   </div>
@@ -177,7 +218,7 @@
             <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="email@dominio.com.br" class="textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('email')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
-            @enderror
+            @enderror   
           </div>
         </div>
       </div>
@@ -204,25 +245,6 @@
   </div>
 
 
-<div class="h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center fixed inset-0 z-50" id="modalSuccess">
-    <div class="flex items-center justify-center gap-3">
-        <img src="/iconCheckModal.png" alt="">
-        <p class="text-white">Cadastro realizado com sucesso!</p>
-        <button type="button" class="flex items-center">
-            <img src="/iconCloseModal.png" alt="" id="close">
-        </button>
-    </div> 
-</div>
-
-<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center" id="modalCamposObrigatorios">
-    <div class="flex items-center justify-center gap-3">
-        <img src="/alertModalCamposObrigatorios.png" alt="">
-        <p class="text-black">Preencha os campos obrigatórios</p>
-        <button type="button" class="flex items-center">
-            <img src="/closeModalBlack.png" alt="" id="btnClose">
-        </button>
-    </div>
-</div>
 
 @if(session('success'))
   <script>
@@ -270,7 +292,51 @@
 </script>
 @endif
 
+@if($errors->has('cpf'))
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modalCpfInvalido");
+    const close = document.getElementById("closeCpfModal");
 
+    modal.classList.remove("hidden");
+    modal.classList.add("opacity-0", "transition", "duration-500");
+    setTimeout(() => modal.classList.remove("opacity-0"), 10);
+
+    close.addEventListener("click", () => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    });
+
+    setTimeout(() => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    }, 3000);
+});
+</script>
+@endif
+
+@if($errors->has('cnpj'))
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modalCnpjInvalido");
+    const close = document.getElementById("closeCnpjModal");
+
+    modal.classList.remove("hidden");
+    modal.classList.add("opacity-0", "transition", "duration-500");
+    setTimeout(() => modal.classList.remove("opacity-0"), 10);
+
+    close.addEventListener("click", () => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    });
+
+    setTimeout(() => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    }, 3000);
+});
+</script>
+@endif
 
 
 

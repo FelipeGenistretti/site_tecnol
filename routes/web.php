@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DownloadPdf;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\PreRegistroController;
 use Illuminate\Support\Facades\Route;
@@ -64,3 +65,5 @@ Route::get("/solicitacao-titular", function(){
 Route::get("/404", function(){
     return view("errors/404");
 })->name("404");
+
+Route::get('/baixar-pdf/{nome}', [DownloadPdf::class, 'downloadPdf'])->name('download.pdf');

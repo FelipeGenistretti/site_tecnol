@@ -106,59 +106,97 @@
   </header>
 
   <!-- MENU MOBILE -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-white w-full fixed top-0 left-0 shadow-lg z-50">
-    <div class="pt-4 flex justify-start">
-      <button id="back" type="button" class="flex items-center gap-2 px-4 py-3 rounded-md">
-        <img src="/voltar.png" alt="Voltar" class="w-5 h-5"/>
-      </button>
-    </div>
-    <div class="relative p-2">
-      <input type="text" name="search" id="searchInput" placeholder="Pesquisar" class="w-full border border-black/15 p-3 pr-12 rounded-md"/>
-      <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center">
-        <img src="/search.png" alt="Pesquisar" class="w-5 h-5"/>
-      </button>
-      <div id="searchResults" class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md"></div>
-    </div>
+<div id="mobile-menu" class="hidden lg:hidden bg-white w-full fixed top-0 left-0 shadow-lg z-50">
+  <div class="pt-4 flex justify-start">
+    <button id="back" type="button" class="flex items-center gap-2 px-4 py-3 rounded-md">
+      <img src="/voltar.png" alt="Voltar" class="w-5 h-5"/>
+    </button>
+  </div>
+  <div class="relative p-2">
+    <input type="text" name="search" id="searchInput" placeholder="Pesquisar" class="w-full border border-black/15 p-3 pr-12 rounded-md"/>
+    <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center">
+      <img src="/search.png" alt="Pesquisar" class="w-5 h-5"/>
+    </button>
+    <div id="searchResults" class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md"></div>
+  </div>
 
-    <div class="bg-[#F8F8FF]">
-      <ul class="flex flex-col gap-5 p-4 uppercase">
-        <li><a href="" class="block hover:text-orange-600">Início</a></li>
-        <li><a href="{{ route('quem-somos') }}" class="block hover:text-orange-600">Quem somos</a></li>
-        <li class="relative">
-          <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
-            Safe Register Car
-            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-            </svg>
+  <div class="bg-[#F8F8FF]">
+    <ul class="flex flex-col gap-5 p-4 uppercase">
+      <li class="relative">
+        <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
+          Quem somos
+          <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
+          <li><a href="{{ route('quem-somos') }}" class="block hover:text-orange-600">Sobre a Tecnol</a></li>
+          <li><a href="" class="block hover:text-orange-600">Trabalhe conosco</a></li>
+        </ul>
+      </li>
+
+      <li class="relative">
+        <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
+          Safe Register Car
+          <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
+          <li><a href="" class="block hover:text-orange-600">O que é?</a></li>
+          <li><a href=""class="block hover:text-orange-600">Onde operamos</a></li>
+          <li><a href="{{route('pre-registro') }}" class="block hover:text-orange-600">Pré-cadastro</a></li>
+        </ul>
+      </li>
+
+      <li class="relative">
+        <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
+          Compliance
+          <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
+          <li><a href="{{ route('compliance') }}" class="block hover:text-orange-600">Compliance</a></li>
+          <li><a href="{{ route('canal-denuncia') }}" class="block hover:text-orange-600">Canal de denúncia</a></li>
+          <li><a href="{{ route('solicitacao-titular') }}" class="block hover:text-orange-600">Solicitação do titular</a></li>
+        </ul>
+      </li>
+
+      <li class="relative">
+        <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
+          Segurança
+          <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
+          <li><a href="{{ route('seguranca') }}" class="block hover:text-orange-600">Gestão de segurança</a></li>
+          <li><a href="{{ route('privacidade') }}" class="block hover:text-orange-600">Privacidade</a></li>
+          <li><a href="{{ route('qualidade') }}" class="block hover:text-orange-600">Qualidade</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/#faleConosco" class="block hover:text-orange-600">Contato</a></li>
+
+      <li>
+        <div class="relative max-md:hidden">
+          <button id="searchButtonMobile" type="button" class="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 transition">
+            <img src="/search.png" class="h-[20px] w-[20px]" alt="Buscar">
           </button>
-          <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
-            <li><a href="{{ route('safe-register-car') }}" class="block hover:text-orange-600">O que é?</a></li>
-            <li><a href="{{ route('pre-registro') }}" class="block hover:text-orange-600">Pré-cadastro</a></li>
-          </ul>
-        </li>
-        <li><a href="{{ route('compliance') }}" class="block hover:text-orange-600">Compliance</a></li>
-        <li><a href="{{ route('seguranca') }}" class="block hover:text-orange-600">Segurança</a></li>
-        <li><a href="{{ route('safe-register-car') }}#ondeoperamos" class="block hover:text-orange-600">Onde operamos</a></li>
-        <li><a href="/#faleconsco" class="block hover:text-orange-600">Contato</a></li>
 
-        <li>
-          <div class="relative max-md:hidden">
-            <button id="searchButtonMobile" type="button" class="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 transition">
-              <img src="/search.png" class="h-[20px] w-[20px]" alt="Buscar">
-            </button>
-
-            <div id="searchBarMobile" class="hidden absolute top-full right-0 mt-2 w-[300px] bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-[9999]">
-              <div class="flex items-center gap-2 border border-gray-300 rounded-md px-3 py-2">
-                <input type="text" placeholder="Pesquisar..." class="w-full focus:outline-none text-sm text-gray-700" />
-                <img src="/search.png" alt="Buscar" class="w-4 h-4 opacity-70">
-              </div>
+          <div id="searchBarMobile" class="hidden absolute top-full right-0 mt-2 w-[300px] bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-[9999]">
+            <div class="flex items-center gap-2 border border-gray-300 rounded-md px-3 py-2">
+              <input type="text" placeholder="Pesquisar..." class="w-full focus:outline-none text-sm text-gray-700" />
+              <img src="/search.png" alt="Buscar" class="w-4 h-4 opacity-70">
             </div>
           </div>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -254,4 +292,5 @@
     padding: 0.75rem !important;
     transition: all 0.2s ease;
   }
+
 </style>

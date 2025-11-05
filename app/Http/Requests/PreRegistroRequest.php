@@ -15,6 +15,15 @@ class PreRegistroRequest extends FormRequest
         return true;
     }
 
+      protected function prepareForValidation()
+    {
+        $this->merge([
+            'cpf'  => preg_replace('/\D/', '', $this->cpf),
+            'cnpj' => preg_replace('/\D/', '', $this->cnpj),
+        ]);
+    }
+
+
     
 
     /**
@@ -29,12 +38,12 @@ class PreRegistroRequest extends FormRequest
         return [];
     }
         return [
-            'cnpj'           => ['required', 'regex:/^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/'], // formato 00.000.000/0001-00
+            'cnpj'           => ['required', 'digits:14'], 
             'nome'           => ['required', 'string', 'max:255'],
             'categoria'      => ['required', 'string', 'in:oficina,lojista,empresa'],
             'nome-fantasia'  => ['required', 'string', 'max:255'],
 
-            'cep'            => ['required', 'regex:/^\d{5}\-\d{3}$/'], // formato 00000-000
+            'cep'            => ['required', 'digits:8'], 
             'endereco'       => ['required', 'string', 'max:255'],
             'numero'         => ['required', 'string', 'max:20'],
             'complemento'    => ['nullable', 'string', 'max:255'],
@@ -43,7 +52,7 @@ class PreRegistroRequest extends FormRequest
             'cidade'         => ['required', 'string', 'max:255'],
 
             'Nome'           => ['required', 'string', 'max:255'],
-            'cpf'            => ['required', 'regex:/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/'], // formato 000.000.000-00
+            'cpf'            => ['required', 'digits:11'], 
             'telefone'       => ['required', 'regex:/^\(?\d{2}\)?\s?\d{4,5}\-?\d{4}$/'], // aceita (00) 00000-0000
             'email'          => ['required', 'email', 'max:255'],
 
