@@ -9,5 +9,6 @@
     <x-enviar-curriculo/>
     <x-section-enviar-curriculo/>
 
-    <x-back-to-top/>
+    <x-back-to-top/>    
+
 @endsection

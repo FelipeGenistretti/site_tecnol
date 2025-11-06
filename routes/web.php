@@ -80,3 +80,7 @@ Route::post("/enviar-curriculo", [EnviarCurriculoController::class, "enviarCurri
 Route::post("/solicitacao-titular", [SolicitacaoTitularController::class, "solicitacaoTitular"])->name('enviar-solicitacao');
 
 Route::get('/api/cnpj/{cnpj}', [CnpjController::class, "consultaCnpj"])->name("consultar-cnpj");
+
+Route::get("/teste", function(){
+    return view("emails/canaldedenuncia");
+})->name("teste");

@@ -6,12 +6,12 @@
 
         <!-- Banner -->
         <div class="bg-[#FDFCFC] h-[358px] flex items-center justify-center">
-            <img src="{{ asset('email-trabalheconsco.png') }}" alt="Logo Trabalhe Conosco" class="w-[350px] h-[350px] object-contain">
+            <img src="{{ asset('email-atendimento.png') }}" alt="Logo Trabalhe Conosco" class="w-[350px] h-[350px] object-contain">
         </div>
 
         <!-- Conteúdo -->
         <div class="p-6 text-[#333] space-y-3">
-            <h1 class="text-[32px] text-center font-semibold">Trabalhe Conosco</h1>
+            <h1 class="text-[32px] text-center font-semibold">Atendimento</h1>
             <br>
             <p class="text-[25px]">Contato via site.</p>
             <br>
@@ -28,17 +28,6 @@
             </p>
         </div>
 
-        <!-- Anexo -->
-        <div class="mt-2 flex justify-center">
-            <button class="bg-[#F2F2F2] font-medium px-6 py-4 rounded-md transition flex items-center gap-3 w-[90%] text-left">
-                <img src="{{ asset('doc-icon.png') }}" alt="" class="w-6 h-6">
-
-                <div class="flex flex-col text-sm gap-1">
-                    <span>Meu_Curriculo_2025.pdf</span>
-                    <span class="text-[#666] text-xs">200KB</span>
-                </div>
-            </button>
-        </div>
 
         <div class="w-full flex justify-center mt-6 mb-10">
             <button class="bg-bgButtonPrimary text-white font-semibold px-8 py-3 rounded-md hover:opacity-90 transition">

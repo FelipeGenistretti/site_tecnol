@@ -1,4 +1,78 @@
-<div class="hero relative bg-cover bg-center min-h-[500px] md:min-h-[700px]" style="background-image: url('/banner.png');">
+<div class="hero relative bg-gray-300 min-h-[500px] md:min-h-[700px] animate-pulse" id="skeleton">
+
+  <div class="absolute inset-0 bg-black/20 z-0"></div>
+
+  <div class="hero-content relative z-10 container-x flex flex-col justify-center pt-[80px] pb-10 max-md:items-center">
+
+    <!-- Título -->
+    <div class="h-10 w-64 bg-gray-400 rounded max-sm:w-48"></div>
+
+    <!-- Texto desktop -->
+    <div class="hidden lg:block mt-4 space-y-2">
+      <div class="h-4 w-96 bg-gray-400 rounded"></div>
+      <div class="h-4 w-80 bg-gray-400 rounded"></div>
+      <div class="h-4 w-72 bg-gray-400 rounded"></div>
+    </div>
+
+    <!-- Texto mobile -->
+    <div class="lg:hidden mt-4 space-y-2 w-full max-w-sm">
+      <div class="h-4 w-full bg-gray-400 rounded"></div>
+      <div class="h-4 w-5/6 bg-gray-400 rounded"></div>
+      <div class="h-4 w-4/6 bg-gray-400 rounded"></div>
+    </div>
+
+    <!-- Estatísticas -->
+    <div class="flex lg:flex-row md:flex-row gap-6 mt-10">
+      <!-- Item -->
+      <div class="flex flex-col gap-2 items-center">
+        <div class="h-10 w-12 bg-gray-400 rounded"></div>
+        <div class="h-3 w-24 bg-gray-400 rounded"></div>
+      </div>
+      <!-- Item -->
+      <div class="flex flex-col gap-2 items-center">
+        <div class="h-10 w-12 bg-gray-400 rounded"></div>
+        <div class="h-3 w-32 bg-gray-400 rounded"></div>
+      </div>
+      <!-- Item -->
+      <div class="flex flex-col gap-2 items-center">
+        <div class="h-10 w-12 bg-gray-400 rounded"></div>
+        <div class="h-3 w-28 bg-gray-400 rounded"></div>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div class="max-sm:w-full flex flex-col sm:flex-row gap-4 mt-10 w-full sm:w-auto">
+      <div class="w-full sm:w-auto">
+        <div class="h-12 w-full bg-gray-400 rounded"></div>
+      </div>
+      <div class="w-full sm:w-auto">
+        <div class="h-12 w-full bg-gray-400 rounded"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Faixa de cadastro -->
+  <div class="bg-gray-200 py-12 md:py-16 flex flex-col md:flex-row justify-between items-center gap-6 mt-12 relative z-10 animate-pulse">
+
+    <div class="container-x flex flex-col gap-3 w-full max-w-lg">
+      <div class="h-6 w-72 bg-gray-400 rounded max-sm:w-56"></div>
+      <div class="h-4 w-60 bg-gray-400 rounded max-sm:w-40"></div>
+    </div>
+
+    <!-- Botão desktop -->
+    <div class="hidden lg:flex container-x">
+      <div class="h-12 w-52 bg-gray-400 rounded"></div>
+    </div>
+
+    <!-- Botão mobile -->
+    <div class="lg:hidden w-full flex justify-center container-x">
+      <div class="h-12 w-full bg-gray-400 rounded"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="hero relative bg-cover bg-center min-h-[500px] md:min-h-[700px]" id="content-type" style="background-image: url('/banner.png');">
 
   <div class="absolute inset-0 bg-black/30 z-0"></div>
 
@@ -82,3 +156,15 @@
     </div>
   </div>
 </div>
+
+
+
+<script>
+    window.addEventListener("load", () => {
+        const skeleton = document.getElementById('skeleton');
+        const content = document.getElementById('content-real');
+
+        skeleton.classList.add('hidden');
+        content.classList.remove('hidden');
+    });
+</script>
