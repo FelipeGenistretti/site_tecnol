@@ -2,29 +2,25 @@
 
 namespace App\Mail;
 
-use App\HasAttachment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class CanalDenunciaMail extends Mailable
+class PreCadastroMail extends Mailable
 {
-    use Queueable, SerializesModels, HasAttachment;
+    use Queueable, SerializesModels;
 
     public $data;
-    public $arquivo;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($data, $arquivo=null)
+    public function __construct($data)
     {
         $this->data = $data;
-        $this->arquivo = $arquivo;
     }
 
     /**
@@ -33,7 +29,7 @@ class CanalDenunciaMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Canal Denuncia Mail',
+            subject: 'Pre Cadastro Mail',
         );
     }
 
@@ -43,10 +39,9 @@ class CanalDenunciaMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.denuncia',
+            markdown: 'emails.pre-cadastro',
             with:[
-                "data"=>$this->data,
-                "arquivo"=>$this->arquivo
+                "data"=>$this->data
             ]
         );
     }
@@ -58,6 +53,6 @@ class CanalDenunciaMail extends Mailable
      */
     public function attachments(): array
     {
-         return $this->attachFile($this->arquivo);
+        return [];
     }
 }

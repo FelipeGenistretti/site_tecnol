@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\HasAttachment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -12,7 +13,7 @@ use Illuminate\Queue\SerializesModels;
 
 class CurriculoMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable, SerializesModels, HasAttachment;
 
     public $data;
     public $arquivo;
@@ -56,14 +57,6 @@ class CurriculoMail extends Mailable
      */
     public function attachments(): array
     {   
-        if ($this->arquivo) {
-            return [
-                Attachment::fromPath($this->arquivo->getRealPath())
-                          ->as($this->arquivo->getClientOriginalName())
-                          ->withMime($this->arquivo->getMimeType())
-            ];
-        }
-        
-        return [];
+        return $this->attachFile($this->arquivo);
     }
 }
