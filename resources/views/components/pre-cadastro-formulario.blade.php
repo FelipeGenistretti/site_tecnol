@@ -1,3 +1,56 @@
+{{-- SKELETON LOADING --}}
+<div id="skeleton" class="container-x py-12 animate-pulse">
+
+    <div class="flex flex-col items-center space-y-4 mb-10">
+        <div class="h-10 w-64 bg-gray-300 rounded"></div>
+        <div class="h-4 w-3/4 bg-gray-300 rounded"></div>
+    </div>
+
+    <div class="bg-gray-200 p-5 rounded-md space-y-5">
+
+        {{-- Linha 1 --}}
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+        </div>
+
+        {{-- Linha 2 --}}
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+        </div>
+
+        {{-- Linha 3 --}}
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+        </div>
+
+        {{-- Linha 4 --}}
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+        </div>
+
+        {{-- Linha 5 --}}
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+            <div class="h-12 bg-gray-300 rounded"></div>
+        </div>
+
+        {{-- Botão --}}
+        <div class="h-12 w-40 bg-gray-300 rounded mx-auto lg:mx-0"></div>
+
+    </div>
+</div>
+
+
+<div  id="content-real" class="hidden">
 <div class="container-x py-10 bg-[#F2F2F2]">
   <h1 class="text-textPrimary flex max-sm:text-center max-sm:text-[38px] text-3xl max-sm:justify-center">Pré-cadastro</h1>
 </div>
@@ -70,7 +123,7 @@
         <div>
           <div class="flex flex-col">
             <label for="nome" class="textContainer text-sm">Razão social</label>
-            <input type="text" name="nome" id="nome" value="{{ old('nome') }}" placeholder="Nome" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="nome" id="razao-social" value="{{ old('nome') }}" placeholder="Nome" class="textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('nome')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -188,7 +241,7 @@
         <div>
           <div class="flex flex-col">
             <label for="Nome" class="textContainer text-sm">Nome</label>
-            <input type="text" name="Nome" id="Nome" value="{{ old('Nome') }}" placeholder="Nome" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="Nome" id="nome" value="{{ old('Nome') }}" placeholder="Nome" class="textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('Nome')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -246,7 +299,73 @@
 
     </form>
   </div>
+</div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const inputCep = document.getElementById("cep");
+
+    inputCep.addEventListener("blur", () => {
+      const cep = inputCep.value.replace(/\D/g, "");
+
+      if (cep.length === 8) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(r => r.json())
+          .then(data => {
+            if (data.erro) return;
+
+            document.getElementById("endereco").value = data.logradouro || "";
+            document.getElementById("complemento").value = data.complemento || "";
+            document.getElementById("bairro").value = data.bairro || "";
+          })
+          .catch(err => console.log("Erro ao buscar CEP:", err));
+      }
+    });
+
+    const inputCnpj = document.getElementById("cnpj");
+
+    inputCnpj.addEventListener("blur", () => {
+      const cnpj = inputCnpj.value.replace(/\D/g, "");
+
+      if (cnpj.length === 14) {
+        fetch(`/api/cnpj/${cnpj}`)
+          .then(r => r.json())
+          .then(data => {
+            if (data.status === "ERROR") return;
+
+            document.getElementById("nome-fantasia").value = data.fantasia ? capitalize(data.fantasia) : "";
+            document.getElementById("telefone").value = data.telefone || "";
+            document.getElementById("email").value = data.email || "";
+
+            const cep = data.cep ? data.cep.replace(/\D/g, "") : "";
+
+            if (cep.length === 8) {
+              document.getElementById("cep").value = cep;
+
+              return fetch(`https://viacep.com.br/ws/${cep}/json/`);
+            }
+          })
+          .then(r => r ? r.json() : null)
+          .then(endereco => {
+            if (!endereco || endereco.erro) return;
+
+            document.getElementById("endereco").value = endereco.logradouro || "";
+            document.getElementById("complemento").value = endereco.complemento || "";
+            document.getElementById("bairro").value = endereco.bairro || "";
+          })
+          .catch(err => console.log("Erro ao buscar CNPJ:", err));
+      }
+    });
+
+  });
+
+  function capitalize(str) {
+  return str
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+}
+
+</script>
 
 
 @if(session('success'))
@@ -280,6 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const modalCampos = document.getElementById("modalCamposObrigatorios");
   const btnCloseCampos = document.getElementById("btnClose");
+
 
   if (modalCampos) {
     modalCampos.classList.remove("hidden");
@@ -353,3 +473,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 @endif
+
+<script>
+    window.addEventListener("load", () => {
+        const skeleton = document.getElementById('skeleton');
+        const content = document.getElementById('content-real');
+
+        skeleton.classList.add('hidden');
+        content.classList.remove('hidden');
+    });
+</script>

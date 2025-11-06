@@ -1,4 +1,39 @@
-<div>
+{{-- SKELETON --}}
+<div id="skeleton" class="container-x py-12 animate-pulse">
+
+  <div class="flex flex-col items-center space-y-4 mb-10">
+    <div class="h-10 w-64 bg-gray-300 rounded"></div>
+    <div class="h-4 w-3/4 bg-gray-300 rounded"></div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+    {{-- Lado esquerdo (texto + cards) --}}
+    <div>
+      <div class="space-y-4 mb-10">
+        <div class="h-10 w-3/4 bg-gray-300 rounded"></div>
+        <div class="h-4 w-full bg-gray-300 rounded"></div>
+        <div class="h-4 w-full bg-gray-300 rounded"></div>
+        <div class="h-4 w-5/6 bg-gray-300 rounded"></div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-5">
+        <div class="h-20 bg-gray-300 rounded"></div>
+        <div class="h-20 bg-gray-300 rounded"></div>
+        <div class="h-20 bg-gray-300 rounded"></div>
+        <div class="h-20 bg-gray-300 rounded"></div>
+      </div>
+    </div>
+
+    {{-- Lado direito (gráfico) --}}
+    <div class="h-80 bg-gray-300 rounded"></div>
+
+  </div>
+</div>
+
+
+
+<div id="content-real" class="hidden">
   <div class="container-x py-10 bg-[#F2F2F2]">
     <h1 class="text-textPrimary text-3xl max-sm:text-[38px] max-sm:flex max-sm:text-center max-sm:justify-center">Safe Register Car</h1>
   </div>
@@ -59,3 +94,14 @@
     </div>
   </div>
 </div>
+
+
+<script>
+    window.addEventListener("load", () => {
+        const skeleton = document.getElementById('skeleton');
+        const content = document.getElementById('content-real');
+
+        skeleton.classList.add('hidden');
+        content.classList.remove('hidden');
+    });
+</script>
