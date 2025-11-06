@@ -84,3 +84,4 @@ Route::get('/api/cnpj/{cnpj}', [CnpjController::class, "consultaCnpj"])->name("c
 Route::get("/teste", function(){
     return view("emails/canaldedenuncia");
 })->name("teste");
+Route::get('/api/cnpj/{cnpj}', [CnpjController ::class, "consultaCnpj"])->name("consultar-cnpj");

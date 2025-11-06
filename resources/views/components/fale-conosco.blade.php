@@ -6,6 +6,26 @@
     </p>
   </div>
 
+  <div class="h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center fixed inset-20 z-[9999]" id="modalSuccess">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/iconCheckModal.png" alt="">
+        <p class="text-white">Cadastro realizado com sucesso!</p>
+        <button type="button" class="flex items-center">
+            <img src="/iconCloseModal.png" alt="" id="close">
+        </button>
+    </div>
+</div>
+
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center" id="modalCamposObrigatorios">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/alertModalCamposObrigatorios.png" alt="">
+        <p class="text-black">Preencha os campos obrigatórios</p>
+        <button type="button" class="flex items-center">
+            <img src="/closeModalBlack.png" alt="" id="btnClose">
+        </button>
+    </div>
+</div>
+
   <div class="pt-5">
     <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[60%_40%] gap-6">
       
@@ -17,95 +37,104 @@
           </div>
         @endif
 
-        <form action="{{ route('fale-conosco.store') }}" method="POST">
-          @csrf
+       <form action="{{ route('fale-conosco.store') }}" method="POST">
+  @csrf
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="flex flex-col">
-              <label for="name" class="font-medium mb-1">Nome</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value="{{ old('name') }}"
-                placeholder="Digite seu nome"
-                class="p-2 border rounded-md w-full @error('name') border-red-500 @enderror"
-              />
-              @error('name')
-                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-              @enderror
-            </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="flex flex-col">
+      <label for="name" class="font-medium mb-1">Nome</label>
+      <input
+        type="text"
+        name="nome"
+        id="name"
+        value="{{ old('nome') }}"
+        placeholder="Digite seu nome"
+        class="p-2 border rounded-md w-full @error('nome') border-red-500 @enderror"
+      />
+      @error('nome')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror
+    </div>
 
-            <div class="flex flex-col">
-              <label for="email" class="font-medium mb-1">E-mail</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value="{{ old('email') }}"
-                placeholder="email@email.com.br"
-                class="p-2 border rounded-md w-full @error('email') border-red-500 @enderror"
-              />
-              @error('email')
-                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-              @enderror
-            </div>
+    <div class="flex flex-col">
+      <label for="email" class="font-medium mb-1">E-mail</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        value="{{ old('email') }}"
+        placeholder="email@email.com.br"
+        class="p-2 border rounded-md w-full @error('email') border-red-500 @enderror"
+      />
+      @error('email')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror
+    </div>
 
-            <div class="flex flex-col">
-              <label for="phone" class="font-medium mb-1">Telefone</label>
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                value="{{ old('phone') }}"
-                placeholder="(xx) xxxxx-xxxx"
-                class="p-2 border rounded-md w-full @error('phone') border-red-500 @enderror"
-              />
-              @error('phone')
-                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-              @enderror
-            </div>
-          </div>
+    <div class="flex flex-col">
+      <label for="phone" class="font-medium mb-1">Telefone</label>
+      <input
+        type="text"
+        name="telefone"
+        id="phone"
+        value="{{ old('telefone') }}"
+        placeholder="(xx) xxxxx-xxxx"
+        class="p-2 border rounded-md w-full @error('telefone') border-red-500 @enderror"
+      />
+      @error('telefone')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror
+    </div>
+  </div>
 
-          <div class="grid grid-cols-1 py-5">
-            <div class="flex flex-col rounded-md">
-              <label class="font-medium mb-1" for="message">Mensagem</label>
-              <textarea
-                name="message"
-                id="message"
-                rows="4"
-                placeholder="Escreva aqui sua mensagem"
-                class="p-3 border rounded-md resize-none @error('message') border-red-500 @enderror"
-              >{{ old('message') }}</textarea>
-              @error('message')
-                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-              @enderror
-            </div>
-          </div>
+  <div class="grid grid-cols-1 py-5">
+    <div class="flex flex-col rounded-md">
+      <label class="font-medium mb-1" for="mensagem">Mensagem</label>
+      <textarea
+        name="mensagem"
+        id="mensagem"
+        rows="4"
+        placeholder="Escreva aqui sua mensagem"
+        class="p-3 border rounded-md resize-none @error('mensagem') border-red-500 @enderror"
+      >{{ old('mensagem') }}</textarea>
+      @error('mensagem')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror
+    </div>
+  </div>
 
-          <div class="flex gap-2 items-center mb-4">
-            <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125" {{ old('privacy') ? 'checked' : '' }}/>
-            <p>
-              Li e concordo com a
-              <span>
-                <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
-              </span>
-              e autorizo o tratamento dos meus dados.
-            </p>
-          </div>
-          @error('privacy')
-            <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
-          @enderror
+  <div class="flex gap-2 items-center mb-4">
+    <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125" {{ old('privacy') ? 'checked' : '' }} />
+    <p>
+      Li e concordo com a
+      <span>
+        <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
+      </span>
+      e autorizo o tratamento dos meus dados.
+    </p>
+  </div>
+  @error('privacy')
+    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
+  @enderror
 
-          <div class="flex justify-center pt-5">
-            <button
-              type="submit"
-              class="uppercase text-md text-white bg-orange-600 hover:bg-orange-400 transition duration-300 w-full p-3 rounded-md"
-            >
-              Enviar
-            </button>
-          </div>
-        </form>
+  <div class="flex justify-center pt-5">
+  <button
+    id="btnSubmit"
+    type="submit"
+    class="uppercase text-md text-white bg-orange-600 hover:bg-orange-400 transition duration-300 w-full p-3 rounded-md flex items-center justify-center gap-2"
+  >
+    <span id="btnText">Enviar</span>
+
+    <!-- Spinner -->
+    <span
+      id="btnLoader"
+      class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"
+    ></span>
+  </button>
+</div>
+
+</form>
+
       </div>
 
       <!-- BLOCO DE INFORMAÇÕES (30%) -->
@@ -150,26 +179,23 @@
   </div>
 </div>
 
-<div class="h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center fixed inset-20 z-50" id="modalSuccess">
-    <div class="flex items-center justify-center gap-3">
-        <img src="/iconCheckModal.png" alt="">
-        <p class="text-white">Cadastro realizado com sucesso!</p>
-        <button type="button" class="flex items-center">
-            <img src="/iconCloseModal.png" alt="" id="close">
-        </button>
-    </div>
-</div>
 
-<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center" id="modalCamposObrigatorios">
-    <div class="flex items-center justify-center gap-3">
-        <img src="/alertModalCamposObrigatorios.png" alt="">
-        <p class="text-black">Preencha os campos obrigatórios</p>
-        <button type="button" class="flex items-center">
-            <img src="/closeModalBlack.png" alt="" id="btnClose">
-        </button>
-    </div>
-</div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector(`form[action='{{ route("fale-conosco.store") }}']`);
+    const btn = document.getElementById('btnSubmit');
+    const text = document.getElementById('btnText');
+    const loader = document.getElementById('btnLoader');
+
+    form.addEventListener('submit', () => {
+      btn.disabled = true;
+      btn.classList.add('opacity-80', 'cursor-not-allowed');
+      text.textContent = "Enviando...";
+      loader.classList.remove('hidden');
+    });
+  });
+</script>
 
 
 @if(session('success'))

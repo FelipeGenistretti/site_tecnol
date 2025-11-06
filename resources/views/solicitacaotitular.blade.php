@@ -80,7 +80,7 @@
 
   <!-- Formulário -->
   <div class="w-full max-w-[1200px] bg-gray-100 rounded-lg p-6 sm:p-8 shadow-md mt-8 mb-10">
-    <form action="{{ route('enviar-solicitacao') }}" type="file" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" enctype="multipart/form-data" class="flex flex-col space-y-6">
+    <form action="{{ route('enviar-solicitacao') }}"  accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" enctype="multipart/form-data" class="flex flex-col space-y-6">
       @csrf
       <!-- Seletor duplo -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">

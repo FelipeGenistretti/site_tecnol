@@ -2,25 +2,28 @@
 
 namespace App\Mail;
 
+use App\HasAttachment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class FaleConoscoMail extends Mailable
+class CurriculoMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable, SerializesModels, HasAttachment;
 
     public $data;
-
+    public $arquivo;
     /**
      * Create a new message instance.
      */
-    public function __construct(array $data)
+    public function __construct($data, $arquivo = null)
     {
         $this->data = $data;
+        $this->arquivo = $arquivo;
     }
 
     /**
@@ -29,7 +32,7 @@ class FaleConoscoMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Fale Conosco Mail',
+            subject: 'Curriculo enviado',
         );
     }
 
@@ -39,9 +42,10 @@ class FaleConoscoMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.faleconosco',
+            markdown: 'emails.curriculo',
             with:[
-                'data'=>$this->data
+                'data'=>$this->data,
+                "arquivo"=>$this->arquivo
             ]
         );
     }
@@ -52,7 +56,7 @@ class FaleConoscoMail extends Mailable
      * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */
     public function attachments(): array
-    {
-        return [];
+    {   
+        return $this->attachFile($this->arquivo);
     }
 }

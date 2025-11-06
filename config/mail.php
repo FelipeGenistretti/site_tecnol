@@ -13,6 +13,10 @@ return [
     | "mailers" array. Examples of each type of mailer are provided.
     |
     */
+    'to' => [
+    'address' => env('MAIL_TO_ADDRESS', 'contato@seusite.com'),
+    'name' => env('MAIL_TO_NAME', 'Site'),
+    ],
 
     'default' => env('MAIL_MAILER', 'log'),
 

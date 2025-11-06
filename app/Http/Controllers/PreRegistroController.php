@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PreRegistroRequest;
+use App\Mail\PreCadastroMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PreRegistroController extends Controller
 {
@@ -21,6 +23,9 @@ class PreRegistroController extends Controller
     public function store(PreRegistroRequest $request)
     {
         $data = $request->validated();
+
+        Mail::to(config("mail.to.address"))->send(new PreCadastroMail($data));
+
         return redirect()->back()->with('success', "Mensagem enviada com sucesso");
     }
 

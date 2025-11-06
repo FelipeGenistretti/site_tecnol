@@ -229,6 +229,7 @@
             <label for="cidade" class="textContainer text-sm">Cidade</label>
             <select name="cidade" id="cidade" class="textContainer p-2 rounded-sm mt-2 border border-gray w-full">
               <option value="">Selecione...</option>
+              <option value="SP">SP</option>
             </select>
             @error('cidade')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>

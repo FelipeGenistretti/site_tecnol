@@ -1,12 +1,12 @@
-<form action="{{ route('upload-file') }}" type="file" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post">
+<form action="{{ route('upload-file') }}" enctype="multipart/form-data" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post">
     @csrf
 
     <div class="flex flex-col">
               <div class="flex flex-col">
                 <label for="mensagem" class="textContainer">Mensagem</label>
-                <textarea name="message" id="mensagem" class="p-3 resize-none border border-gray-400/40 rounded-md mb-3"></textarea>
+                <textarea name="mensagem" id="message" class="p-3 resize-none border border-gray-400/40 rounded-md mb-3"></textarea>
             </div>
-                @error('message')
+                @error('mensagem')
                 <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
               @enderror
         <label class=" border-2 border-dashed border-gray-400/30 rounded px-3 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors">

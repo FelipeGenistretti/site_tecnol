@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ValidationFormRequest;
+use App\Mail\FaleConoscoMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class FormController extends Controller
 {
@@ -21,6 +23,9 @@ class FormController extends Controller
     public function store(ValidationFormRequest $request)
     {
         $data = $request->validated();
+
+         Mail::to(config('mail.to.address'))->send(new FaleConoscoMail($data));
+
         return redirect()->back()->with('success', "Mensagem enviada com sucesso");
     }
 

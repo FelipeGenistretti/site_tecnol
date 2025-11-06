@@ -24,7 +24,7 @@ class UploadFilesRequest extends FormRequest
         return [
             "files"=>["required", "file", 'mimes:png,jpg,jpeg,webp,pdf,doc,docx,xls,xlsx',"max:5120"],
             'privacy'=> ['accepted'],
-            'message'=>['required', 'string', 'max:255']
+            'mensagem'=>['required', 'string', 'max:255']
         ];
     }
 
@@ -35,7 +35,7 @@ class UploadFilesRequest extends FormRequest
             "files.max"=> "O arquivo deve ter no máximo 5MB",
             "files.mimes"=> "Deve ser um arquivo válido",
             "privacy.accepted"=>"Você deve aceitar a política de privacidade.",
-            "message.required"=>"Você deve escrever uma mensagem."
+            "mensagem.required"=>"Você deve escrever uma mensagem."
         ];
     }
 }

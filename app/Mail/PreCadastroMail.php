@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class FaleConoscoMail extends Mailable
+class PreCadastroMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,7 +18,7 @@ class FaleConoscoMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(array $data)
+    public function __construct($data)
     {
         $this->data = $data;
     }
@@ -29,7 +29,7 @@ class FaleConoscoMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Fale Conosco Mail',
+            subject: 'Pre Cadastro Mail',
         );
     }
 
@@ -39,9 +39,9 @@ class FaleConoscoMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.faleconosco',
+            markdown: 'emails.pre-cadastro',
             with:[
-                'data'=>$this->data
+                "data"=>$this->data
             ]
         );
     }

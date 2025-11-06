@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SolicitacaoTitularRequest;
+use App\Mail\SolicitacaoTitularMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SolicitacaoTitularController extends Controller
 {
@@ -21,6 +23,9 @@ class SolicitacaoTitularController extends Controller
     public function solicitacaoTitular(SolicitacaoTitularRequest $request)
     {
         $data = $request->validated();
+        $arquivo = $request->file("files");
+
+        Mail::to(config("mail.to.address"))->send(new SolicitacaoTitularMail($data, $arquivo));
 
         return back()->with("success", "Mensagem enviada com sucesso");
     }

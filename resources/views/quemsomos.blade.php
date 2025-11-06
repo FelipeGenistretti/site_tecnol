@@ -189,7 +189,7 @@
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x mb-12">
   
-<form action="{{ route('enviar-curriculo') }}" type="file" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
+<form id="enviarCurriculoForm" action="{{ route('enviar-curriculo') }}" enctype="multipart/form-data" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
   @csrf
 
   <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -224,7 +224,7 @@
   <!-- Mensagem -->
   <div class="flex flex-col w-full">
     <label class="textContainer text-sm font-medium mb-1">Mensagem</label>
-    <input type="text" class="border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" name="menssagem" />
+    <input type="text" class="border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" name="mensagem" />
   </div>
 
   
@@ -257,6 +257,8 @@
             e autorizo o tratamento dos meus dados.
           </p>
         </div>
+
+         <input type="hidden" name="recaptcha_token" id="recaptcha_token">
 
     <div class="mt-2">
       <div class="bg-gray-200 border border-gray-300 rounded p-4 text-center">
@@ -325,64 +327,59 @@
 </div>    
 @endsection
 
+<script src="https://www.google.com/recaptcha/enterprise.js?render={{ config('recaptcha.site_key') }}"></script>
 <script>
-    window.addEventListener("load", () => {
-        const skeleton = document.getElementById('skeleton');
-        const content = document.getElementById('content-real');
-
-        skeleton.classList.add('hidden');
-        content.classList.remove('hidden');
+grecaptcha.enterprise.ready(function() {
+    grecaptcha.enterprise.execute('{{ config('recaptcha.site_key') }}', {action: 'submit'}).then(function(token) {
+        document.getElementById('recaptcha_token').value = token;
     });
+});
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
- 
 
-    // Modal sucesso
+
+<<script>
+window.addEventListener("load", () => {
+    const skeleton = document.getElementById('skeleton');
+    const content = document.getElementById('content-real');
+
+    skeleton.classList.add('hidden');
+    content.classList.remove('hidden');
+});
+
+document.addEventListener("DOMContentLoaded", () => {
     const modalSuccess = document.getElementById("modalSuccess");
     const closeSuccess = document.getElementById("close");
+
     @if(session('success'))
-        if(modalSuccess){
-            modalSuccess.classList.remove("hidden");
-            modalSuccess.classList.add("opacity-0", "transition", "duration-500");
-            setTimeout(() => modalSuccess.classList.remove("opacity-0"), 10);
-
-            if(closeSuccess){
-                closeSuccess.addEventListener("click", () => {
-                    modalSuccess.classList.add("opacity-0");
-                    setTimeout(() => modalSuccess.classList.add("hidden"), 500);
-                });
-            }
-
-            setTimeout(() => {
-                modalSuccess.classList.add("opacity-0");
-                setTimeout(() => modalSuccess.classList.add("hidden"), 500);
-            }, 3000);
-        }
+        showModal(modalSuccess, closeSuccess);
     @endif
 
-    // Modal campos obrigatórios
     const modalCampos = document.getElementById("modalCamposObrigatorios");
     const btnCloseCampos = document.getElementById("btnClose");
+
     @if($errors->any())
-        if(modalCampos){
-            modalCampos.classList.remove("hidden");
-            modalCampos.classList.add("opacity-0");
-            setTimeout(() => modalCampos.classList.remove("opacity-0"), 10);
-
-            if(btnCloseCampos){
-                btnCloseCampos.addEventListener("click", () => {
-                    modalCampos.classList.add("opacity-0");
-                    setTimeout(() => modalCampos.classList.add("hidden"), 500);
-                });
-            }
-
-            setTimeout(() => {
-                modalCampos.classList.add("opacity-0");
-                setTimeout(() => modalCampos.classList.add("hidden"), 500);
-            }, 3000);
-        }
+        showModal(modalCampos, btnCloseCampos);
     @endif
+
+    function showModal(modal, closeBtn) {
+        if(!modal) return;
+
+        modal.classList.remove("hidden");
+        modal.classList.add("opacity-0", "transition", "duration-500");
+        setTimeout(() => modal.classList.remove("opacity-0"), 10);
+
+        if(closeBtn){
+            closeBtn.addEventListener("click", () => {
+                modal.classList.add("opacity-0");
+                setTimeout(() => modal.classList.add("hidden"), 500);
+            });
+        }
+
+        setTimeout(() => {
+            modal.classList.add("opacity-0");
+            setTimeout(() => modal.classList.add("hidden"), 500);
+        }, 3000);
+    }
 });
 </script>

@@ -26,7 +26,7 @@ class EnviarCurriculoRequest extends FormRequest
             "email"=>["required", "string", "email"],
             "telefone"=>["required", "string"],
             "atuacao" =>["required"],
-            "menssagem"=>["required", "string"],
+            "mensagem"=>["required", "string"],
             "files"=>["required", "file",'mimes:png,jpg,jpeg,webp,pdf,doc,docx,xls,xlsx' ,"max:5120"],
             "privacy"=> ['accepted']
 
