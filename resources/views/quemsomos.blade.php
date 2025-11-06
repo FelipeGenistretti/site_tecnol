@@ -258,7 +258,7 @@
           </p>
         </div>
 
-         <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+<!-- <input type="hidden" name="recaptcha_token" id="recaptcha_token"> -->
 
     <div class="mt-2">
       <div class="bg-gray-200 border border-gray-300 rounded p-4 text-center">
@@ -329,11 +329,11 @@
 
 <script src="https://www.google.com/recaptcha/enterprise.js?render={{ config('recaptcha.site_key') }}"></script>
 <script>
-grecaptcha.enterprise.ready(function() {
-    grecaptcha.enterprise.execute('{{ config('recaptcha.site_key') }}', {action: 'submit'}).then(function(token) {
-        document.getElementById('recaptcha_token').value = token;
-    });
-});
+//grecaptcha.enterprise.ready(function() {
+//    grecaptcha.enterprise.execute('{{ config('recaptcha.site_key') }}', {action: 'submit'}).then(function(token) {
+//        document.getElementById('recaptcha_token').value = token;
+//    });
+//});
 </script>
 
 
