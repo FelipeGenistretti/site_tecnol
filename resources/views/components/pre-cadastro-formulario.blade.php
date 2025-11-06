@@ -334,6 +334,8 @@
             if (data.status === "ERROR") return;
 
             document.getElementById("nome-fantasia").value = data.fantasia ? capitalize(data.fantasia) : "";
+            document.getElementById("nome").value = data.nome_limpo ? capitalize(data.nome_limpo) : "";
+            document.getElementById("cpf").value = data.cpf_extraido || "";
             document.getElementById("telefone").value = data.telefone || "";
             document.getElementById("email").value = data.email || "";
 

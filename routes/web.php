@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CnpjController;
 use App\Http\Controllers\DownloadPdf;
 use App\Http\Controllers\EnviarCurriculoController;
 use App\Http\Controllers\FormController;
@@ -78,10 +79,4 @@ Route::post("/enviar-curriculo", [EnviarCurriculoController::class, "enviarCurri
 
 Route::post("/solicitacao-titular", [SolicitacaoTitularController::class, "solicitacaoTitular"])->name('enviar-solicitacao');
 
-Route::get('/api/cnpj/{cnpj}', function ($cnpj) {
-    $cnpj = preg_replace('/\D/', '', $cnpj);
-
-    $response = Http::get("https://receitaws.com.br/v1/cnpj/{$cnpj}");
-
-    return $response->json();
-});
+Route::get('/api/cnpj/{cnpj}', [CnpjController::class, "consultaCnpj"])->name("consultar-cnpj");
