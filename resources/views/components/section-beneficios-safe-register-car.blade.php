@@ -1,3 +1,4 @@
+<div >
 <div class="container-x bg-[#004A65] py-7">
     <h1 class="text-white text-4xl text-center ">Benefícios</h1>
     <div>
@@ -54,3 +55,11 @@
         </div>
     </div>
 </div>
+</div>
+
+<script>
+    window.addEventListener("load", () => {
+        document.getElementById('skeleton').classList.add('hidden');
+        document.getElementById('content-real').classList.remove('hidden');
+    });
+</script>

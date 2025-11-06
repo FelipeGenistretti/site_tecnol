@@ -6,6 +6,7 @@ use App\Http\Controllers\FormController;
 use App\Http\Controllers\PreRegistroController;
 use App\Http\Controllers\SolicitacaoTitularController;
 use App\Http\Controllers\UploadFileController;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
 // Página inicial
@@ -76,3 +77,11 @@ Route::post("/upload-file", [UploadFileController::class, "uploadFile"])->name('
 Route::post("/enviar-curriculo", [EnviarCurriculoController::class, "enviarCurriculo"])->name('enviar-curriculo');
 
 Route::post("/solicitacao-titular", [SolicitacaoTitularController::class, "solicitacaoTitular"])->name('enviar-solicitacao');
+
+Route::get('/api/cnpj/{cnpj}', function ($cnpj) {
+    $cnpj = preg_replace('/\D/', '', $cnpj);
+
+    $response = Http::get("https://receitaws.com.br/v1/cnpj/{$cnpj}");
+
+    return $response->json();
+});
