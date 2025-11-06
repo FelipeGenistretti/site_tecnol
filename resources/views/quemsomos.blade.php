@@ -189,7 +189,7 @@
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x mb-12">
   
-<form action="{{ route('enviar-curriculo') }}" enctype="multipart/form-data" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
+<form id="enviarCurriculoForm" action="{{ route('enviar-curriculo') }}" enctype="multipart/form-data" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" class="bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
   @csrf
 
   <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -258,6 +258,8 @@
           </p>
         </div>
 
+         <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+
     <div class="mt-2">
       <div class="bg-gray-200 border border-gray-300 rounded p-4 text-center">
         <span class="text-sm text-gray-500">reCAPTCHA aqui</span>
@@ -324,6 +326,17 @@
 
 </div>    
 @endsection
+
+<script src="https://www.google.com/recaptcha/enterprise.js?render={{ config('recaptcha.site_key') }}"></script>
+<script>
+grecaptcha.enterprise.ready(function() {
+    grecaptcha.enterprise.execute('{{ config('recaptcha.site_key') }}', {action: 'submit'}).then(function(token) {
+        document.getElementById('recaptcha_token').value = token;
+    });
+});
+</script>
+
+
 
 <<script>
 window.addEventListener("load", () => {
