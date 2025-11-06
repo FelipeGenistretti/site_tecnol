@@ -22,10 +22,10 @@ class ValidationFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "name" => ["required", "string", "min:2", "max:255"],
+            "nome" => ["required", "string", "min:2", "max:255"],
             "email" => ["required", "email", "max:255"],
-            "phone" => ["nullable", "string", "min:10", "max:15"],
-            "message" => ["required", "string", "min:10", "max:300"],
+            "telefone" => ["nullable", "string", "min:10", "max:15"],
+            "mensagem" => ["required", "string", "min:10", "max:300"],
             "privacy" => ["accepted"],
         ];
     }
@@ -36,12 +36,12 @@ class ValidationFormRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required' => 'O campo nome é obrigatório.',
-            'name.min' => 'O nome deve ter pelo menos 2 caracteres.',
+            'nome.required' => 'O campo nome é obrigatório.',
+            'nome.min' => 'O nome deve ter pelo menos 2 caracteres.',
             'email.required' => 'O campo email é obrigatório.',
             'email.email' => 'Digite um e-mail válido.',
-            'message.required' => 'O campo mensagem é obrigatório.',
-            'message.min' => 'A mensagem deve ter pelo menos 10 caracteres.',
+            'mensagem.required' => 'O campo mensagem é obrigatório.',
+            'mensagem.min' => 'A mensagem deve ter pelo menos 10 caracteres.',
             'privacy.accepted' => 'Você deve aceitar a política de privacidade.',
         ];
     }

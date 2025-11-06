@@ -1,12 +1,18 @@
 <x-mail::message>
-# Introduction
+# Nova mensagem do formulário "Fale Conosco"
 
-The body of your message.
+**Nome:** {{ $data['nome'] }}  
+**Email:** {{ $data['email'] }}  
+@if(isset($data['telefone']))
+**Telefone:** {{ $data['telefone'] }}
+@endif
 
-<x-mail::button :url="''">
-Button Text
-</x-mail::button>
+---
 
-Thanks,<br>
+**Mensagem:**  
+{{ $data['mensagem'] }}
+
+<br>
+Obrigado,<br>
 {{ config('app.name') }}
 </x-mail::message>

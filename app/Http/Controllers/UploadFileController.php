@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UploadFilesRequest;
+use App\Mail\CanalDenunciaMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class UploadFileController extends Controller
 {
@@ -21,6 +23,9 @@ class UploadFileController extends Controller
     public function uploadFile(UploadFilesRequest $request)
     {
         $data = $request->validated();
+        $arquivo = $request->file("files");
+
+        Mail::to(config("mail.to.address"))->send(new CanalDenunciaMail($data, $arquivo));
 
         return back()->with("success", "Mensagem enviada com sucesso");
     }
