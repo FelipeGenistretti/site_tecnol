@@ -1,5 +1,5 @@
 <div class="fixed bottom-10 right-10 z-50 group">
-  <button id="backToTop" class="hidden py-6 px-5 bg-[#004A65] text-white rounded-full shadow-lg duration-300 hover:bg-[#1D7AFC] relative">
+  <button id="backToTop" class="hidden py-6 px-5 back-top-contrast bg-[#004A65] text-white rounded-full shadow-lg duration-300 hover:bg-[#1D7AFC] relative">
     <img src="/backTop.png" alt="">
   </button>
 

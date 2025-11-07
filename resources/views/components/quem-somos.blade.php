@@ -17,14 +17,20 @@
         <div class="hidden mt-6 lg:flex items-center">
             <button type="button" class="button-secundary-contrast uppercase text-textPrimary flex gap-2 items-center p-3 border border-gray-400 rounded-md transform hover:scale-105 duration-300 hover:shadow-md textContainer">
                 sobre a tecnol
-                <img src="/avancar-black.png" alt="">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5859 12L8.29297 17.2929L9.70718 18.7071L16.4143 12L9.70718 5.29291L8.29297 6.70712L13.5859 12Z" fill="currentColor"/>
+                </svg>
+
             </button>
         </div>
 
         <div class="lg:hidden mt-6 flex items-center">
             <button type="button" class="button-secundary-contrast w-full uppercase text-textPrimary flex gap-2 items-center justify-center p-3 border border-gray-400 rounded-md transform hover:scale-105 duration-300 hover:shadow-md textContainer">
                 leia mais
-                <img src="/avancar-black.png" alt="">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5859 12L8.29297 17.2929L9.70718 18.7071L16.4143 12L9.70718 5.29291L8.29297 6.70712L13.5859 12Z" fill="currentColor"/>
+                </svg>
+
             </button>
         </div>
     </div>
