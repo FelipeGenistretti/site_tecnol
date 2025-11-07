@@ -38,16 +38,16 @@
     </div>
 </div>
 
-<div id="content-real" class="hidden">
-<div class="flex items-center py-12 bg-bgSecondary justify-center lg:justify-start text-center lg:text-start">
-  <h1 class="text-[38px] text-textPrimary container-x">Solicitação do titular</h1>
+<div id="content-real" class="hidden bg-contrast text-contrast">
+<div class="flex items-center py-12 bg-bgSecondary justify-center lg:justify-start text-center lg:text-start  text-contrast bg-contrast">
+  <h1 class="text-[38px] text-textPrimary container-x  text-contrast bg-contrast">Solicitação do titular</h1>
 </div>
 
-<div class="h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50 transition-all duration-300"
+<div class=" text-contrast bg-contrast h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50 transition-all duration-300"
      id="modalSuccess">
-  <div class="flex items-center justify-center gap-3">
+  <div class="flex items-center justify-center gap-3  text-contrast bg-contrast">
       <img src="/iconCheckModal.png" alt="">
-      <p class="text-white">Cadastro realizado com sucesso!</p>
+      <p class="text-white  text-contrast bg-contrast">Cadastro realizado com sucesso!</p>
       <button type="button" id="closeSuccessModal">
           <img src="/iconCloseModal.png" alt="">
       </button>
@@ -56,9 +56,9 @@
 
 <div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center right-10 mt-4 justify-center fixed z-50 transition-all duration-300"
      id="modalCamposObrigatorios">
-  <div class="flex items-center justify-center gap-3">
+  <div class="flex items-center justify-center gap-3  text-contrast bg-contrast">
       <img src="/alertModalCamposObrigatorios.png" alt="">
-      <p class="text-black">Preencha os campos obrigatórios</p>
+      <p class="text-black  text-contrast bg-contrast">Preencha os campos obrigatórios</p>
       <button type="button" id="closeCamposModal">
           <img src="/closeModalBlack.png" alt="">
       </button>
@@ -66,27 +66,27 @@
 </div>
 
 <!-- Conteúdo principal -->
-<div class="mt-[60px] flex flex-col items-center px-4 sm:px-8">
+<div class="mt-[60px] flex flex-col items-center px-4 sm:px-8  text-contrast bg-contrast  text-contrast bg-contrast">
   <!-- Título e subtítulo -->
-  <div class="text-center max-w-3xl">
-    <h1 class="text-2xl sm:text-3xl lg:text-[52px] font-semibold mb-3 text-textPrimary">
+  <div class="text-center max-w-3xl  text-contrast bg-contrast">
+    <h1 class="text-2xl sm:text-3xl lg:text-[52px] font-semibold mb-3 text-textPrimary  text-contrast bg-contrast">
       Canal de solicitação do titular
     </h1>
     <br>
-    <p class="text-textPrimary text-base sm:text-lg">
+    <p class="text-textPrimary text-base sm:text-lg  text-contrast bg-contrast">
       Preencha todos os campos abaixo para concluir a solicitação
     </p>
   </div>
 
   <!-- Formulário -->
-  <div class="w-full max-w-[1200px] bg-gray-100 rounded-lg p-6 sm:p-8 shadow-md mt-8 mb-10">
+  <div class="w-full max-w-[1200px] bg-gray-100 rounded-lg p-6 sm:p-8 shadow-md mt-8 mb-10  text-contrast bg-contrast">
     <form action="{{ route('enviar-solicitacao') }}"  accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" enctype="multipart/form-data" class="flex flex-col space-y-6">
       @csrf
       <!-- Seletor duplo -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4  text-contrast bg-contrast">
         <div class="flex flex-col">
-          <label class="text-sm font-medium mb-1">Tipo da solicitação</label>
-          <select class="border rounded px-3 py-2 w-full bg-white" name="solicitacao" >
+          <label class="text-sm font-medium mb-1  text-contrast bg-contrast">Tipo da solicitação</label>
+          <select class="border rounded px-3 py-2 w-full bg-white  text-contrast bg-contrast" name="solicitacao" >
             <option value="">Selecionar</option>
             <option>A empresa possui meus dados pessoais</option>
             <option>Dados pessoais que a empresa tem sobre mim</option>
@@ -96,9 +96,9 @@
           </select>
         </div>
 
-        <div class="flex flex-col">
-          <label class="text-sm font-medium mb-1">Classificação do titular</label>
-          <select class="border rounded px-3 py-2 w-full bg-white" name="classificacao" >
+        <div class="flex flex-col  text-contrast bg-contrast">
+          <label class="text-sm font-medium mb-1  text-contrast bg-contrast">Classificação do titular</label>
+          <select class="border rounded px-3 py-2 w-full bg-white  text-contrast bg-contrast" name="classificacao" >
             <option value="">Selecionar</option>
             <option>Clientes</option>
             <option>Colaboradores</option>
@@ -108,36 +108,36 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="flex flex-col">
+      <div class="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  text-contrast bg-contrast">
+        <div class="flex flex-col  text-contrast bg-contrast">
           <label class="text-sm font-medium mb-1">Nome</label>
-          <input type="text" class="border rounded px-3 py-2 w-full" placeholder="Digite seu nome" name="nome"/>
+          <input type="text" class="border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="Digite seu nome" name="nome"/>
         </div>
         <div class="flex flex-col">
           <label class="text-sm font-medium mb-1">CPF</label>
-          <input type="text" class="border rounded px-3 py-2 w-full" placeholder="000.000.000-00" name="cpf" />
+          <input type="text" class="border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="000.000.000-00" name="cpf" />
         </div>
         <div class="flex flex-col">
           <label class="text-sm font-medium mb-1">E-mail</label>
-          <input type="text" class="border rounded px-3 py-2 w-full" placeholder="email@dominio.com.br" name="email" />
+          <input type="text" class="border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="email@dominio.com.br" name="email" />
         </div>
         <div class="flex flex-col">
           <label class="text-sm font-medium mb-1">Telefone</label>
-          <input type="text" class="border rounded px-3 py-2 w-full" placeholder="(00) 00000-0000" name="telefone" />
+          <input type="text" class="border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="(00) 00000-0000" name="telefone" />
         </div>
       </div>
 
       <!-- Observações -->
       <div class="flex flex-col">
         <label class="text-sm font-medium mb-1">Observações</label>
-        <textarea class="border rounded px-3 py-2 w-full min-h-[120px]" placeholder="Escreva aqui"  name="observacoes"></textarea>
+        <textarea class="border rounded px-3 py-2 w-full min-h-[120px]  text-contrast bg-contrast" placeholder="Escreva aqui"  name="observacoes"></textarea>
         <p class="text-sm ml-1 text-gray-600">Limite máximo de 8000 caracteres</p>
       </div>
 
       <!-- Upload -->
-      <label class="border-2 border-dashed border-gray-400/30 rounded px-3 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors">
+      <label class=" text-contrast bg-contrast border-2 border-dashed border-gray-400/30 rounded px-3 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors">
         <img src="/iconDownloadUploadFile.png" alt="">
-        <p class="text-sm text-center textContainer">
+        <p class="text-sm text-center textContainer  text-contrast bg-contrast">
           Arraste e solte seu(s) arquivo(s) aqui <br> ou
         </p>
         <span class="textContainer py-3 px-6 rounded border border-[#B3B3B3] cursor-pointer uppercase">
@@ -146,7 +146,7 @@
         <input type="file" name="files" class="hidden">
       </label>
 
-      <p class="text-sm text-textSecondary my-3 textContainer">
+      <p class="text-sm text-textSecondary my-3 textContainer text-contrast">
         Tamanho máximo permitido do anexo: 5MB
       </p>
 
@@ -159,7 +159,7 @@
           </p>
         </div>
 
-        <button type="submit" class="textContainer lg:w-[20%] flex items-center justify-center gap-2 uppercase px-6 py-3 bg-bgButtonPrimary hover:bg-orange-400 transition duration-300 rounded-md text-white">
+        <button type="submit" class="button-contrast textContainer lg:w-[20%] flex items-center justify-center gap-2 uppercase px-6 py-3 bg-bgButtonPrimary hover:bg-orange-400 transition duration-300 rounded-md text-white">
           <img src="/uploadFile.png" alt="">
           <p>Enviar arquivo</p>
         </button>
