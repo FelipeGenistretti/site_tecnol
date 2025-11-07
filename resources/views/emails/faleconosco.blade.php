@@ -1,6 +1,6 @@
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-<body class="flex justify-center min-h-screen bg-gray-100 py-10">
+<body class="container-x flex justify-center min-h-screen bg-gray-100 py-10">
 
     <div class="w-[650px] min-h-[1396px] bg-white shadow-md rounded-md overflow-hidden ">
 
@@ -16,9 +16,9 @@
             <p class="text-[25px]">Contato via site.</p>
             <br>
 
-            <p>Nome: <strong>Nome do contato</strong></p>
-            <p>E-mail: <strong>email@dominio.com.br</strong></p>
-            <p>Telefone: <strong>(11) 00000-0000</strong></p>
+            <p>Nome: <strong>{{ $data['nome'] }}</strong></p>
+            <p>E-mail: <strong>{{ $data['email'] }}</strong></p>
+            <p>Telefone: <strong>{{ $data['telefone'] }}</strong></p>
 
             <h2 class="font-semibold text-xl mt-4">Mensagem</h2>
 
