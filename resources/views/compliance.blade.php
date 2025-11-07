@@ -62,7 +62,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 
 
- <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 container-x bg-[#004A65] text-white py-8">
+ <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 container-x bg-[#F2F2F2] text-[#333333] py-8">
 
         
         <div class = "p-4 mt-4 lg:mt-12">

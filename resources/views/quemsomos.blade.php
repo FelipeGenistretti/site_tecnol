@@ -48,7 +48,7 @@
 
 <div id="content-real" class="hidden">
 
-      <div class="flex items-center py-12  bg-bgSecondary justify-center lg:justify-start h-[]">
+<div class="flex items-center py-12  bg-bgSecondary justify-center lg:justify-start">
   <h1 class="text-[38px] text-textPrimary container-x">Quem somos</h1>
     </div>
 
@@ -86,7 +86,7 @@
     </div>
 
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 container-x bg-bgPrimary text-white py-10 gap-3">
+    <div class="grid grid-cols-1 lg:grid-cols-2 container-x bg-[#F2F2F2] text-black py-10 gap-3">
 
         
         <div class = "">
@@ -160,17 +160,17 @@
   </div>
 </div>
 
-<div class="container-x bg-bgPrimary text-white flex flex-col items-center justify-center py-10 mt-20 space-y-5">
-  <img src="{{ asset('/seg.png') }}" alt="Ícone" class="">
+<div class="container-x bg-[#F2F2F2] text-black flex flex-col items-center justify-center py-10 mt-20 space-y-5 gap-3">
+  <img src="{{ asset('/seg-black.png') }}" alt="Ícone" class="">
   <h1 class="text-4xl font-normal text-center ">Política de Sistema de Gestão Integrado - SGI</h1>
   <p class="textContainer text-center font-medium text-md">A TECNOL, uma empresa de tecnologia focada no fornecimento de Serviços de Desenvolvimento de Soluções de Software, com sua matriz localizada em Nova Lima/MG e uma filial em São Paulo/SP, operando em âmbito nacional, define sua Política de Gestão Integrada com o compromisso de alcançar</p>
 
     <div  class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="bg-[#F2F2F21A]  rounded border  border-[#F2F2F21A] p-4">
+        <div class="bg-white  rounded border  border-[#F2F2F2] p-4">
             <p class="textContainer text-[16px] ">• A Política de Segurança da Informação e Serviços da TECNOL tem como principais metas oferecer um serviço confiável, com<strong> garantia de qualidade e segurança da informação </strong> para a entrega e operação dos serviços contratados, com objetivo de manter, por meios dos requisitos técnicos e legais, de clientes, parceiros a <strong> confidencialidade, integridade e disponibilidade </strong> durante toda a prestação do serviço, monitorando constantemente.</p>
         </div>
 
-        <div class="bg-[#F2F2F21A] rounded border  border-[#F2F2F21A] p-4">
+        <div class="bg-white rounded border  border-[#F2F2F2] p-4">
             
             <p class="textContainer  text-[16px]">• A Política de Segurança da Informação e Serviços da TECNOL, assegura a proteção dos seus ativos, pessoas, informação, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio de acordo com as estratégias da empresa, legislação vigente e requisitos contratuais, com acompanhamento constante.</p>
         </div>
