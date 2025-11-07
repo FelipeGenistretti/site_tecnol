@@ -1,6 +1,6 @@
 <div>
-    <div class="container-x py-10 bg-[#F2F2F2]">
-        <h1 class="text-textPrimary text-3xl max-sm:text-[38px] flex max-sm:text-center max-sm:justify-center">Canal de denúncia</h1>
+    <div class="container-x py-10 bg-[#F2F2F2] bg-contrast">
+        <h1 class="text-textPrimary text-3xl max-sm:text-[38px] flex max-sm:text-center max-sm:justify-center text-contrast">Canal de denúncia</h1>
     </div>
 
     <div class="h-[72px] w-[371px] hidden  bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50" id="modalSuccess">
@@ -23,14 +23,14 @@
     </div>
 </div>
 
-    <div class="container-x py-10">
+    <div class="container-x py-10 bg-contrast">
         <div class="text-center space-y-6">
-            <h1 class="text-4xl text-textPrimary max-sm:text-[38px]">Canal de denúncia</h1>
-            <p class="textContainer text-textSecondary max-sm:text-[16px] text-lg font-semibold">Contamos com um Canal de Compliance (Canal de Denúncia) sigiloso e imparcial, hospedado fora dos sistemas da Tecnol e administrado com total garantia de confidencialidade pela empresa. Por meio deste ambiente, tanto o público interno quanto o externo podem denunciar desvios em relação ao Código de Conduta da Tecnol ou conduta de seus colaboradores.</p>
+            <h1 class="text-4xl text-textPrimary max-sm:text-[38px] text-contrast">Canal de denúncia</h1>
+            <p class="textContainer text-textSecondary max-sm:text-[16px] text-lg font-semibold text-contrast">Contamos com um Canal de Compliance (Canal de Denúncia) sigiloso e imparcial, hospedado fora dos sistemas da Tecnol e administrado com total garantia de confidencialidade pela empresa. Por meio deste ambiente, tanto o público interno quanto o externo podem denunciar desvios em relação ao Código de Conduta da Tecnol ou conduta de seus colaboradores.</p>
 
         </div>
 
-        <div class="bg-[#F2F2F2] p-6 rounded-md mt-4">
+        <div class="bg-[#F2F2F2] bg-contrast p-6 rounded-md mt-4">
                 
                 <div>
                     <x-upload-arquivo/>

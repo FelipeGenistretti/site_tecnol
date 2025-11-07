@@ -50,9 +50,9 @@
 </div>
 
 
-<div  id="content-real" class="hidden">
-<div class="container-x py-10 bg-[#F2F2F2]">
-  <h1 class="text-textPrimary flex max-sm:text-center max-sm:text-[38px] text-3xl max-sm:justify-center">Pré-cadastro</h1>
+<div  id="content-real" class="hidden bg-contrast text-contrast">
+<div class="container-x py-10 bg-[#F2F2F2] bg-contrast">
+  <h1 class="text-textPrimary flex max-sm:text-center max-sm:text-[38px] text-3xl max-sm:justify-center text-contrast">Pré-cadastro</h1>
 </div>
 
 <div class="h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50 transition-all duration-300"
@@ -100,12 +100,12 @@
 </div>
 
 <div class="container-x py-12">
-  <div class="text-center space-y-5">
-    <h1 class="text-5xl text-textPrimary max-sm:text-[38px]">Pré-cadastro</h1>
-    <p class="textContainer text-textSecondary font-semibold">Preencha todos os campos abaixo para iniciar seu pré-cadastro.</p>
+  <div class="text-center space-y-5 text-contrast">
+    <h1 class="text-5xl text-textPrimary max-sm:text-[38px] text-contrast">Pré-cadastro</h1>
+    <p class="textContainer text-textSecondary font-semibold text-contrast">Preencha todos os campos abaixo para iniciar seu pré-cadastro.</p>
   </div>
 
-  <div class="p-5 bg-[#F2F2F2] rounded-md mt-10">
+  <div class="p-5 bg-[#F2F2F2] bg-contrast rounded-md mt-10">
     <form action="{{ route('pre-registro.store') }}" method="post">
       @csrf
 
@@ -113,7 +113,7 @@
         <div>
           <div class="flex flex-col">
             <label for="cnpj" class="textContainer text-sm">CNPJ</label>
-            <input type="text" name="cnpj" id="cnpj" value="{{ old('cnpj') }}" placeholder="00.000.000/0001-00" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="cnpj" id="cnpj" value="{{ old('cnpj') }}" placeholder="00.000.000/0001-00" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('cnpj')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -123,7 +123,7 @@
         <div>
           <div class="flex flex-col">
             <label for="nome" class="textContainer text-sm">Razão social</label>
-            <input type="text" name="nome" id="razao-social" value="{{ old('nome') }}" placeholder="Nome" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="nome" id="razao-social" value="{{ old('nome') }}" placeholder="Nome" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('nome')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -133,7 +133,7 @@
         <div>
           <div class="flex flex-col">
             <label for="categoria" class="text-sm textContainer">Categoria</label>
-            <select name="categoria" id="categoria" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <select name="categoria" id="categoria" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
               <option value="">Selecione...</option>
               <option value="oficina" {{ old('categoria') == 'oficina' ? 'selected' : '' }}>Oficina</option>
               <option value="lojista" {{ old('categoria') == 'lojista' ? 'selected' : '' }}>Lojista</option>
@@ -286,7 +286,7 @@
           <p class="textContainer">
             Li e concordo com a
             <span class="textContainer">
-              <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
+              <a href="#" class="text-orange-600 text-contrast underline font-bold">Política de Privacidade</a>
             </span>
             e autorizo o tratamento dos meus dados.
           </p>
@@ -295,7 +295,7 @@
           <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
         @enderror
 
-        <button type="submit" class="textContainer p-4 uppercase text-white rounded-md bg-bgButtonPrimary transform hover:bg-orange-400 transition duration-300 max-sm:w-full max-sm:justify-center max-sm:mb-5">enviar</button>
+        <button type="submit" class="textContainer p-4 button-contrast uppercase text-white rounded-md bg-bgButtonPrimary transform hover:bg-orange-400 transition duration-300 max-sm:w-full max-sm:justify-center max-sm:mb-5">enviar</button>
       </div>
 
     </form>

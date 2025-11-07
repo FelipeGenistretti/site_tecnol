@@ -1,14 +1,14 @@
-<div class="container-x py-20" id="ondeoperamos">
+<div class="container-x py-20 bg-contrast" id="ondeoperamos">
     <div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3" >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 text-contrast" >
             <!-- Coluna 1: Texto -->
-            <div>
+            <div class="">
                 <div class="space-y-4">
-                    <h1 class="text-textSecondary text-4xl">Onde operamos</h1>
-                    <p class="textContainer"><span class="text-textSecondary font-bold textContainer">Safe Register Car</span> é amplamente utilizado em território nacional por nossos clientes parceiros.</p>
-                    <p class="textContainer">Hoje estamos em <span class="text-[#666666] font-bold textContainer">16 estados</span> brasileiros:</p>
+                    <h1 class="text-textSecondary text-4xl text-contrast">Onde operamos</h1>
+                    <p class="textContainer"><span class="text-textSecondary font-bold textContainer text-contrast">Safe Register Car</span> é amplamente utilizado em território nacional por nossos clientes parceiros.</p>
+                    <p class="textContainer">Hoje estamos em <span class="text-[#666666] font-bold textContainer text-contrast">16 estados</span> brasileiros:</p>
                     <div class="ml-4">
-                        <ul class="list-disc textContainer text-textSecondary">
+                        <ul class="list-disc textContainer text-textSecondary text-contrast">
                             <li>Acre</li>
                             <li>Amapá</li>
                             <li>Bahia</li>
@@ -27,7 +27,7 @@
                             <li>Tocantins</li>
                         </ul>
                     </div>
-                    <p class="text-textSecondary text-lg textContainer">Em processo de credenciamento do estado de <span class="text-[#F15A29] text-lg font-bold textContainer">Distrito Federal, Espirito Santo e Sergipe</span></p>
+                    <p class="text-textSecondary text-lg textContainer text-contrast">Em processo de credenciamento do estado de <span class="text-[#F15A29] text-contrast text-lg font-bold textContainer">Distrito Federal, Espirito Santo e Sergipe</span></p>
                 </div>
             </div>
 

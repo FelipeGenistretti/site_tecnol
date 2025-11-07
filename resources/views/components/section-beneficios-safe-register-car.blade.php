@@ -1,6 +1,6 @@
-<div >
-<div class="container-x bg-[#004A65] py-7">
-    <h1 class="text-white text-4xl text-center ">Benefícios</h1>
+<div class="">
+<div class="container-x bg-contrast bg-[#004A65] py-7">
+    <h1 class="text-white text-4xl text-center text-contrast">Benefícios</h1>
     <div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-7 h-full">
             <div>
@@ -8,9 +8,9 @@
                     <img src="/src-img.png" alt="">
                 </div>
             </div>
-            <div>
+            <div class="">
                 <div class="flex flex-col gap-2">
-                    <div class="border rounded-md p-6 bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
+                    <div class="border rounded-md p-6 text-contrast bg-contrast bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
                         <div class="space-y-3">
                             <img src="/Icon-src-cards.png" alt="">
                             <p class="text-lg font-semibold textContainer">Para o Detran </p>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
 
-                    <div class="border rounded-md p-6 bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
+                    <div class="border rounded-md p-6 text-contrast bg-contrast bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
                         <div class="space-y-3">
                             <img src="/Icon-src-cards.png" alt="">
                             <p class="textContainer text-lg font-semibold">Para  o Consumidor  </p>
@@ -26,7 +26,7 @@
                         </div>
                     </div>
 
-                    <div class="border rounded-md p-6 bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
+                    <div class="border rounded-md p-6 text-contrast bg-contrast bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
                         <div class="space-y-3">
                             <img src="/Icon-src-cards.png" alt="">
                             <p class="textContainer text-lg font-semibold">Para o Banco  </p>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
 
-                    <div class="border rounded-md p-6 bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
+                    <div class="border rounded-md p-6 text-contrast bg-contrast bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
                         <div class="space-y-3">
                             <img src="/Icon-src-cards.png" alt="">
                             <p class="textContainer text-lg font-semibold">Para  Todos</p>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
 
-                    <div class="border rounded-md p-6 bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
+                    <div class="border rounded-md p-6 text-contrast bg-contrast bg-[#006C94]/30 h-full flex text-white transform hover:scale-105 transition duration-300 hover:shadow-lg">
                         <div class="space-y-3">
                             <img src="/Icon-src-cards.png" alt="">
                             <p class="textContainer text-lg font-semibold">Benefícios gerais </p>

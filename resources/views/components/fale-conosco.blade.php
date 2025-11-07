@@ -49,7 +49,7 @@
         id="name"
         value="{{ old('nome') }}"
         placeholder="Digite seu nome"
-        class="p-2 border rounded-md w-full @error('nome') border-red-500 @enderror"
+        class="input-contrast p-2 border rounded-md w-full @error('nome') border-red-500 @enderror"
       />
       @error('nome')
         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -64,7 +64,7 @@
         id="email"
         value="{{ old('email') }}"
         placeholder="email@email.com.br"
-        class="p-2 border rounded-md w-full @error('email') border-red-500 @enderror"
+        class="input-contrast p-2 border rounded-md w-full @error('email') border-red-500 @enderror"
       />
       @error('email')
         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -79,7 +79,7 @@
         id="phone"
         value="{{ old('telefone') }}"
         placeholder="(xx) xxxxx-xxxx"
-        class="p-2 border rounded-md w-full @error('telefone') border-red-500 @enderror"
+        class="input-contrast p-2 border rounded-md w-full @error('telefone') border-red-500 @enderror"
       />
       @error('telefone')
         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -95,7 +95,7 @@
         id="mensagem"
         rows="4"
         placeholder="Escreva aqui sua mensagem"
-        class="p-3 border rounded-md resize-none @error('mensagem') border-red-500 @enderror"
+        class="input-contrast p-3 border rounded-md resize-none @error('mensagem') border-red-500 @enderror"
       >{{ old('mensagem') }}</textarea>
       @error('mensagem')
         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>

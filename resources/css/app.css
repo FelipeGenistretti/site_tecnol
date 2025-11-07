@@ -33,8 +33,9 @@
     @apply text-[#FFFF00];
   }
 
-  body.contrast .bg-contrast {
+    body.contrast .bg-contrast {
     @apply bg-[#0D0D0D];
+    background-image: none !important;
   }
 
   body.contrast .button-contrast {
@@ -44,4 +45,28 @@
   body.contrast .button-secundary-contrast {
     @apply border border-[#FFFF00] text-[#FFFF00]
   }
+
+  body.contrast .input-contrast {
+    @apply border border-[#FFFF00] bg-[#0D0D0D] text-[#FFFF00] placeholder:text-[#FFFF00]
+  }
+
+  /* HEADER  */
+
+    header.contrast .text-contrast {
+    @apply text-[#FFFF00];
+  }
+
+    header.contrast .bg-contrast {
+    @apply bg-[#0D0D0D];
+    background-image: none !important;
+  }
+
+  header.contrast .button-contrast {
+    @apply bg-[#0D0D0D] text-[#FFFF00] border border-[#FFFF00]
+  }
+
+  header.contrast .button-secundary-contrast {
+    @apply border border-[#FFFF00] text-[#FFFF00]
+  }
+
 }

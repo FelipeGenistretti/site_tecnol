@@ -15,7 +15,7 @@
         @yield('content')
     </main>
 
- <footer class="bg-bgPrimary">
+ <footer class="bg-bgPrimary bg-contrast">
     <div class="container-x">
         
         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5 text-white py-12 place-items-center lg:place-items-start">
@@ -23,8 +23,8 @@
             <div class="mt-3 mb-3 text-center  md:place-self-start md:justify-self-center lg:justify-self-start">
                 <img src="{{ asset('/logo.png') }}" alt="logo" class="h-10 mb-4">
                 <ul>
-                    <li class="text-lg">Registro</li>
-                    <li class="text-lg" style="color:#FAC8B8">Rápido</li>
+                    <li class="text-lg text-contrast">Registro</li>
+                    <li class="text-lg" style="color:#FAC8B8 text-contrast">Rápido</li>
                     <li class="text-lg" style="color:#FAC8B8">Fácil &</li>
                     <li class="text-lg" style="color:#FAC8B8">Seguro</li>
                 </ul>
@@ -32,50 +32,50 @@
 
             <!-- Coluna 2 -->
             <div class="text-center lg:text-left">
-                <h1 class="text-2xl mt-3 mb-3">Mapa do site</h1>
+                <h1 class="text-2xl mt-3 mb-3 text-contrast">Mapa do site</h1>
                 <ul>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('home') }}">Página inicial</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('quem-somos') }}">Quem somos</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('quem-somos') }}#trabalheConosco">Trabalhe conosco</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('safe-register-car') }}">Safe Register Car</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{route('safe-register-car')}}#ondeoperamos">Onde operamos</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('pre-registro') }}">Pré-cadastro</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('compliance') }}">Compliance</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('canal-denuncia') }}">Canal de denúncia</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('solicitacao-titular') }}">Solicitação de titular</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('seguranca') }}">Segurança</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ 'privacidade' }}">Privacidade</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ 'qualidade' }}">Qualidade</a></li>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="#faleConosco">Contato</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('home') }}">Página inicial</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('quem-somos') }}">Quem somos</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('quem-somos') }}#trabalheConosco">Trabalhe conosco</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('safe-register-car') }}">Safe Register Car</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{route('safe-register-car')}}#ondeoperamos">Onde operamos</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('pre-registro') }}">Pré-cadastro</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('compliance') }}">Compliance</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('canal-denuncia') }}">Canal de denúncia</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('solicitacao-titular') }}">Solicitação de titular</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ route('seguranca') }}">Segurança</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ 'privacidade' }}">Privacidade</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="{{ 'qualidade' }}">Qualidade</a></li>
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start"><img src="/arrowToRightFooter.png" alt=""><a href="#faleConosco">Contato</a></li>
                 </ul>
             </div>
 
             <!-- Coluna 3 -->
             <div class="text-center lg:text-left">
-                <h1 class="text-2xl mt-3 mb-3">Endereços</h1>
+                <h1 class="text-2xl mt-3 mb-3 text-contrast">Endereços</h1>
 
-                <h3 class="font-semibold">Matriz</h3>
-                <p>
+                <h3 class="font-semibold text-contrast">Matriz</h3>
+                <p class="text-contrast">
                     Rua Senador Milton Campos, 35, 7º andar<br>
                     Vila da Serra, Nova Lima - MG<br>
                     CEP 34006-050
                 </p>
 
-                <h3 class="text-lg mt-4 mb-1 font-bold">Filial</h3>
-                <p>
+                <h3 class="text-lg mt-4 mb-1 font-bold text-contrast">Filial</h3>
+                <p class="text-contrast">
                     Av. Dr Chucri Zaidan, 1240, 16º andar<br>
                     Chácara Santo Antônio, São Paulo - SP<br>
                     CEP 04711-130
                 </p>
 
-                <h3 class="text-lg mt-4 mb-1 font-bold">Contatos</h3>
-                <p>(31) 3324-6460</p>
-                <p>0800 590 4004</p>
+                <h3 class="text-lg mt-4 mb-1 font-bold text-contrast">Contatos</h3>
+                <p class="text-contrast">(31) 3324-6460</p>
+                <p class="text-contrast">0800 590 4004</p>
             </div>
 
             <!-- Coluna 4 -->
     <div class="lg:text-left text-left lg:place-self-start lg:justify-self-end ">
-    <h1 class="text-2xl mt-3 mb-3">Certificações</h1>
+    <h1 class="text-2xl mt-3 mb-3 text-contrast">Certificações</h1>
 
     <div class="grid grid-cols-2 lg:grid-cols-2 gap-2 lg:gap-4 justify-items-start">
         <img src="{{ asset('/ISO.png') }}" alt="" class="mb-3 p-0">
@@ -100,11 +100,11 @@
             
 
             <div class="flex items-center gap-2 justify-center lg:justify-start mt-5 lg:mt-0">
-                <p class="text-sm">@ 2025 Tecnol. Todos os direitos reservados</p>
+                <p class="text-sm text-contrast">@ 2025 Tecnol. Todos os direitos reservados</p>
             </div>
             
             <div class="flex items-center justify-center lg:justify-end gap-2 m-10">
-                <h1>Siga-nos :</h1>
+                <h1 class="text-contrast">Siga-nos :</h1>
 
                 <a href="#" class="hover:text-blue-400">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
