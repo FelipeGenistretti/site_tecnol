@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Importação deve vir ANTES dos @tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Camada base: define configurações globais */
+/* Camada base: configs globais */
 @layer base {
   html {
-    @apply font-ibm; /* Define a fonte padrão global */
+    @apply font-ibm;
   }
 
   body {
@@ -16,7 +15,7 @@
   }
 }
 
-/* Camada utilities: define classes customizadas */
+/* Camada utilities: classes customizadas */
 @layer utilities {
   .container-x {
     @apply px-4 sm:px-8 md:px-[120px];
@@ -28,5 +27,21 @@
 
   .container-mbl {
     @apply px-2;
+  }
+
+  body.contrast .text-contrast {
+    @apply text-[#FFFF00];
+  }
+
+  body.contrast .bg-contrast {
+    @apply bg-[#0D0D0D];
+  }
+
+  body.contrast .button-contrast {
+    @apply bg-[#0D0D0D] text-[#FFFF00] border border-[#FFFF00]
+  }
+
+  body.contrast .button-secundary-contrast {
+    @apply border border-[#FFFF00] text-[#FFFF00]
   }
 }

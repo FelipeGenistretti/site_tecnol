@@ -88,6 +88,8 @@
 
         <x-font-control/>
 
+        <x-contraste-control/>
+
         <button type="button" class="py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-orange-500 transition-colors duration-300">
           <img src="/locked.png" class="h-[20px] w-[20px]" alt="Cadeado">
           <p class="text-[12px]">Safe Register Car</p>
