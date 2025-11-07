@@ -70,7 +70,10 @@
 
         <div class="relative">
           <button type="button" class="nav-link focus:outline-none" id="searchButtonDesktop">
-            <img src="/search.png" class="h-[20px] w-[20px]" alt="Buscar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
+            <path d="M5.40964 5.59036C8.39737 2.60263 13.2418 2.60214 16.2296 5.58967C18.9777 8.33775 19.1962 12.6554 16.8891 15.6556L20.2603 19.0268L18.8461 20.441L15.4749 17.0698C12.4747 19.3765 8.15763 19.1576 5.40964 16.4096C2.42221 13.4219 2.42221 8.57811 5.40964 5.59036ZM6.82386 7.00457C4.61747 9.21127 4.61747 12.7887 6.82386 14.9954C9.03054 17.2021 12.6086 17.2026 14.8154 14.9961C17.0222 12.7893 17.0222 9.21066 14.8154 7.00388C12.6086 4.7974 9.03054 4.79789 6.82386 7.00457Z" fill="currentColor"/>
+          </svg>
+
           </button>
 
           <div 
@@ -81,7 +84,10 @@
                 type="text" 
                 placeholder="Pesquisar..." 
                 class="w-full focus:outline-none text-sm text-gray-700" />
-              <img src="/search.png" alt="Buscar" class="w-4 h-4 opacity-70">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
+                <path d="M5.40964 5.59036C8.39737 2.60263 13.2418 2.60214 16.2296 5.58967C18.9777 8.33775 19.1962 12.6554 16.8891 15.6556L20.2603 19.0268L18.8461 20.441L15.4749 17.0698C12.4747 19.3765 8.15763 19.1576 5.40964 16.4096C2.42221 13.4219 2.42221 8.57811 5.40964 5.59036ZM6.82386 7.00457C4.61747 9.21127 4.61747 12.7887 6.82386 14.9954C9.03054 17.2021 12.6086 17.2026 14.8154 14.9961C17.0222 12.7893 17.0222 9.21066 14.8154 7.00388C12.6086 4.7974 9.03054 4.79789 6.82386 7.00457Z" fill="currentColor"/>
+              </svg>
+
             </div>
           </div>
         </div>
@@ -91,7 +97,10 @@
         <x-contraste-control/>
 
         <button type="button" class="button-contrast py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-orange-500 transition-colors duration-300">
-          <img src="/locked.png" class="h-[20px] w-[20px]" alt="Cadeado">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
+            <path d="M11.499 3C14.3255 3 16.999 4.8836 16.999 7.63086V10.5293H18.999V19.8994C18.999 20.5068 18.5067 20.9998 17.8994 21H5.09863C4.4913 20.9998 3.99902 20.5068 3.99902 19.8994V10.5293H5.99902V7.63086C5.99902 4.8836 8.67259 3 11.499 3ZM5.99902 19H16.999V12.5293H5.99902V19ZM11.499 5C9.3549 5 7.99902 6.3677 7.99902 7.63086V10.4434H14.999V7.63086C14.999 6.3677 13.6432 5 11.499 5Z" fill="currentColor"/>
+          </svg>
+
           <p class="text-[12px]">Safe Register Car</p>
         </button>
       </nav>

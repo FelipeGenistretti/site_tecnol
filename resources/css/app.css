@@ -50,6 +50,10 @@
     @apply border border-[#FFFF00] bg-[#0D0D0D] text-[#FFFF00] placeholder:text-[#FFFF00]
   }
 
+  body.contrast .back-top-contrast {
+    @apply bg-[#FFFF00]
+  }
+
   /* HEADER  */
 
     header.contrast .text-contrast {

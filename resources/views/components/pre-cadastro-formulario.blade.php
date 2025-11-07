@@ -148,7 +148,7 @@
         <div>
           <div class="flex flex-col">
             <label for="nome-fantasia" class="textContainer text-sm">Nome fantasia</label>
-            <input type="text" name="nome-fantasia" id="nome-fantasia" value="{{ old('nome-fantasia') }}" placeholder="Nome" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="nome-fantasia" id="nome-fantasia" value="{{ old('nome-fantasia') }}" placeholder="Nome" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('nome-fantasia')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -160,7 +160,7 @@
         <div>
           <div class="flex flex-col">
             <label for="cep" class="textContainer text-sm">CEP*</label>
-            <input type="text" name="cep" id="cep" value="{{ old('cep') }}" placeholder="00000-000" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="cep" id="cep" value="{{ old('cep') }}" placeholder="00000-000" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('cep')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -170,7 +170,7 @@
         <div>
           <div class="flex flex-col">
             <label for="endereco" class="textContainer text-sm">Endereço</label>
-            <input type="text" name="endereco" id="endereco" value="{{ old('endereco') }}" placeholder="Endereço" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="endereco" id="endereco" value="{{ old('endereco') }}" placeholder="Endereço" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('endereco')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -180,7 +180,7 @@
         <div>
           <div class="flex flex-col">
             <label for="numero" class="textContainer text-sm">Número</label>
-            <input type="text" name="numero" id="numero" value="{{ old('numero') }}" placeholder="00" class="textContainer p-2 rounded-sm mt-2 border border-gray lg:mr-3">
+            <input type="text" name="numero" id="numero" value="{{ old('numero') }}" placeholder="00" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray lg:mr-3">
             @error('numero')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -192,7 +192,7 @@
         <div>
           <div class="flex flex-col">
             <label for="complemento" class="textContainer text-sm">Complemento</label>
-            <input type="text" name="complemento" id="complemento" value="{{ old('complemento') }}" placeholder="sala, apartamento, etc..." class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="complemento" id="complemento" value="{{ old('complemento') }}" placeholder="sala, apartamento, etc..." class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('complemento')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -202,7 +202,7 @@
         <div>
           <div class="flex flex-col">
             <label for="bairro" class="textContainer text-sm">Bairro</label>
-            <input type="text" name="bairro" id="bairro" value="{{ old('bairro') }}" placeholder="Nome do bairro" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="bairro" id="bairro" value="{{ old('bairro') }}" placeholder="Nome do bairro" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('bairro')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -212,7 +212,7 @@
         <div>
           <div class="flex flex-col">
             <label for="uf" class="textContainer text-sm">UF</label>
-            <select name="uf" id="uf" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <select name="uf" id="uf" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
               <option value="">Selecione...</option>
               @foreach(['SP','RJ','MG','PR','RS','SC','BA','PE'] as $estado)
                 <option value="{{ $estado }}" {{ old('uf') == $estado ? 'selected' : '' }}>{{ $estado }}</option>
@@ -227,7 +227,7 @@
         <div>
           <div class="flex flex-col">
             <label for="cidade" class="textContainer text-sm">Cidade</label>
-            <select name="cidade" id="cidade" class="textContainer p-2 rounded-sm mt-2 border border-gray w-full">
+            <select name="cidade" id="cidade" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray w-full">
               <option value="">Selecione...</option>
               <option value="SP">SP</option>
             </select>
@@ -242,7 +242,7 @@
         <div>
           <div class="flex flex-col">
             <label for="Nome" class="textContainer text-sm">Nome</label>
-            <input type="text" name="Nome" id="nome" value="{{ old('Nome') }}" placeholder="Nome" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="Nome" id="nome" value="{{ old('Nome') }}" placeholder="Nome" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('Nome')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -252,7 +252,7 @@
         <div>
           <div class="flex flex-col">
             <label for="cpf" class="textContainer text-sm">CPF</label>
-            <input type="text" name="cpf" id="cpf" value="{{ old('cpf') }}" placeholder="000.000.000-00" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="cpf" id="cpf" value="{{ old('cpf') }}" placeholder="000.000.000-00" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('cpf')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -262,7 +262,7 @@
         <div>
           <div class="flex flex-col">
             <label for="telefone" class="text-sm textContainer">Telefone</label>
-            <input type="text" name="telefone" id="telefone" value="{{ old('telefone') }}" placeholder="(00) 00000-0000" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="telefone" id="telefone" value="{{ old('telefone') }}" placeholder="(00) 00000-0000" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('telefone')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
@@ -272,7 +272,7 @@
         <div>
           <div class="flex flex-col">
             <label for="email" class="textContainer text-sm">E-mail</label>
-            <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="email@dominio.com.br" class="textContainer p-2 rounded-sm mt-2 border border-gray">
+            <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="email@dominio.com.br" class="input-contrast textContainer p-2 rounded-sm mt-2 border border-gray">
             @error('email')
               <span class="textContainer text-red-600 text-sm mt-1">{{ $message }}</span>
             @enderror
