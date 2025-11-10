@@ -43,10 +43,10 @@
     </div>
 
 
-  <div class="grid grid-cols-1 lg:grid-cols-2  container-x my-8 lg:my-12  text-contrast bg-contrast">
+  <div class="grid grid-cols-1 lg:grid-cols-2  container-x my-8 lg:my-12  text-contrast bg-contrast items-center">
         <div class= "p-4  lg:mt-12">
-            <h1 class= "text-[40px]  text-textPrimary py-2  text-center lg:text-start m-2  text-contrast bg-contrast">Transparência e conformidade</h1>
-            <p class="text-lg  text-textPrimary textContainer  text-contrast bg-contrast">Na Tecnol, a transparência, a conformidade com a legislação e o compromisso com princípios éticos e melhores experiências de mercado são práticas diárias e fundamentais para o futuro sustentável dos negócios.<br> <br>
+            <h1 class= "text-[40px]  text-textPrimary ">Transparência e conformidade</h1>
+            <p class="text-lg  text-textPrimary textContainer  text-contrast bg-contrast">Na <strong>Tecshare</strong>, a transparência, a conformidade com a legislação e o compromisso com princípios éticos e melhores experiências de mercado são práticas diárias e fundamentais para o futuro sustentável dos negócios. O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer desvios que possam comprometer nosso código de conduta e/ou as normas em vigor.<br> <br>
 
 O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer desvios que possam comprometer nosso código de conduta e/ou as normas em vigor.</p>
        
@@ -63,7 +63,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 </div>
 
          <div class = "p-4 mt-4 lg:mt-12  text-contrast bg-contrast">
-            <img class="h- rounded" src="{{ asset('/compliance-1.png') }}" alt="">
+            <img class="h- rounded" src="{{ asset('/c-img-1.png') }}" alt="">
 
         </div>
     </div>
@@ -71,32 +71,33 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 
 
- <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 container-x bg-[#F2F2F2] text-[#333333] py-8  text-contrast bg-contrast">
+ <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 container-x bg-[#F2F2F2] text-[#333333] py-8  text-contrast bg-contrast items-center">
 
         
         <div class = "p-4 mt-4 lg:mt-12">
-            <img class=" rounded" src="{{ asset('/compliance-2.png') }}" alt="">
+            <img class=" rounded" src="{{ asset('/c-img-2.png') }}" alt="">
 
         </div>
 
           <div class= "py-2 lg:py-[55px]">
-            <h1 class= "text-[35px] text-center lg:text-start m-3" ><strong> Programa de compliance  </strong></h1>
+            <h1 class= "text-[35px] text-center lg:text-start" >Política de Antissuborno</h1>
             <br>
-            <p class="textContainer">Estamos empenhados em manter a integridade e a confiança em todos os nossos relacionamentos, seja com clientes, parceiros, colaboradores ou órgãos reguladores. <br><br>
-            </p>
+            <p>Estamos empenhados em manter a integridade e a confiança em todos os nossos relacionamentos – seja com clientes, parceiros, colaboradores ou órgãos reguladores.</p>
+</p>
+<br>
         
             
 
-            <p class="textContainer">Para reforçar esse compromisso, o nosso programa de Compliance inclui uma Política do Sistema de Antissuborno e ações contínuas para promover um ambiente ético e transparente, consolidando a confiança com nossos stakeholders e fortalecendo a governança corporativa.</p>
+            <p>Para reforçar esse compromisso, o nosso programa de Compliance inclui uma Política do Sistema de Antissuborno e ações contínuas para promover um ambiente ético e transparente, consolidando a confiança com nossos stakeholders e fortalecendo a governança corporativa.</p>
         
-           <button class="button-secundary-contrast flex items-center gap-3 justify-center lg:justify-start p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8 w-full lg:w-[450px]">
+           <button class="button-secundary-contrast flex items-center gap-3 justify-center lg:justify-start p-3 px-6 rounded border border-[#808080] cursor-pointer mt-8 w-full lg:w-[500px]">
       
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
 </svg>
 
 
-      <span class="text-[15px]">NOSSA POLÍTICA DO SISTEMA DE ANTISSUBORNO</span>
+      <span class="text-[15px] whitespace-nowrap"> BAIXAR NOSSA POLÍTICA DO SISTEMA DE ANTISSUBORNO</span>
     </button>
 
         </div>
@@ -205,7 +206,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 
 <div class="grid grid-cols-1 lg:grid-cols-2  text-contrast bg-contrast">
-      <div class="bg-[#F2F2F2] text-center flex flex-col items-center justify-center px-6 p-10  text-contrast bg-contrast">
+      <div class="bg-[#F2F2F2] text-center flex flex-col items-center justify-center px-6   text-contrast bg-contrast p-12">
     <h1 class="text-[45px] font-semibold mb-4">Código de conduta e ética</h1>
     <p class="text-gray-700 textContainer  text-contrast bg-contrast">
       Para fortalecer a transparência e a equidade entre os nossos colaboradores, fornecedores, clientes e parceiros de negócios, tornamos público o nosso Código de Conduta.
@@ -226,10 +227,10 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     </button>
   </div>
     
-       <div class="bg-gradient-to-b from-[#004A65] to-[#006C94] bg-contrast text-center  text-contrast  flex flex-col items-center justify-center px-6 text-white p-10">
+       <div class="bg-gradient-to-b from-[#411F56] to-[#7D24B4] bg-contrast text-center  text-contrast  flex flex-col items-center justify-center px-6 text-white p-12">
     <h1 class="text-[45px] font-semibold mb-4  text-contrast bg-contrast">Canal de denúncia</h1>
     <p class="textContainer  text-contrast bg-contrast">
-        Contamos com um Canal de Denúncia sigiloso e imparcial, hospedado fora dos sistemas da TECNOL, administrado com total garantia de confidencialidade.
+        Contamos com um Canal de Denúncia sigiloso e imparcial, hospedado fora dos sistemas da TECSHARE, administrado com total garantia de confidencialidade pela empresa. 
     </p>
 
     
