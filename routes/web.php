@@ -82,6 +82,7 @@ Route::post("/solicitacao-titular", [SolicitacaoTitularController::class, "solic
 Route::get('/api/cnpj/{cnpj}', [CnpjController::class, "consultaCnpj"])->name("consultar-cnpj");
 
 Route::get("/teste", function(){
-    return view("emails/canaldedenuncia");
+    return view("emails/atendimento");
 })->name("teste");
+
 Route::get('/api/cnpj/{cnpj}', [CnpjController ::class, "consultaCnpj"])->name("consultar-cnpj");
