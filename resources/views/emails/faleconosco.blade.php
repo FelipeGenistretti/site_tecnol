@@ -1,6 +1,6 @@
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-<body class="container-x flex justify-center min-h-screen bg-gray-100 py-10">
+<body class="container-xflex justify-center min-h-screen bg-gray-100 py-10">
 
     <div class="w-[650px] min-h-[1396px] bg-white shadow-md rounded-md overflow-hidden ">
 

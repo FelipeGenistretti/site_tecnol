@@ -9,12 +9,16 @@
                 @error('mensagem')
                 <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
               @enderror
-        <label class="input-contrast border-2 border-dashed border-gray-400/30 rounded px-3 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors">
-            <img src="/iconDownloadUploadFile.png" alt="">
+        <label class="input-contrast border-2 border-dashed  rounded px-3 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
+                <path d="M48.1229 45H15.2946C15.2946 45 8.88135 45 7.6347 38.0534C6.38853 28.3228 14.2004 27.3119 14.2004 27.3119C14.2004 27.3119 12.0348 14.0232 26.2374 12.5825C38.2744 11.3615 40.463 24.0971 40.463 24.0971C40.463 24.0971 52.5 24.5316 52.5 35.7379C52.5 42.8271 48.1229 45 48.1229 45Z" stroke="currentColor" stroke-width="5"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6959 28.2666V38.3118H29.4347V28.2666L31.3666 30.0676L33.7341 26.7705L27.5653 21.0197L21.3965 26.7705L23.764 30.0676L25.6959 28.2666Z" fill="currentColor"/>
+            </svg>
+
             <p class="text-sm text-center textContainer">
                 Arraste e solte seu(s) arquivo(s) aqui <br> ou
             </p>
-            <span class="textContainer py-3 px-6 rounded border border-[#B3B3B3] cursor-pointer uppercase">
+            <span class="textContainer input-contrast py-3 px-6 rounded border border-[#B3B3B3] cursor-pointer uppercase">
                 Adicionar arquivos
             </span> 
 

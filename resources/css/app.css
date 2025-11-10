@@ -54,6 +54,18 @@
     @apply bg-[#FFFF00]
   }
 
+body.contrast .back-top-contrast {
+  @apply bg-[#FFFF00] text-[#0D0D0D];
+}
+
+body.contrast .svg-bg {
+  fill: #000;
+}
+
+body.contrast svg {
+  color: #FFD600; 
+}
+
   /* HEADER  */
 
     header.contrast .text-contrast {
