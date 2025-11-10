@@ -57,38 +57,55 @@
 
         <div>
             <img src="{{ asset('/seguranca-1.png')  }}" alt="" class="mt-12">
+
+             <button class="flex input-contrast items-center justify-center lg:justify-start gap-3 my-6  p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
+
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
+</svg>
+
+                
+
+
+                <span class="text-[13px] text-center lg:text-left">BAIXAR POLÍTICA DO SISTEMA DE GESTÃO INTEGRADO - SGI</span>
+            </button>
+            
+               <button class="flex input-contrast items-center justify-center lg:justify-start gap-3 my-6 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
+        </svg>
+
+                <span class="text-[13px] text-center lg:text-left">BAIXAR POLÍTICA DE SEGURANÇA E INFORMAÇÕES - POSIC</span>
+            </button>
+
+              <button class="flex input-contrast items-center justify-center lg:justify-start gap-3 my-6 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
+               
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
+</svg>
+
+        
+
+                <span class="text-[13px] text-center lg:text-left">BAIXAR TERMOS DE USO E POLÍTICA DE PRIVACIDADE</span>
+            </button>
+
+             <button class="flex input-contrast items-center justify-center lg:justify-start gap-3 my-6  p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px] lg:w-[220px]">
+           
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
+</svg>
+
+        
+
+
+                <span class="text-sm text-center lg:text-left whitespace-nowrap">QMS CERTIFICATION</span>
+            </button>
+
+
         </div>
     </div>
 
-    <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 container-x py-12 gap-4  text-contrast bg-contrast">
-        <div>
-            <button class="flex items-center justify-center lg:justify-start gap-3 w-full p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
-                <img src="{{ asset('/download-black.png') }}" alt="Ícone de download" class="w-5 h-5">
-                <span class="text-[13px] text-center lg:text-left">POLÍTICA DO SISTEMA DE GESTÃO INTEGRADO - SGI</span>
-            </button>
-        </div>
-
-        <div>
-            <button class="flex items-center justify-center lg:justify-start gap-3 w-full p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
-                <img src="{{ asset('/download-black.png') }}" alt="Ícone de download" class="w-5 h-5">
-                <span class="text-[13px] text-center lg:text-left">POLÍTICA DE SEGURANÇA E INFORMAÇÕES - POSIC</span>
-            </button>
-        </div>
-
-        <div>
-            <button class="flex items-center justify-center lg:justify-start gap-3 w-full p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
-                <img src="{{ asset('/download-black.png') }}" alt="Ícone de download" class="w-5 h-5">
-                <span class="text-[13px] text-center lg:text-left">TERMOS DE USO E POLÍTICA DE PRIVACIDADE</span>
-            </button>
-        </div>
-
-        <div>
-            <button class="flex items-center justify-center lg:justify-start gap-3  w-full  p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px] lg:w-[220px]">
-                <img src="{{ asset('/download-black.png') }}" alt="Ícone de download" class="w-5 h-5">
-                <span class="text-sm text-center lg:text-left">QMS CERTIFICATION</span>
-            </button>
-        </div>
-    </div>
+    
 
 </div>
 

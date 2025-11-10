@@ -86,7 +86,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4  text-contrast bg-contrast">
         <div class="flex flex-col">
           <label class="text-sm font-medium mb-1  text-contrast bg-contrast">Tipo da solicitação</label>
-          <select class="border rounded px-3 py-2 w-full bg-white  text-contrast bg-contrast" name="solicitacao" >
+          <select class=" input-contrast border rounded px-3 py-2 w-full bg-white  text-contrast bg-contrast" name="solicitacao" >
             <option value="">Selecionar</option>
             <option>A empresa possui meus dados pessoais</option>
             <option>Dados pessoais que a empresa tem sobre mim</option>
@@ -98,7 +98,7 @@
 
         <div class="flex flex-col  text-contrast bg-contrast">
           <label class="text-sm font-medium mb-1  text-contrast bg-contrast">Classificação do titular</label>
-          <select class="border rounded px-3 py-2 w-full bg-white  text-contrast bg-contrast" name="classificacao" >
+          <select class=" input-contrast border rounded px-3 py-2 w-full bg-white  text-contrast bg-contrast" name="classificacao" >
             <option value="">Selecionar</option>
             <option>Clientes</option>
             <option>Colaboradores</option>
@@ -111,36 +111,43 @@
       <div class="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  text-contrast bg-contrast">
         <div class="flex flex-col  text-contrast bg-contrast">
           <label class="text-sm font-medium mb-1">Nome</label>
-          <input type="text" class="border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="Digite seu nome" name="nome"/>
+          <input type="text" class=" input-contrast border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="Digite seu nome" name="nome"/>
         </div>
         <div class="flex flex-col">
           <label class="text-sm font-medium mb-1">CPF</label>
-          <input type="text" class="border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="000.000.000-00" name="cpf" />
+          <input type="text" class="input-contrast border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="000.000.000-00" name="cpf" />
         </div>
         <div class="flex flex-col">
           <label class="text-sm font-medium mb-1">E-mail</label>
-          <input type="text" class="border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="email@dominio.com.br" name="email" />
+          <input type="text" class="input-contrast border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="email@dominio.com.br" name="email" />
         </div>
         <div class="flex flex-col">
           <label class="text-sm font-medium mb-1">Telefone</label>
-          <input type="text" class="border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="(00) 00000-0000" name="telefone" />
+          <input type="text" class="input-contrast border rounded px-3 py-2 w-full  text-contrast bg-contrast" placeholder="(00) 00000-0000" name="telefone" />
         </div>
       </div>
 
       <!-- Observações -->
       <div class="flex flex-col">
         <label class="text-sm font-medium mb-1">Observações</label>
-        <textarea class="border rounded px-3 py-2 w-full min-h-[120px]  text-contrast bg-contrast" placeholder="Escreva aqui"  name="observacoes"></textarea>
-        <p class="text-sm ml-1 text-gray-600">Limite máximo de 8000 caracteres</p>
+        <textarea class="input-contrast border rounded px-3 py-2 w-full min-h-[120px]  text-contrast bg-contrast" placeholder="Escreva aqui"  name="observacoes"></textarea>
+        <p class="text-sm ml-1 text-gray-600 text-contrast">Limite máximo de 8000 caracteres</p>
       </div>
 
       <!-- Upload -->
-      <label class=" text-contrast bg-contrast border-2 border-dashed border-gray-400/30 rounded px-3 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors">
-        <img src="/iconDownloadUploadFile.png" alt="">
+      <label class="input-contrast text-contrast bg-contrast border-2 border-dashed border-gray-400/30 rounded px-3 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors">
+        
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
+<path d="M48.1229 45H15.2946C15.2946 45 8.88135 45 7.6347 38.0534C6.38853 28.3228 14.2004 27.3119 14.2004 27.3119C14.2004 27.3119 12.0348 14.0232 26.2374 12.5825C38.2744 11.3615 40.463 24.0971 40.463 24.0971C40.463 24.0971 52.5 24.5316 52.5 35.7379C52.5 42.8271 48.1229 45 48.1229 45Z" stroke="currentColor" stroke-width="5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M25.6959 28.2666V38.3118H29.4347V28.2666L31.3666 30.0676L33.7341 26.7705L27.5653 21.0197L21.3965 26.7705L23.764 30.0676L25.6959 28.2666Z" fill="currentColor"/>
+</svg>
+
+
+
         <p class="text-sm text-center textContainer  text-contrast bg-contrast">
           Arraste e solte seu(s) arquivo(s) aqui <br> ou
         </p>
-        <span class="textContainer py-3 px-6 rounded border border-[#B3B3B3] cursor-pointer uppercase">
+        <span class=" input-contrast textContainer py-3 px-6 rounded border border-[#B3B3B3] cursor-pointer uppercase">
           Adicionar arquivos
         </span>
         <input type="file" name="files" class="hidden">
@@ -153,7 +160,7 @@
       <div class="flex flex-col">
         <div class="flex gap-2 items-center mb-4">
           <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125 textContainer" {{ old('privacy') ? 'checked' : '' }}/>
-          <p class="textContainer">
+          <p class="textContainer text-sm">
             Li e concordo com a
             <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
           </p>
@@ -161,7 +168,7 @@
 
         <button type="submit" class="button-contrast textContainer lg:w-[20%] flex items-center justify-center gap-2 uppercase px-6 py-3 bg-bgButtonPrimary hover:bg-orange-400 transition duration-300 rounded-md text-white">
           <img src="/uploadFile.png" alt="">
-          <p>Enviar arquivo</p>
+          <p class="text-sm">Enviar</p>
         </button>
       </div>
 
