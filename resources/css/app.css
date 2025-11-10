@@ -59,12 +59,17 @@ body.contrast .back-top-contrast {
 }
 
 body.contrast .svg-bg {
-  fill: #000;
+   fill: #0D0D0D;
 }
 
 body.contrast svg {
-  color: #FFD600; 
+   color: #FFD600; 
 }
+
+body.contrast .text-black-contrast{
+  @apply text-black
+}
+
 
   /* HEADER  */
 
