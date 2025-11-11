@@ -15,8 +15,12 @@
   }
 }
 
+
+
 /* Camada utilities: classes customizadas */
 @layer utilities {
+
+
   .container-x {
     @apply px-4 sm:px-8 md:px-[120px];
   }

@@ -46,9 +46,9 @@
     </div>
 </div>
 
-<div id="content-real" class="hidden mt-0 text-contrast bg-contrast top-0">
+<div id="content-real" class="hidden text-contrast bg-contrast">
 
-<div class="flex items-center py-12  bg-bgSecondary bg-contrast justify-center lg:justify-start">
+<div class="flex items-center py-12  bg-bgSecondary bg-contrast justify-center lg:justify-start ">
   <h1 class="text-[38px] text-textPrimary text-contrast container-x ">Quem somos</h1>
     </div>
 
@@ -236,6 +236,8 @@
 @endsection
 
 <script src="https://www.google.com/recaptcha/enterprise.js?render={{ config('recaptcha.site_key') }}"></script>
+
+
 <script>
 //grecaptcha.enterprise.ready(function() {
 //    grecaptcha.enterprise.execute('{{ config('recaptcha.site_key') }}', {action: 'submit'}).then(function(token) {
