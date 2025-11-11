@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <div class="bg-contrast container-x py-12" id="faleConosco">
   <div class="flex flex-col justify-center items-center gap-2">
     <h1 class="text-4xl text-contrast">Fale conosco</h1>
@@ -27,7 +30,7 @@
 </div>
 
   <div class="pt-5">
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[60%_40%] gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[70%_30%] gap-6">
       
       <!-- FORMULÁRIO (70%) -->
       <div class="bg-gray-100/30 bg-contrast rounded-md shadow-md p-6 textContainer">
@@ -42,7 +45,7 @@
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div class="flex flex-col">
-      <label for="name" class="font-medium mb-1 text-contrast">Nome</label>
+      <label for="name" class="text-sm mb-1 text-contrast">Nome</label>
       <input
         type="text"
         name="nome"
@@ -57,7 +60,7 @@
     </div>
 
     <div class="flex flex-col">
-      <label for="email" class="font-medium mb-1 text-contrast">E-mail</label>
+      <label for="email" class="text-sm mb-1 text-contrast">E-mail</label>
       <input
         type="email"
         name="email"
@@ -72,7 +75,7 @@
     </div>
 
     <div class="flex flex-col">
-      <label for="phone" class="font-medium mb-1 text-contrast">Telefone</label>
+      <label for="phone" class="text-sm mb-1 text-contrast">Telefone</label>
       <input
         type="text"
         name="telefone"
@@ -89,11 +92,10 @@
 
   <div class="grid grid-cols-1 py-5">
     <div class="flex flex-col rounded-md">
-      <label class="font-medium mb-1 text-contrast" for="mensagem">Mensagem</label>
+      <label class="text-sm mb-1 text-contrast" for="mensagem">Mensagem</label>
       <textarea
         name="mensagem"
         id="mensagem"
-        rows="4"
         placeholder="Escreva aqui sua mensagem"
         class="input-contrast p-3 border rounded-md resize-none @error('mensagem') border-red-500 @enderror"
       >{{ old('mensagem') }}</textarea>
@@ -204,7 +206,7 @@
     </div>
   </div>
 </div>
-
+@endsection
 
 
 <script>
@@ -269,3 +271,4 @@
     });
 </script>
 @endif
+

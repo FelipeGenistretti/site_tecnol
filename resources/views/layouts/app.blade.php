@@ -15,7 +15,7 @@
         @yield('content')
     </main>
 
- <footer class=" bg-contrast">
+ <footer class=" bg-contrast border border-2-t">
     <div class="container-x">
         
         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5 text-[#333333] py-12 place-items-center lg:place-items-start">

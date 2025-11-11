@@ -107,3 +107,7 @@ Route::get('/download-arquivo', function () {
 Route::get("/trabalhe-conosco", function(){
     return view("trabalhe-conosco");
 })->name("trabalhe-conosco");
+
+Route::get("/fale-conosco", function(){
+    return view("fale-conosco");
+})->name("fale-conosco");
