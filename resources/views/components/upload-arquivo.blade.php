@@ -22,7 +22,7 @@
                 Adicionar arquivos
             </span> 
 
-            <input type="file" name="files" class="hidden input-contrast">
+            <input type="file" name="arquivos[]" multiple class="hidden input-contrast">
         </label>
 
         <p class="text-sm text-textSecondary my-3 textContainer text-contrast">

@@ -27,12 +27,11 @@
           <li class="relative group flex items-center h-full">
             <a href="{{ route('safe-register-car') }}" 
                class="text-contrast nav-link flex items-center gap-1 transition-colors {{ Route::is('safe-register-car') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
-              Safe Register Car
+              serviços
             </a>
             <div class="absolute left-0 top-[60%] w-48 bg-white bg-contrast border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
-              <a href="{{ route('safe-register-car') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">O que é?</a>
-              <a href="{{ route('safe-register-car') }}#ondeoperamos" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast" id="scrollToOndeOperamos">Onde operamos</a>
-              <a href="{{route('pre-registro') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Pré-cadastro</a>
+              <a href="{{ route('safe-register-car') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Safe Data Analytics - SDA</a>
+              <a href="{{ route('safe-register-car') }}#ondeoperamos" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast" id="scrollToOndeOperamos">TECNOHUB</a>
             </div>
           </li>
 
@@ -44,7 +43,17 @@
             <div class="absolute left-0 top-[60%] w-48 bg-white border bg-contrast rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
               <a href="{{ route('compliance') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Compliance</a>
               <a href="{{ route('canal-denuncia') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Canal de denúncia</a>
-              <a href="{{ route('solicitacao-titular') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Solicitação do titular</a>
+            </div>
+          </li>
+
+          <li class="relative group flex items-center h-full">
+            <a href="{{ route('privacidade') }}" 
+               class="text-contrast nav-link flex items-center gap-1 {{ Route::is('compliance') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+              Privacidade 
+            </a>
+            <div class="absolute left-0 top-[60%] w-48 bg-white border bg-contrast rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
+              <a href="{{ route('privacidade') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Privacidade</a>
+              <a href="{{ route('canal-denuncia') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">SOLICITAÇÃO DO TITULAR</a>
             </div>
           </li>
 
@@ -101,7 +110,7 @@
             <path d="M11.499 3C14.3255 3 16.999 4.8836 16.999 7.63086V10.5293H18.999V19.8994C18.999 20.5068 18.5067 20.9998 17.8994 21H5.09863C4.4913 20.9998 3.99902 20.5068 3.99902 19.8994V10.5293H5.99902V7.63086C5.99902 4.8836 8.67259 3 11.499 3ZM5.99902 19H16.999V12.5293H5.99902V19ZM11.499 5C9.3549 5 7.99902 6.3677 7.99902 7.63086V10.4434H14.999V7.63086C14.999 6.3677 13.6432 5 11.499 5Z" fill="currentColor"/>
           </svg>
 
-          <p class="text-[12px]">Safe Register Car</p>
+          <p class="text-[12px]">sda analytics</p>
         </button>
       </nav>
 
@@ -148,15 +157,14 @@
 
       <li class="relative">
         <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
-          Safe Register Car
+          Serviços
           <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
         <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
-          <li><a href="" class="block hover:text-orange-600">O que é?</a></li>
-          <li><a href=""class="block hover:text-orange-600">Onde operamos</a></li>
-          <li><a href="{{route('pre-registro') }}" class="block hover:text-orange-600">Pré-cadastro</a></li>
+          <li><a href="" class="block hover:text-orange-600">Safe Data Analytics - SDA</a></li>
+          <li><a href=""class="block hover:text-orange-600">TECNOHUB</a></li>
         </ul>
       </li>
 
@@ -170,7 +178,19 @@
         <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
           <li><a href="{{ route('compliance') }}" class="block hover:text-orange-600">Compliance</a></li>
           <li><a href="{{ route('canal-denuncia') }}" class="block hover:text-orange-600">Canal de denúncia</a></li>
-          <li><a href="{{ route('solicitacao-titular') }}" class="block hover:text-orange-600">Solicitação do titular</a></li>
+        </ul>
+      </li>
+
+          <li class="relative">
+        <button class="w-full flex justify-between items-center hover:text-orange-600 uppercase toggle-submenu">
+          Privacidade
+          <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
+          <li><a href="{{ route('privacidade') }}" class="block hover:text-orange-600">Privacidade</a></li>
+          <li><a href="{{ route('canal-denuncia') }}" class="block hover:text-orange-600">Solicitação do titular</a></li>
         </ul>
       </li>
 

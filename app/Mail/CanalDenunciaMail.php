@@ -2,9 +2,7 @@
 
 namespace App\Mail;
 
-use App\HasAttachment;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
@@ -13,51 +11,50 @@ use Illuminate\Queue\SerializesModels;
 
 class CanalDenunciaMail extends Mailable
 {
-    use Queueable, SerializesModels, HasAttachment;
+    use Queueable, SerializesModels;
 
     public $data;
-    public $arquivo;
+    public $arquivos;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct($data, $arquivo=null)
+    public function __construct($data, $arquivos = [])
     {
         $this->data = $data;
-        $this->arquivo = $arquivo;
+        $this->arquivos = $arquivos;
     }
 
-    /**
-     * Get the message envelope.
-     */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Canal Denuncia Mail',
+            subject: 'Canal de Denúncia'
         );
     }
 
-    /**
-     * Get the message content definition.
-     */
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.denuncia',
-            with:[
-                "data"=>$this->data,
-                "arquivo"=>$this->arquivo
+            view: 'emails.canaldedenuncia',
+            with: [
+                'data' => $this->data,
+                'arquivos' => $this->arquivos,
             ]
         );
     }
 
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
-     */
     public function attachments(): array
     {
-         return $this->attachFile($this->arquivo);
+        $attachments = [];
+
+        foreach ($this->arquivos as $arquivo) {
+
+            $fullPath = storage_path('app/public/' . $arquivo['path']);
+
+            if (file_exists($fullPath)) {
+
+                $attachments[] = Attachment::fromPath($fullPath)
+                    ->as($arquivo['nome'] . '.' . strtolower($arquivo['extensao'])); // ← Mantém extensão
+            }
+        }
+
+        return $attachments;
     }
 }

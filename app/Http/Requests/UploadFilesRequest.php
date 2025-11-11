@@ -19,23 +19,29 @@ class UploadFilesRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
-    {
-        return [
-            "files"=>["required", "file", 'mimes:png,jpg,jpeg,webp,pdf,doc,docx,xls,xlsx',"max:5120"],
-            'privacy'=> ['accepted'],
-            'mensagem'=>['required', 'string', 'max:255']
-        ];
-    }
+        public function rules(): array
+        {
+            return [
+                "arquivos" => ["required"],
+                "arquivos.*" => ["file", "mimes:png,jpg,jpeg,webp,pdf,doc,docx,xls,xlsx", "max:5120"],
 
-    public function messages() : array
-    {
-        return [
-            "files.required"=> "É obrigatório enviar um arquivo",
-            "files.max"=> "O arquivo deve ter no máximo 5MB",
-            "files.mimes"=> "Deve ser um arquivo válido",
-            "privacy.accepted"=>"Você deve aceitar a política de privacidade.",
-            "mensagem.required"=>"Você deve escrever uma mensagem."
-        ];
-    }
+
+                'privacy'=> ['accepted'],
+                'mensagem'=>['required', 'string', 'max:2000']
+            ];
+        }
+
+
+        public function messages(): array
+        {
+            return [
+                "arquivos.required"=> "É obrigatório enviar ao menos um arquivo.",
+                "arquivos.*.max"=> "Cada arquivo deve ter no máximo 5MB.",
+                "arquivos.*.mimes"=> "Algum arquivo enviado não é válido.",
+
+                "privacy.accepted"=>"Você deve aceitar a política de privacidade.",
+                "mensagem.required"=>"Você deve escrever uma mensagem."
+            ];
+        }
+
 }

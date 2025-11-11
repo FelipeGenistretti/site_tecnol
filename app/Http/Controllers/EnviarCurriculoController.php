@@ -26,6 +26,7 @@ class EnviarCurriculoController extends Controller
         $arquivo = $request->file("files");
 
         Mail::to(config('mail.to.address'))->send(new CurriculoMail($data, $arquivo));
+        
 
         return back()->with("success", "Currículo enviado com sucesso");
     }

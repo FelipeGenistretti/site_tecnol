@@ -9,6 +9,7 @@ use App\Http\Controllers\SolicitacaoTitularController;
 use App\Http\Controllers\UploadFileController;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 // Página inicial
 Route::get('/', function () {
@@ -86,3 +87,14 @@ Route::get("/teste", function(){
 })->name("teste");
 
 Route::get('/api/cnpj/{cnpj}', [CnpjController ::class, "consultaCnpj"])->name("consultar-cnpj");
+
+
+Route::get('/download-arquivo', function () {
+    $path = request('path');
+
+    if (!$path || !Storage::disk('public')->exists($path)) {
+        abort(404);
+    }
+
+    return response()->download(storage_path('app/public/' . $path));
+})->name('download.arquivo');
