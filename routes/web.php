@@ -98,3 +98,8 @@ Route::get('/download-arquivo', function () {
 
     return response()->download(storage_path('app/public/' . $path));
 })->name('download.arquivo');
+
+
+Route::get("/trabalhe-conosco", function(){
+    return view("trabalhe-conosco");
+})->name("trabalhe-conosco");
