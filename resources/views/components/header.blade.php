@@ -3,8 +3,11 @@
     <div class="flex justify-between items-center w-full h-full mx-auto">
 
       <div class="flex items-center w-[167px] h-[29px] ">
-        <a href="{{ route('home') }}"><img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain"></a>
+        <a href="{{ route('home') }}"><img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain" id="logoHeader"></a>
+        <a href="{{ route('home') }}"><img src="/logoContrast.png" alt="Logo Contrast TecShare" class="w-full h-full object-contain hidden" id="logoContrastHeader"></a>
       </div>
+
+
 
       <!-- MENU DESKTOP -->
       <nav class="hidden lg:flex items-center gap-4 uppercase text-md h-full relative">
@@ -228,6 +231,27 @@
   </div>
 </div>
 
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const logo = document.getElementById("logoHeader");
+          const logoContrast = document.getElementById("logoContrastHeader");
+          function atualizarLogos() {
+              if (document.body.classList.contains('contrast')) {
+                  logo.classList.add("hidden");
+                  logoContrast.classList.remove("hidden");
+              } else {
+                  logo.classList.remove("hidden");
+                  logoContrast.classList.add("hidden");
+              }
+          }
+          atualizarLogos();
+          const observer = new MutationObserver(atualizarLogos);
+          observer.observe(document.body, {
+              attributes: true,
+              attributeFilter: ['class']
+          });
+      });
+    </script>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
