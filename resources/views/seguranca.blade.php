@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <div id="pdfModal" class=" fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center  pt-[120px]">
+    <div id="pdfModal" class="h-[1000px] fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center  pt-[60px]">
     <div class="bg-white bg-contrast input-contrast w-[90%] md:w-[70%] h-[80%] rounded shadow relative p-6">
         
         <!-- Botão fechar -->
