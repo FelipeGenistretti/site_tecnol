@@ -53,7 +53,7 @@
             </a>
             <div class="absolute left-0 top-[60%] w-48 bg-white border bg-contrast rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
               <a href="{{ route('privacidade') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Privacidade</a>
-              <a href="{{ route('canal-denuncia') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">SOLICITAÇÃO DO TITULAR</a>
+              <a href="{{ route('solicitacao-titular') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">SOLICITAÇÃO DO TITULAR</a>
             </div>
           </li>
 
@@ -70,7 +70,7 @@
           </li>
 
           <li class="flex items-center h-full">
-            <a href="/#faleConosco" id="scrollToFaleConosco"
+            <a href="{{ route('trabalhe-conosco') }}" id="scrollToFaleConosco"
                class="nav-link text-textSecondary hover:text-textPrimary hover:font-bold text-contrast">
               Contato
             </a>

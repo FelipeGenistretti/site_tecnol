@@ -21,7 +21,7 @@
 
   <!-- Coluna 1: Formulário -->
   
-<form action="{{ route('enviar-curriculo') }}" type="file" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" class="text-constrast input-contrast bg-contrast bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
+<form action="{{ route('trabalhe-conosco') }}" multiple type="arquivos[]" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" enctype="multipart/form-data" method="post" class="text-constrast input-contrast bg-contrast bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
   @csrf
 
   <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -56,7 +56,7 @@
   <!-- Mensagem -->
   <div class="flex flex-col w-full">
     <label class="textContainer text-sm font-medium mb-1">Mensagem</label>
-    <input type="text" class="input-contrast border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" name="menssagem" />
+    <input type="text" class="input-contrast border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" name="mensagem" />
   </div>
 
   
