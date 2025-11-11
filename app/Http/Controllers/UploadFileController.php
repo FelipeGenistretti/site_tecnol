@@ -20,15 +20,34 @@ class UploadFileController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function uploadFile(UploadFilesRequest $request)
-    {
-        $data = $request->validated();
-        $arquivo = $request->file("files");
+        public function uploadFile(UploadFilesRequest $request)
+        {
+            $data = $request->validated();
+            $arquivos = [];
 
-        Mail::to(config("mail.to.address"))->send(new CanalDenunciaMail($data, $arquivo));
+            if ($request->hasFile('arquivos')) {
+                foreach ($request->file('arquivos') as $file) {
 
-        return back()->with("success", "Mensagem enviada com sucesso");
-    }
+                    $path = $file->store('canal_denuncia', 'public');
+
+                    $arquivos[] = [
+                        'nome' => $file->getClientOriginalName(),
+                        'tamanho' => round($file->getSize() / 1024),
+                        'extensao' => strtoupper($file->extension()),
+                        'file' => basename($path),
+                        'url' => asset("storage/{$path}"),
+                        'path' => $path
+                    ];
+
+                }
+            }
+
+            Mail::to(config('mail.to.address'))
+                ->send(new CanalDenunciaMail($data, $arquivos));
+
+            return back()->with("success", "Denúncia enviada com sucesso");
+        }
+
 
     /**
      * Display the specified resource.

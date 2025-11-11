@@ -1,4 +1,4 @@
-<div class="container-x py-10 bg-bgSecondary bg-contrast">
+<div class="container-x py-10 bg-white bg-contrast">
   <h1 class="text-4xl text-center mb-10 text-contrast">Diferenciais</h1>
 
   <!-- Grid principal -->

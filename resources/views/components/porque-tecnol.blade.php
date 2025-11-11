@@ -1,6 +1,6 @@
 <div class="bg-contrast container-x bg-bgSecondary max-sm:py-10 lg:py-20 md:py-10">
   <div class="text-textPrimary flex justify-center items-center flex-col gap-3 sm:items-center sm:justify-center">
-    <h1 class="text-4xl sm:text-5xl max-sm:text-center max-sm:text-[38px] text-contrast">Por que escolher a Tecnol?</h1>
+    <h1 class="text-4xl sm:text-5xl max-sm:text-center max-sm:text-[38px] text-contrast">Por que escolher a Tecshare?</h1>
     <p class="text-lg text-contrast font-normal max-sm:text-lg max-sm:flex max-sm:text-center textContainer">
       Oferecemos soluções inteligentes, seguras e automatizadas para nossos clientes
     </p>

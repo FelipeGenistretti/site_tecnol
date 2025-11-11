@@ -1,86 +1,127 @@
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canal de Denúncia</title>
 
-<body class="flex justify-center min-h-screen bg-gray-100 py-10">
+  <style>
+    @media only screen and (max-width: 600px) {
+      .container { width: 100% !important; padding: 20px !important; }
+      .attachment-box { width: 100% !important; display:block !important; }
+      .btn { width: 100% !important; display:block !important; text-align:center !important; }
+    }
+  </style>
 
-    <div class="w-[650px] min-h-[1396px] bg-white shadow-md rounded-md overflow-hidden ">
+</head>
+<body style="margin:0; padding:0; background:#F5F5F5; font-family: Arial, Helvetica, sans-serif;">
 
-        <!-- Banner -->
-        <div class="bg-[#FFF6F3] h-[358px] flex items-center justify-center">
-            <img src="{{ asset('email-canal-denuncia.png') }}" alt="Logo Trabalhe Conosco" class="w-[350px] h-[350px] object-contain">
-        </div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="padding:30px 0;">
+    <tr>
+      <td align="center">
 
-        <!-- Conteúdo -->
-        <div class="p-6 text-[#333] space-y-3">
-            <h1 class="text-[32px] text-center font-semibold">Canal de denuncia</h1>
-            <br>
-            <p class="text-[25px]">Contato via site.</p>
-            <br>
+        <table width="600" cellpadding="0" cellspacing="0" class="container" style="background:#FFFFFF; border-radius:8px; overflow:hidden;">
 
-            <h2 class="font-semibold text-xl mt-4">Mensagem</h2>
+          <!-- Banner -->
+          <tr>
+            <td align="center" style="padding:40px 20px; background:#FFF5EF;">
+              <img src="{{ asset('canalDenunciaEmail.png') }}" alt="Ilustração Canal de Denúncia" style="width:220px; max-width:100%; display:block;">
+            </td>
+          </tr>
 
-            <p class="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae facilisis sapien. 
-                Maecenas porttitor auctor semper. Integer molestie non nisi et cursus. 
-            </p>
-        </div>
+          <!-- Título -->
+          <tr>
+            <td align="center" style="padding:30px 25px; color:#333;">
+              <h1 style="font-size:26px; margin-bottom:8px;">Canal de denúncia</h1>
+              <p style="font-size:16px; color:#555; margin:0;">Contato enviado via site.</p>
+            </td>
+          </tr>
 
-        <!-- Anexo -->
-        <div class="mt-2 flex justify-center">
-            <button class="bg-[#F2F2F2] font-medium px-6 py-4 rounded-md transition flex items-center gap-3 w-[90%] text-left">
-                <img src="{{ asset('pdf-icons.png') }}" alt="" class="w-8 h-8">
+          <!-- Mensagem -->
+          <tr>
+            <td style="padding:0 30px 20px 30px; color:#333;">
+              <h3 style="font-size:16px; margin-bottom:6px;">Mensagem:</h3>
+              <p style="font-size:15px; line-height:1.6; text-align:justify; margin:0;">
+                {{ $data['mensagem'] ?? 'Mensagem não informada.' }}
+              </p>
+            </td>
+          </tr>
 
-                <div class="flex flex-col text-sm gap-1">
-                    <span>Nome_do_arquivo.pdf</span>
-                    <span class="text-[#666] text-xs">20KB</span>
-                </div>
-            </button>
-        </div>
-            <div class="mt-2 flex justify-center">
-            <button class="bg-[#F2F2F2] font-medium px-6 py-4 rounded-md transition flex items-center gap-3 w-[90%] text-left">
-                <img src="{{ asset('doc-icon.png') }}" alt="" class="w-8 h-8">
+          <!-- Lista de Arquivos -->
+         <!-- Lista de Arquivos -->
+@if(!empty($arquivos))
+<tr>
+  <td style="padding:20px 30px;">
+    @foreach($arquivos as $arquivo)
+      <table width="100%" class="attachment-box" cellpadding="0" cellspacing="0" style="margin-bottom:12px; border-radius:8px; background:#F8F8F8; padding:12px;">
+        <tr>
 
-                <div class="flex flex-col text-sm gap-1">
-                    <span>Meu_Curriculo_2025.docx</span>
-                    <span class="text-[#666] text-xs">200KB</span>
-                </div>
-            </button>
-        </div>
-            <div class="mt-2 flex justify-center">
-            <button class="bg-[#F2F2F2] font-medium px-6 py-4 rounded-md transition flex items-center gap-3 w-[90%] text-left">
-                <img src="{{ asset('zip-icon.png') }}" alt="" class="w-8 h-8">
+          <!-- Extensão -->
+          <td width="50" align="center" style="font-size:14px; font-weight:bold; background:#FF6F47; color:white; border-radius:6px; padding:8px;">
+            {{ $arquivo['extensao'] }}
+          </td>
 
-                <div class="flex flex-col text-sm gap-1">
-                    <span>Nome_do_arquivo.zip</span>
-                    <span class="text-[#666] text-xs">500KB</span>
-                </div>
-            </button>
-        </div>
+          <!-- Nome + tamanho -->
+          <td style="padding-left:12px; font-size:14px;">
+            <strong>{{ $arquivo['nome'] }}</strong><br>
+            <span style="color:#777; font-size:12px;">
+              {{ $arquivo['tamanho'] }}kb
+            </span>
+          </td>
 
+          <!-- Botão Baixar -->
+          <td align="right">
+            <a href="{{ route('download.arquivo', $arquivo['file']) }}"
+               style="background:#F15A29; padding:8px 14px; color:#fff; font-size:13px; 
+                      text-decoration:none; border-radius:6px; font-weight:bold; display:inline-block;">
+               Baixar
+            </a>
+          </td>
 
+        </tr>
+      </table>
+    @endforeach
+  </td>
+</tr>
+@endif
 
-        <div class="w-full flex justify-center mt-6 mb-10">
-            <button class="bg-bgButtonPrimary text-white font-semibold px-8 py-3 rounded-md hover:opacity-90 transition">
-                Acessar site
-            </button>
-        </div>
+          <!-- Botão -->
+          <tr>
+            <td align="center" style="padding:30px 20px;">
+              <a href="{{ $data['link'] ?? '#' }}" class="btn" 
+              style="background:#F15A29; color:white; padding:14px 28px; border-radius:6px; text-decoration:none; font-weight:bold; display:inline-block;">
+                ÁREA DEVEDOR
+              </a>
+            </td>
+          </tr>
 
-        <p class="text-center text-sm mb-6">Link de acesso: <a href="" class="text-[#F15A29]">www.sisteastecnol.com.br</a></p>
+          <!-- Link de acesso -->
+          <tr>
+            <td align="center" style="padding-bottom:30px; font-size:14px; color:#555;">
+              Link de acesso: 
+              <a href="{{ $data['link'] ?? '#' }}" style="color:#F15A29;">
+                {{ $data['link'] ?? 'dominio.com.br' }}
+              </a>
+            </td>
+          </tr>
 
-        
-        <div class="border-b w-full"></div>
+          <!-- Divisor -->
+          <tr><td style="border-bottom:1px solid #E5E5E5;"></td></tr>
 
-        <!-- Rodapé -->
-        <div class="bg-[#FDFCFC] h-[358px]  p-6 flex flex-col items-center justify-center">
-            <p class="text-[#B2B2B2] text-justify">
-                “Esta mensagem e eventuais anexos estão dirigidos EXCLUSIVAMENTE aos destinatários especificados. A informação neles contida é CONFIDENCIAL, não estando autorizado seu uso, revelação, distribuição, impressão ou cópia. Se você recebeu por ENGANO, pedimos gentilmente que comunique ao remetente e ELIMINE a mensagem e os anexos. Em que pese se tratar de e-mail corporativo, o seu conteúdo não necessariamente é seguro e/ou reflete a opinião da TECNOL, que não poderá aceitar a responsabilidade por quaisquer perdas e/ou danos causados por esta mensagem ou por seus anexos.”
-            </p>
+          <!-- Rodapé -->
+          <tr>
+            <td style="padding:25px 35px; font-size:11px; color:#9B9B9B; text-align:justify; line-height:1.5;">
+              “Esta mensagem e eventuais anexos estão dirigidos EXCLUSIVAMENTE aos destinatários especificados. A informação nela contida é CONFIDENCIAL, não estando autorizado seu uso, revelação, distribuição ou cópia. Se você recebeu por ENGANO, pedimos gentilmente que comunique ao remetente e ELIMINE esta mensagem.”
+              <br><br>
+              <p style="text-align:center; margin-top:10px;">© Tecnol 2025 - Todos os direitos reservados.</p>
+            </td>
+          </tr>
 
-            <p class="text-[#B2B2B2] text-center m-4">
-                © Tecnol 2025 - Todos os direitos reservados.
-            </p>
+        </table>
 
-            <img src="{{ asset('logo.png') }}" alt="" class="w-[160px] h-[28px] mt-8">
-        </div>
+      </td>
+    </tr>
+  </table>
 
-    </div>
 </body>
+</html>

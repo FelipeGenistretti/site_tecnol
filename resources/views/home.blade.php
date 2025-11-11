@@ -5,7 +5,6 @@
     <x-banner/>
     <x-quem-somos/>
     <x-porque-tecnol/>
-    <x-fale-conosco/>
     <x-enviar-curriculo/>
     <x-section-enviar-curriculo/>
     <x-back-to-top/>    

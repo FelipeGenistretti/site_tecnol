@@ -72,13 +72,18 @@
 </div>
 
 
-<div class="hero relative bg-cover bg-center min-h-[500px] md:min-h-[700px]" id="content-type" style="background-image: url('/banner.png');">
+<div class="hero relative bg-cover bg-center min-h-[500px] md:min-h-[700px]" id="content-type">
 
-  <div class="absolute inset-0 bg-black/30 z-0"></div>
 
-  <div class="hero-content relative z-10 container-x flex flex-col justify-center pt-[80px] pb-10 max-md:items-center">
+  <div class="absolute inset-0 bg-gradient-to-b from-[#411F56] to-[#7D24B4] z-0"></div>
+
+    <div class="absolute inset-0 top-0 z-10">
+    <img src="/heroSda.png" alt="" class="w-full h-full object-cover opacity-60 items -mt-20">
+  </div>
+
+  <div class="hero-content relative z-20 container-x flex flex-col justify-center pt-[80px] pb-10 max-md:items-center">
     <h1 class="text-contrast uppercase text-5xl font-medium mb-2 text-white max-md:text-center max-sm:font-semibold max-sm:text-4xl">
-      Safe Register Car
+      Safe Data Analytics - SDA
     </h1>
 
     <p class="text-contrast textContainer font-medium max-sm:hidden lg:flex mb-2 text-md text-white mt-2">
@@ -95,7 +100,7 @@
 
     <div class="flex lg:flex-row md:flex-row gap-6 mt-10">
       <div class="flex flex-col text-white gap-2 md:gap-4">
-        <p class="text-5xl font-semibold max-sm:text-[24px] max-sm:mb-4 text-contrast">16+</p>
+        <p class="text-5xl font-semibold max-sm:text-[24px] max-sm:mb-4 text-contrast">15+</p>
         <p class="textContainer text-sm max-sm:text-[12px] text-contrast">Estados Brasileiros</p>
       </div>
       <div class="flex flex-col text-white gap-2 md:gap-4">

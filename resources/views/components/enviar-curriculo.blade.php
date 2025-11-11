@@ -1,4 +1,4 @@
-<div class="bg-contrast container-x  p-5 bg-bgSecondary">
+<div class="bg-contrast container-x  p-5 bg-white">
     <div class=" flex text-center flex-col gap-3">
         <h1 class="text-[38px] text-textPrimary font-semibold text-contrast">Imagine trabalhar em um ambiente onde o crescimento conjunto é a nossa missão?</h1>
         <p class="text-[21px] mt-3 mb-3 text-textPrimary text-contrast">Oferecemos um espaço dedicado ao seu desenvolvimento, porque acreditamos que crescer juntos nos leva mais longe</p>
