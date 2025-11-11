@@ -115,6 +115,8 @@
 {{-- Script pra trocar skeleton pelo conteúdo real --}}
 <script>
     window.addEventListener("load", () => {
+     document.getElementById('pdfModal').style.display = 'none';
+
         const skeleton = document.getElementById('skeleton');
         const content = document.getElementById('content-real');
 
