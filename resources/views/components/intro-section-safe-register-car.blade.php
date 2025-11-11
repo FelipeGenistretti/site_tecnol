@@ -42,8 +42,8 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 text-textPrimary">
       <div>
         <div class="mb-10">
-          <h1 class="text-5xl mb-10 max-sm:flex max-sm:justify-center max-sm:text-[38px] max-sm:text-center text-contrast">Inteligência e tecnologia para decisões mais seguras</h1>
-          <p class="mb-4 textContainer max-sm:text-[16px] text-contrast">
+          <h1 class="text-4xl mb-5 max-sm:flex max-sm:justify-center max-sm:text-[38px] max-sm:text-center text-contrast">Inteligência e tecnologia para decisões mais seguras</h1>
+          <p class="textContainer max-sm:text-[16px] text-contrast">
             O SDA é muito mais do que uma solução tecnológica: é um aliado estratégico para transformar dados em decisões inteligentes, seguras e eficientes. Com uma modelagem robusta e integrada, ele potencializa toda a esteira automotiva, trazendo inovação e confiabilidade para instituições financeiras, concessionárias e parceiros do mercado.
           </p>
         </div>
@@ -105,15 +105,9 @@
 
       <!-- Gráfico -->
       <div>
-        <div class="rounded-md shadow-xl bg-contrast bg-[#F2F2F2] h-full flex items-center justify-center p-6">
-          <div class="text-center">
-            <img src="/PieLayer.png" alt="">
-            <div class="flex justify-center mt-4 text-contrast">
-              <ol class="flex flex-col sm:flex-row justify-center gap-3 text-sm">
-                <li>Redução de custos operacionais</li>
-                <li>Economia de tempo e maior transparência</li>
-              </ol>
-            </div>
+        <div class="rounded-md bg-contrast h-full">
+          <div>
+            <img src="/imgSdaHero.png" alt="" class="rounded-md h-full">
           </div>
         </div>
       </div>

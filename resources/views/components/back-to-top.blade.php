@@ -1,5 +1,5 @@
 <div class="fixed bottom-10 right-10 z-50 group">
-  <button id="backToTop" class="hidden py-5 px-5 back-top-contrast bg-[#004A65] text-white rounded-full shadow-lg duration-300 hover:bg-[#1D7AFC] relative">
+  <button id="backToTop" class="hidden py-2 px-2 back-top-contrast bg-[#004A65] text-white rounded-full shadow-lg duration-300 hover:bg-[#1D7AFC] relative">
     <svg class="" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="back-top-contrast">
     <path class="text-black-contrast" fill-rule="evenodd" clip-rule="evenodd" d="M19.9999 14.1581L33.7611 29.4483L36.2388 27.2184L19.9999 9.17528L3.76112 27.2184L6.23877 29.4483L19.9999 14.1581Z" fill="currentColor"/>
     </svg>
@@ -23,7 +23,7 @@
       backToTop.classList.add('hidden');
     }
   });
-
+ 
   backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });

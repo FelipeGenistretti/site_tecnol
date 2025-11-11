@@ -7,7 +7,7 @@
     <div class="grid mt-10 grid-cols-1 lg:grid-cols-[50%_50%] gap-10">
 
     <div class="">
-        <p class="text-textSecondary textContainer text-[16px ] text-contrast">
+        <p class="text-textPrimary textContainer text-[16px ] text-contrast">
             <span class="font-bold text-textPrimary">TECSHARE</span> transforma o ecossistema de soluções tecnológicas e integrações digitais, reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação, por meio de plataformas e integrações.
         </p>
 

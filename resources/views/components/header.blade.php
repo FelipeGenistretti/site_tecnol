@@ -70,7 +70,7 @@
           </li>
 
           <li class="flex items-center h-full">
-            <a href="{{ route('trabalhe-conosco') }}" id="scrollToFaleConosco"
+            <a href="{{ route('fale-conosco') }}" id="scrollToFaleConosco"
                class="nav-link text-textSecondary hover:text-textPrimary hover:font-bold text-contrast">
               Contato
             </a>

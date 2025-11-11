@@ -1,7 +1,7 @@
 <div class="bg-contrast bg-bgSecondary text-textPrimary py-20">
-    <div class="text-center space-y-3 text-contrast">
+    <div class="text-center space-y-4 text-contrast">
         <h1 class="text-4xl">Quer saber mais?</h1>
-        <p class="textContainer">Cadastre-se no nosso sistema e descubra como podemos transformar seus processos de registro de contratos</p>
+        <p class="textContainer">Cadastre-se no nosso sistema e descubra como podemos transformar seus processos automatizados.</p>
         <div class="flex justify-center">
             <button type="button" class="button-contrast textContainer text-white flex gap-2 bg-bgButtonPrimary p-3 rounded-md uppercase hover:bg-orange-400 transition duration-300">
                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast items-center flex">

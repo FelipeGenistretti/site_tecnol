@@ -2,18 +2,18 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
 
         <div>
-            <img src="{{ asset('Privacidade-2.png') }}" alt="">
+            <img src="/imgSolicitacaoTitular.png" alt="" class="flex justify-center h-full">
         </div>
 
         <div>
-            <div class="text-textPrimary space-y-8 text-contrast">
-                <h1 class="text-5xl max-sm:text-[38px] flex max-sm:justify-center max-sm:items-center max-sm:text-center">Canal de Solicitação do Titular</h1>
+            <div class="text-textPrimary space-y-5 text-contrast">
+                <h1 class="text-4xl max-sm:text-[38px] flex max-sm:justify-center max-sm:items-center max-sm:text-center">Canal de Solicitação do Titular</h1>
                 <p class="text-[16px] textContainer">Em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD), a TECNOL nomeou um Encarregado de Dados Pessoais (Data Protection Officer – DPO), responsável por atuar como canal de comunicação entre a empresa, os titulares de dados e a Autoridade Nacional de Proteção de Dados (ANPD).</p>
                 <p class="text-[16px] textContainer">Se você deseja exercer seus direitos como titular ou obter informações sobre como realizamos o tratamento dos dados, entre em contato com o nosso Encarregado de Dados Pessoais por meio de um dos canais abaixo:</p>
                 <p class="text-[16px] textContainer">E-mail: dpo@sistemastecnol.com.br</p>
                 <p class="text-[16px] textContainer">Responsável: <span class="font-bold">Saron Correa</span></p>
                 <div>
-                    <button type="button" class="button-secundary-contrast textContainer flex items-center p-3 border border-black rounded-md gap-2 uppercase max-sm:w-full max-sm:justify-center">
+                    <button type="button" class="button-contrast textContainer text-white flex items-center p-3 bg-bgButtonPrimary  rounded-md gap-2 uppercase max-sm:w-full max-sm:justify-center">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
                             <path d="M15.2139 2C15.4776 2 15.7307 2.09948 15.918 2.27637L20.2031 6.32324C20.3925 6.50211 20.499 6.74596 20.499 7V12.4766H18.499V8.18945H15.5C14.9477 8.18945 14.5001 7.76334 14.5 7.2373V3.90527H5.5V20.0957L10.5 20.0967V22H5C4.17157 22 3.5 21.3604 3.5 20.5713V2.95215C3.5001 2.42615 3.94778 2 4.5 2H15.2139ZM16.5 6.28418H17.3223L16.5 5.50879V6.28418Z" fill="currentColor"/>
                             <path d="M15.5 8.5C16.0523 8.5 16.5 8.94772 16.5 9.5C16.5 10.0523 16.0523 10.5 15.5 10.5H7.5C6.94772 10.5 6.5 10.0523 6.5 9.5C6.5 8.94772 6.94772 8.5 7.5 8.5H15.5Z" fill="currentColor"/>
