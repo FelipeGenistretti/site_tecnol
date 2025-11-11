@@ -72,21 +72,31 @@
     </div>
 </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 container-x py-12 gap-4 bg-contrast">
+    <div class="grid grid-cols-1 lg:grid-cols-2 container-x py-12 gap-4 bg-contrast items-center">
         <div class="space-y-4  mt-3 lg:mt-6">
-            <h1 class= " text-textPrimary text-[38px] text-center lg:text-left text-Primary text-contrast text-[45px] m-2 ">Um pouco da nossa história</h1>
-            <p class="textContainer text-[16px]  text-textPrimary text-contrast   lg:text-left m-2">Hoje a TECNOL possui sede em Nova Lima e conta com uma infraestrutura moderna, com Datacenter certificados, links redundantes e toda estrutura de atendimento (BackOffice, Comercial, Relacionamento Institucional, Jurídico especializado e uma Central de Atendimento). Somos formados por uma equipe com mais de 20 anos de experiência no setor de veículos. Estamos sempre investindo em pessoas e em novas tecnologias, buscando o nosso aperfeiçoamento contínuo para sempre ser a melhor opção em nossa área de atuação.</p>
+            <h1 class= " text-textPrimary text-[38px] text-center lg:text-left text-Primary text-contrast  ">Um pouco da nossa história</h1>
+          <p>A TECSHARE nasceu com o propósito de simplificar e digitalizar experiências, conectando tecnologia, pessoas e negócios de forma inteligente.
+          
+          <p>Identificamos no mercado a oportunidade de evoluir a forma como empresas se relacionam com dados, processos e clientes, criando experiências mais ágeis, seguras e integradas.</p>
+             
+          <p>Com foco em automação, usabilidade e análise de dados, a TECSHARE transforma o ecossistema de soluções tecnológicas e integrações digitais, reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação, por meio de plataformas como o Safe Data Analytics e TecnoHub</p>
+          
+          <p>Unimos inovação tecnológica, experiência do usuário e inteligência de dados para desenvolver produtos que simplificam o uso, automatizam a validação de informações e potencializam resultados de negócio.</p>
+        
+        
+        
         </div>
-        
-        
-        <div class = "">
-            <img class="rounded" src="{{ asset('/quem-somos-1.png') }}" alt="">
+ 
+            
 
+        
+        <div class = " mt-6  lg:mt-12">
+            <img class="rounded" src="{{ asset('/quem-somos-1.png') }}" alt="">
         </div>
     </div>
 
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 container-x bg-[#F2F2F2] bg-contrast text-black py-10 gap-3">
+    <div class="grid grid-cols-1 lg:grid-cols-2 container-x bg-[#F2F2F2] bg-contrast text-black py-10 gap-3 items-center">
 
         
         <div class = "">
@@ -96,7 +106,7 @@
 
           <div class= "mt-[40px] space-y-3 ">
             <h1 class= "text-4xl text-center lg:text-left text-contrast">Nossa missão e visão</h1>
-            <p class="textContainer text-md mt-[24px] text-contrast">Temos como missão automatizar sistematicamente a transmissão de informações de forma rápida, fácil e segura. Além da busca contínua em ser referência em soluções automatizadas para o mercado financeiro. </p>
+            <p class="text-contrast" >emos como missão automatizar sistematicamente o acesso a informações de dados de forma rápida, fácil e segura. Além da busca contínua em ser referência em soluções automatizadas para o mercado financeiro.</p>
                 
         </div>
         
@@ -185,7 +195,7 @@
   </div>
 </div>
 
-<div class="container-x bg-[#F2F2F2] text-black flex flex-col items-center justify-center py-10 mt-20 space-y-5 gap-3 text-contrast bg-contrast">
+<div class="container-x bg-[#F2F2F2] text-[#333333] flex flex-col items-center justify-center py-10 mt-20 space-y-5 gap-3 text-contrast bg-contrast">
  
  
   <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
@@ -196,177 +206,27 @@
 
 
   <h1 class="text-4xl font-normal text-center text-contrast bg-contrast ">Política de Sistema de Gestão Integrado - SGI</h1>
-  <p class="textContainer text-center font-medium text-md text-contrast bg-contrast">A TECNOL, uma empresa de tecnologia focada no fornecimento de Serviços de Desenvolvimento de Soluções de Software, com sua matriz localizada em Nova Lima/MG e uma filial em São Paulo/SP, operando em âmbito nacional, define sua Política de Gestão Integrada com o compromisso de alcançar</p>
+  <p class="textContainer text-center font-medium text-md text-contrast bg-contrast">A TECSHARE, uma empresa de tecnologia, que atua no fornecimento de Serviços de Desenvolvimento de Soluções de Softwares, com a sede localizada na cidade de Nova Lima/MG e, filial em São Paulo/SP, com atuação no território brasileiro, define sua Política de Gestão Integrada com o compromisso de:</p>
 
     <div  class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-contrast bg-contrast">
         <div class="bg-white  rounded border  border-[#F2F2F2] p-4 text-contrast bg-contrast">
-            <p class="textContainer text-[16px] ">• A Política de Segurança da Informação e Serviços da TECNOL tem como principais metas oferecer um serviço confiável, com<strong> garantia de qualidade e segurança da informação </strong> para a entrega e operação dos serviços contratados, com objetivo de manter, por meios dos requisitos técnicos e legais, de clientes, parceiros a <strong> confidencialidade, integridade e disponibilidade </strong> durante toda a prestação do serviço, monitorando constantemente.</p>
+            <p class="textContainer text-[16px] ">•A Política de Segurança da Informação e Serviços da <strong>TECSHARE</strong> tem como principais metas oferecer um serviço confiável, com garantia de qualidade e segurança da informação para a entrega e operação dos serviços contratados, com objetivo de manter, por meios dos requisitos técnicos e legais, de clientes, parceiros a confidencialidade, integridade e disponibilidade durante toda a prestação do serviço, monitorando constantemente.</p>
         </div>
 
         <div class="bg-white rounded border  border-[#F2F2F2] p-4 text-contrast bg-contrast">
             
-            <p class="textContainer  text-[16px text-contrast bg-contrast]">• A Política de Segurança da Informação e Serviços da TECNOL, assegura a proteção dos seus ativos, pessoas, informação, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio de acordo com as estratégias da empresa, legislação vigente e requisitos contratuais, com acompanhamento constante.</p>
+            <p class="textContainer  text-[16px text-contrast bg-contrast]">•A Política de Segurança da Informação e Serviços da <strong>TECSHARE</strong>, assegura a proteção dos seus ativos, pessoas, informação, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio de acordo com as estratégias da empresa, legislação vigente e requisitos contratuais, com acompanhamento constante</p>
         </div>
     </div>
-</div>
 
-         <div class="textContainer flex flex-col items-center justify-center text-center mt-5 py-10 text-contrast bg-contrast" id="trabalheConosco">
-  <h1 class="text-4xl mb-3 text-textPrimary text-contrast bg-contrast">Trabalhe conosco</h1>
-  <p class="textContainer text-sm text-textSecondary text-contrast bg-contrast">
-    Já pensou em trabalhar em um lugar onde o principal objetivo é crescer junto?
-  </p>
-  <p class="textContainer text-sm text-textSecondary text-contrast bg-contrast">
-    Na TECNOL, é assim! Buscamos talentos que nos ajudem a fazer da tecnologia a matéria-prima de soluções e inovações que mudem para melhor as necessidades do mercado financeiro.
-  </p>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x pb-12 text-contrast bg-contrast">
-  
-<form id="enviarCurriculoForm" action="{{ route('enviar-curriculo') }}" enctype="multipart/form-data" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" class="text-contrast bg-contrast bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
-  @csrf
-
-  <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-    <div class="flex flex-col">
-      <label class="textContainer text-sm font-medium mb-1">Nome</label>
-      <input type="text" name="nome" class="input-contrast border rounded px-3 py-2 w-full text-contrast bg-contrast" placeholder="Digite seu nome">
-    </div> 
-           
-    <div class="flex flex-col">
-      <label class="textContainer text-sm font-medium mb-1">E-mail</label>
-      <input type="text" name="email"  class=" input-contrast border rounded px-3 py-2 w-full text-contrast bg-contrast" placeholder="email@email.com.br">
-    </div>
-  
-
-    <div class="flex flex-col">
-      <label class="textContainer text-sm font-medium mb-1">Telefone</label>
-      <input type="text" name="telefone" class=" input-contrast border rounded px-3 py-2 w-full text-contrast bg-contrast" placeholder="(xx) xxxxx-xxxx">
-    </div>
-
-    <div class="flex flex-col text-contrast bg-contrast">
-      <label class="  textContainer text-sm font-medium mb-1 text-contrast bg-contrast">Área de atuação</label>
-      <select class=" input-contrast border rounded px-3 py-2 w-full bg-white text-contrast bg-contrast" name="atuacao">
-        <option value="">Selecionar</option>
-        <option value="opcao1">Opção 1</option>
-        <option value="opcao2">Opção 2</option>
-        <option value="opcao3">Opção 3</option>
-      </select>
-    </div>
-  </div>
-
-
-  <!-- Mensagem -->
-  <div class="flex flex-col w-full text-contrast bg-contrast">
-    <label class="textContainer text-sm font-medium mb-1 text-contrast bg-contrast">Mensagem</label>
-    <input type="text" class=" input-contrast border rounded px-3 py-2 w-full pb-12 text-contrast bg-contrast" placeholder="Escreva aqui sua mensagem" name="mensagem" />
-  </div>
-
-  
-
-  <!-- Upload -->
-  <div class="flex flex-col text-contrast bg-contrast bg-contrast">
-    <label class="textContainer text-sm font-medium mb-1 text-contrast bg-contrast">Upload de Arquivo</label>
-    <label class="input-contrast  text-contrast bg-contrast border rounded px-3 py-2 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3">
-     
-      <svg width="50" height="38" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-constrast bg-contrast">
-<path d="M43.1224 35.0005H10.2941C10.2941 35.0005 3.88086 35.0005 2.63421 28.0539C1.38804 18.3233 9.19986 17.3124 9.19986 17.3124C9.19986 17.3124 7.03433 4.02372 21.2369 2.583C33.2739 1.36195 35.4625 14.0976 35.4625 14.0976C35.4625 14.0976 47.4995 14.532 47.4995 25.7383C47.4995 32.8276 43.1224 35.0005 43.1224 35.0005Z" stroke="currentColor" stroke-width="5"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M20.6954 18.2671V28.3123H24.4342V18.2671L26.3661 20.0681L28.7336 16.771L22.5648 11.0202L16.396 16.771L18.7635 20.0681L20.6954 18.2671Z" fill="currentColor"/>
-</svg>
-
-
-
-      <p class="textContainer text-sm text-center text-contrast bg-contrast">
-        Arraste e solte seu(s) arquivo(s) aqui <br> ou
-      </p>
-      <span class="textContainer p-2 px-6 rounded border border-[#B3B3B3] cursor-pointer text-contrast bg-contrast">
-        Adicionar arquivos
-      </span>
-      <input type="file" name="files"  class="hidden">
-    </label>
-    <p class="textContainer text-sm text-gray-500 mt-1">Tamanho máximo permitido do anexo 5MB</p>
-  </div>
-
-  <!-- Checkbox + reCAPTCHA -->
-  <div class="flex flex-col gap-2">
-    <div class="flex gap-2 items-center mb-4">
-          <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125" {{ old('privacy') ? 'checked' : '' }}/>
-          <p class="textContainer">
-            Li e concordo com a
-            <span class="textContainer">
-              <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
-            </span>
-            e autorizo o tratamento dos meus dados.
-          </p>
-        </div>
-
-<!-- <input type="hidden" name="recaptcha_token" id="recaptcha_token"> -->
-
-    <div class="mt-2">
-      <div class="bg-gray-200 border border-gray-300 rounded p-4 text-center">
-        <span class="text-sm text-gray-500">reCAPTCHA aqui</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Botão -->
-  <div>
-    <button type="submit" class=" bg-[#F15A29] button-contrast textContainer hover:bg-orange-500 text-white font-medium py-2 px-4 rounded transition-colors flex justify-center items-center gap-2">
-      
-      
-      <p class="text-sm">Enviar</p>  
-
-
-    
+     <button class="border border-[#808080] p-4 ">
+          LEIA MAIS SOBRE NOSSA POLÍTICA DE SEGURANÇA
     </button>
+
+
+
   </div>
-
-</form>
-
-  <!-- Coluna 2: Contatos -->
-  <div class="flex flex-col space-y-4 mt-5 text-constrast bg-constrast ">
-    <div class="bg-gray-100 rounded-lg p-4 shadow-md  flex items-center gap-3  text-contrast bg-contrast input-contrast">
-      <img src="{{ '/email.png' }}" alt="" class="">
-      <div class="text-sm text-gray-700 line-clamp-2">
-        <p class="textContainer text-gray-500  text-contrast bg-contrast ">email</p>
-        <p class="textContainer text-contrast bg-contrast">atendimento@sistemastecnol.com.br</p>
-      </div>
-    </div>
-
-    <div class="bg-gray-100 rounded-lg p-4 shadow-md  flex items-center gap-3  text-contrast bg-contrast input-contrast">
-      <img src="{{ '/email.png' }}" alt="" class="">
-      <div class="text-sm text-gray-700 line-clamp-2  text-contrast bg-contrast">
-        <p class="textContainer text-gray-500  text-contrast bg-contrast">ouvidoria</p>
-        <p class="textContainer">ouvidoria@sistemastecnol.com.br</p>
-      </div>  
-    </div>
-
-    <div class="bg-gray-100 rounded-lg p-4 shadow-md flex items-center gap-3  text-contrast bg-contrast input-contrast">
-      <img src="{{ '/email.png' }}" alt="" class="">
-      <div class="text-sm text-gray-700 line-clamp-3  text-contrast bg-contrast">
-        <p class="textContainer text-gray-500  text-contrast bg-contrast">Encarregado de proteção de dados</p>
-        <p class="textContainer  text-contrast bg-contrast">Saron Correa</p>
-        <p class="textContainer  text-contrast bg-contrast">dpo@sistematecnol.com.br</p>
-      </div>
-    </div>
-
-    <div class="bg-gray-100 rounded-lg p-4 shadow-md flex items-center gap-3  text-contrast bg-contrast  input-contrast">
    
-   
-      <img src="{{ '/telefone.png' }}" alt="" class="">
-
-      
-      <div class="text-sm text-gray-700 line-clamp-3  text-contrast bg-contrast">
-        <p class="textContainer text-gray-500  text-contrast bg-contrast">Telefones</p>
-        <p class="textContainer  text-contrast bg-contrast">(31) 3324-6460</p>
-        <p class="textContainer  text-contrast bg-contrast">0800 590 4004</p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-    </div>
-
-
 </div>
 
 
