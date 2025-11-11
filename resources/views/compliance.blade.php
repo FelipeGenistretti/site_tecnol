@@ -45,7 +45,7 @@
 
   <div class="grid grid-cols-1 lg:grid-cols-2  container-x my-8 lg:my-12  text-contrast bg-contrast items-center">
         <div class= "p-4  lg:mt-12">
-            <h1 class= "text-[40px]  text-textPrimary ">Transparência e conformidade</h1>
+            <h1 class= "text-[40px]  text-textPrimary text-contrast">Transparência e conformidade</h1>
             <p class="text-lg  text-textPrimary textContainer  text-contrast bg-contrast">Na <strong>Tecshare</strong>, a transparência, a conformidade com a legislação e o compromisso com princípios éticos e melhores experiências de mercado são práticas diárias e fundamentais para o futuro sustentável dos negócios. O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer desvios que possam comprometer nosso código de conduta e/ou as normas em vigor.<br> <br>
 
 O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer desvios que possam comprometer nosso código de conduta e/ou as normas em vigor.</p>
