@@ -6,6 +6,7 @@ use App\Http\Controllers\EnviarCurriculoController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\PreRegistroController;
 use App\Http\Controllers\SolicitacaoTitularController;
+use App\Http\Controllers\TrabalheConoscoController;
 use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\UploadFileDenunciaController;
 use Illuminate\Support\Facades\Http;
@@ -80,6 +81,8 @@ Route::post("/upload-file", [UploadFileDenunciaController::class, "uploadFile"])
 Route::post("/enviar-curriculo", [EnviarCurriculoController::class, "enviarCurriculo"])->name('enviar-curriculo');
 
 Route::post("/solicitacao-titular", [SolicitacaoTitularController::class, "solicitacaoTitular"])->name('enviar-solicitacao');
+
+Route::post("/trabalhe-conosco", [TrabalheConoscoController::class, "handle"])->name('trabalhe-conosco');
 
 Route::get('/api/cnpj/{cnpj}', [CnpjController::class, "consultaCnpj"])->name("consultar-cnpj");
 
