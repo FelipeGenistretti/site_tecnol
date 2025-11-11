@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Traits\HasMailAttachments;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Attachment;
@@ -11,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 
 class CanalDenunciaMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable, SerializesModels, HasMailAttachments;
 
     public $data;
     public $arquivos;
@@ -42,19 +43,6 @@ class CanalDenunciaMail extends Mailable
 
     public function attachments(): array
     {
-        $attachments = [];
-
-        foreach ($this->arquivos as $arquivo) {
-
-            $fullPath = storage_path('app/public/' . $arquivo['path']);
-
-            if (file_exists($fullPath)) {
-
-                $attachments[] = Attachment::fromPath($fullPath)
-                    ->as($arquivo['nome'] . '.' . strtolower($arquivo['extensao'])); // ← Mantém extensão
-            }
-        }
-
-        return $attachments;
+         return $this->attachmentsFromArray($this->arquivos);
     }
 }

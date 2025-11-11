@@ -4,31 +4,36 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SolicitacaoTitularRequest;
 use App\Mail\SolicitacaoTitularMail;
+use App\Services\ArquivoService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class SolicitacaoTitularController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+
+    protected ArquivoService $arquivoService;
+
+    public function __construct(ArquivoService $arquivoService)
     {
-        //
+        $this->arquivoService = $arquivoService;
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function solicitacaoTitular(SolicitacaoTitularRequest $request)
     {
         $data = $request->validated();
-        $arquivo = $request->file("files");
 
-        Mail::to(config("mail.to.address"))->send(new SolicitacaoTitularMail($data, $arquivo));
+        $arquivos = [];
+        if ($request->hasFile('arquivos')) {
+            $arquivos = $this->arquivoService->processar($request->file('arquivos'));
+        }
 
-        return back()->with("success", "Mensagem enviada com sucesso");
+        Mail::to(config('mail.to.address'))
+            ->send(new SolicitacaoTitularMail($data, $arquivos));
+
+        return back()->with("success", "Solicitação enviada com sucesso");
     }
+
+  
 
     /**
      * Display the specified resource.
