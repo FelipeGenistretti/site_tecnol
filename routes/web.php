@@ -7,6 +7,7 @@ use App\Http\Controllers\FormController;
 use App\Http\Controllers\PreRegistroController;
 use App\Http\Controllers\SolicitacaoTitularController;
 use App\Http\Controllers\UploadFileController;
+use App\Http\Controllers\UploadFileDenunciaController;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
@@ -74,7 +75,7 @@ Route::get("/404", function(){
 
 Route::get('/baixar-pdf/{nome}', [DownloadPdf::class, 'downloadPdf'])->name('download.pdf');
 
-Route::post("/upload-file", [UploadFileController::class, "uploadFile"])->name('upload-file');
+Route::post("/upload-file", [UploadFileDenunciaController::class, "uploadFile"])->name('upload-file');
 
 Route::post("/enviar-curriculo", [EnviarCurriculoController::class, "enviarCurriculo"])->name('enviar-curriculo');
 

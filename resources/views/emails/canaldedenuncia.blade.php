@@ -71,11 +71,12 @@
 
           <!-- Botão Baixar -->
           <td align="right">
-            <a href="{{ route('download.arquivo', $arquivo['file']) }}"
-               style="background:#F15A29; padding:8px 14px; color:#fff; font-size:13px; 
+            <a href="{{ route('download.arquivo', ['path' => $arquivo['path']]) }}"
+              style="background:#F15A29; padding:8px 14px; color:#fff; font-size:13px; 
                       text-decoration:none; border-radius:6px; font-weight:bold; display:inline-block;">
-               Baixar
-            </a>
+              Baixar
+          </a>
+
           </td>
 
         </tr>

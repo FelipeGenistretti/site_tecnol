@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\HasAttachment;
+use App\Traits\HasMailAttachments;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -13,18 +13,15 @@ use Illuminate\Queue\SerializesModels;
 
 class SolicitacaoTitularMail extends Mailable
 {
-    use Queueable, SerializesModels, HasAttachment;
+    use Queueable, SerializesModels,HasMailAttachments;
 
-    public $data;
-    public $arquivo;
+     public $data;
+    public $arquivos;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct($data, $arquivo=null)
+    public function __construct($data, $arquivos = [])
     {
         $this->data = $data;
-        $this->arquivo = $arquivo;
+        $this->arquivos = $arquivos;
     }
 
     /**
@@ -43,11 +40,10 @@ class SolicitacaoTitularMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.solicitacao-titular',
-            with:[
-                "data"=>$this->data,
-                "arquivo"=>$this->arquivo
-
+            view: 'emails.solicitacaotitular',
+            with: [
+                'data' => $this->data,
+                'arquivos' => $this->arquivos,
             ]
         );
     }
@@ -59,6 +55,6 @@ class SolicitacaoTitularMail extends Mailable
      */
     public function attachments(): array
     {
-        return $this->attachFile($this->arquivo);
+         return $this->attachmentsFromArray($this->arquivos); 
     }
 }
