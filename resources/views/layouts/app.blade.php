@@ -154,7 +154,30 @@
             </div>
 
             <!-- Coluna 4 -->
-    <div class="lg:text-left text-left lg:place-self-start lg:justify-self-end ">
+               <div class="text-center lg:text-left">
+                <h1 class="text-2xl mt-3 mb-3 text-contrast">Contatos</h1>
+
+                <h3 class="font-semibold text-contrast">Matriz</h3>
+                <p class="text-contrast">
+                    Rua Senador Milton Campos, 35, 7º andar<br>
+                    Vila da Serra, Nova Lima - MG<br>
+                    CEP 34006-050
+                </p>
+
+                <h3 class="text-lg mt-4 mb-1 font-bold text-contrast">Filial</h3>
+                <p class="text-contrast">
+                    Av. Dr Chucri Zaidan, 1240, 16º andar<br>
+                    Chácara Santo Antônio, São Paulo - SP<br>
+                    CEP 04711-130
+                </p>
+
+                <h3 class="text-lg mt-4 mb-1 font-bold text-contrast">Contatos</h3>
+                <p class="text-contrast">(31) 3324-6460</p>
+                <p class="text-contrast">0800 590 4004</p>
+            </div>
+
+         
+
 
 
     <div class="grid grid-cols-2 lg:grid-cols-2 gap-2 lg:gap-4 justify-items-start">
