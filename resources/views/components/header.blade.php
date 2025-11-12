@@ -88,19 +88,12 @@
 
           </button>
 
-          <div 
+          <div
             id="searchBarDesktop"
             class="hidden absolute top-full right-0 mt-2 w-[320px] bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-[9999]">
-            <div class="flex items-center gap-2 border border-gray-300 rounded-md px-3 py-2">
-              <input 
-                type="text" 
-                placeholder="Pesquisar..." 
-                class="w-full focus:outline-none text-sm text-gray-700" />
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
-                <path d="M5.40964 5.59036C8.39737 2.60263 13.2418 2.60214 16.2296 5.58967C18.9777 8.33775 19.1962 12.6554 16.8891 15.6556L20.2603 19.0268L18.8461 20.441L15.4749 17.0698C12.4747 19.3765 8.15763 19.1576 5.40964 16.4096C2.42221 13.4219 2.42221 8.57811 5.40964 5.59036ZM6.82386 7.00457C4.61747 9.21127 4.61747 12.7887 6.82386 14.9954C9.03054 17.2021 12.6086 17.2026 14.8154 14.9961C17.0222 12.7893 17.0222 9.21066 14.8154 7.00388C12.6086 4.7974 9.03054 4.79789 6.82386 7.00457Z" fill="currentColor"/>
-              </svg>
+            <x-search-component />
+          </div>
 
-            </div>
           </div>
         </div>
 
