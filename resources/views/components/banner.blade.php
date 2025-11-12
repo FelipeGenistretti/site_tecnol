@@ -75,10 +75,9 @@
 <div class="hero relative bg-cover bg-center min-h-[500px] md:min-h-[700px]" id="content-type">
 
 
-  <div class="absolute inset-0 bg-gradient-to-b from-[#411F56] to-[#7D24B4] z-0"></div>
 
     <div class="absolute inset-0 top-0 z-10">
-    <img src="/heroSda.png" alt="" class="w-full h-full object-cover opacity-60 items -mt-20">
+    <img src="/bannerEffects.png" alt="" class="w-full h-full object-cover">
   </div>
 
   <div class="hero-content relative z-20 container-x flex flex-col justify-center pt-[80px] pb-10 max-md:items-center">

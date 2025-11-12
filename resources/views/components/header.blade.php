@@ -11,7 +11,7 @@
 
       <!-- MENU DESKTOP -->
       <nav class="hidden lg:flex items-center gap-4 uppercase text-md h-full relative">
-        <ul class="flex items-center gap-6 font-medium text-[12px] h-full">
+        <ul class="flex items-center gap-4 font-medium text-[12px] h-full">
 
           <li class="flex items-center h-full">
             <a href="{{ route('home') }}" 
@@ -113,7 +113,7 @@
             <path d="M11.499 3C14.3255 3 16.999 4.8836 16.999 7.63086V10.5293H18.999V19.8994C18.999 20.5068 18.5067 20.9998 17.8994 21H5.09863C4.4913 20.9998 3.99902 20.5068 3.99902 19.8994V10.5293H5.99902V7.63086C5.99902 4.8836 8.67259 3 11.499 3ZM5.99902 19H16.999V12.5293H5.99902V19ZM11.499 5C9.3549 5 7.99902 6.3677 7.99902 7.63086V10.4434H14.999V7.63086C14.999 6.3677 13.6432 5 11.499 5Z" fill="currentColor"/>
           </svg>
 
-          <p class="text-[12px]">sda analytics</p>
+          <p class="text-[12px]">Safe Data Analytics</p>
         </button>
       </nav>
 
