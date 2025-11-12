@@ -38,8 +38,8 @@
 
 <div id="content-real" class="hidden  text-contrast bg-contrast">
 
-   <div class="flex items-center py-12  bg-bgSecondary justify-center lg:justify-start h-[]  text-contrast bg-contrast">
-  <h1 class="text-[38px] text-textPrimary container-x  text-contrast bg-contrast">Compliance</h1>
+   <div class="flex items-center h-[128px]  bg-bgSecondary justify-center lg:justify-start h-[]  text-contrast bg-contrast">
+  <h1 class=" text-[30px] text-textPrimary container-x  text-contrast bg-contrast">Compliance</h1>
     </div>
 
 

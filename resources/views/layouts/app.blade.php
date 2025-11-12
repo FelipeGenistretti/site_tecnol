@@ -157,18 +157,15 @@
                <div class="text-center lg:text-left">
                 <h1 class="text-2xl mt-3 mb-3 text-contrast">Contatos</h1>
 
-                <h3 class="font-semibold text-contrast">Matriz</h3>
+                <h3 class="font-semibold text-contrast">Atendimento</h3>
                 <p class="text-contrast">
-                    Rua Senador Milton Campos, 35, 7º andar<br>
-                    Vila da Serra, Nova Lima - MG<br>
-                    CEP 34006-050
+                    atendimento@tecshare.com.br
                 </p>
 
-                <h3 class="text-lg mt-4 mb-1 font-bold text-contrast">Filial</h3>
+                <h3 class="text-lg mt-4 mb-1 font-bold text-contrast">Ouvidoria</h3>
                 <p class="text-contrast">
-                    Av. Dr Chucri Zaidan, 1240, 16º andar<br>
-                    Chácara Santo Antônio, São Paulo - SP<br>
-                    CEP 04711-130
+                   ouvidoria@tecshare.com.br
+                
                 </p>
 
                 <h3 class="text-lg mt-4 mb-1 font-bold text-contrast">Contatos</h3>
