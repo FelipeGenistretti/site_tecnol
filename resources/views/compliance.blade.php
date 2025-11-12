@@ -50,14 +50,14 @@
 
 O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer desvios que possam comprometer nosso código de conduta e/ou as normas em vigor.</p>
        
-          <button class="button-secundary-contrast flex gap-3 items-center justify-center lg:justify-start p-2 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8 w-full lg:w-[350px]">
+          <button onclick="downloadFile()" class="button-secundary-contrast flex gap-3 items-center justify-center lg:justify-start p-2 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8 w-full lg:w-[350px]">
 
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
 </svg>
 
 
-
+  
   <span class="p-2 whitespace-nowrap">Baixe nossa política de compliance</span>
 </button>
 </div>
@@ -90,7 +90,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
             <p>Para reforçar esse compromisso, o nosso programa de Compliance inclui uma Política do Sistema de Antissuborno e ações contínuas para promover um ambiente ético e transparente, consolidando a confiança com nossos stakeholders e fortalecendo a governança corporativa.</p>
         
-           <button class="button-secundary-contrast flex items-center gap-3 justify-center lg:justify-start p-3 px-6 rounded border border-[#808080] cursor-pointer mt-8 w-full lg:w-[500px]">
+           <button onclick="downloadFile()" class="button-secundary-contrast flex items-center gap-3 justify-center lg:justify-start p-3 px-6 rounded border border-[#808080] cursor-pointer mt-8 w-full lg:w-[500px]">
       
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
@@ -212,7 +212,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
       Para fortalecer a transparência e a equidade entre os nossos colaboradores, fornecedores, clientes e parceiros de negócios, tornamos público o nosso Código de Conduta.
     </p>
 
-    <button class="button-secundary-contrast flex items-center gap-3 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8">
+    <button onclick="downloadFile()" class="button-secundary-contrast flex items-center gap-3 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8">
 
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-constrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
@@ -239,14 +239,32 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
 </svg>
-
+<a href="{{ route('canal-denuncia') }}">
+  
+  <span>ACESSAR CANAL DE DENÚNCIA</span>
+</a>
       
 
-  <span>ACESSAR CANAL DE DENÚNCIA</span>
 </button>
 
   </div>    
 </div>
+      <div id="pdfModal" class=" fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center  pt-[60px] mt-8">
+    <div class="bg-white bg-contrast input-contrast w-[90%] md:w-[70%] h-[80%] rounded shadow relative p-6">
+        
+        <!-- Botão fechar -->
+        <button onclick="closePdfModal()" class="absolute top-0 right-2 text-[25px] font-bold ">
+            &times;
+        </button>
+
+        <!-- Iframe do PDF -->
+        <iframe id="pdfViewer" class="w-full h-full rounded mt-2" src="{{ asset('pdfs/teste-pdf.pdf') }}">
+
+        </iframe>
+    </div>
+</div>
+
+
 
 
     <x-back-to-top/>
@@ -263,6 +281,28 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
         skeleton.classList.add('hidden');
         content.classList.remove('hidden');
     });
+
+        window.addEventListener("load", () => {
+     document.getElementById('pdfModal').style.display = 'none';
+
+        const skeleton = document.getElementById('skeleton');
+        const content = document.getElementById('content-real');
+
+        skeleton.classList.add('hidden');
+        content.classList.remove('hidden');
+    });
+
+ function downloadFile(caminho){
+    document.getElementById('pdfModal').style.display = 'flex';
+ console.log("Aqui vai o diretorio do arquivo + ",caminho);
+}
+
+function closePdfModal(){
+    document.getElementById('pdfModal').style.display = 'none';
+}
+
+
+
 
 </script>
 
