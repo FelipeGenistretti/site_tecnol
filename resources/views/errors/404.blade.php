@@ -55,7 +55,7 @@
         </button>
 
          <button class="flex items-center" onclick="window.location.href='{{ route('safe-register-car') }}'">
-        <p class="whitespace-nowrap">SAFE REGISTER CAR</p>
+        <p class="whitespace-nowrap">SYSTEM DATA ANALYTICS</p>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5859 12L8.29297 17.2929L9.70718 18.7072L16.4143 12L9.70718 5.29294L8.29297 6.70715L13.5859 12Z" fill="currentColor"/>
         </svg>   
