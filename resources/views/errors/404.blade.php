@@ -17,19 +17,34 @@
         <p><Strong>Use a Busca:</Strong> Digite o que você estava procurando na barra de pesquisa abaixo.</p>
 
 
-           <div class="relative w-full max-w-sm m-4 w-ful text-constrast bg-constrast">
-    <input 
-        type="text" 
-        class="input-contrast text-contrast bg-contrast w-full border border-gray-300 rounded-lg py-2 pl-3 pr-12 focus:outline-none focus:ring-2 focus:ring-gray-400"
-        placeholder="Pesquisar..."
-    >
+<div id="searchContainer404" class="relative w-full max-w-sm m-4">
+  <input
+    type="text"
+    id="searchInput404"
+    placeholder="Pesquisar..."
+    class="w-full border border-gray-300 rounded-lg py-2 pl-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-[#F15A29] text-contrast bg-contrast"
+  />
+  <button
+    type="button"
+    class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-600 hover:text-[#F15A29]"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M9.5 17A7.5 7.5 0 109.5 2a7.5 7.5 0 000 15z" />
+    </svg>
+  </button>
 
-    <button class="text contrast bg-contrast absolute right-2 top-1/2 -translate-y-1/2 bg-transparent text-black px-2">
-        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 text-contrast bg-contrast">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M9.5 17A7.5 7.5 0 109.5 2a7.5 7.5 0 000 15z" />
-        </svg>
-    </button>
-</div> 
+  <!-- dropdown -->
+  <div
+    id="searchResults404"
+    class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md max-h-60 overflow-y-auto"
+  ></div>
+</div>
+ 
+  <div
+    id="searchResults404"
+    class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md max-h-60 overflow-y-auto"
+  ></div>
+</div>
 
 
         <p><Strong>Volte para a Página Inicial:</Strong> Clique no link abaixo para recomeçar a navegação</p>
@@ -102,3 +117,61 @@
 </div>
 
 @endsection
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const rotas = {
+    'Início': '/',
+    'Quem somos': '/quem-somos',
+    'Safe Data Analytics - SDA': '/safe-register-car',
+    'Tecnohub': '/tecnohub',
+    'Serviços': '/veiculos',
+    'Compliance': '/compliance',
+    'Canal de denúncia': '/canal-denuncia',
+    'Solicitação do titular': '/solicitacao-titular',
+    'Segurança': '/seguranca',
+    'Contato': '/fale-conosco',
+    'Trabalhe conosco': '/trabalhe-conosco'
+  };
+
+  const input = document.getElementById('searchInput404');
+  const results = document.getElementById('searchResults404');
+  const container = document.getElementById('searchContainer404');
+
+  input.addEventListener('input', (e) => {
+    const valor = e.target.value.toLowerCase().trim();
+    results.innerHTML = '';
+
+    if (!valor) {
+      results.classList.add('hidden');
+      return;
+    }
+
+    const filtrados = Object.keys(rotas).filter(item =>
+      item.toLowerCase().includes(valor)
+    );
+
+    if (filtrados.length > 0) {
+      filtrados.forEach(item => {
+        const link = document.createElement('a');
+        link.href = rotas[item];
+        link.textContent = item;
+        link.className = 'block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer';
+        results.appendChild(link);
+      });
+      results.classList.remove('hidden');
+    } else {
+      results.innerHTML = '<div class="px-3 py-2 text-sm text-gray-500">Nenhum resultado encontrado</div>';
+      results.classList.remove('hidden');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!container.contains(e.target)) {
+      results.classList.add('hidden');
+    }
+  });
+});
+</script>
