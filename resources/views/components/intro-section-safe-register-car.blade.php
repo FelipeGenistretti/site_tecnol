@@ -103,11 +103,10 @@
         </div>
       </div>
 
-      <!-- Gráfico -->
       <div>
         <div class="rounded-md bg-contrast h-full">
           <div>
-            <img src="/imgSdaHero.png" alt="" class="rounded-md h-full">
+            <img src="/imgHeroSda.png" width="820" alt="" class="rounded-md h-full">
           </div>
         </div>
       </div>
