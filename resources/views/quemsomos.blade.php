@@ -208,18 +208,18 @@
   <h1 class="text-4xl font-normal text-center text-contrast bg-contrast ">Política de Sistema de Gestão Integrado - SGI</h1>
   <p class="textContainer text-center font-medium text-md text-contrast bg-contrast">A TECSHARE, uma empresa de tecnologia, que atua no fornecimento de Serviços de Desenvolvimento de Soluções de Softwares, com a sede localizada na cidade de Nova Lima/MG e, filial em São Paulo/SP, com atuação no território brasileiro, define sua Política de Gestão Integrada com o compromisso de:</p>
 
-    <div  class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-contrast bg-contrast">
-        <div class="bg-white  rounded border  border-[#F2F2F2] p-4 text-contrast bg-contrast">
+    <div  class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-contrast bg-contrast ">
+        <div class="bg-white  rounded border  border-[#F2F2F2] p-4 text-contrast bg-contrast input-contrast">
             <p class="textContainer text-[16px] ">•A Política de Segurança da Informação e Serviços da <strong>TECSHARE</strong> tem como principais metas oferecer um serviço confiável, com garantia de qualidade e segurança da informação para a entrega e operação dos serviços contratados, com objetivo de manter, por meios dos requisitos técnicos e legais, de clientes, parceiros a confidencialidade, integridade e disponibilidade durante toda a prestação do serviço, monitorando constantemente.</p>
         </div>
 
-        <div class="bg-white rounded border  border-[#F2F2F2] p-4 text-contrast bg-contrast">
+        <div class="bg-white rounded border  border-[#F2F2F2] p-4 text-contrast bg-contrast input-contrast">
             
             <p class="textContainer  text-[16px text-contrast bg-contrast]">•A Política de Segurança da Informação e Serviços da <strong>TECSHARE</strong>, assegura a proteção dos seus ativos, pessoas, informação, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio de acordo com as estratégias da empresa, legislação vigente e requisitos contratuais, com acompanhamento constante</p>
         </div>
     </div>
 
-     <button class="border border-[#808080] p-4 ">
+     <button class="border border-[#808080] p-4 input-contrast">
           LEIA MAIS SOBRE NOSSA POLÍTICA DE SEGURANÇA
     </button>
 

@@ -15,7 +15,7 @@
         @yield('content')
     </main>
 
- <footer class=" bg-contrast border border-2-t">
+ <footer class=" bg-contrast border border-2-t input-contrast">
     <div class="container-x">
         
         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5 text-[#333333] py-12 place-items-center lg:place-items-start">
@@ -166,7 +166,7 @@
         </div>
 
 
-        <hr class="border-t w-screen relative left-1/2 right-1/2 -ml-[50vw]">
+        <hr class="border-t w-screen relative left-1/2 right-1/2 -ml-[50vw] input-contrast">
 
 
        
