@@ -270,6 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
     'Solicitação do titular': '/solicitacao-titular',
     'Segurança': '/seguranca',
     'Contato': '/fale-conosco',
+    'Privacidade':"/privacidade",
     'Trabalhe conosco': '/trabalhe-conosco'
   };
 

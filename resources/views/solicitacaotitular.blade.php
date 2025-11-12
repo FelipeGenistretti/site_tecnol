@@ -166,10 +166,22 @@
           </p>
         </div>
 
-        <button type="submit" class="button-contrast textContainer lg:w-[20%] flex items-center justify-center gap-2 uppercase px-6 py-3 bg-bgButtonPrimary hover:bg-orange-400 transition duration-300 rounded-md text-white">
-          <img src="/uploadFile.png" alt="">
-          <p class="text-sm">Enviar</p>
+        <button
+          id="btnSubmit"
+          type="submit"
+          class="button-contrast textContainer lg:w-[20%] flex items-center justify-center gap-2 uppercase px-6 py-3 bg-bgButtonPrimary hover:bg-orange-400 transition duration-300 rounded-md text-white"
+        >
+          <span id="btnSubmitText" class="flex items-center gap-2">
+            <img src="/uploadFile.png" alt="">
+            <p class="text-sm">Enviar</p>
+          </span>
+
+          <span
+            id="btnSubmitLoader"
+            class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"
+          ></span>
         </button>
+
       </div>
 
     </form>
@@ -188,6 +200,26 @@
         content.classList.remove('hidden');
     });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector("form[action='{{ route('enviar-solicitacao') }}']");
+  const btn = document.getElementById('btnSubmit');
+  const text = document.getElementById('btnSubmitText');
+  const loader = document.getElementById('btnSubmitLoader');
+
+  if (form) {
+    form.addEventListener('submit', () => {
+      btn.disabled = true;
+      btn.classList.add('opacity-80', 'cursor-not-allowed');
+
+      text.classList.add('hidden');
+      loader.classList.remove('hidden');
+    });
+  }
+});
+</script>
+
 
 
 @if(session('success'))
