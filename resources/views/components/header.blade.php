@@ -90,11 +90,16 @@
 
           <div
             id="searchBarDesktop"
-            class="hidden absolute top-full right-0 mt-2 w-[320px] bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-[9999]">
-            <x-search-component />
+            class="hidden absolute top-full right-0 mt-2 w-[320px] bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-[9999]">
+            <div class="relative w-full">
+              <input 
+                type="text"
+                placeholder="Pesquisar..."
+                class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#F15A29]"
+              />
+            </div>
           </div>
 
-          </div>
         </div>
 
         <x-font-control/>
@@ -238,9 +243,129 @@
           </div>
         </div>
       </li>
+        <button type="button" class="w-[40%] container-x button-contrast py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-orange-500 transition-colors duration-300">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
+              <path d="M11.499 3C14.3255 3 16.999 4.8836 16.999 7.63086V10.5293H18.999V19.8994C18.999 20.5068 18.5067 20.9998 17.8994 21H5.09863C4.4913 20.9998 3.99902 20.5068 3.99902 19.8994V10.5293H5.99902V7.63086C5.99902 4.8836 8.67259 3 11.499 3ZM5.99902 19H16.999V12.5293H5.99902V19ZM11.499 5C9.3549 5 7.99902 6.3677 7.99902 7.63086V10.4434H14.999V7.63086C14.999 6.3677 13.6432 5 11.499 5Z" fill="currentColor"/>
+            </svg>
+
+            <p class="text-[12px]">Safe Data Analytics</p>
+          </button>
+
     </ul>
+    
+      </nav>
   </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const rotas = {
+    'Início': '/',
+    'Quem somos': '/quem-somos',
+    'Safe Data Analytics - SDA': '/safe-register-car',
+    'Tecnohub': '/tecnohub',
+    'Serviços': '/veiculos',
+    'Compliance': '/compliance',
+    'Canal de denúncia': '/canal-denuncia',
+    'Solicitação do titular': '/solicitacao-titular',
+    'Segurança': '/seguranca',
+    'Contato': '/fale-conosco',
+    'Trabalhe conosco': '/trabalhe-conosco'
+  };
+
+  const itens = Object.keys(rotas);
+
+  const searchBarDesktop = document.querySelector("#searchBarDesktop input");
+  const containerDesktop = document.getElementById("searchBarDesktop");
+
+  if (searchBarDesktop) {
+    const resultadosDesktop = document.createElement("div");
+    resultadosDesktop.className =
+      "absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-[9999] shadow-md";
+    containerDesktop.appendChild(resultadosDesktop);
+
+    searchBarDesktop.addEventListener("input", (e) => {
+      const valor = e.target.value.toLowerCase().trim();
+      resultadosDesktop.innerHTML = "";
+
+      if (!valor) {
+        resultadosDesktop.classList.add("hidden");
+        return;
+      }
+
+      const filtrados = itens.filter((item) =>
+        item.toLowerCase().includes(valor)
+      );
+
+      if (filtrados.length > 0) {
+        filtrados.forEach((item) => {
+          const link = document.createElement("a");
+          link.href = rotas[item];
+          link.textContent = item;
+          link.className =
+            "block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer";
+          resultadosDesktop.appendChild(link);
+        });
+        resultadosDesktop.classList.remove("hidden");
+      } else {
+        resultadosDesktop.classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!containerDesktop.contains(e.target)) {
+        resultadosDesktop.classList.add("hidden");
+      }
+    });
+  }
+
+  const inputMobile = document.getElementById("searchInput");
+  const resultadosMobile = document.getElementById("searchResults");
+  const containerMobile = inputMobile.closest(".relative");
+
+  if (inputMobile) {
+    inputMobile.addEventListener("input", (e) => {
+      const valor = e.target.value.toLowerCase().trim();
+      resultadosMobile.innerHTML = "";
+
+      if (!valor) {
+        resultadosMobile.classList.add("hidden");
+        return;
+      }
+
+      const filtrados = itens.filter((item) =>
+        item.toLowerCase().includes(valor)
+      );
+
+      if (filtrados.length > 0) {
+        filtrados.forEach((item) => {
+          const link = document.createElement("a");
+          link.href = rotas[item];
+          link.textContent = item;
+          link.className =
+            "block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer";
+          resultadosMobile.appendChild(link);
+        });
+        resultadosMobile.classList.remove("hidden");
+      } else {
+        const semResultado = document.createElement("div");
+        semResultado.textContent = "Nenhum resultado encontrado";
+        semResultado.className = "px-3 py-2 text-sm text-gray-500";
+        resultadosMobile.appendChild(semResultado);
+        resultadosMobile.classList.remove("hidden");
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!containerMobile.contains(e.target)) {
+        resultadosMobile.classList.add("hidden");
+      }
+    });
+  }
+});
+</script>
+
+
 
   <script>
       document.addEventListener('DOMContentLoaded', () => {
