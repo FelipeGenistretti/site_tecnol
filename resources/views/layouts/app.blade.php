@@ -11,7 +11,7 @@
     
     <x-header/>
 
-    <main class="pt-[106px] font-ibm text-contrast bg-contrast">
+    <main class="pt-[120px] font-ibm text-contrast bg-contrast">
         @yield('content')
     </main>
 

@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+  <div class="container-x py-10 bg-contrast bg-[#F2F2F2]">
+    <h1 class="text-textPrimary text-contrast text-3xl max-sm:text-[38px] max-sm:flex max-sm:text-center max-sm:justify-center">Contato</h1>
+  </div>   
+
 <div class="bg-contrast container-x py-12" id="faleConosco">
   <div class="flex flex-col justify-center items-center gap-2">
     <h1 class="text-4xl text-contrast">Fale conosco</h1>
