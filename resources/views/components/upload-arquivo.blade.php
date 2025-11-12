@@ -44,8 +44,38 @@
         <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
     @enderror
 
-    <button type="submit" class="button-contrast textContainer max-sm:w-full uppercase p-3 text-white bg-bgButtonPrimary hover:bg-orange-400 transition duration-300 rounded-md">
-        Enviar arquivo
+    <button
+    id="btnUpload"
+    type="submit"
+    class="button-contrast textContainer max-sm:w-full uppercase p-3 text-white bg-bgButtonPrimary hover:bg-orange-400 transition duration-300 rounded-md flex items-center justify-center gap-2"
+>
+    <span id="btnUploadText">Enviar arquivo</span>
+
+    <!-- Spinner -->
+    <span
+        id="btnUploadLoader"
+        class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"
+    ></span>
     </button>
 
+
 </form>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector("form[action='{{ route('upload-file') }}']");
+  const btn = document.getElementById('btnUpload');
+  const text = document.getElementById('btnUploadText');
+  const loader = document.getElementById('btnUploadLoader');
+
+  if (form) {
+    form.addEventListener('submit', () => {
+      btn.disabled = true;
+      btn.classList.add('opacity-80', 'cursor-not-allowed');
+      text.textContent = "Enviando...";
+      loader.classList.remove('hidden');
+    });
+  }
+});
+</script>
+

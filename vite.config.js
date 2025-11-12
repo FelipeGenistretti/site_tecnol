@@ -8,4 +8,13 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    // server: {
+    //     host: '0.0.0.0',
+    //     port: 5173,
+    //     https: true,
+    //     hmr: {
+    //         host: 'cuddly-news-enjoy.loca.lt',
+    //         protocol: 'wss',
+    //     },
+    // },
 });
