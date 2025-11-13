@@ -34,10 +34,9 @@
 
 
 <div id="content-real" class="hidden bg-contrast">
-  <div class="container-x py-10 bg-contrast  bg-[#F2F2F2]">
-    <h1 class="text-textPrimary text-contrast text-3xl max-sm:text-[38px] max-sm:flex max-sm:text-center max-sm:justify-center">Safe Data Analytics - SDA</h1>
-  </div>   
-
+  <div class="titulo flex items-center bg-bgSecondary justify-center lg:justify-start text-center lg:text-start  text-contrast bg-contrast">
+  <h1 class=" text-textPrimary container-x  text-contrast bg-contrast">Safe Data Analytics - SDA</h1>
+</div>
   <div class="container-x py-10">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 text-textPrimary">
       <div>

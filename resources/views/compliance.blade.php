@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','TecShare compliance')
+@section('title',' compliance TecShare')
 
 @section('content')
     <div id="skeleton" class="container-x py-10 animate-pulse">
@@ -38,8 +38,8 @@
 
 <div id="content-real" class="hidden  text-contrast bg-contrast">
 
-   <div class="flex items-center h-[128px]  bg-bgSecondary justify-center lg:justify-start h-[]  text-contrast bg-contrast">
-  <h1 class=" text-[30px] text-textPrimary container-x  text-contrast bg-contrast">Compliance</h1>
+   <div class=" titulo flex items-center h-[128px]  bg-bgSecondary justify-center lg:justify-start h-[]  text-contrast bg-contrast">
+  <h1 class=" text-[38px] text-textPrimary container-x  text-contrast bg-contrast">Compliance</h1>
     </div>
 
 
@@ -249,7 +249,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
   </div>    
 </div>
-      <div id="pdfModal" class=" fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center  pt-[60px] mt-8">
+      <div id="pdfModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center  pt-[60px] mt-8">
     <div class="bg-white bg-contrast input-contrast w-[90%] md:w-[70%] h-[80%] rounded shadow relative p-6">
         
         <!-- Botão fechar -->
@@ -274,6 +274,18 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 
 <script>
+
+ function downloadFile(caminho){
+    document.getElementById('pdfModal').style.display = 'flex';
+ console.log("Aqui vai o diretorio do arquivo + ",caminho);
+}
+
+function closePdfModal(){
+    document.getElementById('pdfModal').style.display = 'none';
+}
+
+
+
     window.addEventListener("load", () => {
         const skeleton = document.getElementById('skeleton');
         const content = document.getElementById('content-real');
@@ -291,15 +303,6 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
         skeleton.classList.add('hidden');
         content.classList.remove('hidden');
     });
-
- function downloadFile(caminho){
-    document.getElementById('pdfModal').style.display = 'flex';
- console.log("Aqui vai o diretorio do arquivo + ",caminho);
-}
-
-function closePdfModal(){
-    document.getElementById('pdfModal').style.display = 'none';
-}
 
 
 

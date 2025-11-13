@@ -28,9 +28,10 @@ Route::post('/fale-conosco', [FormController::class, 'store'])
     ->name('fale-conosco.store');
 
 // Formulário de pré-cadastro (exibe o formulário)
-Route::get('/pre-registro', function() {
+/*Route::get('/pre-registro', function() {
     return view('pre-cadastro');
 })->name('pre-registro');
+*/
 
 // Formulário de pré-cadastro (envio)
 Route::post('/pre-registro', [PreRegistroController::class, 'store'])
@@ -41,9 +42,11 @@ Route::get('/quem-somos', function() {
     return view('quemsomos');
 })->name('quem-somos');
 
-Route::get('/veiculo', function() {
+
+Route::get('/sda', function() {
     return view('safe-register-car');
 })->name('safe-register-car');
+
 
 Route::get('/compliance', function() {
     return view('compliance');
@@ -58,13 +61,16 @@ Route::get("/privacidade", function(){
     return view("privacidade");
 })->name("privacidade");
 
+
 Route::get("/canal-denuncia", function(){
     return view("canal-denuncia");
 })->name("canal-denuncia");
 
+
 Route::get("/qualidade", function(){
-    return view("qualidade");
+  return view("qualidade");
 })->name("qualidade");
+
 
 Route::get("/solicitacao-titular", function(){
     return view("solicitacaotitular");

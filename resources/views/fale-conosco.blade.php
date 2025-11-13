@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
+@section('title','Fale Conosco - TecShare') 
+
 @section('content')
-  <div class="container-x py-10 bg-contrast bg-[#F2F2F2]">
-    <h1 class="text-textPrimary text-contrast text-3xl max-sm:text-[38px] max-sm:flex max-sm:text-center max-sm:justify-center">Contato</h1>
-  </div>    
+ <div class="titulo flex items-center bg-bgSecondary justify-center lg:justify-start text-center lg:text-start  text-contrast bg-contrast">
+  <h1 class=" text-textPrimary container-x  text-contrast bg-contrast">Contato</h1>
+</div> 
 
 <div class="bg-contrast container-x py-12" id="faleConosco">
   <div class="flex flex-col justify-center items-center gap-2">
@@ -123,13 +125,16 @@
     <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
   @enderror
 
+  <div class="g-recaptcha" data-sitekey="6LfoBQQsAAAAALvq1uHB9aofQRKJcb2uSXQzl1am"></div>
+
+
   <div class="flex justify-center pt-5">
   <button
     id="btnSubmit"
     type="submit"
-    class="button-contrast uppercase text-md text-white bg-orange-600 hover:bg-orange-400 transition duration-300 w-full p-3 rounded-md flex items-center justify-center gap-2"
+    class="bg-bgButtonPrimary button-contrast uppercase text-md text-white  hover:bg-purple-800 transition duration-300 w-full p-3 rounded-md flex items-center justify-center gap-2"
   >
-    <span id="btnText">Enviar</span>
+    <span id="btnText ">Enviar</span>
 
     <!-- Spinner -->
     <span
@@ -206,6 +211,17 @@
 @endsection
 
 
+<script>
+  function onSubmit(token) {
+    // Quando o usuário clicar e o token for gerado
+    document.getElementById("demo-form").submit();
+  }
+</script>
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
         <script>
         document.addEventListener('DOMContentLoaded', () => {
             const logo = document.getElementById("telefoneSemContraste");
@@ -240,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const loader = document.getElementById('btnLoader');
 
   form.addEventListener('submit', (event) => {
-    event.preventDefault();
+  //  event.preventDefault();
 
 
     btn.disabled = true;
@@ -305,5 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     });
 </script>
+
 @endif
 

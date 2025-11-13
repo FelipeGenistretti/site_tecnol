@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','TecShare-Segurança')
+@section('title','Segurança Tecshare')
 
 @section('content')
 
@@ -37,7 +37,7 @@
 {{-- Conteúdo real --}}
 <div id="content-real" class="hidden">
 
-    <div class="flex items-center py-12 bg-bgSecondary justify-center lg:justify-start  text-contrast bg-contrast">
+    <div class="titulo flex items-center py-12 bg-bgSecondary justify-center lg:justify-start  text-contrast bg-contrast">
         <h1 class="text-[38px] text-textPrimary container-x  text-contrast bg-contrast">Segurança</h1>
     </div>
 

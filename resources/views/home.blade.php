@@ -2,6 +2,8 @@
 
 @section("title", "Home - TecShare")
 @section("content")
+
+    <div class="mt-[120px]">
     <x-banner/>
     <x-quem-somos/>
     <x-porque-tecnol/>
@@ -9,5 +11,9 @@
     <x-section-enviar-curriculo/>
     <x-back-to-top/>    
     <x-cookies/>
+    </div>
+
+
+  
 
 @endsection

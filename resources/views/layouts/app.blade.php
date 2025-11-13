@@ -11,7 +11,7 @@
     
     <x-header/>
 
-    <main class="pt-[120px] font-ibm text-contrast bg-contrast">
+    <main class=" font-ibm text-contrast bg-contrast">
         @yield('content')
     </main>
 
@@ -48,70 +48,70 @@
             <div class=" lg:text-left">
                 <h1 class="text-2xl mt-3 mb-3 text-contrast">Mapa do site</h1>
                 <ul>
-                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
+                    <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
                     <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
                     </svg>
-                        <a class="ml-2" href="{{ route('home') }}">Inicio</a>                    
+                        <a class="ml-2 footer-hover" href="{{ route('home') }}">Inicio</a>                    
                     </li>
-                         <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
                     </svg>
-                        <a class="ml-2" href="{{ route('quem-somos') }}">Quem somos</a>                    
+                        <a class="ml-2 footer-hover" href="{{ route('quem-somos') }}">Quem somos</a>                    
                     </li>
-                       <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
                     </svg>
-                        <a class="ml-2" href="{{ route('trabalhe-conosco') }}">Trabalhe conosco</a>                    
+                        <a class="ml-2 footer-hover" href="{{ route('trabalhe-conosco') }}">Trabalhe conosco</a>                    
                     </li>
-                       <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
                     </svg>
-                        <a class="ml-2" href="{{ route('safe-register-car') }}">Safe Data Analytics - SDA</a>                    
+                        <a class="ml-2 footer-hover" href="{{ route('safe-register-car') }}">Safe Data Analytics - SDA</a>                    
                     </li>
-                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
                     </svg>
-                        <a class="ml-2" href="{{ route('compliance') }}">Compliance</a>                    
-                    </li>
-                          </li>
-                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
-                    </svg>
-                        <a class="ml-2" href="{{ route('canal-denuncia') }}">Canal de Denúncia</a>                    
-                    </li>
-                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
-                    </svg>
-                        <a class="ml-2" href="{{ route('privacidade') }}">Privacidade</a>                    
+                        <a class="ml-2 footer-hover" href="{{ route('compliance') }}">Compliance</a>                    
                     </li>
                           </li>
-                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
                     </svg>
-                        <a class="ml-2" href="{{ route('solicitacao-titular') }}">Solicitação do titular</a>                    
+                        <a class="ml-2 footer-hover" href="{{ route('canal-denuncia') }}">Canal de Denúncia</a>                    
                     </li>
-                     <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
                     </svg>
-                        <a class="ml-2" href="{{ route('seguranca') }}">Segurança</a>                    
+                        <a class="ml-2 footer-hover" href="{{ route('privacidade') }}">Privacidade</a>                    
                     </li>
-                          <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          </li>
+                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
+                    </svg>
+                        <a class="ml-2 footer-hover" href="{{ route('solicitacao-titular') }}">Solicitação do titular</a>                    
+                    </li>
+                     <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
+                    </svg>
+                        <a class="ml-2 footer-hover" href="{{ route('seguranca') }}">Segurança</a>                    
+                    </li>
+                          <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
                     </svg>
                         <a class="ml-2" href="{{ route('fale-conosco') }}">Contato</a>                    
                     </li>
-                          <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start">
-                    <svg class="text-contrasts" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
+                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
                     </svg>
                         <a class="ml-2" href="{{ route('seguranca') }}">Erro 404 layout</a>                    

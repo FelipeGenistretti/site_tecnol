@@ -29,7 +29,8 @@ class SolicitacaoTitularRequest extends FormRequest
             'email'          => ['required', 'email', 'max:255'],
             'telefone'       => ['required', 'regex:/^\(?\d{2}\)?\s?\d{4,5}\-?\d{4}$/'],
             'observacoes' => ["required", "string", "max:8000"],
-            "files"=>["required", "file", 'mimes:png,jpg,jpeg,webp,pdf,doc,docx,xls,xlsx',"max:5120"],
+            "arquivos" => ["required"],
+            "arquivos.*" => ["file", "mimes:png,jpg,jpeg,webp,pdf,doc,docx,xls,xlsx", "max:5120"],
             "privacy" => ["accepted"]
         ];
     }
@@ -60,10 +61,10 @@ class SolicitacaoTitularRequest extends FormRequest
 
         "privacy.accepted"=>"Você deve aceitar a política de privacidade.",
 
-        'files.required' => 'É necessário enviar um arquivo.',
-        'files.file' => 'O envio deve ser um arquivo válido.',
-        'files.mimes' => 'O arquivo deve ser uma imagem (png, jpg, jpeg, webp) ou documento (pdf, doc, docx, xls, xlsx).',
-        'files.max' => 'O arquivo não pode ultrapassar 5MB.',
+        "arquivos.*.file" => "O envio deve ser um arquivo válido.",
+        "arquivos.required"=> "É obrigatório enviar ao menos um arquivo.",
+        "arquivos.*.max"=> "Cada arquivo deve ter no máximo 5MB.",
+        "arquivos.*.mimes"=> "Algum arquivo enviado não é válido.",
     ];
 }
 

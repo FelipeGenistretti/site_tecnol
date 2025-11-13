@@ -1,7 +1,7 @@
 <div>
-    <div class="container-x py-10 bg-[#F2F2F2] bg-contrast">
-        <h1 class="text-textPrimary text-3xl max-sm:text-[38px] flex max-sm:text-center max-sm:justify-center text-contrast">Canal de denúncia</h1>
-    </div>
+  <div class="titulo flex items-center bg-bgSecondary justify-center lg:justify-start text-center lg:text-start  text-contrast bg-contrast">
+  <h1 class=" text-textPrimary container-x  text-contrast bg-contrast">Canal de Denuncia</h1>
+</div>
 
     <div class="h-[72px] w-[371px] hidden  bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50" id="modalSuccess">
     <div class="flex items-center justify-center gap-3">

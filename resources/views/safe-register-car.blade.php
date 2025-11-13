@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section("title", "safe register car - TecShare")
+@section("title", "safe data analytics - TecShare")
 @section("content")
     <x-intro-section-safe-register-car/>
     <x-section-beneficios-safe-register-car/>

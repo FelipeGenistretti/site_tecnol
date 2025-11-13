@@ -48,10 +48,10 @@
 <!-- Dados -->
 <tr>
 <td style="padding: 0 30px 25px; color:#444; font-size:14px; line-height:1.8;">
-  <strong>Nome:</strong> {{ $nome }}<br>
-  <strong>E-mail:</strong> {{ $email }}<br>
-  <strong>Telefone:</strong> {{ $telefone }}<br>
-  <strong>Área de atuação:</strong> {{ $atuacao }}<br>
+  <strong>Nome:</strong> {{ $data["nome"] }}<br>
+  <strong>E-mail:</strong> {{$data["email"] }}<br>
+  <strong>Telefone:</strong> {{$data["telefone"] }}<br>
+  <strong>Área de atuação:</strong> {{ $data["atuacao"] }}<br>
 </td>
 </tr>
 
@@ -59,7 +59,7 @@
 <tr>
 <td style="padding: 0 30px 20px; color:#444; font-size:14px; line-height:1.6;">
   <strong>Mensagem:</strong><br>
-  {{ $mensagem }}
+  {{ $data["mensagem"] }}
 </td>
 </tr>
 

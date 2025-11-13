@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
-@section('title','Trabalhe-conosco')
+@section('title','Trabalhe-conosco - TecShare')
 
 @section('content')
-<div class="flex items-center py-12 bg-bgSecondary justify-center lg:justify-start  text-contrast bg-contrast">
-        <h1 class="text-[38px] text-textPrimary container-x  text-contrast bg-contrast">Trabalhe conosco</h1>
-    </div>
+<div class="titulo flex items-center bg-bgSecondary justify-center lg:justify-start text-center lg:text-start  text-contrast bg-contrast">
+  <h1 class=" text-textPrimary container-x  text-contrast bg-contrast">Trabalhe conosco</h1>
+</div>  
+
 
  <div class="textContainer flex flex-col items-center justify-center text-center  py-10 container-x text-contrast bg-contrast" id="trabalheConosco">
   <h1 class="text-4xl mb-3 text-textPrimary text-contrast">Trabalhe conosco</h1>
@@ -79,7 +80,7 @@
       <span class="textContainer p-2 px-6 rounded border border-[#B3B3B3] cursor-pointe input-contrast">
         Adicionar arquivos
       </span>
-      <input type="file" name="files"  class="hidden">
+      <input type="file" name="arquivos[]"  class="hidden">
     </label>
     <p class="textContainer text-sm text-gray-500 mt-1 text-contrast">Tamanho máximo permitido do anexo 5MB</p>
   </div>
@@ -160,6 +161,38 @@
         <p class="textContainer text-contrast">dpo@sistematecnol.com.br</p>
       </div>
     </div>
+      
+      @error('arquivos')
+    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
+  @enderror
+    @error('nome')
+    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
+  @enderror
+    @error('email')
+    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
+  @enderror
+    @error('telefone')
+    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
+  @enderror
+    @error('atuacao')
+    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
+  @enderror
+    @error('mensagem')
+    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
+  @enderror
+    @error('privacy')
+    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
+  @enderror
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
 
     <div class="bg-gray-100 rounded-lg p-4 shadow-md flex items-center gap-3 text-contrast bg-contrast input-contrast">
       <img src="{{ '/telefone.png' }}" alt="" class="">

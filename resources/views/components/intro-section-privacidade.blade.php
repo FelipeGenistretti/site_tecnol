@@ -1,5 +1,5 @@
-<div class="container-x py-12 bg-[#F2F2F2] bg-contrast">
-  <h1 class="text-black text-3xl max-sm:text-[38px] flex max-sm:justify-center text-contrast">Privacidade</h1>
+<div class="titulo flex items-center bg-bgSecondary justify-center lg:justify-start text-center lg:text-start  text-contrast bg-contrast">
+  <h1 class=" text-textPrimary container-x  text-contrast bg-contrast">Privacidade</h1>
 </div>
 
 <div class="container-x py-12 gap-3 bg-contrast">

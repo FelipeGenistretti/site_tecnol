@@ -16,7 +16,7 @@ class TrabalheConoscoRequest extends FormRequest
         return [
             "arquivos"     => ["required"],
             "arquivos.*"   => ["file", "mimes:png,jpg,jpeg,webp,pdf,doc,docx,xls,xlsx", "max:5120"],
-
+              "privacy" =>["accepted"],  
             "nome"         => ["required", "string", "min:3", "max:120"],
             "email"        => ["required", "email"],
             "telefone"     => ["nullable", "string", "max:30"],

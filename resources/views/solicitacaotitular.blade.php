@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','TecShare')
+@section('title','Solicitação de titular - TecShare')
 
 @section('content')
 {{-- Skeleton Loading --}}
@@ -39,8 +39,8 @@
 </div>
 
 <div id="content-real" class="hidden bg-contrast text-contrast">
-<div class="flex items-center py-12 bg-bgSecondary justify-center lg:justify-start text-center lg:text-start  text-contrast bg-contrast">
-  <h1 class="text-[38px] text-textPrimary container-x  text-contrast bg-contrast">Solicitação do titular</h1>
+<div class="titulo flex items-center bg-bgSecondary justify-center lg:justify-start text-center lg:text-start  text-contrast bg-contrast">
+  <h1 class=" text-textPrimary container-x  text-contrast bg-contrast">Solicitação do titular</h1>
 </div>
 
 <div class=" text-contrast bg-contrast h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50 transition-all duration-300"
@@ -80,7 +80,7 @@
 
   <!-- Formulário -->
   <div class="w-full max-w-[1200px] bg-gray-100 rounded-lg p-6 sm:p-8 shadow-md mt-8 mb-10  text-contrast bg-contrast">
-    <form action="{{ route('enviar-solicitacao') }}"  accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" enctype="multipart/form-data" class="flex flex-col space-y-6">
+    <form action="{{ route('enviar-solicitacao') }}" multiple accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" method="post" enctype="multipart/form-data" class="flex flex-col space-y-6">
       @csrf
       <!-- Seletor duplo -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4  text-contrast bg-contrast">
@@ -142,6 +142,12 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6959 28.2666V38.3118H29.4347V28.2666L31.3666 30.0676L33.7341 26.7705L27.5653 21.0197L21.3965 26.7705L23.764 30.0676L25.6959 28.2666Z" fill="currentColor"/>
 </svg>
 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
         <p class="text-sm text-center textContainer  text-contrast bg-contrast">
@@ -150,7 +156,7 @@
         <span class=" input-contrast textContainer py-3 px-6 rounded border border-[#B3B3B3] cursor-pointer uppercase">
           Adicionar arquivos
         </span>
-        <input type="file" name="files" class="hidden">
+        <input type="file" name="arquivos[]" class="hidden">
       </label>
 
       <p class="text-sm text-textSecondary my-3 textContainer text-contrast">

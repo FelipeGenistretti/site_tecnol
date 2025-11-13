@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 
-@section('title','TecShare')
+@section('title','quem somos - TecShare')
 
 @section('content')
 {{-- Skeleton Loading --}}
@@ -48,40 +48,21 @@
 
 <div id="content-real" class="hidden text-contrast bg-contrast">
 
-<div class="flex items-center py-12  bg-bgSecondary bg-contrast justify-center lg:justify-start  ">
+<div class=" mt-[105px] flex items-center py-8  bg-bgSecondary bg-contrast justify-center lg:justify-start  ">
   <h1 class="text-[38px] text-textPrimary text-contrast container-x ">Quem somos</h1>
     </div>
 
-    <div class="h-[72px] w-[371px] hidden  bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50" id="modalSuccess">
-    <div class="flex items-center justify-center gap-3">
-        <img src="/iconCheckModal.png" alt="">
-        <p class="text-white text-constrast">Cadastro realizado com sucesso!</p>
-        <button type="button" class="flex items-center">
-            <img src="/iconCloseModal.png" alt="" id="close">
-        </button>
-    </div> 
-</div>
-
-<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center right-10 mt-4 justify-center fixed z-50" id="modalCamposObrigatorios">
-    <div class="flex items-center justify-center gap-3">
-        <img src="/alertModalCamposObrigatorios.png" alt="">
-        <p class="text-black text-constrast">Preencha os campos obrigatórios</p>
-        <button type="button" class="flex items-center">
-            <img src="/closeModalBlack.png" alt="" id="btnClose">
-        </button>
-    </div>
-</div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 container-x py-12 gap-4 bg-contrast items-center">
         <div class="space-y-4  mt-3 lg:mt-6">
             <h1 class= " text-textPrimary text-[38px] text-center lg:text-left text-Primary text-contrast  ">Um pouco da nossa história</h1>
-          <p>A TECSHARE nasceu com o propósito de simplificar e digitalizar experiências, conectando tecnologia, pessoas e negócios de forma inteligente.
+          <p class="textContainer">A TECSHARE nasceu com o propósito de simplificar e digitalizar experiências, conectando tecnologia, pessoas e negócios de forma inteligente.
           
-          <p>Identificamos no mercado a oportunidade de evoluir a forma como empresas se relacionam com dados, processos e clientes, criando experiências mais ágeis, seguras e integradas.</p>
+          <p class="textContainer">Identificamos no mercado a oportunidade de evoluir a forma como empresas se relacionam com dados, processos e clientes, criando experiências mais ágeis, seguras e integradas.</p>
              
-          <p>Com foco em automação, usabilidade e análise de dados, a TECSHARE transforma o ecossistema de soluções tecnológicas e integrações digitais, reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação, por meio de plataformas como o Safe Data Analytics e TecnoHub</p>
+          <p class="textContainer">Com foco em automação, usabilidade e análise de dados, a TECSHARE transforma o ecossistema de soluções tecnológicas e integrações digitais, reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação, por meio de plataformas como o Safe Data Analytics e TecnoHub</p>
           
-          <p>Unimos inovação tecnológica, experiência do usuário e inteligência de dados para desenvolver produtos que simplificam o uso, automatizam a validação de informações e potencializam resultados de negócio.</p>
+          <p class="textContainer">Unimos inovação tecnológica, experiência do usuário e inteligência de dados para desenvolver produtos que simplificam o uso, automatizam a validação de informações e potencializam resultados de negócio.</p>
         
         
         
@@ -106,7 +87,7 @@
 
           <div class= "mt-[40px] space-y-3 ">
             <h1 class= "text-4xl text-center lg:text-left text-contrast">Nossa missão e visão</h1>
-            <p class="text-contrast" >emos como missão automatizar sistematicamente o acesso a informações de dados de forma rápida, fácil e segura. Além da busca contínua em ser referência em soluções automatizadas para o mercado financeiro.</p>
+            <p class="text-contrast textContainer" >temos como missão automatizar sistematicamente o acesso a informações de dados de forma rápida, fácil e segura. Além da busca contínua em ser referência em soluções automatizadas para o mercado financeiro.</p>
                 
         </div>
         

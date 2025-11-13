@@ -19,19 +19,27 @@
 
 /* Camada utilities: classes customizadas */
 @layer utilities {
+.footer-hover{
+  @apply hover:text-purple-800;
+}
 
+
+.titulo{
+  @apply mt-[120px] bg-[#F2F2F2] text-[38px] py-10;
+}
 
   .container-x {
     @apply px-4 sm:px-8 md:px-[120px];
   }
 
   .container-2x {
-    @apply px-4 sm:px-8 md:px-[240px];
+    @apply px-4 sm:px-8 md:px-[240px] ;
   }
 
   .container-mbl {
     @apply px-2;
   }
+
 
   body.contrast .text-contrast {
     @apply text-[#FFFF00];
