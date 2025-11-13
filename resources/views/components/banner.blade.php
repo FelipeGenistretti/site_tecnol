@@ -77,7 +77,7 @@
 
 
     <div class="absolute inset-0 top-0 z-10">
-    <img src="/bannerEffects.png" alt="" class="w-full h-full object-cover">
+    <img src="/bannerEffects.png" width="2113px"alt="" class="w-full h-full object-cover">
   </div>
 
   <div class="hero-content relative z-20 container-x flex flex-col justify-center pt-[80px] pb-10 max-md:items-center">
@@ -139,38 +139,7 @@
     </div>
   </div>
 
-  <div class="bg-contrast hero-signup bg-bgSecondary py-12 md:py-16 flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg mt-12 relative z-10">
-    <div class="container-x flex flex-col gap-2 md:gap-3 text-center md:text-left">
-      <p class="text-textPrimary text-contrast text-3xl font-medium max-sm:text-2xl ">
-        Faça seu cadastro sem custo de adesão e mensalidade
-      </p>
-      <p class="text-textPrimary text-contrast text-lg sm:text textContainer max-sm:text-sm">
-        Pague somente pelas transações executadas
-      </p>
-    </div>
-
-    <!-- Botão desktop -->
-    <div class="hidden lg:flex container-x">
-      <button type="button" class="button-secundary-contrast sm:w-full flex items-center p-3 gap-2 transform hover:scale-105 duration-300 hover:shadow-md border border-black rounded-md relative z-10">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11.9985 2.56677C17.2078 2.56695 21.431 6.79014 21.4312 11.9994C21.431 17.2086 17.2078 21.4318 11.9985 21.432C6.78922 21.4319 2.5661 17.2087 2.56592 11.9994C2.56606 6.79007 6.7892 2.56684 11.9985 2.56677ZM11.9985 4.23279C7.70967 4.23285 4.23208 7.71054 4.23193 11.9994C4.23212 16.2882 7.70969 19.7649 11.9985 19.765C16.2873 19.7648 19.764 16.2881 19.7642 11.9994C19.764 7.71062 16.2873 4.23297 11.9985 4.23279ZM16.2944 9.13318L16.8833 9.72205L10.6733 15.933L10.0835 16.5219L6.62842 13.0668L7.21729 12.4769L7.80615 11.8881L10.0835 14.1644L15.7046 8.54431L16.2944 9.13318Z" fill="currentColor"/>
-        </svg>
-
-        <p class="uppercase text-textPrimary text-contrast textContainer">iniciar pré-cadastro</p>
-      </button>
-    </div>
-
-    <!-- Botão mobile -->
-    <div class="lg:hidden w-full flex justify-center container-x">
-      <button type="button" class="w-full flex items-center justify-center gap-2 border border-black p-3 rounded-md">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.9985 2.56641C17.2078 2.56659 21.431 6.78977 21.4312 11.999C21.431 17.2082 17.2078 21.4315 11.9985 21.4316C6.78922 21.4316 2.5661 17.2083 2.56592 11.999C2.56606 6.7897 6.7892 2.56647 11.9985 2.56641ZM11.9985 4.23242C7.70967 4.23249 4.23208 7.71018 4.23193 11.999C4.23212 16.2878 7.70969 19.7646 11.9985 19.7646C16.2873 19.7645 19.764 16.2878 19.7642 11.999C19.764 7.71025 16.2873 4.2326 11.9985 4.23242ZM16.2944 9.13281L16.8833 9.72168L10.6733 15.9326L10.0835 16.5215L6.62842 13.0664L7.21729 12.4766L7.80615 11.8877L10.0835 14.1641L15.7046 8.54395L16.2944 9.13281Z" fill="black"/>
-        </svg>
-
-        <p class="uppercase text-textPrimary text-center">quero conhecer</p>
-      </button>
-    </div>
-  </div>
+  
 </div>
 
 

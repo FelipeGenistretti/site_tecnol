@@ -206,9 +206,9 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 
 <div class="grid grid-cols-1 lg:grid-cols-2  text-contrast bg-contrast">
-      <div class="bg-[#F2F2F2] text-center flex flex-col items-center justify-center px-6   text-contrast bg-contrast p-12">
+      <div class="bg-[#F2F2F2] text-center  flex flex-col items-center justify-center px-6   text-contrast bg-contrast p-12">
     <h1 class="text-[45px] font-semibold mb-4">Código de conduta e ética</h1>
-    <p class="text-gray-700 textContainer  text-contrast bg-contrast">
+    <p class="text-gray-700 textContainer container-x text-contrast bg-contrast">
       Para fortalecer a transparência e a equidade entre os nossos colaboradores, fornecedores, clientes e parceiros de negócios, tornamos público o nosso Código de Conduta.
     </p>
 
@@ -225,16 +225,16 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
       
       <span>BAIXE NOSSO CÓDIGO DE CONDUTA</span>
     </button>
-  </div>
+  </div >
     
-       <div class="bg-gradient-to-b from-[#411F56] to-[#7D24B4] bg-contrast text-center  text-contrast  flex flex-col items-center justify-center px-6 text-white p-12">
+       <div class="container-x bg-gradient-to-b from-[#411F56] to-[#7D24B4] bg-contrast text-center  text-contrast  flex flex-col items-center justify-center px-6 text-white p-12">
     <h1 class="text-[45px] font-semibold mb-4  text-contrast bg-contrast">Canal de denúncia</h1>
     <p class="textContainer  text-contrast bg-contrast">
         Contamos com um Canal de Denúncia sigiloso e imparcial, hospedado fora dos sistemas da TECSHARE, administrado com total garantia de confidencialidade pela empresa. 
     </p>
 
     
-    <button class="button-contrast flex items-center gap-3 justify-center lg:justify-start p-3 px-6 rounded border bg-[#F15A29] cursor-pointer mt-8 w-full lg:w-[350px]">
+    <button class="button-contrast flex items-center gap-3 justify-center lg:justify-start p-3 px-6 rounded border bg-[#411F56] cursor-pointer mt-8 w-full lg:w-[350px]">
   
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>

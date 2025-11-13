@@ -36,7 +36,7 @@
 </div>
 
   <div class="pt-5">
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[70%_30%] gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[70%_28%] gap-6">
       
       <!-- FORMULÁRIO (70%) -->
       <div class="bg-gray-100/30 bg-contrast rounded-md shadow-md p-6 textContainer">
@@ -128,11 +128,11 @@
   <div class="g-recaptcha" data-sitekey="6LfoBQQsAAAAALvq1uHB9aofQRKJcb2uSXQzl1am"></div>
 
 
-  <div class="flex justify-center pt-5">
+  <div class="flex max-sm:justify-center pt-5">
   <button
     id="btnSubmit"
     type="submit"
-    class="bg-bgButtonPrimary button-contrast uppercase text-md text-white  hover:bg-purple-800 transition duration-300 w-full p-3 rounded-md flex items-center justify-center gap-2"
+    class="bg-bgButtonPrimary lg:w-[15%] button-contrast uppercase text-md text-white  hover:bg-purple-800 transition duration-300 w-full p-3 rounded-md flex items-center justify-center gap-2"
   >
     <span id="btnText ">Enviar</span>
 
@@ -161,7 +161,7 @@
 
           <div>
             <p class="opacity-65 mb-2 text-contrast">Email</p>
-            <p class="text-contrast">atendimento@sistemastecnol.com.br</p>
+            <p class="text-contrast">atendimento@tecshare.com.br</p>
           </div>
         </div>
 
@@ -175,22 +175,11 @@
 
           <div class="text-contrast">
             <p class="opacity-65 mb-2">Ouvidoria</p>
-            <p>ouvidoria@sistemastecnol.com.br</p>
+            <p>ouvidoria@tecshare.com.br</p>
           </div>
         </div>
 
-        <div class="bg-gray-100/30 bg-contrast rounded-md shadow-md p-5 lg:w-full flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast text-[#F15A29]">
-            <path class="svg-bg" d="M0 10C0 4.47715 4.47715 0 10 0H30C35.5228 0 40 4.47715 40 10V30C40 35.5228 35.5228 40 30 40H10C4.47715 40 0 35.5228 0 30V10Z" fill="#FFF6F3"/>
-            <path class="svg"  d="M28.3332 15.8333L20.8407 20.6058C20.5864 20.7535 20.2976 20.8313 20.0036 20.8313C19.7096 20.8313 19.4208 20.7535 19.1665 20.6058L11.6665 15.8333" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-            <path class="svg"  d="M26.6665 13.3333H13.3332C12.4127 13.3333 11.6665 14.0795 11.6665 15V25C11.6665 25.9205 12.4127 26.6666 13.3332 26.6666H26.6665C27.587 26.6666 28.3332 25.9205 28.3332 25V15C28.3332 14.0795 27.587 13.3333 26.6665 13.3333Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <div class="text-contrast">
-            <p class="opacity-65 mb-2">Encarregado de proteção de dados</p>
-            <p>Saron Correa</p>
-            <p>dpo@sistemastecnol.com.br</p>
-          </div>
-        </div>
+       
 
         <div class="bg-gray-100/30 bg-contrast rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
             <img src="/telefoneNoContrast.png" width="40" height="40" alt="" class="" id="telefoneSemContraste">
