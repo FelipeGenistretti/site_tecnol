@@ -9,7 +9,7 @@
 
     </div>
         <p class="text-textPrimary textContainer text-[16px ] text-contrast">
-            <span class="font-bold text-textPrimary">TECSHARE</span> transforma o ecossistema de soluções tecnológicas e integrações digitais, reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação, por meio de plataformas e integrações.
+            <span class="font-bold text-textPrimary text-contrast">TECSHARE</span> transforma o ecossistema de soluções tecnológicas e integrações digitais, reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação, por meio de plataformas e integrações.
         </p>
 
         <div class="hidden mt-6 lg:flex items-center">

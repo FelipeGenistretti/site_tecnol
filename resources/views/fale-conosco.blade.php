@@ -44,7 +44,7 @@
           </div>
         @endif
 
-       <form action="{{ route('fale-conosco.store') }}" method="POST">
+       <form action="{{ route('fale-conosco.store') }}" id="faleConoscoForm" method="POST">
   @csrf
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -205,6 +205,7 @@
 
 @endsection
 
+
         <script>
         document.addEventListener('DOMContentLoaded', () => {
             const logo = document.getElementById("telefoneSemContraste");
@@ -232,20 +233,32 @@
         </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector(`form[action='{{ route("fale-conosco.store") }}']`);
-    const btn = document.getElementById('btnSubmit');
-    const text = document.getElementById('btnText');
-    const loader = document.getElementById('btnLoader');
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('faleConoscoForm');
+  const btn = document.getElementById('btnSubmit');
+  const text = document.getElementById('btnText');
+  const loader = document.getElementById('btnLoader');
 
-    form.addEventListener('submit', () => {
-      btn.disabled = true;
-      btn.classList.add('opacity-80', 'cursor-not-allowed');
-      text.textContent = "Enviando...";
-      loader.classList.remove('hidden');
-    });
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+
+    btn.disabled = true;
+    btn.classList.add('opacity-80', 'cursor-not-allowed');
+    text.textContent = "Enviando...";
+    loader.classList.remove('hidden');
+
+    
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.classList.remove('opacity-80', 'cursor-not-allowed');
+      text.textContent = "Enviar";
+      loader.classList.add('hidden');
+    }, 2000);
   });
+});
 </script>
+
 
 
 @if(session('success'))

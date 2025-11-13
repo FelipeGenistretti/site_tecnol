@@ -115,13 +115,13 @@
     <div class="max-sm:w-full flex flex-col sm:flex-row gap-4 mt-10">
       <div class="flex items-center justify-center max-sm:justify-center w-full sm:w-auto">
         <button type="button"
-          class="button-contrast w-full sm:w-auto flex items-center justify-center max-sm:justify-center gap-2 bg-bgButtonPrimary text-white uppercase rounded-md px-4 py-3 hover:bg-orange-400 transition duration-300 relative z-10">
+          class="button-contrast w-full sm:w-auto flex items-center justify-center max-sm:justify-center gap-2 bg-bgButtonPrimary text-white uppercase rounded-md px-4 py-3 hover:bg-purple-800 transition duration-300 relative z-10">
           <div class="flex gap-2 items-center justify-center max-sm:justify-center">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.4991 3C14.3256 3 16.9991 4.8836 16.9991 7.63086V10.5293H18.9991V19.8994C18.9991 20.5068 18.5069 20.9998 17.8995 21H5.09875C4.49143 20.9998 3.99915 20.5068 3.99915 19.8994V10.5293H5.99915V7.63086C5.99915 4.8836 8.67271 3 11.4991 3ZM5.99915 19H16.9991V12.5293H5.99915V19ZM11.4991 5C9.35502 5 7.99915 6.3677 7.99915 7.63086V10.4434H14.9991V7.63086C14.9991 6.3677 13.6433 5 11.4991 5Z" fill="currentColor"/>
             </svg>
 
-            <p class="textContainer text-contrast">Acessar Safe Data Analytics</p>
+            <p class="textContainer text-contrast text-[14px]">Acessar Safe Data Analytics</p>
           </div>
         </button>
       </div>
@@ -129,7 +129,7 @@
       <div class="max-sm:w-full flex justify-center">
         <button type="button"
           class="button-secundary-contrast w-full flex items-center justify-center gap-2 border text-white uppercase rounded-md px-4 py-3 transform hover:bg-white/10 hover:scale-105 transition duration-300 relative z-10">
-          <p class="textContainer text-center flex-1">Sobre o Safe Data Analytics</p>
+          <p class="textContainer text-center flex-1 text-[14px]">Sobre o Safe Data Analytics</p>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5856 12L8.29272 17.2929L9.70694 18.7072L16.414 12L9.70694 5.29294L8.29272 6.70715L13.5856 12Z" fill="currentColor"/>
         </svg>

@@ -13,7 +13,7 @@ module.exports = {
         textSecondary:"#666666",
         bgPrimary:"#004A65",
         bgSecondary:"#F2F2F2",
-        bgButtonPrimary:"#F15A29"
+        bgButtonPrimary:"#411F56"
       }   
     },
 

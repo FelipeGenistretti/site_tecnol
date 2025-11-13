@@ -69,13 +69,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const loader = document.getElementById('btnUploadLoader');
 
   if (form) {
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
       btn.disabled = true;
       btn.classList.add('opacity-80', 'cursor-not-allowed');
       text.textContent = "Enviando...";
       loader.classList.remove('hidden');
+
+      
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.classList.remove('opacity-80', 'cursor-not-allowed');
+        text.textContent = "Enviar arquivo";
+        loader.classList.add('hidden');
+      }, 2000);
     });
   }
 });
 </script>
+
+
 

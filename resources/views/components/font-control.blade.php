@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const textContainers = document.querySelectorAll('.textContainer');
   const aPlus = document.getElementById('aPlus');
   const aMinus = document.getElementById('aMinus');
-  const minFontSize = 16;
+  const minFontSize = 12;
   const maxFontSize = 23;
 
   const savedFontSize = localStorage.getItem('fontSize');
