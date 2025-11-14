@@ -20,7 +20,6 @@
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x pb-12 bg-contrast text-contrast " >
 
-  <!-- Coluna 1: Formulário -->
   
 <form action="{{ route('trabalhe-conosco') }}" multiple type="arquivos[]" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" enctype="multipart/form-data" method="post" class="text-constrast input-contrast bg-contrast bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
   @csrf
@@ -54,7 +53,6 @@
   </div>
 
 
-  <!-- Mensagem -->
   <div class="flex flex-col w-full">
     <label class="textContainer text-sm font-medium mb-1">Mensagem</label>
     <input type="text" class="input-contrast border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" name="mensagem" />
@@ -62,7 +60,6 @@
 
   
 
-  <!-- Upload -->
   <div class="flex flex-col bg-contrast">
     <label class="textContainer text-sm font-medium mb-1">Upload de Arquivo</label>
     <label class="bg-contrast input-contrast border rounded px-3 py-2 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3">
@@ -85,14 +82,13 @@
     <p class="textContainer text-sm text-gray-500 mt-1 text-contrast">Tamanho máximo permitido do anexo 5MB</p>
   </div>
 
-  <!-- Checkbox + reCAPTCHA -->
   <div class="flex flex-col gap-2">
     <div class="flex gap-2 items-center mb-4">
           <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125" {{ old('privacy') ? 'checked' : '' }}/>
           <p class="textContainer">
             Li e concordo com a
             <span class="textContainer">
-              <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
+              <a href="#" class="text-[#411F56] underline font-bold">Política de Privacidade</a>
             </span>
             e autorizo o tratamento dos meus dados.
           </p>
@@ -105,9 +101,8 @@
     </div>
   </div>
 
-  <!-- Botão -->
   <div>
-    <button type="submit" class="button-contrast bg-bgButtonPrimary textContainer hover:bg-purple-800 text-white font-medium py-2 px-4 rounded transition-colors flex justify-center items-center gap-2">
+    <button type="submit" class="button-contrast bg-bgButtonPrimary textContainer uppercase hover:bg-purple-800 text-white font-medium py-3 px-4 rounded transition-colors flex justify-center items-center gap-2">
     
       Enviar
     </button>
@@ -115,7 +110,6 @@
 
 </form>
 
-  <!-- Coluna 2: Contatos -->
   <div class="flex flex-col space-y-4 mt-5 bg-contrast text-contrast">
     <div class="bg-gray-100 rounded-lg p-4 shadow-md  flex items-center gap-3 bg-contrast text-contrast input-contrast">
       <svg id="mail-icon" class="text-contrast contrast-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

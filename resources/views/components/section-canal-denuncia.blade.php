@@ -26,22 +26,22 @@
     <div class="container-x py-10 bg-contrast text-contrast">
         <div class="text-center space-y-6">
             <h1 class="text-4xl text-textPrimary max-sm:text-[38px] text-contrast">Canal de denúncia</h1>
-            <p class="textContainer text-textSecondary max-sm:text-[16px] text-lg font-semibold text-contrast">Contamos com um Canal de Compliance (Canal de Denúncia) sigiloso e imparcial, hospedado fora dos sistemas da Tecnol e administrado com total garantia de confidencialidade pela empresa. Por meio deste ambiente, tanto o público interno quanto o externo podem denunciar desvios em relação ao Código de Conduta da Tecnol ou conduta de seus colaboradores.</p>
+            <p class="textContainer text-textSecondary max-sm:text-[16px] text-lg font-semibold text-contrast text-[14px]">Contamos com um Canal de Denúncia sigiloso e imparcial, hospedado fora dos sistemas da TECSHARE, administrado com total garantia de confidencialidade pela empresa. Por meio deste ambiente, o público interno e externo pode denunciar desvios em relação ao Código de Conduta da TECSHARE ou à conduta de seus colaboradores, apresentar sugestões de melhorias, bem como acompanhar o andamento de seus chamados.</p>
 
         </div>
 
         <div class="bg-[#F2F2F2] bg-contrast p-6 rounded-md mt-4">
                 
                 <div>
-                    <x-upload-arquivo/>
+                    <x-upload-arquivo/> 
                 </div>
-        </div>
+        </div> 
     </div>
 </div>
 
 @if($errors->has('files'))
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DO MContentLoaded", () => {
     const modal = document.getElementById("modalArquivoInvalido");
     const close = document.getElementById("btnClose");
 

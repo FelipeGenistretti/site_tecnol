@@ -10,7 +10,7 @@
 
 
       <!-- MENU DESKTOP -->
-      <nav class="hidden lg:flex items-center gap-4 uppercase text-md h-full relative">
+      <nav class="hidden lg:flex items-center gap-[16px] uppercase text-md h-full relative">
         <ul class="flex items-center gap-4 font-medium text-[12px] h-full">
 
           <li class="flex items-center h-full">

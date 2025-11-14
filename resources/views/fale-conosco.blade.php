@@ -116,7 +116,7 @@
     <p class="text-contrast">
       Li e concordo com a
       <span>
-        <a href="#" class="text-orange-600 underline font-bold text-contrast">Política de Privacidade</a>
+        <a href="#" class="text-[#411F56] underline font-bold text-contrast">Política de Privacidade</a>
       </span>
       e autorizo o tratamento dos meus dados.
     </p>

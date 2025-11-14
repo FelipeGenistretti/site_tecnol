@@ -157,7 +157,7 @@
                <div class="text-center lg:text-left">
                 <h1 class="text-2xl mt-3 mb-3 text-contrast">Contatos</h1>
 
-                <h3 class="font-semibold text-contrast">Atendimento</h3>
+                <h3 class="font-semibold text-contrast text-lg">Atendimento</h3>
                 <p class="text-contrast">
                     atendimento@tecshare.com.br
                 </p>
@@ -193,7 +193,7 @@
 
 
         <!-- Linha final -->
-        <div class="grid lg:grid-cols-2 sm:grid-cols-1 text-[#333333]">
+        <div class="grid lg:grid-cols-2 sm:grid-cols-1 text-[#333333] container-x">
             
 
             <div class="flex items-center gap-2 justify-center lg:justify-start mt-5 lg:mt-0">
