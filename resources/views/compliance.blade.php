@@ -58,7 +58,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 
   
-  <span class="p-2 whitespace-nowrap">Baixe nossa política de compliance</span>
+  <span class="p-2 whitespace-nowrap bts-hover">Baixe nossa política de compliance</span>
 </button>
 </div>
 
@@ -97,7 +97,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 </svg>
 
 
-      <span class="text-[15px] whitespace-nowrap"> BAIXAR NOSSA POLÍTICA DO SISTEMA DE ANTISSUBORNO</span>
+      <span class="text-[15px] whitespace-nowrap bts-hover"> BAIXAR POLÍTICA DO SISTEMA DE ANTISSUBORNO</span>
     </button>
 
         </div>
@@ -118,7 +118,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container-x mb-12  text-contrast bg-contrast">
 
 
-      <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col  text-contrast bg-contrast input-contrast">
+      <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col  text-contrast bg-contrast input-contrast card-hover">
 
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path d="M22.0153 5.17025C21.19 3.49793 18.8053 3.49795 17.98 5.17025L14.0501 13.1331L5.26257 14.41C3.41707 14.6782 2.68017 16.9462 4.01559 18.2478L10.3743 24.446L8.87322 33.1982C8.55797 35.0362 10.4872 36.4378 12.1379 35.57L19.9977 31.4378L27.8575 35.57C29.5082 36.4378 31.4373 35.0362 31.1222 33.1982L29.621 24.446L35.9798 18.2478C37.3152 16.9462 36.5783 14.6782 34.7328 14.41L25.9453 13.1331L22.0153 5.17025ZM16.2338 14.3574L19.9977 6.7309L23.7617 14.3574C24.0893 15.0215 24.7228 15.4817 25.4557 15.5882L33.872 16.8112L27.7818 22.7477C27.2517 23.2645 27.0097 24.0092 27.1348 24.7392L28.5725 33.1215L21.0447 29.1638C20.3892 28.8192 19.6062 28.8192 18.9507 29.1638L11.4229 33.1215L12.8606 24.7392C12.9857 24.0092 12.7438 23.2645 12.2135 22.7477L6.12336 16.8112L14.5397 15.5882C15.2725 15.4817 15.9061 15.0215 16.2338 14.3574ZM1.94096 6.3017C1.50969 6.84077 1.59709 7.62738 2.13617 8.05865L6.30284 11.392C6.84191 11.8233 7.62852 11.7359 8.05979 11.1968C8.49106 10.6577 8.40366 9.87108 7.86457 9.43982L3.69791 6.10648C3.15882 5.67522 2.37221 5.76262 1.94096 6.3017ZM38.0598 30.3635C38.4912 29.8243 38.4037 29.0377 37.8647 28.6065L33.698 25.2732C33.1588 24.8418 32.3723 24.9293 31.941 25.4683C31.5097 26.0075 31.5972 26.794 32.1362 27.2253L36.3028 30.5587C36.842 30.9898 37.6285 30.9025 38.0598 30.3635ZM2.13617 28.6065C1.59709 29.0377 1.50969 29.8243 1.94096 30.3635C2.37221 30.9025 3.15882 30.9898 3.69791 30.5587L7.86457 27.2253C8.40366 26.794 8.49106 26.0075 8.05979 25.4683C7.62852 24.9293 6.84191 24.8418 6.30284 25.2732L2.13617 28.6065ZM38.0598 6.3017C38.4912 6.84077 38.4037 7.62738 37.8647 8.05865L33.698 11.392C33.1588 11.8233 32.3723 11.7359 31.941 11.1968C31.5097 10.6577 31.5972 9.87108 32.1362 9.43982L36.3028 6.10648C36.842 5.67522 37.6285 5.76262 38.0598 6.3017Z" fill="currentColor "/>
@@ -132,7 +132,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     </p>
   </div>
 
-    <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col  text-contrast bg-contrast input-contrast">
+    <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col  text-contrast bg-contrast input-contrast card-hover">
 
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-constrast">
 <path d="M12.5 15C15.2614 15 17.5 12.7614 17.5 10C17.5 7.23858 15.2614 5 12.5 5C9.73858 5 7.5 7.23858 7.5 10C7.5 12.7614 9.73858 15 12.5 15ZM12.5 12.5C11.1193 12.5 10 11.3807 10 10C10 8.61928 11.1193 7.5 12.5 7.5C13.8807 7.5 15 8.61928 15 10C15 11.3807 13.8807 12.5 12.5 12.5ZM5 19.5833C5 17.9725 6.30583 16.6667 7.91667 16.6667H17.0833C18.6942 16.6667 20 17.9725 20 19.5833V27.5C20 31.6422 16.6421 35 12.5 35C8.35787 35 5 31.6422 5 27.5V19.5833ZM7.91667 19.1667C7.68655 19.1667 7.5 19.3532 7.5 19.5833V27.5C7.5 30.2615 9.73858 32.5 12.5 32.5C15.2614 32.5 17.5 30.2615 17.5 27.5V19.5833C17.5 19.3532 17.3135 19.1667 17.0833 19.1667H7.91667ZM17.5455 14.3573C18.2705 14.7665 19.1078 15 19.9998 15C22.7612 15 24.9998 12.7614 24.9998 10C24.9998 7.23858 22.7612 5 19.9998 5C19.1078 5 18.2705 5.23352 17.5455 5.64273C18.0898 6.27243 18.5182 7.00508 18.7975 7.80753C19.1542 7.6115 19.564 7.5 19.9998 7.5C21.3805 7.5 22.4998 8.61928 22.4998 10C22.4998 11.3807 21.3805 12.5 19.9998 12.5C19.564 12.5 19.1542 12.3885 18.7975 12.1925C18.5182 12.9949 18.0898 13.7276 17.5455 14.3573ZM18.1003 34.7573C18.707 34.9157 19.3435 35 19.9998 35C24.1418 35 27.4998 31.6422 27.4998 27.5V19.5833C27.4998 17.9725 26.194 16.6667 24.5832 16.6667H20.6188C21.1903 17.3587 21.5625 18.2213 21.6478 19.1667H24.5832C24.8132 19.1667 24.9998 19.3532 24.9998 19.5833V27.5C24.9998 30.199 22.8613 32.3985 20.1862 32.4965C19.6222 33.3625 18.9158 34.1272 18.1003 34.7573ZM25.0455 14.3573C25.7705 14.7665 26.6078 15 27.4998 15C30.2612 15 32.4998 12.7614 32.4998 10C32.4998 7.23858 30.2612 5 27.4998 5C26.6078 5 25.7705 5.23352 25.0455 5.64273C25.5898 6.27243 26.0182 7.00508 26.2975 7.80753C26.6542 7.6115 27.064 7.5 27.4998 7.5C28.8805 7.5 29.9998 8.61928 29.9998 10C29.9998 11.3807 28.8805 12.5 27.4998 12.5C27.064 12.5 26.6542 12.3885 26.2975 12.1925C26.0182 12.9949 25.5898 13.7276 25.0455 14.3573ZM25.6003 34.7573C26.207 34.9157 26.8435 35 27.4998 35C31.6418 35 34.9998 31.6422 34.9998 27.5V19.5833C34.9998 17.9725 33.694 16.6667 32.0832 16.6667H28.1188C28.6903 17.3587 29.0625 18.2213 29.1478 19.1667H32.0832C32.3132 19.1667 32.4998 19.3532 32.4998 19.5833V27.5C32.4998 30.199 30.3613 32.3985 27.6862 32.4965C27.1222 33.3625 26.4158 34.1272 25.6003 34.7573Z" fill="currentColor"/>
@@ -148,7 +148,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
     </p>
   </div>
 
- <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col  text-contrast bg-contrast input-contrast">
+ <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col  text-contrast bg-contrast input-contrast card-hover">
    
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-constrast bg-contrast">
 <path d="M33.7497 3.3317C35.3605 3.3317 36.6663 4.63755 36.6663 6.24837V11.3195C36.6663 13.0265 35.7178 14.592 34.2048 15.3822L23.7352 20.8495C26.4618 22.219 28.333 25.0413 28.333 28.3007C28.333 32.903 24.602 36.634 19.9997 36.634C15.3973 36.634 11.6663 32.903 11.6663 28.3007C11.6663 25.0413 13.5375 22.219 16.2643 20.8495L5.79456 15.3822C4.28156 14.592 3.33301 13.0265 3.33301 11.3195V6.24837C3.33301 4.63755 4.63884 3.3317 6.24967 3.3317H33.7497ZM19.9997 22.4673C16.778 22.4673 14.1663 25.079 14.1663 28.3007C14.1663 31.5223 16.778 34.134 19.9997 34.134C23.2213 34.134 25.833 31.5223 25.833 28.3007C25.833 25.079 23.2213 22.4673 19.9997 22.4673ZM25.833 5.83003H14.1663V16.9333L19.8068 19.8798C19.9277 19.943 20.0717 19.943 20.1925 19.8798L25.833 16.9317V5.83003ZM11.6663 5.83003L6.24967 5.8317C6.01956 5.8317 5.83301 6.01825 5.83301 6.24837V11.3195C5.83301 12.0954 6.26416 12.807 6.95189 13.1662L11.6663 15.6267V5.83003ZM33.7497 5.8317L28.333 5.83003V15.6267L33.0475 13.1662C33.7352 12.807 34.1663 12.0954 34.1663 11.3195V6.24837C34.1663 6.01825 33.9798 5.8317 33.7497 5.8317Z" fill="currentColor"/>
@@ -165,7 +165,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 </div>
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 container-x pb-12  text-contrast bg-contrast">
-    <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col lg:w-[525px] lg:justify-self-end  text-contrast bg-contrast input-contrast">
+    <div class="card-hover bg-gray-100 rounded-lg p-8 shadow-md flex flex-col lg:w-[525px] lg:justify-self-end  text-contrast bg-contrast input-contrast">
 
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path d="M20.381 9.4039L21.902 12.4917L25.3085 12.9839C25.6573 13.0343 25.7968 13.463 25.5443 13.709L23.0805 16.1098L23.6622 19.5022C23.7217 19.8495 23.357 20.1143 23.0452 19.95L19.9998 18.346L16.9543 19.95C16.6424 20.1143 16.2776 19.8493 16.3374 19.5018L16.922 16.1098L14.4553 13.7092C14.2026 13.4633 14.342 13.0343 14.691 12.9839L18.0975 12.4917L19.6185 9.4039C19.7743 9.08758 20.2253 9.08758 20.381 9.4039ZM31.6663 15C31.6663 8.55668 26.443 3.33333 19.9997 3.33333C13.5564 3.33333 8.33301 8.55668 8.33301 15C8.33301 18.1783 9.60394 21.0598 11.6653 23.1638L11.6677 35.417L11.6792 35.5912C11.8009 36.4955 12.858 36.9878 13.6374 36.439L19.9982 31.9595L26.3622 36.4392L26.5113 36.53C27.3207 36.951 28.3317 36.3702 28.3317 35.417L28.334 23.1638C30.3953 21.0598 31.6663 18.1783 31.6663 15ZM25.832 25.1065L25.8317 33.0085L20.7173 29.4087L20.5493 29.3088C20.144 29.1095 19.6558 29.1428 19.2782 29.4088L14.1677 33.0078L14.1673 25.1065C15.8831 26.0987 17.875 26.6667 19.9997 26.6667C22.1243 26.6667 24.1162 26.0987 25.832 25.1065ZM10.833 15C10.833 9.93738 14.9371 5.83333 19.9997 5.83333C25.0623 5.83333 29.1663 9.93738 29.1663 15C29.1663 20.0627 25.0623 24.1667 19.9997 24.1667C14.9371 24.1667 10.833 20.0627 10.833 15Z" fill="currentColor"/>
@@ -179,7 +179,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
         Políticas e procedimentos para <br> mitigar os riscos.
   </div>
 
-   <div class="bg-gray-100 rounded-lg p-8 shadow-md flex flex-col lg:w-[525px]  text-contrast bg-contrast input-contrast">
+   <div class="card-hover bg-gray-100 rounded-lg p-8 shadow-md flex flex-col lg:w-[525px]  text-contrast bg-contrast input-contrast">
 
 
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
@@ -212,7 +212,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
       Para fortalecer a transparência e a equidade entre os nossos colaboradores, fornecedores, clientes e parceiros de negócios, tornamos público o nosso Código de Conduta.
     </p>
 
-    <button onclick="downloadFile()" class="button-secundary-contrast flex items-center gap-3 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8">
+    <button onclick="downloadFile()" class="bts-hover button-secundary-contrast flex items-center gap-3 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8">
 
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-constrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
@@ -223,7 +223,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
       
       
       
-      <span>BAIXE NOSSO CÓDIGO DE CONDUTA</span>
+      <span>BAIXAR CÓDIGO DE CONDUTA</span>
     </button>
   </div>
     

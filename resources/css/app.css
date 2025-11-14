@@ -19,6 +19,17 @@
 
 /* Camada utilities: classes customizadas */
 @layer utilities {
+
+
+.card-hover{
+  @apply transform hover:scale-105 hover:shadow-lg duration-300;
+
+}
+
+.bts-hover{
+  @apply transform hover:scale-105 duration-300 hover:shadow-md;
+}
+
 .footer-hover{
   @apply hover:text-purple-800;
 }
