@@ -20,7 +20,6 @@
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x pb-12 bg-contrast text-contrast " >
 
-  <!-- Coluna 1: Formulário -->
   
 <form action="{{ route('trabalhe-conosco') }}" multiple type="arquivos[]" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" enctype="multipart/form-data" method="post" class="text-constrast input-contrast bg-contrast bg-gray-100 rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
   @csrf
@@ -54,7 +53,6 @@
   </div>
 
 
-  <!-- Mensagem -->
   <div class="flex flex-col w-full">
     <label class="textContainer text-sm font-medium mb-1">Mensagem</label>
     <input type="text" class="input-contrast border rounded px-3 py-2 w-full pb-12" placeholder="Escreva aqui sua mensagem" name="mensagem" />
@@ -62,7 +60,6 @@
 
   
 
-  <!-- Upload -->
   <div class="flex flex-col bg-contrast">
     <label class="textContainer text-sm font-medium mb-1">Upload de Arquivo</label>
     <label class="bg-contrast input-contrast border rounded px-3 py-2 w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3">
@@ -85,14 +82,13 @@
     <p class="textContainer text-sm text-gray-500 mt-1 text-contrast">Tamanho máximo permitido do anexo 5MB</p>
   </div>
 
-  <!-- Checkbox + reCAPTCHA -->
   <div class="flex flex-col gap-2">
     <div class="flex gap-2 items-center mb-4">
           <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125" {{ old('privacy') ? 'checked' : '' }}/>
           <p class="textContainer">
             Li e concordo com a
             <span class="textContainer">
-              <a href="#" class="text-orange-600 underline font-bold">Política de Privacidade</a>
+              <a href="#" class="text-[#411F56] underline font-bold">Política de Privacidade</a>
             </span>
             e autorizo o tratamento dos meus dados.
           </p>
@@ -105,9 +101,8 @@
     </div>
   </div>
 
-  <!-- Botão -->
   <div>
-    <button type="submit" class="button-contrast bg-[#F15A29] textContainer hover:bg-orange-500 text-white font-medium py-2 px-4 rounded transition-colors flex justify-center items-center gap-2">
+    <button type="submit" class="button-contrast bg-bgButtonPrimary textContainer uppercase hover:bg-purple-800 text-white font-medium py-3 px-4 rounded transition-colors flex justify-center items-center gap-2">
     
       Enviar
     </button>
@@ -115,7 +110,6 @@
 
 </form>
 
-  <!-- Coluna 2: Contatos -->
   <div class="flex flex-col space-y-4 mt-5 bg-contrast text-contrast">
     <div class="bg-gray-100 rounded-lg p-4 shadow-md  flex items-center gap-3 bg-contrast text-contrast input-contrast">
       <svg id="mail-icon" class="text-contrast contrast-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,51 +140,6 @@
         <p class="textContainer text-contrast">ouvidoria@sistemastecnol.com.br</p>
       </div>  
     </div>
-
-    <div class="bg-gray-100 rounded-lg p-4 shadow-md flex items-center gap-3 bg-contrast text-contrast input-contrast">
-<svg id="mail-icon" class="contrast-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path data-original-fill="#FFF6F3" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" fill="#FFF6F3"/>
-<path data-original-stroke="#FAC8B8" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" stroke="#FAC8B8"/>
-<path data-original-stroke="#F15A29" d="M28.3327 15.8333L20.8402 20.6058C20.5859 20.7535 20.2971 20.8313 20.0031 20.8313C19.7091 20.8313 19.4203 20.7535 19.166 20.6058L11.666 15.8333" stroke="#F15A29" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-<path data-original-stroke="#F15A29" d="M26.666 13.3333H13.3327C12.4122 13.3333 11.666 14.0795 11.666 15V25C11.666 25.9205 12.4122 26.6667 13.3327 26.6667H26.666C27.5865 26.6667 28.3327 25.9205 28.3327 25V15C28.3327 14.0795 27.5865 13.3333 26.666 13.3333Z" stroke="#F15A29" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-      <div class="text-sm text-gray-700 line-clamp-3">
-        <p class="textContainer text-gray-500 text-contrast">Encarregado de proteção de dados</p>
-        <p class="textContainer text-contrast">Saron Correa</p>
-        <p class="textContainer text-contrast">dpo@sistematecnol.com.br</p>
-      </div>
-    </div>
-      
-      @error('arquivos')
-    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
-  @enderror
-    @error('nome')
-    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
-  @enderror
-    @error('email')
-    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
-  @enderror
-    @error('telefone')
-    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
-  @enderror
-    @error('atuacao')
-    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
-  @enderror
-    @error('mensagem')
-    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
-  @enderror
-    @error('privacy')
-    <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
-  @enderror
- 
- 
-
- 
- 
- 
- 
- 
 
  
 

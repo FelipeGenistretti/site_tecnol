@@ -42,7 +42,7 @@
         <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125 textContainer" {{ old('privacy') ? 'checked' : '' }}/>
         <p class="textContainer">
             Li e concordo com a
-            <a href="#" class="text-orange-600 underline font-bold text-contrast">Política de Privacidade</a>
+            <a href="#" class="text-[#411F56] underline font-bold text-contrast">Política de Privacidade</a>
         </p>
     </div>
     @error('privacy')
@@ -54,7 +54,7 @@
     type="submit"
     class=" button-contrast textContainer max-sm:w-full uppercase p-3 text-white bg-bgButtonPrimary hover:bg-purple-800 transition duration-300 rounded-md flex items-center justify-center gap-2"
 >
-    <span id="btnUploadText ">Enviar arquivo</span>
+    <span id="btnUploadText ">Enviar</span>
 
     <!-- Spinner -->
     <span
