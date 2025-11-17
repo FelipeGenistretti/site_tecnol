@@ -72,7 +72,7 @@
 
         
         <div class = " mt-6  lg:mt-12">
-            <img class="rounded" src="{{ asset('/quem-somos-1.png') }}" alt="">
+            <img class="rounded" src="/quemSomosDialogo.png" alt="">
         </div>
     </div>
 
@@ -81,7 +81,7 @@
 
         
         <div class = "">
-            <img class="rounded mt-[40px]" src="{{ asset('/quem-somos-2.png') }}" alt="" >
+            <img class="rounded mt-[40px]" src="/quemSomosHorizonte.png" alt="" >
 
         </div>
 
