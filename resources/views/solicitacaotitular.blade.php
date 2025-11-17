@@ -43,7 +43,7 @@
   <h1 class=" text-textPrimary container-x  text-contrast bg-contrast">Solicitação do titular</h1>
 </div>
 
-<div class=" text-contrast bg-contrast h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50 transition-all duration-300"
+<div class=" text-contrast bg-contrast h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center right-10 mt-4 fixed z-50 transition-all duration-300 left-2"
      id="modalSuccess">
   <div class="flex items-center justify-center gap-3  text-contrast bg-contrast">
       <img src="/iconCheckModal.png" alt="">
@@ -54,7 +54,7 @@
   </div>
 </div>
 
-<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center right-10 mt-4 justify-center fixed z-50 transition-all duration-300"
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center right-10 mt-4 justify-center fixed z-50 transition-all duration-300 left-2"
      id="modalCamposObrigatorios">
   <div class="flex items-center justify-center gap-3  text-contrast bg-contrast">
       <img src="/alertModalCamposObrigatorios.png" alt="">

@@ -9,7 +9,11 @@
 </head>
 <body>
     
+   
+<div class="fixed top-0 left-0 w-full z-50">
     <x-header/>
+</div>
+
 
     <main class=" font-ibm text-contrast bg-contrast">
         @yield('content')

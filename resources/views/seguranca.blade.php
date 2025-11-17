@@ -44,15 +44,19 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 container-x py-10  text-contrast bg-contrast text-[#333333]">
         <div class="p-4">
             <h1 class="text-[42px] lg:text-start text-center  text-contrast bg-contrast">Gestão de segurança da <br> informação e serviços</h1>
-            <p>A TECSHARE, reforçando seu compromisso com a Segurança da Informação, assegura que seus processos de governança estão em conformidade com os mais altos padrões de segurança.</p>
+            <p class="textContainer">A TECSHARE, reforçando seu compromisso com a Segurança da Informação, assegura que seus processos de governança estão em conformidade com os mais altos padrões de segurança.</p>
             <br>
-            <p> Assim sendo, a TECSHARE definiu sua Política de Gestão Integrada com o compromisso de: Oferecer um serviço confiável, com garantia de qualidade e segurança da informação, para a entrega e operação dos serviços contratados, com objetivo manter, por meios dos requisitos técnicos legais, a segurança e o sigilo dos dados da empresa, dos clientes, parceiros e fornecedores, a confidencialidade, integridade e disponibilidade durante toda a prestação do serviço, por meio de monitoramento constante.</p>
+            <p class="text-Container"> Assim sendo, a TECSHARE definiu sua Política de Gestão Integrada com o compromisso de: Oferecer um serviço confiável, com garantia de qualidade e segurança da informação, para a entrega e operação dos serviços contratados, com objetivo manter, por meios dos requisitos técnicos legais, a segurança e o sigilo dos dados da empresa, dos clientes, parceiros e fornecedores, a confidencialidade, integridade e disponibilidade durante toda a prestação do serviço, por meio de monitoramento constante.</p>
             <br>
+<<<<<<< HEAD
             <p> A Política de Segurança da Informação e Serviços da TECSHARE, assegura a proteção dos seus ativos, pessoas, dados, informações, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio, de acordo com as estratégias da empresa, além de assegurar a privacidade e proteção de dados pessoais das pessoas com quem se relaciona, efetuando o tratamento de dados em conformidade com a legislação vigente. Como em cumprimento a requisitos contratuais aplicáveis, por meio de monitoramento constante.</p>
+=======
+            <p class="text-Container"> A Política de Segurança da Informação e Serviços da TECSHARE, assegura a proteção dos seus ativos, pessoas, dados, informações, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio, de acordo com as estratégias da empresa, além de assegurar a privacidade e proteção de dados pessoais das pessoas com quem se relaciona, efetuando o tratamento de dados em conformidade com a legislação vigente. Como em cumprimento a requisitos contratuais aplicáveis, por meio de monitoramento constante</p>
+>>>>>>> PDEV-17/11/2025
             <br>
-            <p> Nós, da TECSHARE, sempre priorizamos a confidencialidade, a integridade e disponibilidade dos dados de nossos clientes e parceiros comerciais através dos melhores requisitos técnicos e legais em todo o nosso atendimento.</p>
+            <p class="text-Container"> Nós, da TECSHARE, sempre priorizamos a confidencialidade, a integridade e disponibilidade dos dados de nossos clientes e parceiros comerciais através dos melhores requisitos técnicos e legais em todo o nosso atendimento.</p>
             <br>
-            <p>Assim, reforçamos nosso compromisso integral com a segurança da informação interna e de todos os nossos clientes.</p>
+            <p class="text-Container">Assim, reforçamos nosso compromisso integral com a segurança da informação interna e de todos os nossos clientes.</p>
         </div>
 
         <div>

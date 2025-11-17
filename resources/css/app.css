@@ -20,6 +20,10 @@
 /* Camada utilities: classes customizadas */
 @layer utilities {
 
+.menu-inclusivo{
+  @apply absolute fixed flex !important;
+}
+
 
 .card-hover{
   @apply transform hover:scale-105 hover:shadow-lg duration-300;
