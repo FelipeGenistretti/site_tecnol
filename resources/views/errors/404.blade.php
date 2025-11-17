@@ -5,7 +5,7 @@
 
 @section('content')
 
-<div class="grid grid-cols-1 lg:grid-cols-2    pb-12 container-x bg-contrast text-constrast items-center justify-center">
+<div class="grid grid-cols-1 lg:grid-cols-2    pb-12 container-x bg-contrast text-constrast items-center justify-center pt-[90px]">
 
     <div>
         <h1 class="text-[#2A687F] text-[50px] py-5 text-center lg:text-start bg-costrast text-contrast"> <strong>Página Não Encontrada</strong></h1>

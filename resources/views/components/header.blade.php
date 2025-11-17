@@ -1,10 +1,22 @@
-<div class="">
-  <header id="main-header" class="w-full container-x fixed top-0 left-0 bg-contrast bg-white shadow z-50 h-[128px] flex items-center transition-all duration-300">
-    <div class="flex justify-between items-center w-full h-full mx-auto">
+<div>
 
-      <div class="flex items-center w-[167px] h-[29px] ">
-        <a href="{{ route('home') }}"><img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain" id="logoHeader"></a>
-        <a href="{{ route('home') }}"><img src="/logoContrast.png" alt="Logo Contrast TecShare" class="w-full h-full object-contain hidden" id="logoContrastHeader"></a>
+
+ <div>
+    
+
+  <header id="main-header" class="h-[120px] w-full  lg:container-x  top-0  left-0 bg-contrast bg-white shadow z-50   py-4 lg:py-[30px] items-center  transition-all duration-300">
+    
+  
+
+   
+    <div class="flex justify-between items-center w-full h-full mx-auto">
+      
+
+      <div class="max-sm:hidden lg:flex-col items-center  lg:w-[167px] lg:h-[29px] ">
+        
+    
+        <a href="{{ route('home') }}"><img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain md:hidden sm:hidden lg:flex" id="logoHeader"></a>
+        <a href="{{ route('home') }}"><img src="/logoContrast.png" alt="Logo Contrast TecShare" class="w-full h-full object-contain hidden md:hidden" id="logoContrastHeader"></a>
       </div>
 
 
@@ -21,13 +33,18 @@
           </li>
 
             <li class="relative group flex items-center h-full">
-            <a href="{{ route('quem-somos') }}" 
+            <a href="#" 
                class="text-contrast nav-link flex items-center gap-1 transition-colors {{ Route::is('quem-somos') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
               quem somos
             </a>
+         
             <div class="absolute left-0 top-[60%] w-48 bg-white bg-contrast border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
+              <a href="{{ route('quem-somos') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">quem-somos</a>
               <a href="{{ route('trabalhe-conosco') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Trabalhe conosco</a>
             </div>
+         
+            
+         
           </li>
 
           <li class="relative group flex items-center h-full">
@@ -39,7 +56,7 @@
           </li>
 
           <li class="relative group flex items-center h-full">
-            <a href="{{ route('compliance') }}" 
+            <a href="#" 
                class="text-contrast nav-link flex items-center gap-1 {{ Route::is('compliance') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
               Compliance
             </a>
@@ -50,7 +67,7 @@
           </li>
 
           <li class="relative group flex items-center h-full">
-            <a href="{{ route('privacidade') }}" 
+            <a href="#" 
                class="text-contrast nav-link flex items-center gap-1 {{ Route::is('privacidade') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
               Privacidade 
             </a>
@@ -61,7 +78,7 @@
           </li>
 
           <li class="relative group flex items-center h-full">
-            <a href="{{ route('seguranca') }}" 
+            <a href="#" 
                class="text-contrast nav-link flex items-center gap-1 {{ Route::is('seguranca') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
               Segurança
             </a>
@@ -101,9 +118,11 @@
 
         </div>
 
+        
         <x-font-control/>
 
-        <x-contraste-control/>
+        <x-contraste-control />
+    
 
         <button type="button" class="button-contrast py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-purple-800 transition-colors duration-300 ">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
@@ -114,26 +133,107 @@
         </button>
       </nav>
 
+
+
       <!-- BOTÃO HAMBURGUER MOBILE -->
-      <div class="lg:hidden flex items-center">
-        <button id="menu-btn" class="nav-link text-black focus:outline-none">
+      
+
+
+      <div class=" grid grid-cols-1 items-center justify-between  w-full lg:hidden justify-center ">
+       
+        <div id = "menu-acess" class="w-full bg-contrast text-contrast  h-[48px] gap-4 bg-[#F2F2F2]  items-center justify-start top-0 item-center flex top-0 container-x ">
+      <h1>Acessibilidade :</h1>
+      
+      
+          <button  onclick="AtivarContraste()">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.1211 28.2422C17.121 28.7944 16.6733 29.2422 16.1211 29.2422C15.5688 29.2422 15.1212 28.7944 15.1211 28.2422V24.5488C15.4394 24.5851 15.7628 24.6055 16.0908 24.6055C16.4397 24.6055 16.7833 24.5819 17.1211 24.541V28.2422ZM9.44043 21.3867C9.856 21.9109 10.3322 22.3838 10.8584 22.7969L8.1709 25.4854C7.78035 25.8756 7.14727 25.8758 6.75684 25.4854C6.3664 25.0949 6.36657 24.4618 6.75684 24.0713L9.44043 21.3867ZM25.4854 24.0713C25.8756 24.4618 25.8758 25.0949 25.4854 25.4854C25.0949 25.8758 24.4618 25.8756 24.0713 25.4854L21.3564 22.7705C21.8806 22.3549 22.3536 21.8789 22.7666 21.3525L25.4854 24.0713ZM16.4961 8.8584C16.6198 8.86468 16.7432 8.87433 16.8652 8.88672C17.2319 8.92397 17.5909 8.98844 17.9395 9.07812L18.2852 9.17578C21.2452 10.0968 23.3953 12.8581 23.3955 16.1211L23.3857 16.4961C23.3671 16.8628 23.32 17.2228 23.249 17.5732C23.2415 17.6105 23.2317 17.6475 23.2236 17.6846C23.1808 17.8802 23.1315 18.0733 23.0732 18.2627C23.0616 18.3006 23.0484 18.3383 23.0361 18.376C23.0113 18.4522 22.9862 18.5284 22.959 18.6035C22.9553 18.6138 22.952 18.6245 22.9482 18.6348C22.9126 18.7314 22.8745 18.8272 22.835 18.9219C22.8165 18.9661 22.7967 19.0099 22.7773 19.0537C22.7503 19.1149 22.723 19.176 22.6943 19.2363C22.6696 19.2885 22.6432 19.3401 22.6172 19.3916C22.5916 19.4423 22.5658 19.493 22.5391 19.543C22.5169 19.5844 22.4946 19.626 22.4717 19.667C22.4373 19.7284 22.4023 19.7894 22.3662 19.8496C22.3415 19.891 22.3156 19.9318 22.29 19.9727C22.2533 20.0314 22.2161 20.0899 22.1777 20.1475C22.1506 20.1882 22.1226 20.2284 22.0947 20.2686C22.059 20.3199 22.0223 20.3705 21.9854 20.4209C21.9555 20.4616 21.9252 20.502 21.8945 20.542C21.8522 20.5972 21.8095 20.6521 21.7656 20.7061C21.7403 20.7373 21.7144 20.7681 21.6885 20.7988C21.6396 20.8569 21.5897 20.9142 21.5391 20.9707C21.5109 21.0021 21.4828 21.0335 21.4541 21.0645C21.4098 21.1122 21.3649 21.1595 21.3193 21.2061C21.282 21.2442 21.2442 21.282 21.2061 21.3193C21.1563 21.368 21.1058 21.4157 21.0547 21.4629C21.0271 21.4884 20.9997 21.514 20.9717 21.5391C20.9144 21.5903 20.8557 21.64 20.7969 21.6895C20.7635 21.7176 20.7302 21.7459 20.6963 21.7734C20.6502 21.8108 20.6036 21.8476 20.5566 21.8838C20.5075 21.9216 20.4583 21.9595 20.4082 21.9961C20.3596 22.0316 20.3102 22.0662 20.2607 22.1006C20.2242 22.1259 20.1874 22.1511 20.1504 22.1758C20.0883 22.2172 20.0253 22.2574 19.9619 22.2969C19.9218 22.3219 19.8815 22.3468 19.8408 22.3711C19.7938 22.3991 19.746 22.4261 19.6982 22.4531C19.6424 22.4847 19.586 22.5157 19.5293 22.5459C19.4891 22.5673 19.4488 22.5888 19.4082 22.6094C19.3452 22.6413 19.2818 22.673 19.2178 22.7031C19.1724 22.7245 19.126 22.7442 19.0801 22.7646C19.025 22.7892 18.9699 22.8146 18.9141 22.8379C18.8512 22.8641 18.7874 22.8886 18.7236 22.9131C18.6786 22.9303 18.6333 22.9475 18.5879 22.9639C18.507 22.993 18.425 23.0205 18.3428 23.0469C18.3196 23.0543 18.2967 23.0631 18.2734 23.0703C18.1957 23.0944 18.1169 23.1162 18.0381 23.1377C17.9953 23.1494 17.9523 23.1619 17.9092 23.1729C17.8553 23.1865 17.8004 23.1976 17.7461 23.21C17.6846 23.224 17.6227 23.2385 17.5605 23.251C17.4614 23.2709 17.3613 23.2889 17.2607 23.3047C17.2494 23.3065 17.2379 23.3088 17.2266 23.3105C17.1452 23.323 17.0627 23.3321 16.9805 23.3418C16.9367 23.3469 16.8927 23.354 16.8486 23.3584C16.6098 23.3821 16.3671 23.3945 16.1221 23.3945L15.748 23.3848C11.9055 23.19 8.84984 20.012 8.84961 16.1211C8.84988 12.1048 12.1057 8.84878 16.1221 8.84863C16.2474 8.84864 16.3724 8.85213 16.4961 8.8584ZM16.1221 10.8486C13.2103 10.8488 10.8499 13.2094 10.8496 16.1211C10.8498 18.9418 13.0649 21.2463 15.8506 21.3877L16.1221 21.3945V10.8486ZM7.66699 15.1211C7.62846 15.4492 7.60645 15.7827 7.60645 16.1211C7.60645 16.4595 7.62846 16.793 7.66699 17.1211H4C3.44772 17.1211 3 16.6734 3 16.1211C3 15.5688 3.44772 15.1211 4 15.1211H7.66699ZM28.2422 15.1211C28.7944 15.1212 29.2422 15.5688 29.2422 16.1211C29.2422 16.6733 28.7944 17.121 28.2422 17.1211H24.5146C24.5532 16.793 24.5752 16.4595 24.5752 16.1211C24.5752 15.7827 24.5532 15.4492 24.5146 15.1211H28.2422ZM23.8984 6.92871C24.289 6.5382 24.923 6.53819 25.3135 6.92871C25.704 7.31923 25.704 7.95322 25.3135 8.34375L22.7676 10.8887C22.3543 10.362 21.88 9.88651 21.3555 9.4707L23.8984 6.92871ZM6.92871 6.92871C7.31923 6.53819 7.95322 6.5382 8.34375 6.92871L10.8584 9.44336C10.3318 9.85657 9.85625 10.331 9.44043 10.8555L6.92871 8.34375C6.5382 7.95322 6.53819 7.31923 6.92871 6.92871ZM16.1211 3C16.6734 3 17.1211 3.44772 17.1211 4V7.7002C16.7833 7.6593 16.4396 7.63672 16.0908 7.63672C15.7628 7.63672 15.4394 7.65616 15.1211 7.69238V4C15.1211 3.44772 15.5688 3 16.1211 3Z" fill="#411F56"/>
+            </svg>
+
+
+
+
+          </button>
+
+      
+      
+      <button id="aPlusMobile" onclick="ZoomMais()">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="30" height="30" rx="15" stroke="#E6E6E6" stroke-width="2"/>
+              <path d="M21.7143 15.1526V12.8118H19.5303V12.0502H21.7143V9.70935H22.5655V12.0502H24.7495V12.8118H22.5655V15.1526H21.7143Z" fill="#411F56"/>
+              <path d="M16.715 22.5147L15.4083 18.6694H10.1443L8.83764 22.5147H7.25098L11.8056 9.48535H13.803L18.3576 22.5147H16.715ZM12.8136 10.9414H12.7203L10.5176 17.288H15.0163L12.8136 10.9414Z" fill="#411F56"/>
+              </svg>
+
+         </button>
+
+
+
+
+         <button id="aMinusMobile" onclick="ZoomMenos()">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="30" height="30" rx="15" stroke="#E6E6E6" stroke-width="2"/>
+<path d="M19.5156 16.792V15.416H23.6916V16.792H19.5156Z" fill="#411F56"/>
+<path d="M16.4206 21.584L15.3006 18.288H10.7886L9.66859 21.584H8.30859L12.2126 10.416H13.9246L17.8286 21.584H16.4206ZM13.0766 11.664H12.9966L11.1086 17.104H14.9646L13.0766 11.664Z" fill="#411F56"/>
+</svg>
+
+
+
+
+
+         </button>
+      
+      
+     
+      
+    </div>
+
+        <div class="flex justify-between items-center w-full  py-[16px] container-x ">
+              <div>
+          <a href="{{ route('home') }}"><img src="/logo.png"   alt="Logo TecShare" class=" w-[164px] h-[32px] h-full object-contain" id="logoHeader"></a>
+        <a href="{{ route('home') }}"><img src="/logoContrast.png" alt="Logo Contrast TecShare" class="w-full h-full object-contain hidden" id="logoContrastHeader"></a>
+      
+
+              </div>
+
+              <div class="container-x">
+                  <button id="menu-btn" class="nav-link text-black focus:outline-none ">
+          
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
+      
+      </div>
+
+              </div>
+        </div>
+
+
+
+    
+
+
+
+       
       </div>
     </div>
   </header>
-
+</div>
   <!-- MENU MOBILE -->
+
+
+
+
 <div id="mobile-menu" class="hidden lg:hidden bg-white w-full fixed top-0 left-0 shadow-lg z-50 text-contrast bg-contrast">
+  
+  
+
+      
   <div class="pt-4 flex justify-start">
     <button id="back" type="button" class="flex items-center gap-2 px-4 py-3 rounded-md">
        <svg class="text-contrast" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.49483 11.9992L17.6689 3.74245L16.331 2.25586L5.50513 11.9992L16.331 21.7424L17.6689 20.2559L8.49483 11.9992Z" fill="currentColor"/>
 </svg>
- 
-
     </button>
   </div>
   <div class="relative p-2">
@@ -244,6 +344,8 @@
       </nav>
   </div>
 </div>
+</div>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -389,13 +491,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const backBtn = document.getElementById('back');
     const menu = document.getElementById('mobile-menu');
     const header = document.getElementById('main-header');
+    const menuAcess = document.getElementById('menu-acess');
 
     function updateHeaderState() {
       if (!header) return;
       if (window.scrollY > 300) {
+
+        menuAcess.classList.add('menu-acess-fixed');
         header.classList.add('header-fixed');
+    //    header.classList.add('mt-[10px]')
       } else {
+         
         header.classList.remove('header-fixed');
+        menuAcess.classList.remove('menu-acess-fixed');
+     //   header.classList.remove('mt-[10px]')
       }
     }
 
@@ -424,6 +533,11 @@ document.addEventListener("DOMContentLoaded", () => {
     updateHeaderState();
   });
 
+
+  function ZoomMenos(){
+    
+  }
+
   function setupSearch(buttonId, barId) {
     const button = document.getElementById(buttonId);
     const bar = document.getElementById(barId);
@@ -446,21 +560,99 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSearch('searchButtonMobile', 'searchBarMobile');
 </script>
 
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const textContainers = document.querySelectorAll('.textContainer');
+  const aPlus = document.getElementById('aPlusMobile');
+  const aMinus = document.getElementById('aMinusMobile');
+  const minFontSize = 12;
+  const maxFontSize = 23;
+
+  // Carrega o tamanho previamente salvo
+  const savedFontSize = localStorage.getItem('fontSize');
+  if (savedFontSize) {
+    textContainers.forEach(el => {
+      el.style.fontSize = savedFontSize + 'px';
+    });
+  }
+
+  function updateFontSize(change) {
+    textContainers.forEach(el => {
+      const computedSize = parseFloat(window.getComputedStyle(el).fontSize);
+      const newSize = Math.max(minFontSize, Math.min(maxFontSize, computedSize + change));
+      
+      el.style.fontSize = newSize + 'px';
+      localStorage.setItem('fontSize', newSize);
+    });
+  }
+
+  aPlus.addEventListener('click', () => updateFontSize(2));
+  aMinus.addEventListener('click', () => updateFontSize(-2));
+
+  // Expondo funções globalmente:
+  window.updateFontSize = updateFontSize;
+});
+
+function ZoomMais() {
+ // console.log("entrou")
+  let size = parseFloat(localStorage.getItem('fontSize')) || 16;
+  const max = 23;
+
+  const newSize = Math.min(size + 2, max);
+
+  localStorage.setItem('fontSize', newSize);
+}
+
+
+function ZoomMenos() {
+ // console.log("entrou")
+  let size = parseFloat(localStorage.getItem('fontSize')) || 16;
+  const max = 23;
+
+  const newSize = Math.min(size - 2, max);
+
+  localStorage.setItem('fontSize', newSize);
+}
+
+</script>
+
+
+
+
+
 <style>
   .rotate-180 { transform: rotate(180deg); transition: transform 0.2s ease; }
 
-  .header-fixed {
-    height: 80px !important;           
+    .menu-acess-fixed{
+      height: 50px !important;
+     position:relative;
+    
+    }
+
+
+    .header-fixed {
+    position: fixed;
+    top: 0;
+    height: 100px !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-  }
+}
+ 
+@media (min-width: 768px) {
+    .header-fixed {
+        @apply mt-[10px]; /* ⬅️ DESFAZ o que você não quer no desktop */
+    }
+}
+
 
   #main-header.header-fixed > div {
     align-items: center; 
-    height: 80px;
+    height: 90px;
   }
 
   #main-header.header-fixed img[alt="Logo TecShare"] {
@@ -477,5 +669,7 @@ document.addEventListener("DOMContentLoaded", () => {
     padding: 0.75rem !important;
     transition: all 0.2s ease;
   }
+
+  
 
 </style>

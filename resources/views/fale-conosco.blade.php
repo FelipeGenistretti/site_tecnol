@@ -15,7 +15,7 @@
     </p>
   </div>
 
-  <div class="h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center fixed inset-20 z-[9999]" id="modalSuccess">
+  <div class="h-[72px] w-[371px] hidden bg-[#2ABB7F] flex items-center justify-center fixed inset-20 z-[9999] absolute top-[300px]" id="modalSuccess">
     <div class="flex items-center justify-center gap-3">
         <img src="/iconCheckModal.png" alt="">
         <p class="text-white text-contrast">Cadastro realizado com sucesso!</p>
@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center" id="modalCamposObrigatorios">
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center justify-center z-[9999] absolute top-[300px]" id="modalCamposObrigatorios">
     <div class="flex items-center justify-center gap-3">
         <img src="/alertModalCamposObrigatorios.png" alt="">
         <p class="text-black">Preencha os campos obrigatórios</p>

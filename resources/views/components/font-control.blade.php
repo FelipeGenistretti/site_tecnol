@@ -20,13 +20,13 @@
 
 @push('scripts')
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const textContainers = document.querySelectorAll('.textContainer');
+ const textContainers = document.querySelectorAll('.textContainer');
   const aPlus = document.getElementById('aPlus');
   const aMinus = document.getElementById('aMinus');
   const minFontSize = 12;
   const maxFontSize = 23;
 
+  // Carrega o tamanho previamente salvo
   const savedFontSize = localStorage.getItem('fontSize');
   if (savedFontSize) {
     textContainers.forEach(el => {
@@ -38,14 +38,22 @@ document.addEventListener("DOMContentLoaded", () => {
     textContainers.forEach(el => {
       const computedSize = parseFloat(window.getComputedStyle(el).fontSize);
       const newSize = Math.max(minFontSize, Math.min(maxFontSize, computedSize + change));
+     
       el.style.fontSize = newSize + 'px';
       localStorage.setItem('fontSize', newSize);
+
     });
   }
 
   aPlus.addEventListener('click', () => updateFontSize(2));
   aMinus.addEventListener('click', () => updateFontSize(-2));
-});
+
+  // Expondo funções globalmente:
+  window.updateFontSize = updateFontSize;
+
 
 </script>
+
+
+
 @endpush
