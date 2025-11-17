@@ -14,7 +14,7 @@
 
         if(localStorage.getItem("contrast") === "enabled") {
             document.body.classList.add("contrast");
-        }
+        }  
 
         buttonContrast.addEventListener("click", () => {
             document.body.classList.toggle("contrast");

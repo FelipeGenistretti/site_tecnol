@@ -66,7 +66,15 @@
   }
 
   body.contrast .button-secundary-contrast {
-    @apply border border-[#FFFF00] text-[#FFFF00]
+    @apply border border-[#FFFF00] text-[#FFFF00] 
+  }
+
+  body.contrast .icon-bg {
+    fill: #0D0D0D; 
+}
+
+  body.contrast .button-a-contrast {
+    @apply bg-[#0D0D0D] text-[#FFFF00]
   }
 
   body.contrast .input-contrast {

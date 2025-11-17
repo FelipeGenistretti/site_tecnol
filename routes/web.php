@@ -72,9 +72,9 @@ Route::get("/qualidade", function(){
 })->name("qualidade");
 
 
-Route::get("/solicitacao-titular", function(){
-    return view("solicitacaotitular");
-})->name("solicitacao-titular");
+// Route::get("/solicitacao-titular", function(){
+//     return view("solicitacaotitular");
+// })->name("solicitacao-titular");
 
 Route::get("/404", function(){
     return view("errors/404");
