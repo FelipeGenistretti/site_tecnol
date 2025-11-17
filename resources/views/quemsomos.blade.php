@@ -60,7 +60,7 @@
           
           <p class="textContainer">Identificamos no mercado a oportunidade de evoluir a forma como empresas se relacionam com dados, processos e clientes, criando experiências mais ágeis, seguras e integradas.</p>
              
-          <p class="textContainer">Com foco em automação, usabilidade e análise de dados, a TECSHARE transforma o ecossistema de soluções tecnológicas e integrações digitais, reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação, por meio de plataformas como o Safe Data Analytics e TecnoHub</p>
+          <p class="textContainer">Com foco em automação, usabilidade e análise de dados, a TECSHARE transforma o ecossistema de soluções tecnológicas e integrações digitais, reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação, por meio de plataformas como o Safe Data Analytics e TecnoHub.</p>
           
           <p class="textContainer">Unimos inovação tecnológica, experiência do usuário e inteligência de dados para desenvolver produtos que simplificam o uso, automatizam a validação de informações e potencializam resultados de negócio.</p>
         
@@ -87,7 +87,7 @@
 
           <div class= "mt-[40px] space-y-3 ">
             <h1 class= "text-4xl text-center lg:text-left text-contrast">Nossa missão e visão</h1>
-            <p class="text-contrast textContainer" >temos como missão automatizar sistematicamente o acesso a informações de dados de forma rápida, fácil e segura. Além da busca contínua em ser referência em soluções automatizadas para o mercado financeiro.</p>
+            <p class="text-contrast textContainer" >Temos como missão automatizar sistematicamente o acesso a informações de dados de forma rápida, fácil e segura. Além da busca contínua em ser referência em soluções automatizadas para o mercado financeiro.</p>
                 
         </div>
         
@@ -196,7 +196,7 @@
 
         <div class="bg-white rounded border  border-[#F2F2F2] p-4 text-contrast bg-contrast input-contrast">
             
-            <p class="textContainer  text-[16px text-contrast bg-contrast]">•A Política de Segurança da Informação e Serviços da <strong>TECSHARE</strong>, assegura a proteção dos seus ativos, pessoas, informação, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio de acordo com as estratégias da empresa, legislação vigente e requisitos contratuais, com acompanhamento constante</p>
+            <p class="textContainer  text-[16px text-contrast bg-contrast]">•A Política de Segurança da Informação e Serviços da <strong>TECSHARE</strong>, assegura a proteção dos seus ativos, pessoas, informação, sistemas, aplicação e mapeamento de seus principais processos críticos do negócio de acordo com as estratégias da empresa, legislação vigente e requisitos contratuais, com acompanhamento constante.</p>
         </div>
     </div>
 

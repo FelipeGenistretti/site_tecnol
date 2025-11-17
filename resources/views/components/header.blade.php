@@ -45,32 +45,14 @@
             </a>
             <div class="absolute left-0 top-[60%] w-48 bg-white border bg-contrast rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
               <a href="{{ route('compliance') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Compliance</a>
+              <a href="{{ route('privacidade') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Privacidade</a>
+              <a href="{{ route('seguranca') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Segurança</a>
               <a href="{{ route('canal-denuncia') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Canal de denúncia</a>
             </div>
           </li>
 
-          <li class="relative group flex items-center h-full">
-            <a href="{{ route('privacidade') }}" 
-               class="text-contrast nav-link flex items-center gap-1 {{ Route::is('privacidade') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
-              Privacidade 
-            </a>
-            <div class="absolute left-0 top-[60%] w-48 bg-white border bg-contrast rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
-              <a href="{{ route('privacidade') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Privacidade</a>
-              <a href="{{ route('solicitacao-titular') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">SOLICITAÇÃO DO TITULAR</a>
-            </div>
-          </li>
 
-          <li class="relative group flex items-center h-full">
-            <a href="{{ route('seguranca') }}" 
-               class="text-contrast nav-link flex items-center gap-1 {{ Route::is('seguranca') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
-              Segurança
-            </a>
-            <div class="absolute left-0 top-[60%] w-48 bg-white bg-contrast border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
-              <a href="{{ route('seguranca') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Gestão de segurança</a>
-              <a href="{{ route('privacidade') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Privacidade</a>
-            </div>
-          </li>
-
+          
           <li class="flex items-center h-full">
             <a href="{{ route('fale-conosco') }}" id="scrollToFaleConosco"
                class="nav-link text-textSecondary hover:text-textPrimary hover:font-bold text-contrast">

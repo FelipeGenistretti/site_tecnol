@@ -46,11 +46,11 @@
   <div class="grid grid-cols-1 lg:grid-cols-2  container-x my-8 lg:my-12  text-contrast bg-contrast items-center">
         <div class= "p-4  lg:mt-12">
             <h1 class= "text-[40px]  text-textPrimary text-contrast">Transparência e conformidade</h1>
-            <p class="text-lg  text-textPrimary textContainer  text-contrast bg-contrast">Na <strong>Tecshare</strong>, a transparência, a conformidade com a legislação e o compromisso com princípios éticos e melhores experiências de mercado são práticas diárias e fundamentais para o futuro sustentável dos negócios. O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer desvios que possam comprometer nosso código de conduta e/ou as normas em vigor.<br> <br>
+            <p class="text-lg  text-textPrimary textContainer  text-contrast bg-contrast">Na <strong>Tecshare</strong>, a transparência, a conformidade com a legislação e o compromisso com princípios éticos e melhores experiências de mercado são práticas diárias e fundamentais para o futuro sustentável dos negócios.<br> <br>
 
 O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer desvios que possam comprometer nosso código de conduta e/ou as normas em vigor.</p>
        
-          <button onclick="downloadFile()" class="button-secundary-contrast flex gap-3 items-center justify-center lg:justify-start p-2 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8 w-full lg:w-[350px]">
+          <button onclick="downloadFile()" class="bts-hover button-secundary-contrast flex gap-3 items-center justify-center lg:justify-start p-2 px-6 rounded border border-[#B3B3B3] cursor-pointer mt-8 w-full lg:w-[350px]">
 
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
@@ -58,7 +58,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 
   
-  <span class="p-2 whitespace-nowrap bts-hover">Baixe nossa política de compliance</span>
+  <span class="p-2 whitespace-nowrap ">Baixe nossa política de compliance</span>
 </button>
 </div>
 
@@ -90,14 +90,14 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
             <p>Para reforçar esse compromisso, o nosso programa de Compliance inclui uma Política do Sistema de Antissuborno e ações contínuas para promover um ambiente ético e transparente, consolidando a confiança com nossos stakeholders e fortalecendo a governança corporativa.</p>
         
-           <button onclick="downloadFile()" class="button-secundary-contrast flex items-center gap-3 justify-center lg:justify-start p-3 px-6 rounded border border-[#808080] cursor-pointer mt-8 w-full lg:w-[500px]">
+           <button onclick="downloadFile()" class="bts-hover button-secundary-contrast flex items-center gap-3 justify-center lg:justify-start p-3 px-6 rounded border border-[#808080] cursor-pointer mt-8 w-full lg:w-[500px]">
       
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
 </svg>
 
 
-      <span class="text-[15px] whitespace-nowrap bts-hover"> BAIXAR POLÍTICA DO SISTEMA DE ANTISSUBORNO</span>
+      <span class="text-[15px] whitespace-nowrap "> BAIXAR POLÍTICA DO SISTEMA DE ANTISSUBORNO</span>
     </button>
 
         </div>
@@ -156,7 +156,7 @@ O nosso foco é a prevenção e o combate a fraudes, corrupções e quaisquer de
 
 
 
-    <h2 class="text-xl font-semibold mb-3 text-gray-800  text-contrast bg-contrast">Análise de perfil e risco.</h2>
+    <h2 class="text-xl font-semibold mb-3 text-gray-800  text-contrast bg-contrast">Análise de perfil e riscos.</h2>
     <p class="text-gray-700 text-base flex-1 textContainer  text-contrast bg-contrast">
         Soluções pensadas no cliente.
     </p>

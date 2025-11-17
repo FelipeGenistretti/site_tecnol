@@ -201,7 +201,7 @@
             </div>
             
             <div class="flex items-center justify-center lg:justify-end gap-2 m-10">
-                <h1 class="text-contrast">Siga-nos :</h1>
+                <!-- <h1 class="text-contrast">Siga-nos :</h1>
 
                 <a href="#" class="hover:text-blue-400">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
@@ -219,7 +219,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
                         <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.38v4.59h-3v-9h2.88v1.23h.04c.4-.76 1.37-1.56 2.82-1.56 3.02 0 3.58 1.99 3.58 4.58v5.75z"/>
                     </svg>
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
