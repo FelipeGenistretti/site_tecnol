@@ -9,13 +9,13 @@ export default defineConfig({
         }),
     ],
     server: {
-        host: '0.0.0.0',
-        port: 5173,
-        https: true,
-        hmr: {
-            //host: 'cuddly-news-enjoy.loca.lt',
-            host: 'https://five-mammals-change.loca.lt',
-            protocol: 'wss',
-        },
+        // host: '0.0.0.0',
+        // port: 5173,
+        // https: true,
+        // hmr: {
+        //     //host: 'cuddly-news-enjoy.loca.lt',
+        //     host: 'https://six-plums-cough.loca.lt',
+        //     protocol: 'wss',
+        // },
     },
 });

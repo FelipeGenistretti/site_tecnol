@@ -23,15 +23,11 @@ class TrabalheConoscoController extends Controller
     public function handle(TrabalheConoscoRequest $request)
     {
         $data = $request->validated();
-
-        $arquivos = [];
-            if ($request->hasFile('arquivos')) {
-                $arquivos = $this->arquivoService->processar($request->file('arquivos'));
-            }
+        $arquivo = $request->file("arquivos");
 
 
             Mail::to(config('mail.to.address'))
-                ->send(new TrabalheConoscoMail($data, $arquivos));
+                ->send(new TrabalheConoscoMail($data, $arquivo));
 
             return back()->with("success", "Currículo enviada com sucesso");
         

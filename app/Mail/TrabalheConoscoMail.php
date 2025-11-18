@@ -5,6 +5,7 @@ namespace App\Mail;
 use App\Traits\HasMailAttachments;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Attachment;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -15,15 +16,15 @@ class TrabalheConoscoMail extends Mailable
     use Queueable, SerializesModels, HasMailAttachments;
 
     public $data;
-    public $arquivos;
+    public $arquivo;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($data, $arquivos=null)
+    public function __construct($data, $arquivo)
     {
         $this->data = $data;
-        $this->arquivos = $arquivos;
+        $this->arquivo = $arquivo;
     }
 
     /**
@@ -45,7 +46,7 @@ class TrabalheConoscoMail extends Mailable
             view: 'emails.trabalhe-conosco',
             with:[
                 "data"=>$this->data,
-                "arquivos"=>$this->arquivos
+                "arquivo"=>$this->arquivo
             ]
         );
     }
@@ -57,6 +58,10 @@ class TrabalheConoscoMail extends Mailable
      */
     public function attachments(): array
     {
-        return $this->attachmentsFromArray($this->arquivos);
+        return [
+            Attachment::fromPath($this->arquivo)
+            ->as('curriculo.' . pathinfo($this->arquivo, PATHINFO_EXTENSION))
+            ->withMime(mime_content_type($this->arquivo)),
+        ];
     }
 }

@@ -12,7 +12,7 @@
 
     <div class="">
       <div class="space-y-4 text-textPrimary">
-        <h1 class="text-[52px] text-contrast">Vem fazer parte da cultura Tecshare</h1>
+        <h1 class="text-[52px] text-contrast max-md:text-center max-md:text-5xl">Vem fazer parte da cultura Tecshare</h1>
         <p class="text-[16px] text-contrast textContainer">Já pensou em trabalhar em um lugar onde o principal objetivo é crescer juntos?</p>
         <p class="text-[16px] text-contrast textContainer">Na Tecshare, é assim! Buscamos talentos que nos ajudem a fazer da tecnologia a matéria-prima de soluções e inovações que mudem para melhor as necessidades do mercado financeiro. </p>
         <p class="text-[16px] text-contrast textContainer">Candidate-se às vagas em aberto ou cadastre seu currículo em nosso banco de talentos.</p>
@@ -36,8 +36,8 @@
 
 <div class="bg-bgSecondary">
 
-  <div class="container-x text-[38px] bg-contrast text-contrast">
-    <h1 class="py-12">Envie seu currículo</h1>
+  <div class="container-x text-[38px] bg-contrast text-contrast py-10">
+    <h1 class="py-1">Envie seu currículo</h1>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x pb-12 bg-contrast text-contrast " >

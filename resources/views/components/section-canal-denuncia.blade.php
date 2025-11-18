@@ -39,7 +39,7 @@
     </div>
 </div>
 
-@if($errors->has('files'))
+@if($errors->has('arquivos'))
 <script>
 document.addEventListener("DO MContentLoaded", () => {
     const modal = document.getElementById("modalArquivoInvalido");

@@ -77,9 +77,7 @@
     fill: #0D0D0D; 
 }
 
-  body.contrast .button-a-contrast {
-    @apply bg-[#0D0D0D] text-[#FFFF00]
-  }
+
 
   body.contrast .input-contrast {
     @apply border border-[#FFFF00] bg-[#0D0D0D] text-[#FFFF00] placeholder:text-[#FFFF00]
@@ -104,6 +102,34 @@ body.contrast svg {
 body.contrast .text-black-contrast{
   @apply text-black
 }
+
+/* MODO NORMAL (SEM CONTRASTE) */
+.button-a-contrast .icon-stroke {
+  stroke: #E6E6E6;              /* borda cinza */
+}
+
+.button-a-contrast .icon-fill-first {
+  fill: #000000;                /* parte preta */
+}
+
+.button-a-contrast .icon-fill-second {
+  fill: #000000;                /* outra parte preta */
+}
+
+/* MODO CONTRASTE */
+body.contrast .button-a-contrast .icon-stroke {
+  stroke: #FFFF00;              /* borda amarela */
+}
+
+body.contrast .button-a-contrast .icon-fill-first {
+  fill: #FFFF00;                /* texto amarelo */
+}
+
+body.contrast .button-a-contrast .icon-fill-second {
+  fill: #FFFF00;                /* texto amarelo */
+}
+
+
 
 
   /* HEADER  */

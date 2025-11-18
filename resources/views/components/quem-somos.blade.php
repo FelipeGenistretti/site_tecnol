@@ -3,7 +3,7 @@
     
     <div class="items-center">
       <div class="flex justify-center flex-col">
-        <h1 class="text-5xl max-sm:text-[38px] font-medium text-textPrimary text-contrast pb-12">Quem somos</h1>
+        <h1 class="text-5xl max-sm:text-[38px] max-md:text-center font-medium text-textPrimary text-contrast pb-12">Quem somos</h1>
       </div>
       <p class="text-textPrimary textContainer text-[16px ] text-contrast">
         <span class="font-bold text-textPrimary text-contrast">TECSHARE</span> transforma o ecossistema de soluções tecnológicas e integrações digitais, reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação, por meio de plataformas e integrações.
