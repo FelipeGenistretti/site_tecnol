@@ -42,7 +42,7 @@
         <input type="checkbox" name="privacy" id="privacy" class="accent-orange-600 scale-125 textContainer" {{ old('privacy') ? 'checked' : '' }}/>
         <p class="textContainer">
             Li e concordo com a
-            <a href="#" class="text-[#411F56] underline font-bold text-contrast">Política de Privacidade</a>
+            <a href="#" class="text-[#411F56] underline font-bold text-contrast">Política de Privacidade e autorizo o tratamento dos meu dados</a>
         </p>
     </div>
     @error('privacy')
