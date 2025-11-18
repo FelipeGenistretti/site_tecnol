@@ -48,7 +48,7 @@
 
 <div id="content-real" class="hidden text-contrast bg-contrast">
 
-<div class=" mt-[105px] flex items-center py-8  bg-bgSecondary bg-contrast justify-center lg:justify-start  ">
+<div class=" mt-[98px] flex items-center py-8  bg-bgSecondary bg-contrast justify-center lg:justify-start  ">
   <h1 class="text-[38px] text-textPrimary text-contrast container-x ">Quem somos</h1>
     </div>
 
