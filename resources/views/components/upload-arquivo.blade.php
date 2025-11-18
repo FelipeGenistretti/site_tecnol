@@ -15,7 +15,8 @@
         @enderror
 
         <label for="arquivos"
-            class="input-contrast border-2 border-dashed rounded px-3 w-full flex flex-col items-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors relative py-3">
+    class="input-contrast border-2 border-dashed rounded px-3 w-full flex flex-col justify-between items-center cursor-pointer bg-gray-50 hover:bg-gray-100 h-[200px] gap-3 transition-colors relative py-3">
+
 
             {{-- PLACEHOLDER --}}
             <div id="uploadPlaceholder" class="flex flex-col items-center gap-3">
