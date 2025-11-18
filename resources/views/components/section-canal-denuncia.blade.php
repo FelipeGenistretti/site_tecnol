@@ -16,7 +16,7 @@
 <div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center right-10 mt-4 justify-center fixed z-50" id="modalArquivoInvalido">
     <div class="flex items-center justify-center gap-3">
         <img src="/alertModalCamposObrigatorios.png" alt="">
-        <p class="text-black">Preencha os campos obrigatórios</p>
+        <p class="text-black">{{ $errors->first('arquivos') }}</p>
         <button type="button" class="flex items-center">
             <img src="/closeModalBlack.png" alt="" id="btnClose">
         </button>
@@ -41,7 +41,7 @@
 
 @if($errors->has('arquivos'))
 <script>
-document.addEventListener("DO MContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modalArquivoInvalido");
     const close = document.getElementById("btnClose");
 
