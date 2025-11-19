@@ -25,11 +25,10 @@ class TrabalheConoscoMail extends Mailable
         $this->data = $data;
         $this->path = $path;
 
-        // Metadados
         $this->arquivo_nome = basename($path);
         $this->arquivo_tamanho = round(Storage::disk("public")->size($path) / 1024, 1);
 
-        // Link para download
+        
         $this->arquivo_url = route("download.arquivo", ["path" => $this->path]);
     }
 
@@ -54,7 +53,10 @@ class TrabalheConoscoMail extends Mailable
     }
 
     public function attachments(): array
-    {
-        return $this->attachFileFromPath($this->path);
-    }
+{
+    return [
+        $this->attachFileFromPath($this->path)
+    ];
+}
+
 }

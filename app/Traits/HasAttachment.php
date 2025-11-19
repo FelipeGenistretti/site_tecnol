@@ -3,16 +3,16 @@
 namespace App\Traits;
 
 use Illuminate\Mail\Mailables\Attachment;
+use Illuminate\Support\Facades\Storage;
 
 trait HasAttachment
 {
-    public function attachFileFromPath(string $path): array
+    public function attachFileFromPath(string $path): Attachment
     {
-        $filePath = storage_path("app/public/" . $path);
+        // Usa o próprio Storage para resolver o caminho correto
+        $filePath = Storage::disk("public")->path($path);
 
-        return [
-            Attachment::fromPath($filePath)
-                ->as(basename($path))
-        ];
+        return Attachment::fromPath($filePath)
+            ->as(basename($path));
     }
 }
