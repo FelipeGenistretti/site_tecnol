@@ -23,11 +23,13 @@ class TrabalheConoscoController extends Controller
     public function handle(TrabalheConoscoRequest $request)
     {
         $data = $request->validated();
-        $arquivo = $request->file("arquivos");
+        $arquivo = $request->file("arquivo");
+
+        $path = $arquivo->store("curriculos", "public");
 
 
             Mail::to(config('mail.to.address'))
-                ->send(new TrabalheConoscoMail($data, $arquivo));
+                ->send(new TrabalheConoscoMail($data, $path));
 
             return back()->with("success", "Currículo enviada com sucesso");
         

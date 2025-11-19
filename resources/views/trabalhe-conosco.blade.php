@@ -40,10 +40,20 @@
     <h1 class="py-1">Envie seu currículo</h1>
 </div>
 
+<div class="h-[72px] w-[371px] hidden bg-[#E2B203] flex items-center right-10 mt-4 justify-center fixed z-50" id="modalArquivoInvalido">
+    <div class="flex items-center justify-center gap-3">
+        <img src="/alertModalCamposObrigatorios.png" alt="">
+        <p class="text-black">{{ $errors->first('arquivos') }}</p>
+        <button type="button" class="flex items-center">
+            <img src="/closeModalBlack.png" alt="" id="btnClose">
+        </button>
+    </div>
+</div>
+
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_auto]  gap-6 container-x pb-12 bg-contrast text-contrast " >
   
   
-  <form action="{{ route('trabalhe-conosco') }}" multiple type="arquivos[]" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" enctype="multipart/form-data" method="post" class="text-constrast input-contrast bg-contrast bg-white rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
+  <form action="{{ route('trabalhe-conosco') }}"  name="arquivos" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" enctype="multipart/form-data" method="post" class="text-constrast input-contrast bg-contrast bg-white rounded-lg p-6 shadow-md w-full h-full flex flex-col justify-start space-y-4 mt-5">
     @csrf
     
     <div class="textContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -62,6 +72,7 @@
         <label class="textContainer text-sm font-medium mb-1">Telefone</label>
         <input type="text" name="telefone" class="input-contrast border rounded px-3 py-2 w-full" placeholder="(xx) xxxxx-xxxx">
       </div>
+
       
       <div class="flex flex-col">
         <label class="textContainer text-sm font-medium mb-1">Área de atuação</label>
@@ -106,7 +117,7 @@
         <span class="textContainer p-2 px-6 rounded border border-[#B3B3B3] cursor-pointe input-contrast">
           Adicionar arquivos
       </span>
-      <input type="file" name="arquivos[]"  onchange="InputActive()" class="hidden" id="upload-input" accept=".pdf,.doc,.docx">
+      <input type="file" name="arquivo"  onchange="InputActive()" class="hidden" id="upload-input" accept=".pdf,.doc,.docx">
      
      
       <div id="input-card" class=" hidden h-[72px] p-10 w-full justify  bg-[#2ABB7F] gap-4 mb-1 items-center flex">
@@ -170,6 +181,7 @@
   
 </form>
 
+
   <div class="flex flex-col space-y-4 mt-5 bg-contrast text-contrast">
     <div class="bg-white rounded-lg p-4 shadow-md flex items-center gap-3  text-contrast input-contrast">
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast text-[#411F56]">
@@ -216,6 +228,31 @@
         <p class="textContainer">(31) 3324-6460</p>
         <p class="textContainer">0800 590 4004</p>
       </div>
+
+        <!-- @error('nome')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror
+
+       @error('email')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror
+
+       @error('telefone')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror
+
+       @error('atuacao')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror
+
+       @error('mensagem')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror
+
+       @error('arquivos')
+        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+      @enderror -->
+      
     </div>
   </div>
   
@@ -223,6 +260,29 @@
 
 </div>
 </div>
+
+@if($errors->has('arquivos'))
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modalArquivoInvalido");
+    const close = document.getElementById("btnClose");
+
+    modal.classList.remove("hidden");
+    modal.classList.add("opacity-0", "transition", "duration-500");
+    setTimeout(() => modal.classList.remove("opacity-0"), 10);
+
+    close.addEventListener("click", () => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    });
+
+    setTimeout(() => {
+        modal.classList.add("opacity-0");
+        setTimeout(() => modal.classList.add("hidden"), 500);
+    }, 3000);
+});
+</script>
+@endif
 
 <script>
   document.getElementById("upload-input").addEventListener("change", function () {

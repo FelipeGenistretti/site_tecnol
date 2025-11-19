@@ -51,7 +51,7 @@
             Tamanho máximo permitido do anexo: 5MB
         </p>
 
-        @error('files')
+        @error('arquivos')
             <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
         @enderror
 
@@ -151,7 +151,6 @@ arquivosInput.addEventListener("change", () => {
   selectedFiles = [...selectedFiles, ...Array.from(arquivosInput.files)];
 
   renderCards();
-  arquivosInput.value = "";
 });
 
 function renderCards() {
