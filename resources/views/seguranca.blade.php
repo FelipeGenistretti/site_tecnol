@@ -82,8 +82,8 @@
     <div class="container-x items-center justify-center bg-[#F2F2F2] p-12 bg-contrast input-contrast">
         <h1 class="text-[62px] text-[#333333] text-center text-contrast">Conheça nossa política de segurança</h1>
         <p class="text-[#666666] text-center text-contrast">Disponibilizamos o documento completo das Políticas de Segurança da Informação para leitura e ciência.</p>
-        <div class="lg:flex gap-6 justify-center align-items-center">
-                         <button onclick="downloadFile('/pdfs/meu-arquivo.pdf')" class="bts-hover  flex input-contrast items-center justify-center lg:justify-start gap-3 my-6  p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
+        <div class="lg:flex gap-6 justify-center align-items-center text-center">
+                         <button onclick="downloadFile('/pdfs/meu-arquivo.pdf')" class="bts-hover  flex input-contrast items-center    gap-3 my-6  p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
 
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
@@ -93,7 +93,7 @@
                 <span class="text-[13px] text-center lg:text-left">BAIXAR POLÍTICA DO SISTEMA DE GESTÃO INTEGRADO - SGI</span>
             </button>
             
-               <button onclick="downloadFile('/pdfs/meu-arquivo.pdf')"  class="bts-hover flex input-contrast items-center justify-center lg:justify-start gap-3 my-6 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
+               <button onclick="downloadFile('/pdfs/meu-arquivo.pdf')"  class="bts-hover flex input-contrast items-center justify-center  gap-3 my-6 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>
         </svg>
@@ -101,7 +101,7 @@
                 <span class="text-[13px] text-center lg:text-left">BAIXAR POLÍTICA DE SEGURANÇA E INFORMAÇÕES - POSIC</span>
             </button>
 
-              <button onclick="downloadFile('/pdfs/meu-arquivo.pdf')"  class="bts-hover flex input-contrast items-center justify-center lg:justify-start gap-3 my-6 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
+              <button onclick="downloadFile('/pdfs/meu-arquivo.pdf')"  class="bts-hover flex input-contrast items-center justify-center  gap-3 my-6 p-3 px-6 rounded border border-[#B3B3B3] cursor-pointer h-[60px]">
                
                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4L13 12.0858L15.2929 9.79289L16.7071 11.2071L12 15.9142L7.29289 11.2071L8.70711 9.79289L11 12.0858L11 4H13ZM2 19.9L2 11H4L4 19L20 19L20 11H22L22 19.9C22 20.5075 21.5075 21 20.9 21L3.1 21C2.49248 21 2 20.5075 2 19.9Z" fill="currentColor"/>

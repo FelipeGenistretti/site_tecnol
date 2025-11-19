@@ -102,6 +102,7 @@
     <div class="flex flex-col bg-contrast">
       <label class="textContainer text-sm font-medium mb-1">Upload de Arquivo</label>
       <label id="inputInit" class="input-contrast border rounded px-3 py-2 w-full flex flex-col items-center justify-center cursor-pointer   h-[200px] gap-3">
+        
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast text-[#411F56]">
           <path d="M48.1229 45H15.2946C15.2946 45 8.88135 45 7.6347 38.0534C6.38853 28.3228 14.2004 27.3119 14.2004 27.3119C14.2004 27.3119 12.0348 14.0232 26.2374 12.5825C38.2744 11.3615 40.463 24.0971 40.463 24.0971C40.463 24.0971 52.5 24.5316 52.5 35.7379C52.5 42.8271 48.1229 45 48.1229 45Z" stroke="currentColor" stroke-width="5"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6959 28.2666V38.3118H29.4347V28.2666L31.3666 30.0676L33.7341 26.7705L27.5653 21.0197L21.3965 26.7705L23.764 30.0676L25.6959 28.2666Z" fill="currentColor"/>
@@ -145,7 +146,7 @@
           
 
 
-          <button class="textContainer p-2 px-6 rounded border border-[#B3B3B3] cursor-pointe input-contrast">Adicionar arquivos</button>
+       
       </div>
 
 
@@ -368,7 +369,7 @@ function renderFilesList() {
             </div>
 
               <!-- Botão remover -->
-              <button onclick="removeFile(${index})" class="text-red-500 text-lg font-bold ml-auto">
+              <button type="button" onclick="removeFile(${index})" class="text-red-500 text-lg font-bold ml-auto">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8727 3.88806V2.99902H13.127V3.88806H19.8893V5.88806H4.10938V3.88806H10.8727ZM4.14213 6.55505H5.23678H18.7624H19.8571L19.7584 7.64524L18.6395 20.0006C18.5881 20.5674 18.113 21.0014 17.5439 21.0014H6.45527C5.88621 21.0014 5.41108 20.5674 5.35976 20.0006L4.24086 7.64524L4.14213 6.55505ZM6.33144 8.55505L7.27745 19.0014H16.7218L17.6678 8.55505H6.33144Z" fill="#333333"/>
                 </svg>
@@ -396,7 +397,7 @@ function renderFilesList() {
             </div>
 
               <!-- Botão remover -->
-              <button onclick="removeFile(${index})" class="text-red-500 text-lg font-bold ml-auto">
+              <button type="button" onclick="removeFile(${index})" class="text-red-500 text-lg font-bold ml-auto">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8727 3.88806V2.99902H13.127V3.88806H19.8893V5.88806H4.10938V3.88806H10.8727ZM4.14213 6.55505H5.23678H18.7624H19.8571L19.7584 7.64524L18.6395 20.0006C18.5881 20.5674 18.113 21.0014 17.5439 21.0014H6.45527C5.88621 21.0014 5.41108 20.5674 5.35976 20.0006L4.24086 7.64524L4.14213 6.55505ZM6.33144 8.55505L7.27745 19.0014H16.7218L17.6678 8.55505H6.33144Z" fill="#333333"/>
                 </svg>
@@ -429,8 +430,14 @@ function renderFilesList() {
 
 // REMOVE UM ARQUIVO
 function removeFile(index) {
-    filesArray.splice(index, 1);
+ 
+   
+  inputInit.classList.remove("hidden")
+  fileList.classList.add("hidden")
+ 
+     filesArray.splice(index, 1);
     renderFilesList();
+  
 }
 
 // BOTÃO "Adicionar arquivos" abre o input novamente
@@ -441,6 +448,7 @@ addMoreButton.addEventListener("click", (e) => {
 
 // ✓ antes de enviar o formulário, cria um DataTransfer com todos os arquivos
 document.querySelector("form").addEventListener("submit", (e) => {
+  // e.preventDefault();
     const dataTransfer = new DataTransfer();
 
     filesArray.forEach(file => dataTransfer.items.add(file));

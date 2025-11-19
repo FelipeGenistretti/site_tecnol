@@ -19,9 +19,6 @@ Route::get('/', function () {
 })->name('home');
 
 // Rota de teste
-Route::get('/teste', function() {
-    return view('teste');
-});
 
 // Formulário de fale-conosco
 Route::post('/fale-conosco', [FormController::class, 'store'])
