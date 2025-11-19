@@ -3,9 +3,36 @@
 @section('title','Fale Conosco - TecShare') 
 
 @section('content')
+
+
+
  <div class="titulo flex items-center bg-bgSecondary justify-center lg:justify-start text-center lg:text-start  text-contrast bg-contrast">
   <h1 class=" text-textPrimary container-x  text-contrast bg-contrast">Contato</h1>
 </div> 
+<!-- SKELETON LOADING -->
+<div id="skeletonPage" class="w-full bg-white animate-pulse py-10">
+  <div class="container-x mx-auto">
+    
+    <!-- título -->
+    <div class="h-10 w-64 bg-gray-300 rounded mb-8"></div>
+
+    <!-- frase -->
+    <div class="h-4 w-96 bg-gray-300 rounded mb-10"></div>
+
+    <!-- formulário fake -->
+    <div class="space-y-4">
+      <div class="h-10 w-full bg-gray-300 rounded"></div>
+      <div class="h-10 w-full bg-gray-300 rounded"></div>
+      <div class="h-10 w-full bg-gray-300 rounded"></div>
+      <div class="h-32 w-full bg-gray-300 rounded"></div>
+    </div>
+
+    <!-- botão -->
+    <div class="h-12 w-40 bg-gray-300 rounded mt-6"></div>
+
+  </div>
+</div>
+
 
 <div class="bg-contrast container-x py-12" id="faleConosco">
   <div class="flex flex-col justify-center items-center gap-2">
@@ -215,6 +242,19 @@
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const skeleton = document.getElementById("skeletonPage");
+    const realPage = document.getElementById("faleConosco");
+
+    // Quando TUDO carregar (imagens, recaptcha, etc)
+    window.onload = () => {
+        skeleton.classList.add("hidden");
+        realPage.classList.remove("hidden");
+    };
+});
+</script>
+
 
         <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -315,6 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     });
 </script>
+
+
 
 @endif
 

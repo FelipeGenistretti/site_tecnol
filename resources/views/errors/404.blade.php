@@ -5,112 +5,124 @@
 
 @section('content')
 
-<div class="grid grid-cols-1 lg:grid-cols-2    pb-12 container-x bg-contrast text-constrast items-center justify-center pt-[90px]">
+<div class=" grid grid-cols-1 lg:grid-cols-2    pb-12 container-x bg-contrast text-constrast items-center justify-center pt-[90px]">
 
-    <div>
-        <h1 class="text-[#2A687F] text-[50px] py-5 text-center lg:text-start bg-costrast text-contrast"> <strong>Página Não Encontrada</strong></h1>
-        <p">A página que você está procurando pode ter sido movida, excluída, ou o link que você usou <br> pode estar incorreto.</p>
-        <p>Não se preocupe, estamos aqui para ajudar você a voltar ao caminho certo!</p>
-        <h1 class="text-[#F15A29] text-[30px] py-4 text-contrast">O que fazer agora?</h1>
+   <div class="px-4 lg:px-0">
 
-        <p class="my-1"><Strong>Verifique o endereço (URL):</Strong> Se você digitou o endereço, confira se não há erros de digitação.</p>
-        <p><Strong>Use a Busca:</Strong> Digite o que você estava procurando na barra de pesquisa abaixo.</p>
+    <!-- Título -->
+    <h1 class="text-[#2A687F] text-4xl lg:text-5xl py-5 text-center lg:text-start text-contrast">
+        <strong>Página Não Encontrada</strong>
+    </h1>
 
+    <!-- Texto inicial -->
+    <p class="text-base leading-relaxed">
+        A página que você está procurando pode ter sido movida, excluída, ou o link que você usou
+        pode estar incorreto.
+    </p>
+    <p class="text-base leading-relaxed mt-2">
+        Não se preocupe, estamos aqui para ajudar você a voltar ao caminho certo!
+    </p>
 
-           <div class="relative w-full max-w-sm m-4 w-ful text-contrast bg-contrast">
-  
-<div id="searchContainer404" class="relative w-full max-w-sm m-4">
-  <input
-    type="text"
-    id="searchInput404"
-    placeholder="Pesquisar..."
-    class="w-full border input-contrast border-gray-300 rounded-lg py-2 pl-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-[#F15A29] text-contrast bg-contrast"
-  />
-  <button
-    type="button"
-    class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-600 hover:text-[#F15A29]"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M9.5 17A7.5 7.5 0 109.5 2a7.5 7.5 0 000 15z" />
-    </svg>
-  </button>
+    <!-- Subtítulo -->
+    <h2 class="text-[#F15A29] text-2xl lg:text-3xl py-4 text-contrast">
+        O que fazer agora?
+    </h2>
 
-  <!-- dropdown -->
-  <div
-    id="searchResults404"
-    class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md max-h-60 overflow-y-auto"
-  ></div>
-</div>
- 
-  <div
-    id="searchResults404"
-    class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md max-h-60 overflow-y-auto"
-  ></div>
-</div>
+    <!-- Orientações -->
+    <div class="space-y-2">
+        <p><strong>Verifique o endereço (URL):</strong> Confira se não há erros de digitação.</p>
+        <p><strong>Use a Busca:</strong> Digite o que você estava procurando na barra de pesquisa abaixo.</p>
+    </div>
 
+    <!-- Campo de busca -->
+    <div class="relative w-full max-w-md mt-4">
 
-        <p><Strong>Volte para a Página Inicial:</Strong> Clique no link abaixo para recomeçar a navegação</p>
-        <button class="flex my-4 gap-2" onclick="window.location.href='{{ route('home') }}'" >
+        <input
+            type="text"
+            id="searchInput404"
+            placeholder="Pesquisar..."
+            class="input-contrast text-contrast bg-contrast input-contrast w-full border border-gray-300 rounded-lg py-2 pl-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-[#F15A29]"
+        />
 
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0006 1.7738L21.4515 8.48085C22.2858 9.07298 21.8669 10.3871 20.8438 10.3871H20.7149V20.9C20.7149 21.5075 20.2224 22 19.6149 22H4.38633C3.77882 22 3.28633 21.5075 3.28633 20.9V10.3871H3.15746C2.13434 10.3871 1.71541 9.07298 2.54978 8.48085L12.0006 1.7738ZM5.28633 8.99124V20H18.7149V8.99124L12.0006 4.22627L5.28633 8.99124ZM14.572 17.1875V19.1875H9.42919V17.1875H14.572Z" fill="currentColor"/>
-</svg>
-
-
-
-            <p class="">INCIAL</p>
-        </button>
-        <p><Strong>Acesse as Principais Seções:</Strong> Talvez o que você procura esteja em uma destas áreas.</p>
-    
-        <div class="flex gap-12 my-6">
-        
-        <button class="flex items-center" onclick="window.location.href='{{ route('quem-somos') }}'">
-        <p class="whitespace-nowrap">QUEM SOMOS</p>
-         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5859 12L8.29297 17.2929L9.70718 18.7072L16.4143 12L9.70718 5.29294L8.29297 6.70715L13.5859 12Z" fill="currentColor"/>
-        </svg>
+        <button type="button"
+            class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-600 hover:text-[#F15A29]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-4.35-4.35M9.5 17A7.5 7.5 0 109.5 2a7.5 7.5 0 000 15z" />
+            </svg>
         </button>
 
-         <button class="flex items-center" onclick="window.location.href='{{ route('safe-register-car') }}'">
-        <p class="whitespace-nowrap">SYSTEM DATA ANALYTICS</p>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5859 12L8.29297 17.2929L9.70718 18.7072L16.4143 12L9.70718 5.29294L8.29297 6.70715L13.5859 12Z" fill="currentColor"/>
-        </svg>   
-
-        
-        </button>
-        
-        <button class="flex items-center" onclick="window.location.href='{{ route('compliance') }}'" >
-        <p>COMPLIANCE</p>
-           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5859 12L8.29297 17.2929L9.70718 18.7072L16.4143 12L9.70718 5.29294L8.29297 6.70715L13.5859 12Z" fill="currentColor"/>
-        </svg>
-        
-        </button>
-        
-        <button class="flex items-center" onclick="window.location.href='{{ route('home') }}#faleConosco'">
-        <p>CONTATO</p>
-           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast bg-contrast">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5859 12L8.29297 17.2929L9.70718 18.7072L16.4143 12L9.70718 5.29294L8.29297 6.70715L13.5859 12Z" fill="currentColor"/>
-        </svg>
-        
-        </button>
-        
-
+        <!-- Dropdown da busca -->
+        <div id="searchResults404"
+            class="bg-contrast text-contrast input-contrast absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md max-h-60 overflow-y-auto">
         </div>
+    </div>
 
+    <!-- Página inicial -->
+    <p class="mt-5"><strong>Volte para a Página Inicial:</strong></p>
 
-      
-        
-  
+    <button class="flex items-center gap-2 my-4" onclick="window.location.href='{{ route('home') }}'">
+        <svg width="24" height="24" viewBox="0 0 24 24" class="text-current">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0006 1.7738L21.4515 8.48085C22.2858 9.07298 21.8669 10.3871 20.8438 10.3871H20.7149V20.9C20.7149 21.5075 20.2224 22 19.6149 22H4.38633C3.77882 22 3.28633 21.5075 3.28633 20.9V10.3871H3.15746C2.13434 10.3871 1.71541 9.07298 2.54978 8.48085L12.0006 1.7738ZM5.28633 8.99124V20H18.7149V8.99124L12.0006 4.22627L5.28633 8.99124ZM14.572 17.1875V19.1875H9.42919V17.1875H14.572Z"
+                fill="currentColor" />
+        </svg>
+        <p class="font-semibold">INICIAL</p>
+    </button>
 
-        <p>Agradecemos sua compreensão!</p>
+    <!-- Seções principais -->
+    <p><strong>Acesse as Principais Seções:</strong></p>
 
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
+
+        <button class="flex items-center justify-between px-3 py-2 border rounded-lg hover:bg-gray-100"
+            onclick="window.location.href='{{ route('quem-somos') }}'">
+            <p class="whitespace-nowrap">QUEM SOMOS</p>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.5859 12L8.29297 17.2929L9.70718 18.7072L16.4143 12L9.70718 5.29294L8.29297 6.70715L13.5859 12Z"
+                    fill="currentColor" />
+            </svg>
+        </button>
+
+        <button class="flex items-center justify-between px-3 py-2 border rounded-lg hover:bg-gray-100"
+            onclick="window.location.href='{{ route('safe-register-car') }}'">
+            <p class="whitespace-nowrap">SDA</p>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.5859 12L8.29297 17.2929L9.70718 18.7072L16.4143 12L9.70718 5.29294L8.29297 6.70715L13.5859 12Z"
+                    fill="currentColor" />
+            </svg>
+        </button>
+
+        <button class="flex items-center justify-between px-3 py-2 border rounded-lg hover:bg-gray-100"
+            onclick="window.location.href='{{ route('compliance') }}'">
+            <p>COMPLIANCE</p>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.5859 12L8.29297 17.2929L9.70718 18.7072L16.4143 12L9.70718 5.29294L8.29297 6.70715L13.5859 12Z"
+                    fill="currentColor" />
+            </svg>
+        </button>
+
+        <button class="flex items-center justify-between px-3 py-2 border rounded-lg hover:bg-gray-100"
+            onclick="window.location.href='{{ route('home') }}#faleConosco'">
+            <p>CONTATO</p>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.5859 12L8.29297 17.2929L9.70718 18.7072L16.4143 12L9.70718 5.29294L8.29297 6.70715L13.5859 12Z"
+                    fill="currentColor" />
+            </svg>
+        </button>
 
     </div>
+
+    <p class="mt-6">Agradecemos sua compreensão!</p>
+</div>
+
     
-    <div>
-        <svg id="img-origin" class="container-x" width="668" height="671" viewBox="0 0 668 671" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div class="items-center justify-center m-2">
+        <svg id="img-origin" class="container-x  w-[450px] w-[450px]  lg:w-[668px] lg:h-[671px] " viewBox="0 0 668 671" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M145.578 182.941C144.897 179.627 147.389 167.717 148.779 161.923C149.097 160.597 150.294 159.678 151.656 159.716L179.207 160.486C180.569 160.524 181.713 161.509 181.957 162.85C183.021 168.714 184.844 180.743 183.978 184.015L204.792 193.326C206.654 190.5 216.837 183.841 221.918 180.727C223.079 180.014 224.576 180.21 225.513 181.201L244.45 201.227C245.386 202.217 245.498 203.723 244.722 204.843C241.329 209.741 234.111 219.537 231.186 221.238L239.319 242.539C242.635 241.857 254.543 244.35 260.338 245.74C261.663 246.058 262.583 247.255 262.545 248.617L261.775 276.168C261.737 277.53 260.751 278.674 259.411 278.917C253.547 279.981 241.517 281.805 238.246 280.939L228.935 301.753C231.761 303.615 238.42 313.798 241.534 318.879C242.247 320.04 242.051 321.537 241.06 322.473L221.034 341.411C220.044 342.347 218.538 342.459 217.418 341.683C212.52 338.289 202.724 331.072 201.023 328.147L179.722 336.28C180.403 339.595 177.911 351.504 176.521 357.299C176.203 358.624 175.006 359.544 173.644 359.506L146.093 358.735C144.73 358.697 143.587 357.712 143.343 356.371C142.279 350.508 140.456 338.478 141.322 335.207L120.508 325.896C118.646 328.722 108.463 335.381 103.382 338.495C102.221 339.207 100.724 339.011 99.7874 338.021L80.8502 317.995C79.9138 317.005 79.8018 315.499 80.5778 314.379C83.9714 309.481 91.1886 299.685 94.1142 297.984L85.9806 276.683C82.6654 277.364 70.7566 274.872 64.9618 273.482C63.6366 273.164 62.717 271.967 62.755 270.605L63.5254 243.053C63.5634 241.691 64.5486 240.547 65.8894 240.304C71.753 239.24 83.7826 237.417 87.0542 238.283L96.365 217.469C93.539 215.607 86.8802 205.423 83.7658 200.343C83.0534 199.181 83.2494 197.685 84.2398 196.748L104.266 177.811C105.256 176.875 106.762 176.763 107.882 177.539C112.78 180.932 122.576 188.149 124.277 191.075L145.578 182.941ZM118.971 258.389C118.297 282.513 137.305 302.615 161.429 303.289C185.552 303.964 205.654 284.955 206.329 260.832C207.003 236.709 187.994 216.606 163.871 215.932C139.748 215.257 119.645 234.266 118.971 258.389Z" fill="#F3F3FF"/>
 <path d="M450.668 129.629C450.116 126.948 452.132 117.315 453.257 112.627C453.514 111.555 454.482 110.811 455.584 110.842L477.87 111.465C478.972 111.496 479.897 112.293 480.094 113.378C480.955 118.121 482.429 127.851 481.729 130.498L498.565 138.03C500.072 135.744 508.309 130.358 512.418 127.838C513.358 127.262 514.569 127.421 515.326 128.221L530.645 144.421C531.402 145.221 531.493 146.439 530.865 147.345C528.12 151.308 522.282 159.231 519.915 160.607L526.494 177.838C529.176 177.287 538.809 179.303 543.496 180.427C544.568 180.684 545.312 181.652 545.282 182.754L544.658 205.041C544.628 206.143 543.831 207.067 542.746 207.265C538.003 208.125 528.272 209.6 525.626 208.9L518.094 225.736C520.38 227.242 525.766 235.479 528.286 239.589C528.862 240.529 528.703 241.739 527.902 242.497L511.703 257.815C510.902 258.572 509.684 258.663 508.778 258.035C504.816 255.29 496.892 249.452 495.516 247.086L478.286 253.665C478.837 256.347 476.821 265.98 475.696 270.667C475.439 271.739 474.471 272.483 473.369 272.452L451.083 271.829C449.981 271.798 449.056 271.001 448.859 269.917C447.998 265.174 446.524 255.443 447.224 252.796L430.388 245.265C428.881 247.551 420.644 252.937 416.534 255.456C415.595 256.032 414.384 255.874 413.626 255.073L398.308 238.873C397.551 238.073 397.46 236.855 398.088 235.949C400.833 231.986 406.671 224.063 409.037 222.687L402.458 205.456C399.776 206.007 390.143 203.991 385.456 202.867C384.384 202.61 383.64 201.642 383.671 200.54L384.294 178.253C384.325 177.151 385.122 176.227 386.206 176.03C390.949 175.169 400.68 173.694 403.327 174.395L410.858 157.559C408.572 156.052 403.186 147.815 400.667 143.705C400.091 142.766 400.249 141.555 401.05 140.797L417.249 125.479C418.05 124.722 419.268 124.631 420.174 125.259C424.136 128.004 432.06 133.842 433.436 136.208L450.668 129.629ZM429.145 190.659C428.6 210.173 443.976 226.433 463.489 226.979C483.002 227.524 499.263 212.148 499.808 192.635C500.354 173.121 484.978 156.861 465.464 156.315C445.952 155.77 429.691 171.146 429.145 190.659Z" fill="#F3F3FF"/>
 <path d="M560.82 384.771C560.623 383.81 561.345 380.358 561.748 378.679C561.84 378.295 562.187 378.028 562.582 378.039L570.567 378.262C570.962 378.273 571.294 378.559 571.364 378.947C571.672 380.647 572.201 384.133 571.95 385.082L577.982 387.781C578.522 386.961 581.474 385.032 582.946 384.129C583.283 383.923 583.716 383.979 583.988 384.266L589.477 390.071C589.748 390.357 589.781 390.794 589.556 391.119C588.572 392.538 586.48 395.377 585.632 395.871L587.99 402.044C588.95 401.847 592.402 402.569 594.082 402.972C594.466 403.064 594.732 403.411 594.721 403.806L594.498 411.791C594.487 412.186 594.201 412.517 593.813 412.588C592.113 412.896 588.627 413.425 587.678 413.174L584.98 419.206C585.799 419.746 587.728 422.697 588.631 424.17C588.838 424.507 588.781 424.94 588.494 425.212L582.69 430.701C582.403 430.972 581.966 431.005 581.642 430.779C580.222 429.796 577.383 427.704 576.89 426.856L570.716 429.213C570.913 430.174 570.191 433.626 569.788 435.305C569.696 435.689 569.349 435.956 568.954 435.945L560.969 435.722C560.574 435.711 560.242 435.425 560.172 435.037C559.864 433.337 559.335 429.851 559.586 428.902L553.554 426.203C553.014 427.023 550.062 428.953 548.59 429.855C548.253 430.061 547.82 430.005 547.548 429.718L542.059 423.913C541.788 423.626 541.755 423.19 541.98 422.865C542.964 421.446 545.056 418.607 545.904 418.113L543.546 411.939C542.586 412.137 539.134 411.415 537.454 411.012C537.07 410.92 536.804 410.573 536.815 410.178L537.038 402.193C537.049 401.798 537.334 401.466 537.723 401.396C539.423 401.087 542.909 400.559 543.858 400.81L546.556 394.777C545.737 394.238 543.808 391.286 542.905 389.814C542.698 389.477 542.755 389.043 543.042 388.772L548.846 383.283C549.133 383.012 549.57 382.979 549.894 383.204C551.314 384.188 554.153 386.279 554.646 387.127L560.82 384.771ZM553.109 406.638C552.913 413.63 558.423 419.456 565.414 419.652C572.406 419.847 578.232 414.338 578.428 407.346C578.624 400.355 573.114 394.528 566.122 394.333C559.131 394.137 553.304 399.647 553.109 406.638Z" fill="#F3F3FF"/>
