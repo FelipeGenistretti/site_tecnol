@@ -9,7 +9,6 @@ trait HasAttachment
 {
     public function attachFileFromPath(string $path): Attachment
     {
-        // Usa o próprio Storage para resolver o caminho correto
         $filePath = Storage::disk("public")->path($path);
 
         return Attachment::fromPath($filePath)

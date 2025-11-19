@@ -5,110 +5,132 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* Responsividade básica para mobile */
+/* Responsividade */
 @media only screen and (max-width: 600px) {
-  .container { width: 100% !important; padding: 0 16px !important; }
+  .container { width: 100% !important; padding: 0 20px !important; }
   .hero-img { width: 100% !important; height: auto !important; }
-  .button { width: 100% !important; display: block !important; }
+  .content { padding: 20px !important; }
+  .button { width: 100% !important; display: block !important; text-align:center !important; }
+  .attach-box { padding: 16px !important; }
 }
 </style>
+
 </head>
 
 <body style="margin:0; padding:0; background:#f5f5f5; font-family: Arial, sans-serif;">
 
-<!-- Wrapper -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td align="center" style="padding: 20px 0;">
+<td align="center" style="padding:30px 0;">
 
-<!-- Container -->
-<table class="container" width="600" border="0" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:6px; overflow:hidden;">
+<!-- MAIN CONTAINER -->
+<table width="600" border="0" cellspacing="0" cellpadding="0" class="container" style="background:#fff; border-radius:10px; overflow:hidden;">
 
-<!-- Top Image -->
+<!-- HEADER IMAGE -->
 <tr>
-<td align="center" style="padding:0;">
-  <img src="https://via.placeholder.com/600x250" alt="Banner" class="hero-img" style="display:block; width:600px; height:auto;">
+<td>
+  <img src="{{ asset('imgEmailTrabConosco.png') }}" class="hero-img" style="display:block; width:600px; height:auto;" alt="">
 </td>
 </tr>
 
-<!-- Title -->
+<!-- TITLE -->
 <tr>
-<td align="center" style="padding: 30px 30px 10px; font-size:22px; font-weight:bold; color:#111;">
+<td align="center" style="padding:30px 30px 10px; font-size:24px; font-weight:bold; color:#111;">
   Trabalhe conosco
 </td>
 </tr>
 
-<!-- Intro Text -->
+<!-- TEXT INTRO -->
 <tr>
-<td style="padding: 0 30px 25px; color:#444; font-size:14px; line-height:1.6;">
+<td class="content" style="padding:0 30px 20px; font-size:16px; color:#444;">
   Contato enviado via site.
 </td>
 </tr>
 
-<!-- Dados -->
+<!-- USER INFO -->
 <tr>
-<td style="padding: 0 30px 25px; color:#444; font-size:14px; line-height:1.8;">
+<td class="content" style="padding:0 30px 25px; font-size:15px; color:#444; line-height:1.8;">
   <strong>Nome:</strong> {{ $data["nome"] }}<br>
-  <strong>E-mail:</strong> {{$data["email"] }}<br>
-  <strong>Telefone:</strong> {{$data["telefone"] }}<br>
+  <strong>E-mail:</strong> {{ $data["email"] }}<br>
+  <strong>Telefone:</strong> {{ $data["telefone"] }}<br>
   <strong>Área de atuação:</strong> {{ $data["atuacao"] }}<br>
 </td>
 </tr>
 
-<!-- Mensagem -->
+<!-- MESSAGE -->
 <tr>
-<td style="padding: 0 30px 20px; color:#444; font-size:14px; line-height:1.6;">
-  <strong>Mensagem:</strong><br>
+<td class="content" style="padding:0 30px 25px; font-size:15px; color:#444; line-height:1.6;">
+  <strong>Mensagem:</strong><br><br>
   {{ $data["mensagem"] }}
 </td>
 </tr>
 
-<!-- Anexo -->
-@if(isset($arquivo) && $arquivo)
+<!-- ATTACHMENT BOX -->
+@if(isset($arquivo_nome))
 <tr>
-<td style="padding: 0 30px 30px;">
-  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #ddd; border-radius:6px;">
+<td style="padding:0 30px 30px;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-radius:10px; border:1px solid #e5e5e5;">
     <tr>
-      <td style="padding:15px; font-size:14px; color:#333;">
-        📄 <strong>{{ $arquivo_nome }}</strong><br>
-        <span style="font-size:12px; color:#777;">{{ $arquivo_tamanho }}kb</span>
+
+      <!-- LEFT ICON + FILENAME -->
+      <td class="attach-box" style="padding:20px; font-size:14px; color:#333;">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td>
+              <img src="https://img.icons8.com/color/48/000000/ms-word.png" width="36" style="display:block; margin-right:10px;">
+            </td>
+            <td style="padding-left:12px;">
+              <strong style="font-size:15px; color:#444;">{{ $arquivo_nome }}</strong><br>
+              <span style="font-size:12px; color:#777;">{{ $arquivo_tamanho }}kb</span>
+            </td>
+          </tr>
+        </table>
       </td>
-      <td align="right" style="padding: 15px;">
-        <a href="{{ $arquivo_url }}" style="text-decoration:none; font-size:14px; color:#7D24B4; font-weight:bold;">Baixar</a>
+
+      <!-- DOWNLOAD BUTTON -->
+      <td align="right" style="padding:20px;">
+        <a href="{{ $arquivo_url }}" 
+           style="background:#7D24B4; padding:10px 18px; color:#fff; text-decoration:none; font-size:14px; border-radius:6px; font-weight:bold;">
+           Baixar
+        </a>
       </td>
+
     </tr>
   </table>
+
 </td>
 </tr>
 @endif
 
-<!-- Botão -->
+<!-- MAIN BUTTON -->
 <tr>
-<td align="center" style="padding: 10px 30px 30px;">
-  <a href="https://www.sistemastecnol.com.br" class="button" 
-  style="background:#F5633A; color:#fff; padding:14px 28px; border-radius:4px; font-size:14px; text-decoration:none; display:inline-block;">
-    ACESSAR SITE
+<td align="center" style="padding:10px 30px 30px;">
+  <a href="https://www.sistemastecnol.com.br"
+     class="button"
+     style="background:#F5633A; color:#fff; padding:14px 32px; text-decoration:none;
+            border-radius:6px; font-weight:bold; font-size:15px; display:inline-block;">
+     ACESSAR SITE
   </a>
 </td>
 </tr>
 
-<!-- Rodapé -->
+<!-- FOOTER -->
 <tr>
-<td align="center" style="padding: 30px; background:#fafafa; font-size:11px; color:#777; line-height:1.4;">
-  “Esta mensagem e eventuais anexos estão dirigidos EXCLUSIVAMENTE aos destinatários especificados...”
-  <br><br>
-  © TecnoIt 2025 - Todos os direitos reservados.<br>
-  <img src="https://via.placeholder.com/120x35?text=Tecshare" alt="Tecshare" style="margin-top:10px;">
+<td style="padding:30px; background:#fafafa; text-align:center; font-size:11px; color:#777; line-height:1.5;">
+  “Esta mensagem e eventuais anexos estão dirigidos EXCLUSIVAMENTE aos destinatários especificados...”<br><br>
+  © TecnoIt 2025 - Todos os direitos reservados.<br><br>
+
+  <img src="{{ asset(' /logo.png') }}" width="140" style="opacity:0.85;">
 </td>
 </tr>
 
 </table>
-<!-- Container End -->
+<!-- END MAIN CONTAINER -->
 
 </td>
 </tr>
 </table>
-<!-- Wrapper End -->
 
 </body>
 </html>
