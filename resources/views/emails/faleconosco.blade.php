@@ -1,89 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Trabalhe Conosco</title>
+<style>
+/* Responsividade simples */
+@media only screen and (max-width: 600px) {
+  .container { width: 100% !important; padding: 0 16px !important; }
+  .hero-img { width: 100% !important; height: auto !important; }
+  .button { width: 100% !important; display: block !important; }
+}
+</style>
 </head>
-<body style="margin:0; padding:0; background:#f3f3f3; font-family: Arial, Helvetica, sans-serif;">
 
-  <table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
-    <tr>
-      <td align="center">
+<body style="margin:0; padding:0; background:#f5f5f5; font-family: Arial, sans-serif;">
 
-        <table cellpadding="0" cellspacing="0" style="max-width:650px; width:100%; background:white; border-radius:6px; overflow:hidden;">
+<!-- Wrapper -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" style="padding: 20px 0;">
 
-          <!-- Banner -->
-          <tr>
-            <td align="center" style="background:#FDFCFC; padding:40px 0;">
-              <img src="{{ asset('email-trabalheconsco.png') }}" alt="Trabalhe Conosco" style="max-width:350px; width:100%; height:auto; display:block;">
-            </td>
-          </tr>
+<!-- Container -->
+<table class="container" width="600" border="0" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:6px; overflow:hidden;">
 
-          <!-- Conteúdo -->
-          <tr>
-            <td style="padding:30px; color:#333;">
+<!-- Top Image -->
+<tr>
+<td align="center">
+  <img src="{{ asset('/imgEmailFaleConosco.png') }}" alt="Banner" class="hero-img" style="display:block; width:600px; height:auto;">
+</td>
+</tr>
 
-              <h1 style="font-size:28px; text-align:center; margin:0 0 20px 0;">Trabalhe Conosco</h1>
+<!-- Title -->
+<tr>
+<td align="center" style="padding: 30px 30px 10px; font-size:22px; font-weight:bold; color:#111;">
+  Atendimento
+</td>
+</tr>
 
-              <p style="margin:6px 0;">Nome: <strong>{{ $data['nome'] }}</strong></p>
-              <p style="margin:6px 0;">E-mail: <strong>{{ $data['email'] }}</strong></p>
-              <p style="margin:6px 0;">Telefone: <strong>{{ $data['telefone'] }}</strong></p>
+<!-- Intro -->
+<tr>
+<td style="padding: 0 30px 20px; font-size:14px; color:#444; line-height:1.6;">
+  Contato enviado via site.
+</td>
+</tr>
 
-              <h2 style="margin-top:25px; font-size:18px;">Mensagem</h2>
-              <p style="text-align:justify; line-height:1.5;">
-                {{ $data['mensagem'] ?? 'Mensagem não informada.' }}
-              </p>
+<!-- Dados -->
+<tr>
+<td style="padding: 0 30px 25px; font-size:14px; color:#444; line-height:1.8;">
+  <strong>Nome:</strong> {{ $data["nome"] }}<br>
+  <strong>E-mail:</strong> {{ $data["email"] }}<br>
+  <strong>Telefone:</strong> {{ $data["telefone"] }}<br>
+</td>
+</tr>
 
-            </td>
-          </tr>
+<!-- Mensagem -->
+<tr>
+<td style="padding: 0 30px 30px; font-size:14px; color:#444; line-height:1.6;">
+  <strong>Mensagem:</strong><br>
+  {{ $data["mensagem"] }}
+</td>
+</tr>
 
-          <!-- Anexo -->
-          <tr>
-            <td align="center" style="padding:10px 0;">
-              <a href="#" style="display:block; width:90%; background:#F2F2F2; padding:14px; text-decoration:none; border-radius:6px; color:#333;">
-                <table width="100%" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td width="30">
-                      <img src="{{ asset('doc-icon.png') }}" style="max-width:24px; width:100%; height:auto; display:block;">
-                    </td>
-                    <td style="font-size:14px; padding-left:10px;">
-                      Meu_Curriculo_2025.pdf (200KB)
-                    </td>
-                  </tr>
-                </table>
-              </a>
-            </td>
-          </tr>
+<!-- Botão -->
+<tr>
+<td align="center" style="padding: 10px 30px 20px;">
+  <a href="https://www.sistemastecnol.com.br" 
+     class="button"
+     style="background:#F5633A; color:#fff; padding:14px 32px; border-radius:5px; 
+            font-size:14px; font-weight:bold; text-decoration:none; display:inline-block;">
+    ACESSAR SITE
+  </a>
+</td>
+</tr>
 
-          <!-- Botão -->
-          <tr>
-            <td align="center" style="padding:20px;">
-              <a href="https://www.sisteastecnol.com.br" style="background:#F15A29; color:white; padding:14px 28px; text-decoration:none; border-radius:5px; font-weight:bold; display:inline-block;">
-                Acessar site
-              </a>
-            </td>
-          </tr>
+<!-- Link de acesso -->
+<tr>
+<td align="center" style="font-size:12px; color:#777; padding-bottom:30px;">
+  Link de acesso: <a href="https://www.sistemastecnol.com.br" style="color:#F5633A; text-decoration:none;">
+  www.sistemastecnol.com.br</a>
+</td>
+</tr>
 
-          <!-- Rodapé -->
-          <tr>
-            <td style="background:#FDFCFC; padding:30px; text-align:center; color:#9b9b9b; font-size:12px; line-height:1.5;">
-              <p style="text-align:justify;">
-                “Esta mensagem e eventuais anexos estão dirigidos EXCLUSIVAMENTE aos destinatários especificados. A informação neles contida é CONFIDENCIAL...”
-              </p>
+<!-- Rodapé -->
+<tr>
+<td align="center" style="padding: 30px; background:#fafafa; font-size:11px; color:#888; line-height:1.5;">
+  “Esta mensagem e eventuais anexos estão dirigidos EXCLUSIVAMENTE aos destinatários especificados. A informação neles contida é CONFIDENCIAL, não estando autorizado seu uso, revelação, distribuição, impressão ou cópia. Se você recebeu por ENGANO, pedimos gentilmente que comunique ao remetente e ELIMINE a mensagem e os anexos. Em que pese se tratar de e-mail corporativo, o seu conteúdo não necessariamente é seguro e/ou reflete a opinião da TECNOL, que não poderá aceitar a responsabilidade por quaisquer perdas e/ou danos causados por esta mensagem ou por seus anexos”
+  <br><br>
+  © TecnoIt 2025 — Todos os direitos reservados.
+  <br>
+  <img src="{{ asset('/logo.png') }}" alt="Tecshare" style="margin-top:10px;">
+</td>
+</tr>
 
-              <p style="margin-top:20px;">© Tecnol 2025 - Todos os direitos reservados.</p>
+</table>
+<!-- Container End -->
 
-              <img src="{{ asset('logo.png') }}" style="max-width:160px; width:100%; height:auto; margin-top:20px;">
-            </td>
-          </tr>
-
-        </table>
-
-      </td>
-    </tr>
-  </table>
+</td>
+</tr>
+</table>
+<!-- Wrapper End -->
 
 </body>
 </html>

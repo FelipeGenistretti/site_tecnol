@@ -118,7 +118,7 @@
 <!-- FOOTER -->
 <tr>
 <td style="padding:30px; background:#fafafa; text-align:center; font-size:11px; color:#777; line-height:1.5;">
-  “Esta mensagem e eventuais anexos estão dirigidos EXCLUSIVAMENTE aos destinatários especificados...”<br><br>
+  “Esta mensagem e eventuais anexos estão dirigidos EXCLUSIVAMENTE aos destinatários especificados. A informação neles contida é CONFIDENCIAL, não estando autorizado seu uso, revelação, distribuição, impressão ou cópia. Se você recebeu por ENGANO, pedimos gentilmente que comunique ao remetente e ELIMINE a mensagem e os anexos. Em que pese se tratar de e-mail corporativo, o seu conteúdo não necessariamente é seguro e/ou reflete a opinião da TECNOL, que não poderá aceitar a responsabilidade por quaisquer perdas e/ou danos causados por esta mensagem ou por seus anexos.”<br><br>
   © TecnoIt 2025 - Todos os direitos reservados.<br><br>
 
   <img src="{{ asset(' /logo.png') }}" width="140" style="opacity:0.85;">
