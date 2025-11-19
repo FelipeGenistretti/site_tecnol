@@ -2,78 +2,60 @@
 
 namespace App\Mail;
 
-use App\Traits\HasMailAttachments;
+use App\Traits\HasAttachment;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Mail\Attachment;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Storage;
 
 
 class TrabalheConoscoMail extends Mailable
 {
-    use Queueable, SerializesModels, HasMailAttachments;
+    use Queueable, HasAttachment;
 
     public $data;
-    public $arquivo;
+    public $path;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct($data, $arquivo)
+    public $arquivo_nome;
+    public $arquivo_tamanho;
+    public $arquivo_url;
+
+    public function __construct($data, $path)
     {
         $this->data = $data;
-        $this->arquivo = $arquivo;
+        $this->path = $path;
+
+        // Metadados
+        $this->arquivo_nome = basename($path);
+        $this->arquivo_tamanho = round(Storage::disk("public")->size($path) / 1024, 1);
+
+        // Link para download
+        $this->arquivo_url = route("download.arquivo", ["path" => $this->path]);
     }
 
-    /**
-     * Get the message envelope.
-     */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Trabalhe Conosco Mail',
+            subject: 'Novo Currículo Recebido'
         );
     }
 
-    /**
-     * Get the message content definition.
-     */
     public function content(): Content
     {
         return new Content(
             view: 'emails.trabalhe-conosco',
-            with:[
-                "data"=>$this->data,
-                "arquivo"=>$this->arquivo
+            with: [
+                "data" => $this->data,
+                "arquivo_nome" => $this->arquivo_nome,
+                "arquivo_tamanho" => $this->arquivo_tamanho,
+                "arquivo_url" => $this->arquivo_url,
             ]
         );
     }
 
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
-     */
     public function attachments(): array
     {
-
-            if ($this->arquivo) {
-            return [
-                Attachment::fromPath($this->arquivo->getRealPath())
-                    ->as($this->arquivo->getClientOriginalName())
-                    ->withMime($this->arquivo->getMimeType())
-            ];
-        }
-
-        return [];
-
-        // return [
-        //     Attachment::fromPath($this->arquivo)
-        //     ->as('curriculo.' . pathinfo($this->arquivo, PATHINFO_EXTENSION))
-        //     ->withMime(mime_content_type($this->arquivo)),
-        // ];
+        return $this->attachFileFromPath($this->path);
     }
 }
