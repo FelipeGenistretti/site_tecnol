@@ -179,9 +179,9 @@
       <div class="flex flex-col gap-4 textContainer">
         <div class="bg-gray-100/30 bg-contrast rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300 lg:w-full">
 
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast text-[#411F56]">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-a-contrast text-[#411F56]">
         <path class="svg-bg" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" fill="white"/>
-        <path class="svg" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" stroke=""/>
+        <path class="icon-stroke" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" stroke=""/>
         <path class="svg" d="M28.3327 15.8334L20.8402 20.6059C20.5859 20.7536 20.2971 20.8313 20.0031 20.8313C19.7091 20.8313 19.4203 20.7536 19.166 20.6059L11.666 15.8334" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
         <path class="svg" d="M26.666 13.3334H13.3327C12.4122 13.3334 11.666 14.0796 11.666 15V25C11.666 25.9205 12.4122 26.6667 13.3327 26.6667H26.666C27.5865 26.6667 28.3327 25.9205 28.3327 25V15C28.3327 14.0796 27.5865 13.3334 26.666 13.3334Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -194,9 +194,9 @@
         </div>
 
         <div class="bg-gray-100/30 bg-contrast rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast text-[#411F56]">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-a-contrast text-[#411F56]">
         <path class="svg-bg" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" fill="white"/>
-        <path class="svg" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" stroke=""/>
+        <path class="icon-stroke" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" stroke=""/>
         <path class="svg" d="M28.3327 15.8334L20.8402 20.6059C20.5859 20.7536 20.2971 20.8313 20.0031 20.8313C19.7091 20.8313 19.4203 20.7536 19.166 20.6059L11.666 15.8334" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
         <path class="svg" d="M26.666 13.3334H13.3327C12.4122 13.3334 11.666 14.0796 11.666 15V25C11.666 25.9205 12.4122 26.6667 13.3327 26.6667H26.666C27.5865 26.6667 28.3327 25.9205 28.3327 25V15C28.3327 14.0796 27.5865 13.3334 26.666 13.3334Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -211,9 +211,9 @@
        
 
         <div class="bg-gray-100/30 bg-contrast rounded-md shadow-md p-5 flex items-center gap-3 transform hover:scale-105 hover:shadow-xl transition duration-300">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast text-[#411F56]">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-a-contrast text-[#411F56]">
         <path class="svg-bg" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" fill="white"/>
-        <path class="svg" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" stroke=""/>
+        <path class="icon-stroke" d="M10 0.5H30C35.2467 0.5 39.5 4.7533 39.5 10V30C39.5 35.2467 35.2467 39.5 30 39.5H10C4.7533 39.5 0.5 35.2467 0.5 30V10C0.5 4.7533 4.7533 0.5 10 0.5Z" stroke=""/>
         <path class="svg" d="M17.0544 11.8159L17.7237 11.6142C18.8259 11.2819 20.0034 11.8188 20.4753 12.8687L21.0779 14.2092C21.4802 15.104 21.2682 16.1557 20.5507 16.8248L19.4961 17.8082C19.4552 17.8463 19.4313 17.8993 19.43 17.9553C19.4221 18.2691 19.6301 18.8343 20.0735 19.6024C20.4011 20.1699 20.6986 20.5749 20.9536 20.8129C21.043 20.8965 21.1141 20.9496 21.1625 20.982L21.2356 21.027L21.2703 21.0206L22.718 20.578C23.656 20.2912 24.6725 20.6332 25.2465 21.4286L26.1021 22.6144C26.7738 23.5454 26.653 24.8298 25.8195 25.6192L25.3111 26.1007C24.4825 26.8854 23.2921 27.156 22.2057 26.8067C20.1713 26.1526 18.3452 24.3881 16.705 21.5472C15.0622 18.7018 14.4478 16.2347 14.9027 14.1436C15.1306 13.0961 15.878 12.2431 16.8758 11.8757L17.0544 11.8159ZM17.278 13.0599C16.6944 13.2863 16.2587 13.7914 16.1242 14.4094C15.7455 16.1502 16.2863 18.3219 17.7876 20.9222C19.2865 23.5185 20.8942 25.072 22.5883 25.6167C23.2401 25.8263 23.9544 25.6639 24.4516 25.1931L24.9599 24.7116C25.3388 24.3528 25.3937 23.769 25.0884 23.3458L24.2328 22.16C23.9719 21.7985 23.5098 21.643 23.0835 21.7734L21.5938 22.2272L21.4781 22.2527C20.6009 22.3975 19.8267 21.675 18.991 20.2274C18.4419 19.2763 18.1652 18.5246 18.1803 17.9237C18.1902 17.5321 18.3572 17.161 18.6436 16.8939L19.6981 15.9106C20.0243 15.6064 20.1207 15.1285 19.9378 14.7216L19.3352 13.3812C19.1207 12.904 18.5855 12.6599 18.0845 12.811L17.4152 13.0128L17.278 13.0599Z" fill="currentColor" stroke="currentColor" stroke-width="0.2"/>
       </svg>
 

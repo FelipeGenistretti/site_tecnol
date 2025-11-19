@@ -75,7 +75,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
 
-        <button class="flex items-center justify-between px-3 py-2 border rounded-lg hover:bg-gray-100"
+        <button class="flex items-center justify-between px-3 py-2 border rounded-lg input-contrast"
             onclick="window.location.href='{{ route('quem-somos') }}'">
             <p class="whitespace-nowrap">QUEM SOMOS</p>
             <svg width="24" height="24" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@
             </svg>
         </button>
 
-        <button class="flex items-center justify-between px-3 py-2 border rounded-lg hover:bg-gray-100"
+        <button class="flex items-center justify-between px-3 py-2 border rounded-lg input-contrast"
             onclick="window.location.href='{{ route('safe-register-car') }}'">
             <p class="whitespace-nowrap">SDA</p>
             <svg width="24" height="24" viewBox="0 0 24 24">
@@ -95,7 +95,7 @@
             </svg>
         </button>
 
-        <button class="flex items-center justify-between px-3 py-2 border rounded-lg hover:bg-gray-100"
+        <button class="flex items-center justify-between px-3 py-2 border rounded-lg input-contrast"
             onclick="window.location.href='{{ route('compliance') }}'">
             <p>COMPLIANCE</p>
             <svg width="24" height="24" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@
             </svg>
         </button>
 
-        <button class="flex items-center justify-between px-3 py-2 border rounded-lg hover:bg-gray-100"
+        <button class="flex items-center justify-between px-3 py-2 border rounded-lg input-contrast"
             onclick="window.location.href='{{ route('home') }}#faleConosco'">
             <p>CONTATO</p>
             <svg width="24" height="24" viewBox="0 0 24 24">
@@ -357,12 +357,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const rotas = {
     'Início': '/',
     'Quem somos': '/quem-somos',
-    'Safe Data Analytics - SDA': '/safe-register-car',
-    'Tecnohub': '/tecnohub',
+    'Safe Data Analytics - SDA': '/sda',
     'Serviços': '/veiculos',
     'Compliance': '/compliance',
     'Canal de denúncia': '/canal-denuncia',
-    'Solicitação do titular': '/solicitacao-titular',
     'Segurança': '/seguranca',
     'Contato': '/fale-conosco',
     'Trabalhe conosco': '/trabalhe-conosco'
@@ -390,12 +388,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('a');
         link.href = rotas[item];
         link.textContent = item;
-        link.className = 'block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer';
+        link.className = 'block px-3 uppercase text-contrast py-2 text-sm text-gray-700 cursor-pointer';
         results.appendChild(link);
       });
       results.classList.remove('hidden');
     } else {
-      results.innerHTML = '<div class="px-3 py-2 text-sm text-gray-500">Nenhum resultado encontrado</div>';
+      results.innerHTML = '<div class="px-3 py-2 text-contrast text-sm text-gray-500">Nenhum resultado encontrado</div>';
       results.classList.remove('hidden');
     }
   });

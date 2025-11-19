@@ -1,25 +1,16 @@
 <div>
 
-
  <div>
-    
-
-  <header id="main-header" class="h-[120px] w-full  lg:container-x  top-0  left-0 bg-contrast bg-white shadow z-50   py-4 lg:py-[30px] items-center  transition-all duration-300">
-    
   
-
-   
+  <header id="main-header" class="h-[120px] w-full  lg:container-x  top-0  left-0 bg-contrast bg-white shadow z-50   py-4 lg:py-[30px] items-center  transition-all duration-300">
+  
     <div class="flex justify-between items-center w-full h-full mx-auto">
-      
 
       <div class="max-sm:hidden lg:flex-col items-center  lg:w-[167px] lg:h-[29px] ">
         
-    
         <a href="{{ route('home') }}"><img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain md:hidden sm:hidden lg:flex" id="logoHeaderDesk"></a>
         <a href="{{ route('home') }}"><img src="/logoContrast.png" alt="Logo Contrast TecShare" class="w-full h-full object-contain hidden md:hidden" id="logoContrastHeaderDesk"></a>
       </div>
-
-
 
       <!-- MENU DESKTOP -->
       <nav class="hidden lg:flex items-center gap-[16px] uppercase text-md h-full relative">
@@ -42,8 +33,7 @@
               <a href="{{ route('quem-somos') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Quem Somos</a>
               <a href="{{ route('trabalhe-conosco') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">Trabalhe conosco</a>
             </div>
-         
-            
+
          
           </li>
 
@@ -68,7 +58,6 @@
             </div>
           </li>
 
-
           
           <li class="flex items-center h-full">
             <a href="{{ route('fale-conosco') }}" id="scrollToFaleConosco"
@@ -88,23 +77,21 @@
 
           <div
             id="searchBarDesktop"
-            class="hidden absolute top-full right-0 mt-2 w-[320px] bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-[9999]">
+            class="hidden absolute top-full right-0 mt-2 w-[320px] input-contrast bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-[9999]">
             <div class="relative w-full">
               <input 
                 type="text"
                 placeholder="Pesquisar..."
-                class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#411F56]"
+                class="w-full border input-contrast border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#411F56]"
               />
             </div>
           </div>
 
-        </div>
-
-        
+        </div>        
         <x-font-control/>
 
         <x-contraste-control />
-    
+
 
         <button type="button" class="button-contrast py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-purple-800 transition-colors duration-300 ">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
@@ -115,17 +102,12 @@
         </button>
       </nav>
 
-
-
       <!-- BOTÃO HAMBURGUER MOBILE -->
-      
-
-
+    
       <div class=" grid grid-cols-1 items-center justify-between  w-full lg:hidden justify-center ">
        
         <div id = "menu-acess" class="w-full bg-contrast text-contrast  h-[48px] gap-4 bg-[#F2F2F2]  items-center justify-start top-0 item-center flex top-0 container-x ">
       <h1>Acessibilidade :</h1>
-      
       
           <button  onclick="AtivarContraste()">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
@@ -133,8 +115,6 @@
             </svg>
           </button>
 
-      
-      
 <button id="aPlusMobile" onclick="ZoomMais()">
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
        xmlns="http://www.w3.org/2000/svg" class="button-a-contrast">
@@ -165,11 +145,6 @@
           class="icon-fill-second"/>
   </svg>
 </button>
-
-
-      
-      
-     
       
     </div>
 
@@ -177,8 +152,7 @@
               <div>
           <a href="{{ route('home') }}"><img src="/logo.png"   alt="Logo TecShare" class=" w-[164px] h-[32px] h-full object-contain" id="logoHeader"></a>
         <a href="{{ route('home') }}"><img src="/logoContrast.png" alt="Logo Contrast TecShare" class="w-full h-full object-contain hidden" id="logoContrastHeader"></a>
-      
-
+    
               </div>
 
               <div class="container-x">
@@ -193,13 +167,6 @@
 
               </div>
         </div>
-
-
-
-    
-
-
-
        
       </div>
     </div>
@@ -207,14 +174,8 @@
 </div>
   <!-- MENU MOBILE -->
 
-
-
-
 <div id="mobile-menu" class="hidden lg:hidden bg-white w-full fixed top-0 left-0 shadow-lg z-50 text-contrast bg-contrast">
   
-  
-
-      
   <div class="pt-4 flex justify-start">
     <button id="back" type="button" class="flex items-center gap-2 px-4 py-3 rounded-md">
        <svg class="text-contrast" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -278,13 +239,9 @@
           <li><a href="{{ route('seguranca') }}" class="block hover:text-purple-800">Segurança</a></li>
            <li><a href="{{ route('canal-denuncia') }}" class="block hover:text-purple-800">Canal de denúncia</a></li>
         </ul>
-      </li>
-
-        
-      
-
+      </li>      
     
-      <li><a href="/#faleConosco" class="block hover:text-purple-800">Contato</a></li>
+      <li><a href="{{ route('fale-conosco') }}" class="block hover:text-purple-800">Contato</a></li>
 
       <li>
         <div class="relative max-md:hidden flex justify-between items-center">
@@ -295,11 +252,7 @@
               </svg>
           </button>
 
-           
-
-
-
-          <div id="searchBarMobile" class="hidden absolute top-full right-0 mt-2 w-[300px] bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-[9999]">
+          <div id="searchBarMobile" class="hidden  absolute top-full right-0 mt-2 w-[300px] bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-[9999]">
             <div class="flex items-center gap-2 border border-gray-300 rounded-md px-3 py-2">
               <input type="text" placeholder="Pesquisar..." class="w-full focus:outline-none text-sm text-gray-700" />
               <img src="/search.png" alt="Buscar" class="w-4 h-4 opacity-70">
@@ -346,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (searchBarDesktop) {
     const resultadosDesktop = document.createElement("div");
     resultadosDesktop.className =
-      "absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-[9999] shadow-md";
+      "absolute input-contrast top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-[9999] shadow-md";
     containerDesktop.appendChild(resultadosDesktop);
 
     searchBarDesktop.addEventListener("input", (e) => {
@@ -368,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
           link.href = rotas[item];
           link.textContent = item;
           link.className =
-            "block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer";
+            "text-contrast block px-3 py-2 text-sm text-gray-700 cursor-pointer";
           resultadosDesktop.appendChild(link);
         });
         resultadosDesktop.classList.remove("hidden");
@@ -408,7 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
           link.href = rotas[item];
           link.textContent = item;
           link.className =
-            "block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer";
+            "block px-3 py-2 text-contrast bg-contrast text-sm text-gray-700 hover:bg-gray-100 cursor-pointer";
           resultadosMobile.appendChild(link);
         });
         resultadosMobile.classList.remove("hidden");
@@ -429,8 +382,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
-
-
 
   <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -534,10 +485,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSearch('searchButtonMobile', 'searchBarMobile');
 </script>
 
-
-
-
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const textContainers = document.querySelectorAll('.textContainer');
@@ -594,10 +541,6 @@ function ZoomMenos() {
 
 </script>
 
-
-
-
-
 <style>
   .rotate-180 { transform: rotate(180deg); transition: transform 0.2s ease; }
 
@@ -606,8 +549,6 @@ function ZoomMenos() {
      position:relative;
     
     }
-
-
     .header-fixed {
     position: fixed;
     top: 0;
@@ -643,7 +584,5 @@ function ZoomMenos() {
     padding: 0.75rem !important;
     transition: all 0.2s ease;
   }
-
-  
-
+ 
 </style>
