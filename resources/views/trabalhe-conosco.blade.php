@@ -111,7 +111,7 @@
         
 
         
-        <p class="textContainer text-sm text-center text-[#666666]">
+        <p class="textContainer text-contrast text-sm text-center text-[#666666]">
           Arraste e solte seu(s) arquivo(s) aqui <br> ou
         </p>
         <span class="textContainer p-2 px-6 rounded border border-[#B3B3B3] cursor-pointe input-contrast">
