@@ -164,7 +164,7 @@
         <div class="flex justify-between items-center w-full  py-[16px] container-x ">
               <div>
           <a href="{{ route('home') }}"><img src="/logo.png"   alt="Logo TecShare" class=" w-[164px] h-[32px] h-full object-contain" id="logoHeader"></a>
-        <a href="{{ route('home') }}"><img src="/logoContrast.png" alt="Logo Contrast TecShare" class="w-full h-full object-contain hidden" id="logoContrastHeader"></a>
+        <a href="{{ route('home') }}"><img src="/logoContrast.png" alt="Logo Contrast TecShare" class="w-[164px] h-[32px]   object-contain hidden" id="logoContrastHeader"></a>
     
               </div>
 
@@ -400,6 +400,28 @@ document.addEventListener("DOMContentLoaded", () => {
       document.addEventListener('DOMContentLoaded', () => {
           const logo = document.getElementById("logoHeaderDesk");
           const logoContrast = document.getElementById("logoContrastHeaderDesk");
+          function atualizarLogos() {
+              if (document.body.classList.contains('contrast')) {
+                  logo.classList.add("hidden");
+                  logoContrast.classList.remove("hidden");
+              } else {
+                  logo.classList.remove("hidden");
+                  logoContrast.classList.add("hidden");
+              }
+          }
+          atualizarLogos();
+          const observer = new MutationObserver(atualizarLogos);
+          observer.observe(document.body, {
+              attributes: true,
+              attributeFilter: ['class']
+          });
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const logo = document.getElementById("logoHeader");
+          const logoContrast = document.getElementById("logoContrastHeader");
           function atualizarLogos() {
               if (document.body.classList.contains('contrast')) {
                   logo.classList.add("hidden");
