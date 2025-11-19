@@ -24,7 +24,7 @@
     type="text"
     id="searchInput404"
     placeholder="Pesquisar..."
-    class="w-full border input-contrast border-gray-300 rounded-lg py-2 pl-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-[#F15A29] text-contrast bg-contrast"
+    class="w-full border input-contrast iput-contrast border-gray-300 rounded-lg py-2 pl-3 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-[#F15A29] text-contrast bg-contrast"
   />
   <button
     type="button"
@@ -38,13 +38,13 @@
   <!-- dropdown -->
   <div
     id="searchResults404"
-    class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md max-h-60 overflow-y-auto"
+    class="absolute top-full left-0 w-full input-contrast bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md max-h-60 overflow-y-auto"
   ></div>
 </div>
  
   <div
     id="searchResults404"
-    class="absolute top-full left-0 w-full bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md max-h-60 overflow-y-auto"
+    class="absolute text-contrast top-full left-0 w-full input-contrast bg-white border border-gray-200 rounded-md mt-1 hidden z-50 shadow-md max-h-60 overflow-y-auto"
   ></div>
 </div>
 
@@ -345,12 +345,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const rotas = {
     'Início': '/',
     'Quem somos': '/quem-somos',
-    'Safe Data Analytics - SDA': '/safe-register-car',
-    'Tecnohub': '/tecnohub',
+    'Safe Data Analytics - SDA': '/sda',
     'Serviços': '/veiculos',
     'Compliance': '/compliance',
     'Canal de denúncia': '/canal-denuncia',
-    'Solicitação do titular': '/solicitacao-titular',
     'Segurança': '/seguranca',
     'Contato': '/fale-conosco',
     'Trabalhe conosco': '/trabalhe-conosco'
@@ -378,12 +376,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('a');
         link.href = rotas[item];
         link.textContent = item;
-        link.className = 'block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer';
+        link.className = 'block px-3 uppercase text-contrast py-2 text-sm text-gray-700 cursor-pointer';
         results.appendChild(link);
       });
       results.classList.remove('hidden');
     } else {
-      results.innerHTML = '<div class="px-3 py-2 text-sm text-gray-500">Nenhum resultado encontrado</div>';
+      results.innerHTML = '<div class="px-3 py-2 text-contrast text-sm text-gray-500">Nenhum resultado encontrado</div>';
       results.classList.remove('hidden');
     }
   });
