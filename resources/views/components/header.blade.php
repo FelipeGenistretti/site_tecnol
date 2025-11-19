@@ -6,11 +6,24 @@
   
     <div class="flex justify-between items-center w-full h-full mx-auto">
 
-      <div class="max-sm:hidden lg:flex-col items-center  lg:w-[167px] lg:h-[29px] ">
-        
-        <a href="{{ route('home') }}"><img src="/logo.png" alt="Logo TecShare" class="w-full h-full object-contain md:hidden sm:hidden lg:flex" id="logoHeaderDesk"></a>
-        <a href="{{ route('home') }}"><img src="/logoContrast.png" alt="Logo Contrast TecShare" class="w-full h-full object-contain hidden md:hidden" id="logoContrastHeaderDesk"></a>
-      </div>
+     <div class="max-sm:hidden lg:flex-col items-center lg:w-[167px] lg:h-[29px]">
+    
+    <a href="{{ route('home') }}">
+        <img src="/logo.png"
+             alt="Logo TecShare"
+             class="w-full h-full object-contain"
+             id="logoHeaderDesk">
+    </a>
+
+    <a href="{{ route('home') }}">
+        <img src="/logoContrast.png"
+             alt="Logo Contrast TecShare"
+             class="w-full h-full object-contain hidden"
+             id="logoContrastHeaderDesk">
+    </a>
+
+</div>
+
 
       <!-- MENU DESKTOP -->
       <nav class="hidden lg:flex items-center gap-[16px] uppercase text-md h-full relative">

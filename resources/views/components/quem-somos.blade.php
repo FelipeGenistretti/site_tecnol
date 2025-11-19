@@ -6,10 +6,10 @@
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
     <div>
-      <h1 class="text-5xl max-sm:text-[38px] font-medium text-textPrimary pb-12">Quem somos</h1>
+      <h1 class="text-5xl max-sm:text-[38px] font-medium text-textPrimary pb-12 text-contrast">Quem somos</h1>
 
-      <p class="text-textPrimary text-[16px]">
-        <span class="font-bold">TECSHARE</span> transforma o ecossistema de soluções tecnológicas e integrações digitais,
+      <p class="text-textPrimary text-[16px] text-contrast textContainer">
+        <span class="font-bold textContainer text-contrast">TECSHARE</span> transforma o ecossistema de soluções tecnológicas e integrações digitais,
         reduzindo burocracias, aumentando a eficiência operacional e garantindo segurança em cada interação.
       </p>
 
