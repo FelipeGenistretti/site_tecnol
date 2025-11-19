@@ -131,7 +131,7 @@
 
 
         </ul>
-
+          
 
 
           <button class="textContainer p-2 px-6 rounded border border-[#B3B3B3] cursor-pointe input-contrast">Adicionar arquivos</button>
@@ -259,8 +259,10 @@ let filesArray = []; // guarda os arquivos selecionados
 function InputActive() {
     const newFiles = Array.from(inputFile.files);
 
-    // adiciona sem perder os antigos
-    newFiles.forEach(file => filesArray.push(file));
+    // substitui os antigos pelos novos
+filesArray.length = 0;     // limpa o array
+newFiles.forEach(file => filesArray.push(file)); // adiciona só os novos
+
 
     // muda o visual
     inputInit.classList.add("hidden");

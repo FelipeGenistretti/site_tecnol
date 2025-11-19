@@ -96,11 +96,7 @@
                         <a class="ml-2 footer-hover" href="{{ route('privacidade') }}">Privacidade</a>                    
                     </li>
                           </li>
-                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
-                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
-                    </svg>
-                    </li>
+                  
                      <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
                     <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
@@ -113,13 +109,7 @@
                     </svg>
                         <a class="ml-2" href="{{ route('fale-conosco') }}">Contato</a>                    
                     </li>
-                          <li class="text-sm mt-1 mb-1 flex items-center text-contrast text-md justify-center lg:justify-start footer-hover">
-                    <svg class="text-contrasts footer-hover"  width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6.70708L0 12L1.41421 13.4142L8.12132 6.70708L1.41421 -2.86102e-05L0 1.41418L5.29289 6.70708Z" fill="currentColor"/>
-                    </svg>
-                        <a class="ml-2" href="{{ route('seguranca') }}">Erro 404 layout</a>                    
-                    </li>
-
+                     
 
 
 

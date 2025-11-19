@@ -11,6 +11,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
+
 class TrabalheConoscoMail extends Mailable
 {
     use Queueable, SerializesModels, HasMailAttachments;
@@ -58,10 +59,21 @@ class TrabalheConoscoMail extends Mailable
      */
     public function attachments(): array
     {
-        return [
-            Attachment::fromPath($this->arquivo)
-            ->as('curriculo.' . pathinfo($this->arquivo, PATHINFO_EXTENSION))
-            ->withMime(mime_content_type($this->arquivo)),
-        ];
+
+            if ($this->arquivo) {
+            return [
+                Attachment::fromPath($this->arquivo->getRealPath())
+                    ->as($this->arquivo->getClientOriginalName())
+                    ->withMime($this->arquivo->getMimeType())
+            ];
+        }
+
+        return [];
+
+        // return [
+        //     Attachment::fromPath($this->arquivo)
+        //     ->as('curriculo.' . pathinfo($this->arquivo, PATHINFO_EXTENSION))
+        //     ->withMime(mime_content_type($this->arquivo)),
+        // ];
     }
 }
