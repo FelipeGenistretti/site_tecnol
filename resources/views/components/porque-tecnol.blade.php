@@ -81,7 +81,7 @@
       <h1 class="text-[42px]">Fale Conosco</h1>
       <p class="text-textSecondary textContainer text-contrast">Envie-nos um e-mail com uma sugestão, crítica ou elogio</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[70%_28%] gap-6 ">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[70%_30%] gap-6 ">
       
       <!-- FORMULÁRIO (70%) --> 
       <div class="bg-gray-100/30 bg-contrast rounded-md shadow-md p-6 textContainer">
@@ -207,7 +207,7 @@
 
           <div class="min-w-0">
             <p class="opacity-65 mb-2 text-contrast">Email</p>
-            <p class="text-contrast break-words">atendimento@sistemastecnol.com.br</p>
+            <p class="text-contrast break-words text-[17px]">atendimento@sistemastecnol.com.br</p>
           </div>
         </div>
 

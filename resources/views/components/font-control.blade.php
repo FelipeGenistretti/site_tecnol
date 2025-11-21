@@ -15,15 +15,15 @@
 
     <button id="aPlusActive"
   class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none text-white">
-  <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
-       class="button-a-contrast" aria-hidden="true" focusable="false">
-    <rect class="icon-bg" x="1" y="1" width="30" height="30" rx="15" fill="#411F56" />
-    <rect x="1" y="1" width="30" height="30" rx="15" stroke="currentColor" stroke-width="2" fill="none"/>
-    <path d="M21.7143 15.1524V12.8116H19.5303V12.05H21.7143V9.70923H22.5655V12.05H24.7495V12.8116H22.5655V15.1524H21.7143Z"
-          fill="currentColor"/>
-    <path d="M16.715 22.5147L15.4083 18.6694H10.1443L8.83764 22.5147H7.25098L11.8056 9.48535H13.803L18.3576 22.5147H16.715ZM12.8136 10.9414H12.7203L10.5176 17.288H15.0163L12.8136 10.9414Z"
-          fill="currentColor"/>
-  </svg>
+   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+<rect class="bg-a-contrast" x="1.33333" y="1.33333" width="29.3333" height="29.3333" rx="14.6667" fill="#FFF6F3"/>
+<rect class="stroke-contrast" x="1.33333" y="1.33333" width="29.3333" height="29.3333" rx="14.6667" stroke="#F15A29" stroke-width="2.66667"/>
+<path class="text-a-contrast" d="M21.7143 15.1522V12.8114H19.5303V12.0498H21.7143V9.70898H22.5655V12.0498H24.7495V12.8114H22.5655V15.1522H21.7143Z" fill="currentColor"/>
+<path class="text-a-contrast" d="M16.715 22.5137L15.4083 18.6684H10.1443L8.83764 22.5137H7.25098L11.8056 9.48438H13.803L18.3576 22.5137H16.715ZM12.8136 10.9404H12.7203L10.5176 17.287H15.0163L12.8136 10.9404Z" fill="black"/>
+</svg>
+
+
+
 </button>
 
 
@@ -42,19 +42,13 @@
 
   <button id="aMinusActive"
   class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none text-white focus:outline-none focus:ring-0">
-  <svg class="button-a-contrast focus:outline-none focus:ring-0"
-       width="30" height="30" viewBox="0 0 32 32" fill="none"
-       xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+<rect class="bg-a-contrast" x="1.33333" y="1.33333" width="29.3333" height="29.3333" rx="14.6667" fill="#FFF6F3"/>
+<rect class="stroke-contrast" x="1.33333" y="1.33333" width="29.3333" height="29.3333" rx="14.6667" stroke="#F15A29" stroke-width="2.66667"/>
+<path class="text-a-contrast" d="M19.5151 16.0733V14.6973H23.6911V16.0733H19.5151Z" fill="black"/>
+<path class="text-a-contrast" d="M16.4211 21.584L15.3011 18.288H10.7891L9.66908 21.584H8.30908L12.2131 10.416H13.9251L17.8291 21.584H16.4211ZM13.0771 11.664H12.9971L11.1091 17.104H14.9651L13.0771 11.664Z" fill="black"/>
+</svg>
 
-    <rect class="icon-bg" x="1" y="1" width="30" height="30" rx="15" fill="#411F56"/>
-
-    <rect x="1" y="1" width="30" height="30" rx="15"
-          stroke="currentColor" stroke-width="2" fill="none"/>
-
-    <path d="M19.5146 16.792V15.416H23.6906V16.792H19.5146Z" fill="currentColor"/>
-    <path d="M16.4206 21.584L15.3006 18.288H10.7886L9.66859 21.584H8.30859L12.2126 10.416H13.9246L17.8286 21.584H16.4206ZM13.0766 11.664H12.9966L11.1086 17.104H14.9646L13.0766 11.664Z"
-          fill="currentColor"/>
-  </svg>
 </button>
 
 

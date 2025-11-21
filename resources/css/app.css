@@ -109,11 +109,11 @@ body.contrast .text-black-contrast{
 }
 
 .button-a-contrast .icon-fill-first {
-  fill: #000000;                /* parte preta */
+  fill: #000000;                
 }
 
 .button-a-contrast .icon-fill-second {
-  fill: #000000;                /* outra parte preta */
+  fill: #000000;                
 }
 
 /* MODO CONTRASTE */
@@ -122,13 +122,24 @@ body.contrast .button-a-contrast .icon-stroke {
 }
 
 body.contrast .button-a-contrast .icon-fill-first {
-  fill: #FFFF00;                /* texto amarelo */
+  fill: #FFFF00;                
 }
 
 body.contrast .button-a-contrast .icon-fill-second {
-  fill: #FFFF00;                /* texto amarelo */
+  fill: #FFFF00;               
 }
 
+body.contrast .stroke-contrast{
+  stroke:#FFFF00;
+}
+
+body.contrast .bg-a-contrast{
+  fill:#0D0D0D;
+}
+
+body.contrast .text-a-contrast{
+  fill:#FFFF00;
+}
 
 
 

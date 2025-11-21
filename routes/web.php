@@ -40,7 +40,7 @@ Route::get('/quem-somos', function() {
 })->name('quem-somos');
 
 
-Route::get('/sda', function() {
+Route::get('/safe-register-car', function() {
     return view('safe-register-car');
 })->name('safe-register-car');
 

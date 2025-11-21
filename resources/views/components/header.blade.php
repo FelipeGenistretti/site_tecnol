@@ -9,18 +9,20 @@
      <div class="max-sm:hidden lg:flex-col items-center lg:w-[167px] lg:h-[29px]">
     
     <a href="{{ route('home') }}">
-        <img src="/logo.png"
+        <img src="/logoTecnolNormalDesk.png"
              alt="Logo TecShare"
              class="w-full h-full object-contain"
              id="logoHeaderDesk">
     </a>
 
-    <a href="{{ route('home') }}">
+    <!-- <a href="{{ route('home') }}">
         <img src="/logoContrast.png"
              alt="Logo Contrast TecShare"
              class="w-full h-full object-contain hidden"
              id="logoContrastHeaderDesk">
-    </a>
+    </a> -->
+
+    
 
 </div>
 
@@ -56,7 +58,7 @@
             </a>
 
             <div class="absolute left-0 top-[60%] w-48 bg-white bg-contrast border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
-              <a href="{{ route('quem-somos') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">o que é</a>
+              <a href="{{ route('safe-register-car') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">o que é</a>
               <a href="{{ route('trabalhe-conosco') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">onde operamos</a>
               <a href="{{ route('pre-registro') }}" class="nav-link block px-4 py-2 text-gray-700 hover:text-textPrimary hover:font-bold text-contrast">pré-cadastro</a>
             </div>
@@ -75,6 +77,15 @@
             </div>
           </li>
 
+          <li class="relative group flex items-center h-full">
+            <a href="{{ route('seguranca') }}" 
+               class="text-contrast nav-link flex items-center gap-1 {{ Route::is('seguranca') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+              Segurança
+            </a>
+          
+          </li>
+
+      
           
           <li class="flex items-center h-full">
             <a href="{{ route('fale-conosco') }}" id="scrollToFaleConosco"
@@ -298,10 +309,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const rotas = {
     'Início': '/',
     'Quem somos': '/quem-somos',
-    'Safe Data Analytics - SDA': '/sda',
+    'Safe Register Car - SRC': '/safe-register-car',
+    'Pré-cadastro':'/pre-registro',
     'Serviços': '/veiculos',
     'Compliance': '/compliance',
     'Canal de denúncia': '/canal-denuncia',
+    'Solicitação do titular':'/solicitacao-titular',
     'Segurança': '/seguranca',
     'Contato': '/fale-conosco',
     'Privacidade':"/privacidade",
