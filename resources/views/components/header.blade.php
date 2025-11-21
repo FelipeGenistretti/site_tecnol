@@ -31,14 +31,14 @@
 
           <li class="flex items-center h-full">
             <a href="{{ route('home') }}" 
-               class="text-contrast nav-link {{ Route::is('home') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+               class="text-contrast nav-link {{ Route::is('home') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
               Início
             </a>
           </li>
 
             <li class="relative group flex items-center h-full">
             <a href="" 
-               class="text-contrast nav-link flex items-center gap-1 transition-colors {{ Route::is('quem-somos') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+               class="text-contrast nav-link flex items-center gap-1 transition-colors {{ Route::is('quem-somos') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
               quem somos
             </a>
          
@@ -51,7 +51,7 @@
  
           <li class="relative group flex items-center h-full">
             <a href="{{ route('safe-register-car') }}" 
-               class="text-contrast nav-link flex items-center gap-1 transition-colors {{ Route::is('safe-register-car') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+               class="text-contrast nav-link flex items-center gap-1 transition-colors {{ Route::is('safe-register-car') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
               Safe register car
             </a>
 
@@ -65,7 +65,7 @@
 
           <li class="relative group flex items-center h-full">
             <a href="" 
-               class="text-contrast nav-link flex items-center gap-1 {{ Route::is('compliance') ? 'text-[#411F56] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
+               class="text-contrast nav-link flex items-center gap-1 {{ Route::is('compliance') ? 'text-[#F15A29] font-bold' : 'text-textSecondary hover:text-textPrimary hover:font-bold' }}">
               Compliance
             </a>
             <div class="absolute left-0 top-[60%] w-48 bg-white border bg-contrast rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
@@ -99,7 +99,7 @@
               <input 
                 type="text"
                 placeholder="Pesquisar..."
-                class="w-full border input-contrast border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#411F56]"
+                class="w-full border input-contrast border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#F15A29]"
               />
             </div>
           </div>
@@ -110,7 +110,7 @@
         <x-contraste-control />
 
 
-        <button type="button" class="button-contrast py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-purple-800 transition-colors duration-300 ">
+        <button type="button" class="button-contrast py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-orange-400 transition-colors duration-300 ">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
             <path d="M11.499 3C14.3255 3 16.999 4.8836 16.999 7.63086V10.5293H18.999V19.8994C18.999 20.5068 18.5067 20.9998 17.8994 21H5.09863C4.4913 20.9998 3.99902 20.5068 3.99902 19.8994V10.5293H5.99902V7.63086C5.99902 4.8836 8.67259 3 11.499 3ZM5.99902 19H16.999V12.5293H5.99902V19ZM11.499 5C9.3549 5 7.99902 6.3677 7.99902 7.63086V10.4434H14.999V7.63086C14.999 6.3677 13.6432 5 11.499 5Z" fill="currentColor"/>
           </svg>
@@ -214,7 +214,7 @@
   <div class="bg-[#F8F8FF] text-contrast bg-contrast input-contrast">
     <ul class="flex flex-col gap-5 p-4 uppercase">
          <li class="relative">
-        <button class="w-full flex justify-between items-center hover:text-purple-800 uppercase toggle-submenu">
+        <button class="w-full flex justify-between items-center hover:text-orange-400 uppercase toggle-submenu">
           <a href="{{ route('home') }}">Inicio</a>
         </button>
    
@@ -222,7 +222,7 @@
 
 
       <li class="relative">
-        <button class="w-full flex justify-between items-center hover:text-purple-800 uppercase toggle-submenu">
+        <button class="w-full flex justify-between items-center hover:text-orange-400 uppercase toggle-submenu">
           Quem somos
           <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
@@ -231,34 +231,34 @@
         <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
 
           
-          <li><a href="{{ route('quem-somos') }}" class="block hover:text-purple-800">Quem somos</a></li>
-          <li><a href="{{ route('trabalhe-conosco') }}" class="block hover:text-purple-800">Trabalhe conosco</a></li>
+          <li><a href="{{ route('quem-somos') }}" class="block hover:text-orange-400">Quem somos</a></li>
+          <li><a href="{{ route('trabalhe-conosco') }}" class="block hover:text-orange-400">Trabalhe conosco</a></li>
         </ul>
       </li>
 
       <li class="relative">
-        <button class="w-full flex justify-between items-center hover:text-purple-800 uppercase toggle-submenu">
+        <button class="w-full flex justify-between items-center hover:text-orange-400 uppercase toggle-submenu">
           <a href="{{ route('safe-register-car') }}"> Safe register car</a>
         </button>
    
       </li>
 
       <li class="relative">
-        <button class="w-full flex justify-between items-center hover:text-purple-800 uppercase toggle-submenu">
+        <button class="w-full flex justify-between items-center hover:text-orange-400 uppercase toggle-submenu">
           Compliance
           <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
         <ul class="pl-4 mt-2 hidden submenu flex-col gap-3">
-          <li><a href="{{ route('compliance') }}" class="block hover:text-purple-800">Compliance</a></li>
-          <li><a href="{{ route('privacidade') }}" class="block hover:text-purple-800">Privacidade</a></li>
-          <li><a href="{{ route('seguranca') }}" class="block hover:text-purple-800">Segurança</a></li>
-           <li><a href="{{ route('canal-denuncia') }}" class="block hover:text-purple-800">Canal de denúncia</a></li>
+          <li><a href="{{ route('compliance') }}" class="block hover:text-orange-400">Compliance</a></li>
+          <li><a href="{{ route('privacidade') }}" class="block hover:text-orange-400">Privacidade</a></li>
+          <li><a href="{{ route('seguranca') }}" class="block hover:text-orange-400">Segurança</a></li>
+           <li><a href="{{ route('canal-denuncia') }}" class="block hover:text-orange-400">Canal de denúncia</a></li>
         </ul>
       </li>      
     
-      <li><a href="{{ route('fale-conosco') }}" class="block hover:text-purple-800">Contato</a></li>
+      <li><a href="{{ route('fale-conosco') }}" class="block hover:text-orange-400">Contato</a></li>
 
       <li>
         <div class="relative max-md:hidden flex justify-between items-center">
@@ -277,7 +277,7 @@
           </div>
         </div>
       </li>
-        <button type="button" class="w-[40%] container-x button-contrast py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-purple-800 transition-colors duration-300">
+        <button type="button" class="w-[40%] container-x button-contrast py-3 px-4 flex items-center gap-2 rounded-md bg-bgButtonPrimary text-white uppercase hover:bg-orange-400 transition-colors duration-300">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-contrast">
               <path d="M11.499 3C14.3255 3 16.999 4.8836 16.999 7.63086V10.5293H18.999V19.8994C18.999 20.5068 18.5067 20.9998 17.8994 21H5.09863C4.4913 20.9998 3.99902 20.5068 3.99902 19.8994V10.5293H5.99902V7.63086C5.99902 4.8836 8.67259 3 11.499 3ZM5.99902 19H16.999V12.5293H5.99902V19ZM11.499 5C9.3549 5 7.99902 6.3677 7.99902 7.63086V10.4434H14.999V7.63086C14.999 6.3677 13.6432 5 11.499 5Z" fill="currentColor"/>
             </svg>
