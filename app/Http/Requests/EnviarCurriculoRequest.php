@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\Recaptcha;
 use Illuminate\Foundation\Http\FormRequest;
 
 class EnviarCurriculoRequest extends FormRequest
@@ -24,6 +25,7 @@ class EnviarCurriculoRequest extends FormRequest
         return [
             "nome"=>["required", "string"],
             "email"=>["required", "string", "email"],
+            "g-recaptcha-response" => ["required", new Recaptcha()],
             "telefone"=>["required", "string"],
             "atuacao" =>["required"],
             "mensagem"=>["required", "string"],

@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\Recaptcha;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UploadFilesRequest extends FormRequest
@@ -24,6 +25,8 @@ class UploadFilesRequest extends FormRequest
             return [
                 "arquivos" => ["required"],
                 "arquivos.*" => ["file", "mimes:png,jpg,jpeg,webp,pdf,doc,docx,xls,xlsx", "max:5120"],
+                "g-recaptcha-response" => ["required", new Recaptcha()],
+                
 
 
                 'privacy'=> ['accepted'],

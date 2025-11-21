@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\Recaptcha;
 use Illuminate\Foundation\Http\FormRequest;
 
 class TrabalheConoscoRequest extends FormRequest
@@ -15,7 +16,8 @@ class TrabalheConoscoRequest extends FormRequest
     {
         return [
             "arquivo"     => ["required", "file", "mimes:pdf,doc,docx,png,jpg,jpeg,webp,xls,xlsx", "max:5120"],
-            "privacy"     => ["accepted"],  
+            "privacy"     => ["accepted"],
+            "g-recaptcha-response" => ["required", new Recaptcha()],  
             "nome"        => ["required", "string", "min:3", "max:120"],
             "email"       => ["required", "email"],
             "telefone"    => ["required", "string", "max:30"],

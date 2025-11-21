@@ -152,7 +152,7 @@
     <p class="text-red-500 text-sm mt-1 mb-4">{{ $message }}</p>
   @enderror
 
-  <div class="g-recaptcha" data-sitekey="6LfoBQQsAAAAALvq1uHB9aofQRKJcb2uSXQzl1am"></div>
+  <div class="g-recaptcha" data-sitekey="{{ config('recaptcha.site_key') }}"></div>
 
 
   <div class="flex max-sm:justify-center pt-5">

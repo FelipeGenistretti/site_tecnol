@@ -71,8 +71,10 @@
         <span class="textContainer text-red-600 text-sm mt-1 block">{{ $message }}</span>
     @enderror
 
+    <div class="g-recaptcha" data-sitekey="{{ config('recaptcha.site_key') }}"></div>
+
     <button id="btnUpload" type="submit"
-        class="button-contrast textContainer max-sm:w-full uppercase p-3 text-white bg-bgButtonPrimary hover:bg-purple-800 transition duration-300 rounded-md flex items-center justify-center gap-2">
+        class="button-contrast textContainer max-sm:w-full uppercase p-3 mt-3 text-white bg-bgButtonPrimary hover:bg-purple-800 transition duration-300 rounded-md flex items-center justify-center gap-2">
 
         <span id="btnUploadText">Enviar</span>
 
@@ -103,7 +105,7 @@
 
 </form>
 
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector("form[action='{{ route('upload-file') }}']");

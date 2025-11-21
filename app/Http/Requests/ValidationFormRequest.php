@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\Recaptcha;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ValidationFormRequest extends FormRequest
@@ -22,6 +23,7 @@ class ValidationFormRequest extends FormRequest
     public function rules(): array
     {
         return [
+            "g-recaptcha-response" => ["required", new Recaptcha()],
             "nome" => ["required", "string", "min:2", "max:255"],
             "email" => ["required", "email", "max:255"],
             "telefone" => ["nullable", "string", "min:10", "max:15"],

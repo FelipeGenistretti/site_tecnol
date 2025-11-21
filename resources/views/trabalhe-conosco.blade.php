@@ -166,11 +166,7 @@
           </p>
         </div>
         
-        <div class="mt-2">
-          <div class="bg-gray-200 border border-gray-300 rounded p-4 text-center">
-            <span class="text-sm text-gray-500">reCAPTCHA aqui</span>
-          </div>
-        </div>
+        <div class="g-recaptcha" data-sitekey="{{ config('recaptcha.site_key') }}"></div>
       </div>
       
       <div>
@@ -261,6 +257,8 @@
 
 </div>
 </div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 @if($errors->has('arquivos'))
 <script>
