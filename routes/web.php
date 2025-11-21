@@ -24,11 +24,11 @@ Route::get('/', function () {
 Route::post('/fale-conosco', [FormController::class, 'store'])
     ->name('fale-conosco.store');
 
-// Formulário de pré-cadastro (exibe o formulário)
-/*Route::get('/pre-registro', function() {
+
+Route::get('/pre-registro', function() {
     return view('pre-cadastro');
 })->name('pre-registro');
-*/
+
 
 // Formulário de pré-cadastro (envio)
 Route::post('/pre-registro', [PreRegistroController::class, 'store'])
@@ -69,9 +69,9 @@ Route::get("/qualidade", function(){
 })->name("qualidade");
 
 
-// Route::get("/solicitacao-titular", function(){
-//     return view("solicitacaotitular");
-// })->name("solicitacao-titular");
+Route::get("/solicitacao-titular", function(){
+    return view("solicitacaotitular");
+})->name("solicitacao-titular");
 
 Route::get("/404", function(){
     return view("errors/404");

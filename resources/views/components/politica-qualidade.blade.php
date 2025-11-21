@@ -21,7 +21,7 @@
             </div>
 
             <div>
-                <img src="/imgHeroQualidade.png" alt="" class="max-sm:h-[300px] max-sm:w-full">
+                <img src="/qualidadeHero.png" alt="" class="max-sm:h-[300px] max-sm:w-full">
             </div>
         </div>
     </div>

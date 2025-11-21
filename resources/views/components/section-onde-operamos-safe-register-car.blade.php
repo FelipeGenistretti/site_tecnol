@@ -1,4 +1,4 @@
-<div class="container-x py-20 bg-contrast" id="ondeoperamos">
+<div class="container-x pt-20 bg-contrast" id="ondeoperamos">
     <div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 text-contrast" >
             <!-- Coluna 1: Texto -->

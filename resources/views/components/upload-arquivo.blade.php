@@ -63,7 +63,7 @@
 
         <p class="textContainer">
             Li e concordo com a
-            <a href="#" class="text-[#411F56] underline font-bold text-contrast">Política de Privacidade e autorizo o tratamento dos meu dados</a>
+            <a href="#" class="text-[#f15a29] underline font-bold text-contrast">Política de Privacidade e autorizo o tratamento dos meu dados</a>
         </p>
     </div>
 
@@ -74,7 +74,7 @@
     <div class="g-recaptcha" data-sitekey="{{ config('recaptcha.site_key') }}"></div>
 
     <button id="btnUpload" type="submit"
-        class="button-contrast textContainer max-sm:w-full uppercase p-3 mt-3 text-white bg-bgButtonPrimary hover:bg-purple-800 transition duration-300 rounded-md flex items-center justify-center gap-2">
+        class="button-contrast textContainer max-sm:w-full uppercase p-3 mt-3 text-white bg-bgButtonPrimary hover:bg-orange-400 transition duration-300 rounded-md flex items-center justify-center gap-2">
 
         <span id="btnUploadText">Enviar</span>
 
